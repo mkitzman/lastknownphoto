@@ -38,7 +38,8 @@ const emptyPost = (): Post => ({
   tags: [],
   sourceUrl: null,
   sourceLabel: null,
-  description: ''
+  description: '',
+  bio: ''
 })
 
 const form = reactive<Post>(emptyPost())
@@ -58,6 +59,26 @@ function autoSlug() {
   if (!editingPost.value) {
     form.slug = slugify(form.name)
   }
+}
+
+const bioLoading = ref(false)
+
+async function fetchBio() {
+  if (!form.name) return
+  bioLoading.value = true
+  try {
+    const name = form.name.replace(/ /g, '_')
+    const res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name)}`)
+    if (!res.ok) throw new Error('Not found')
+    const data = await res.json()
+    if (data.extract) {
+      form.bio = data.extract
+    }
+  } catch {
+    form.bio = ''
+    alert('Could not find a Wikipedia article for "' + form.name + '". Try a different spelling.')
+  }
+  bioLoading.value = false
 }
 
 function addTag() {
@@ -206,6 +227,15 @@ function downloadAll() {
         <div class="form-group">
           <label>Source Label</label>
           <input v-model="form.sourceLabel" placeholder="e.g., Wikipedia" />
+        </div>
+        <div class="form-group full">
+          <label>Bio</label>
+          <div class="bio-row">
+            <textarea v-model="form.bio" rows="3" placeholder="1-2 sentence bio of the person"></textarea>
+            <button @click="fetchBio" type="button" class="btn-secondary bio-btn" :disabled="bioLoading || !form.name">
+              {{ bioLoading ? 'Loading...' : 'Fetch from Wikipedia' }}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -443,6 +473,21 @@ function downloadAll() {
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
+}
+
+.bio-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bio-btn {
+  align-self: flex-start;
+}
+
+.bio-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .tag-input-row {

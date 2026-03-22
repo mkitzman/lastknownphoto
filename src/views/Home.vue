@@ -38,8 +38,8 @@ function clearFilter() {
   <div class="home">
     <div class="filter-bar">
       <div class="filter-select-wrapper">
-        <select v-model="selectedTag" class="filter-select">
-          <option :value="null">All Posts</option>
+        <select v-model="selectedTag" class="filter-select" aria-label="Filter posts by tag">
+          <option :value="null">all posts</option>
           <option v-for="{ tag, count } in allTags" :key="tag" :value="tag">
             {{ tag }} ({{ count }})
           </option>
@@ -48,8 +48,8 @@ function clearFilter() {
           <path d="m6 9 6 6 6-6"/>
         </svg>
       </div>
-      <button v-if="selectedTag" class="clear-btn" @click="clearFilter">&times; Clear</button>
       <span class="post-count">{{ filteredPosts.length }} {{ filteredPosts.length === 1 ? 'post' : 'posts' }}</span>
+      <button v-if="selectedTag" class="clear-btn" @click="clearFilter">&times; Clear</button>
     </div>
     <div class="masonry">
       <PostCard v-for="post in filteredPosts" :key="post.id" :post="post" />
@@ -68,6 +68,7 @@ function clearFilter() {
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
+  justify-content: flex-end;
 }
 
 .filter-select-wrapper {
@@ -123,7 +124,6 @@ function clearFilter() {
 .post-count {
   font-size: 0.75rem;
   color: var(--text-dim);
-  margin-left: auto;
 }
 
 .masonry {
