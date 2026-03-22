@@ -13,7 +13,6 @@ import { RouterView, RouterLink } from 'vue-router'
         </svg>
       </RouterLink>
       <nav class="site-nav">
-        <RouterLink to="/">Archive</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </header>
