@@ -39,7 +39,8 @@ const emptyPost = (): Post => ({
   sourceUrl: null,
   sourceLabel: null,
   description: '',
-  bio: ''
+  bio: '',
+  createdAt: new Date().toISOString().split('T')[0]
 })
 
 const form = reactive<Post>(emptyPost())

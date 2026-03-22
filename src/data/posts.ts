@@ -13,6 +13,7 @@ export interface Post {
   description: string
   bio?: string | null
   wikipediaUrl?: string | null
+  createdAt?: string | null
 }
 
 export function getWikipediaUrl(post: Post): string {
@@ -31,7 +32,7 @@ function parseDate(d: string): number {
 }
 
 export const posts: Post[] = Object.values(postModules).sort((a, b) => {
-  return parseDate(b.date) - parseDate(a.date)
+  return parseDate(b.createdAt || '') - parseDate(a.createdAt || '')
 })
 
 export function getPostBySlug(slug: string): Post | undefined {
