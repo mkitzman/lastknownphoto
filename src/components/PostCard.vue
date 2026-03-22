@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { getWikipediaUrl, type Post } from '../data/posts'
 
-const props = defineProps<{ post: Post }>()
-const router = useRouter()
+defineProps<{ post: Post }>()
 const flipped = ref(false)
 
 function handleClick() {
