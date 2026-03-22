@@ -11,6 +11,7 @@ export interface Post {
   sourceUrl: string | null
   sourceLabel: string | null
   description: string
+  bio?: string | null
   wikipediaUrl?: string | null
 }
 

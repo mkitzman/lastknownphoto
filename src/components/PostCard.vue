@@ -51,6 +51,7 @@ function handleClickOutside() {
           </svg>
         </button>
         <h3>{{ post.name }}</h3>
+        <p class="card-bio" v-if="post.bio">{{ post.bio }}</p>
         <p class="card-title">{{ post.title }}</p>
         <p class="card-desc" v-if="post.description && post.description !== post.title">{{ post.description }}</p>
         <div class="card-meta">
@@ -229,6 +230,17 @@ function handleClickOutside() {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text);
+}
+
+.card-bio {
+  font-size: 0.75rem;
+  color: var(--accent);
+  line-height: 1.5;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card-title {

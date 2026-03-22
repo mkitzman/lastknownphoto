@@ -18,6 +18,7 @@ const post = computed(() => getPostBySlug(route.params.slug as string))
       </div>
       <div class="post-info">
         <h1>{{ post.name }}</h1>
+        <p class="post-bio" v-if="post.bio">{{ post.bio }}</p>
         <p class="post-title">{{ post.title }}</p>
         <p class="post-description" v-if="post.description && post.description !== post.title">
           {{ post.description }}
@@ -122,6 +123,13 @@ const post = computed(() => getPostBySlug(route.params.slug as string))
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
+}
+
+.post-bio {
+  font-size: 0.95rem;
+  color: var(--accent);
+  line-height: 1.7;
+  font-style: italic;
 }
 
 .post-title {
