@@ -5,9 +5,7 @@ import { getWikipediaUrl, type Post } from '../data/posts'
 defineProps<{ post: Post }>()
 const flipped = ref(false)
 
-function handleFlip(e: Event) {
-  const target = e.target as HTMLElement
-  if (target.closest('a, .tag, .wiki-link, .card-cta')) return
+function handleFlip() {
   flipped.value = !flipped.value
 }
 
