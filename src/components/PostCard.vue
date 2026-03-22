@@ -5,7 +5,9 @@ import { getWikipediaUrl, type Post } from '../data/posts'
 defineProps<{ post: Post }>()
 const flipped = ref(false)
 
-function handleFlip() {
+function handleFlip(e: Event) {
+  const target = e.target as HTMLElement
+  if (target.closest('a, .tag, .wiki-link, .card-cta')) return
   flipped.value = !flipped.value
 }
 
@@ -19,15 +21,11 @@ function handleKeydown(e: KeyboardEvent) {
   }
 }
 
-function handleClickOutside() {
-  flipped.value = false
-}
 </script>
 
 <template>
   <article
     class="card-container"
-    v-click-outside="handleClickOutside"
     @keydown="handleKeydown"
     :aria-label="post.name + ' — click to reveal details'"
   >
@@ -44,7 +42,7 @@ function handleClickOutside() {
           <span class="card-name">{{ post.name }}</span>
         </div>
       </button>
-      <div class="card-back" @click="handleFlip" role="region" :aria-label="post.name + ' details'" :inert="!flipped">
+      <div class="card-back" role="region" :aria-label="post.name + ' details'" :inert="!flipped">
         <button class="flip-back-btn" @click.stop="flipped = false" title="Flip back">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
@@ -96,6 +94,10 @@ function handleClickOutside() {
 
 .card.flipped {
   transform: rotateY(180deg);
+}
+
+.card.flipped .card-front {
+  pointer-events: none;
 }
 
 .card-front,
@@ -199,8 +201,9 @@ function handleClickOutside() {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.75rem;
+  overflow-y: auto;
 }
 
 .flip-back-btn {
@@ -237,10 +240,6 @@ function handleClickOutside() {
   color: var(--accent);
   line-height: 1.5;
   font-style: italic;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .card-title {
