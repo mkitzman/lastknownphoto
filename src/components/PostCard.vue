@@ -5,11 +5,17 @@ import { getWikipediaUrl, type Post } from '../data/posts'
 defineProps<{ post: Post }>()
 const flipped = ref(false)
 
-function handleClick() {
-  if (flipped.value) {
+function handleFlip() {
+  flipped.value = !flipped.value
+}
+
+function handleKeydown(e: KeyboardEvent) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault()
+    handleFlip()
+  }
+  if (e.key === 'Escape' && flipped.value) {
     flipped.value = false
-  } else {
-    flipped.value = true
   }
 }
 
@@ -19,15 +25,26 @@ function handleClickOutside() {
 </script>
 
 <template>
-  <div class="card-container" @click="handleClick" v-click-outside="handleClickOutside">
+  <article
+    class="card-container"
+    v-click-outside="handleClickOutside"
+    @keydown="handleKeydown"
+    :aria-label="post.name + ' — click to reveal details'"
+  >
     <div class="card" :class="{ flipped }">
-      <div class="card-front">
+      <button
+        class="card-front"
+        @click="handleFlip"
+        :aria-expanded="flipped"
+        :aria-label="'View details for ' + post.name"
+        type="button"
+      >
         <img :src="post.imageUrl" :alt="post.name" loading="lazy" />
-        <div class="card-overlay">
+        <div class="card-overlay" aria-hidden="true">
           <span class="card-name">{{ post.name }}</span>
         </div>
-      </div>
-      <div class="card-back">
+      </button>
+      <div class="card-back" @click="handleFlip" role="region" :aria-label="post.name + ' details'" :inert="!flipped">
         <button class="flip-back-btn" @click.stop="flipped = false" title="Flip back">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
@@ -59,7 +76,7 @@ function handleClickOutside() {
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <style scoped>
@@ -89,17 +106,61 @@ function handleClickOutside() {
 
 .card-front {
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.card-front:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.card-front:focus-visible img {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.04);
+}
+
+.card-front:focus-visible ~ .card-overlay,
+.card-container:focus-within .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card-front img {
   width: 100%;
   display: block;
   border-radius: 8px;
-  transition: filter 0.3s;
+  filter: grayscale(100%) contrast(1.05);
+  transition: filter 0.6s ease, transform 0.6s ease;
 }
 
 .card-container:hover .card-front img {
-  filter: brightness(0.7);
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.04);
+}
+
+/* Vignette overlay */
+.card-front::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-container:hover .card-front::after {
+  opacity: 1;
 }
 
 .card-overlay {
@@ -108,14 +169,17 @@ function handleClickOutside() {
   left: 0;
   right: 0;
   padding: 1.5rem 1rem 1rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
   border-radius: 0 0 8px 8px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transform: translateY(4px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2;
 }
 
 .card-container:hover .card-overlay {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .card-name {

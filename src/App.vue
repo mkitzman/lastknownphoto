@@ -5,7 +5,13 @@ import { RouterView, RouterLink } from 'vue-router'
 <template>
   <div class="app">
     <header class="site-header">
-      <RouterLink to="/" class="site-title">Last Known Photo</RouterLink>
+      <RouterLink to="/" class="site-title">
+        Last Known Photo
+        <svg class="shutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
+        </svg>
+      </RouterLink>
       <nav class="site-nav">
         <RouterLink to="/">Archive</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -38,12 +44,32 @@ import { RouterView, RouterLink } from 'vue-router'
 }
 
 .site-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-family: 'Faster One', cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--text);
+  background: linear-gradient(135deg, #888, #d0d0d0, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shutter-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  stroke: #a8a8a8;
+  transition: transform 1.5s cubic-bezier(0.2, 0, 0.1, 1);
+  transform: rotate(0deg);
+}
+
+.site-title:hover .shutter-icon {
+  transform: rotate(720deg);
+  transition: transform 2s cubic-bezier(0.1, 0, 0.3, 1);
 }
 
 .site-nav {
