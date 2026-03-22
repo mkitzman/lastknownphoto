@@ -1,0 +1,531 @@
+<script setup lang="ts">
+import { ref, reactive, computed } from 'vue'
+import { posts, type Post } from '../data/posts'
+
+const PASSWORD = 'lastknown2024'
+const isAuthenticated = ref(localStorage.getItem('lkp-admin') === 'true')
+const passwordInput = ref('')
+const authError = ref(false)
+
+function login() {
+  if (passwordInput.value === PASSWORD) {
+    localStorage.setItem('lkp-admin', 'true')
+    isAuthenticated.value = true
+    authError.value = false
+  } else {
+    authError.value = true
+  }
+}
+
+function logout() {
+  localStorage.removeItem('lkp-admin')
+  isAuthenticated.value = false
+}
+
+const mode = ref<'list' | 'add' | 'edit'>('list')
+const editingPost = ref<Post | null>(null)
+const searchQuery = ref('')
+
+const emptyPost = (): Post => ({
+  id: crypto.randomUUID().slice(0, 8),
+  slug: '',
+  name: '',
+  title: '',
+  imageUrl: '',
+  date: '',
+  deathDate: '',
+  age: null,
+  tags: [],
+  sourceUrl: null,
+  sourceLabel: null,
+  description: ''
+})
+
+const form = reactive<Post>(emptyPost())
+const tagInput = ref('')
+
+const filteredPosts = computed(() => {
+  if (!searchQuery.value) return posts
+  const q = searchQuery.value.toLowerCase()
+  return posts.filter(p => p.name.toLowerCase().includes(q) || p.title.toLowerCase().includes(q))
+})
+
+function slugify(text: string): string {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+}
+
+function autoSlug() {
+  if (!editingPost.value) {
+    form.slug = slugify(form.name)
+  }
+}
+
+function addTag() {
+  const tag = tagInput.value.trim().toLowerCase()
+  if (tag && !form.tags.includes(tag)) {
+    form.tags.push(tag)
+  }
+  tagInput.value = ''
+}
+
+function removeTag(tag: string) {
+  form.tags = form.tags.filter(t => t !== tag)
+}
+
+function startAdd() {
+  Object.assign(form, emptyPost())
+  editingPost.value = null
+  mode.value = 'add'
+}
+
+function startEdit(post: Post) {
+  Object.assign(form, JSON.parse(JSON.stringify(post)))
+  editingPost.value = post
+  mode.value = 'edit'
+}
+
+function downloadPost() {
+  const json = JSON.stringify(form, null, 2)
+  const blob = new Blob([json], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `${slugify(form.name) || form.slug}.json`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
+function downloadAll() {
+  const allPosts = posts.map(p => JSON.stringify(p, null, 2))
+  const blob = new Blob([allPosts.join('\n---\n')], { type: 'text/plain' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'all-posts.json'
+  a.click()
+  URL.revokeObjectURL(url)
+}
+</script>
+
+<template>
+  <!-- Login -->
+  <div class="admin-login" v-if="!isAuthenticated">
+    <div class="login-box">
+      <h2>Admin Access</h2>
+      <form @submit.prevent="login">
+        <input
+          v-model="passwordInput"
+          type="password"
+          placeholder="Password"
+          autocomplete="off"
+        />
+        <button type="submit">Enter</button>
+      </form>
+      <p class="error" v-if="authError">Incorrect password</p>
+    </div>
+  </div>
+
+  <!-- Admin Panel -->
+  <div class="admin" v-else>
+    <div class="admin-header">
+      <h2>Admin Panel</h2>
+      <div class="admin-actions">
+        <button @click="startAdd" class="btn-primary">+ Add Post</button>
+        <button @click="downloadAll" class="btn-secondary">Export All</button>
+        <button @click="logout" class="btn-secondary">Logout</button>
+      </div>
+    </div>
+
+    <!-- Post list -->
+    <div v-if="mode === 'list'" class="post-list">
+      <input v-model="searchQuery" placeholder="Search posts..." class="search-input" />
+      <div class="post-row" v-for="post in filteredPosts" :key="post.id" @click="startEdit(post)">
+        <img :src="post.imageUrl" :alt="post.name" class="post-thumb" />
+        <div class="post-row-info">
+          <strong>{{ post.name }}</strong>
+          <span class="post-row-meta">{{ post.tags.join(', ') }}</span>
+        </div>
+      </div>
+      <p v-if="!filteredPosts.length" class="empty">No posts found</p>
+    </div>
+
+    <!-- Add/Edit form -->
+    <div v-else class="post-form">
+      <button @click="mode = 'list'" class="btn-back">&larr; Back to list</button>
+      <h3>{{ mode === 'add' ? 'Add New Post' : `Edit: ${form.name}` }}</h3>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Name</label>
+          <input v-model="form.name" @input="autoSlug" placeholder="Subject's name" />
+        </div>
+        <div class="form-group">
+          <label>Slug</label>
+          <input v-model="form.slug" placeholder="url-slug" />
+        </div>
+        <div class="form-group full">
+          <label>Title / Caption</label>
+          <textarea v-model="form.title" rows="3" placeholder="Brief caption about the photo"></textarea>
+        </div>
+        <div class="form-group full">
+          <label>Description</label>
+          <textarea v-model="form.description" rows="4" placeholder="Full description"></textarea>
+        </div>
+        <div class="form-group full">
+          <label>Image URL</label>
+          <input v-model="form.imageUrl" placeholder="/images/filename.jpg or https://..." />
+        </div>
+        <div class="form-group">
+          <label>Photo Date</label>
+          <input v-model="form.date" placeholder="e.g., January 14, 2018" />
+        </div>
+        <div class="form-group">
+          <label>Death Date</label>
+          <input v-model="form.deathDate" placeholder="e.g., January 15, 2018" />
+        </div>
+        <div class="form-group">
+          <label>Age at Death</label>
+          <input v-model.number="form.age" type="number" placeholder="46" />
+        </div>
+        <div class="form-group">
+          <label>Tags</label>
+          <div class="tag-input-row">
+            <input v-model="tagInput" @keydown.enter.prevent="addTag" placeholder="Add tag..." />
+            <button @click="addTag" type="button">+</button>
+          </div>
+          <div class="tag-list">
+            <span v-for="tag in form.tags" :key="tag" class="tag" @click="removeTag(tag)">
+              {{ tag }} &times;
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Source URL</label>
+          <input v-model="form.sourceUrl" placeholder="https://..." />
+        </div>
+        <div class="form-group">
+          <label>Source Label</label>
+          <input v-model="form.sourceLabel" placeholder="e.g., Wikipedia" />
+        </div>
+      </div>
+
+      <div class="form-preview" v-if="form.imageUrl">
+        <h4>Preview</h4>
+        <img :src="form.imageUrl" :alt="form.name" />
+      </div>
+
+      <div class="form-actions">
+        <button @click="downloadPost" class="btn-primary">Download JSON</button>
+        <p class="form-help">
+          Download the JSON file and place it in <code>content/posts/{{ form.slug }}.json</code>,
+          then commit and redeploy.
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.admin-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.login-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-box h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.login-box form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.login-box input {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.login-box input:focus {
+  border-color: var(--accent);
+}
+
+.login-box button {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+}
+
+.error {
+  color: #e55;
+  font-size: 0.85rem;
+}
+
+.admin {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-header h2 {
+  font-weight: 400;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-light);
+  color: var(--text);
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.btn-back:hover {
+  color: var(--text);
+}
+
+.search-input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
+
+.post-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.post-row:hover {
+  background: var(--bg-card);
+}
+
+.post-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.post-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.post-row-info strong {
+  font-size: 0.9rem;
+}
+
+.post-row-meta {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.post-form h3 {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  outline: none;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.tag-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag-input-row button {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--bg-elevated);
+  border-radius: 3px;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: var(--border-light);
+}
+
+.form-preview {
+  margin-top: 1.5rem;
+}
+
+.form-preview h4 {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.form-preview img {
+  max-width: 300px;
+  border-radius: 6px;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-help {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.form-help code {
+  background: var(--bg-elevated);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin {
+    padding: 1rem;
+  }
+}
+</style>

@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{fields.slug}}"
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image URL", name: "imageUrl", widget: "string" }
+      - { label: "Photo Date", name: "date", widget: "string", required: false }
+      - { label: "Death Date", name: "deathDate", widget: "string", required: false }
+      - { label: "Age at Death", name: "age", widget: "number", required: false }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Source URL", name: "sourceUrl", widget: "string", required: false }
+      - { label: "Source Label", name: "sourceLabel", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
