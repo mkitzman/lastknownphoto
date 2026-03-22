@@ -90,7 +90,7 @@ function downloadPost() {
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = `${slugify(form.name) || form.slug}.json`
+  a.download = `${form.slug}.json`
   a.click()
   URL.revokeObjectURL(url)
 }
