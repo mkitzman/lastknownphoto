@@ -2,18 +2,19 @@
   "id": "9255688126",
   "slug": "john-lennon",
   "name": "John Lennon",
-  "title": "John Lennon - taken 12/8/80 killed later that night by the other person in photo 12/8/80, 40",
+  "title": "Last known photo of John Lennon, taken on December 8, 1980, as he signed an autograph for Mark David Chapman — the man who would murder him hours later.",
   "imageUrl": "/images/john-lennon.jpg",
-  "date": "2011-08-22 17:14:00 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "December 8, 1980",
+  "deathDate": "December 8, 1980",
+  "age": 40,
   "tags": [
     "the beatles",
-    "musician"
+    "musician",
+    "assassination"
   ],
   "sourceUrl": null,
   "sourceLabel": null,
-  "description": "John Lennon - taken 12/8/80 killed later that night by the other person in photo 12/8/80, 40",
+  "description": "John Lennon was photographed outside his Manhattan apartment building, The Dakota, on the afternoon of December 8, 1980, signing a copy of his album 'Double Fantasy' for a fan. That fan was Mark David Chapman. Hours later, as Lennon and Yoko Ono returned home from a recording session that evening, Chapman shot Lennon four times in the back. He was 40 years old.",
   "bio": "John Lennon was an English singer, songwriter, and peace activist who co-founded the Beatles. His solo career and activism for peace made him one of the most influential cultural figures of the 20th century.",
   "createdAt": "2026-03-22"
 }
