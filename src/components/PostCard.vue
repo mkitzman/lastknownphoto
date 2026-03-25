@@ -48,6 +48,20 @@ function handleKeydown(e: KeyboardEvent) {
         </button>
         <h3>{{ post.name }}</h3>
         <p class="card-desc">{{ post.description || post.title }}</p>
+        <div class="card-meta" v-if="post.date || post.deathDate || post.age">
+          <div class="meta-item" v-if="post.date">
+            <span class="meta-label">Photo Date</span>
+            <span class="meta-value">{{ post.date }}</span>
+          </div>
+          <div class="meta-item" v-if="post.deathDate">
+            <span class="meta-label">Death Date</span>
+            <span class="meta-value">{{ post.deathDate }}</span>
+          </div>
+          <div class="meta-item" v-if="post.age">
+            <span class="meta-label">Age</span>
+            <span class="meta-value">{{ post.age }}</span>
+          </div>
+        </div>
         <div class="card-bottom">
           <a :href="getWikipediaUrl(post)" target="_blank" rel="noopener noreferrer" class="wiki-link" @click.stop title="Wikipedia">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -222,6 +236,29 @@ function handleKeydown(e: KeyboardEvent) {
   font-size: 0.8rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.card-meta {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.meta-value {
+  font-size: 0.8rem;
+  color: var(--text);
 }
 
 .card-bottom {
