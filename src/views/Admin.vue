@@ -106,6 +106,32 @@ function startEdit(post: Post) {
   mode.value = 'edit'
 }
 
+const imageFile = ref<File | null>(null)
+const imagePreview = ref<string | null>(null)
+
+function handleImageUpload(e: Event) {
+  const target = e.target as HTMLInputElement
+  const file = target.files?.[0]
+  if (!file) return
+  imageFile.value = file
+  imagePreview.value = URL.createObjectURL(file)
+  const ext = file.name.split('.').pop() || 'jpg'
+  const slug = form.slug || slugify(form.name) || 'image'
+  form.imageUrl = `/images/${slug}.${ext}`
+}
+
+function downloadImage() {
+  if (!imageFile.value) return
+  const url = URL.createObjectURL(imageFile.value)
+  const a = document.createElement('a')
+  a.href = url
+  const ext = imageFile.value.name.split('.').pop() || 'jpg'
+  const slug = form.slug || slugify(form.name) || 'image'
+  a.download = `${slug}.${ext}`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
 function downloadPost() {
   const json = JSON.stringify(form, null, 2)
   const blob = new Blob([json], { type: 'application/json' })
@@ -194,8 +220,19 @@ function downloadAll() {
           <textarea v-model="form.description" rows="4" placeholder="Full description"></textarea>
         </div>
         <div class="form-group full">
-          <label>Image URL</label>
-          <input v-model="form.imageUrl" placeholder="/images/filename.jpg or https://..." />
+          <label>Image</label>
+          <div class="image-upload-row">
+            <label class="upload-btn btn-secondary">
+              Choose File
+              <input type="file" accept="image/*" @change="handleImageUpload" hidden />
+            </label>
+            <span class="upload-or">or</span>
+            <input v-model="form.imageUrl" placeholder="/images/filename.jpg or https://..." class="image-url-input" />
+          </div>
+          <div class="image-upload-preview" v-if="imagePreview || form.imageUrl">
+            <img :src="imagePreview || form.imageUrl" :alt="form.name" />
+            <span class="image-path">{{ form.imageUrl }}</span>
+          </div>
         </div>
         <div class="form-group">
           <label>Photo Date</label>
@@ -240,15 +277,14 @@ function downloadAll() {
         </div>
       </div>
 
-      <div class="form-preview" v-if="form.imageUrl">
-        <h4>Preview</h4>
-        <img :src="form.imageUrl" :alt="form.name" />
-      </div>
-
       <div class="form-actions">
-        <button @click="downloadPost" class="btn-primary">Download JSON</button>
+        <div class="form-actions-row">
+          <button @click="downloadPost" class="btn-primary">Download JSON</button>
+          <button v-if="imageFile" @click="downloadImage" class="btn-secondary">Download Image</button>
+        </div>
         <p class="form-help">
-          Download the JSON file and place it in <code>content/posts/{{ form.slug }}.json</code>,
+          Place JSON in <code>content/posts/{{ form.slug }}.json</code>
+          <span v-if="imageFile"> and image in <code>public{{ form.imageUrl }}</code></span>,
           then commit and redeploy.
         </p>
       </div>
@@ -474,6 +510,49 @@ function downloadAll() {
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
+}
+
+.image-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.upload-btn {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.upload-or {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.image-url-input {
+  flex: 1;
+}
+
+.image-upload-preview {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.image-upload-preview img {
+  max-width: 200px;
+  border-radius: 6px;
+}
+
+.image-path {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-family: monospace;
+}
+
+.form-actions-row {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .bio-row {
