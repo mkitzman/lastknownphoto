@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed } from 'vue'
 import { getWikipediaUrl, type Post } from '../data/posts'
 
-defineProps<{ post: Post }>()
-const flipped = ref(false)
+const props = defineProps<{ post: Post, activeCardId: string | null }>()
+const emit = defineEmits<{ flip: [id: string | null] }>()
+
+const flipped = computed(() => props.activeCardId === props.post.id)
 
 function handleFlip() {
-  flipped.value = !flipped.value
+  emit('flip', flipped.value ? null : props.post.id)
 }
 
 function handleKeydown(e: KeyboardEvent) {
@@ -15,7 +17,7 @@ function handleKeydown(e: KeyboardEvent) {
     handleFlip()
   }
   if (e.key === 'Escape' && flipped.value) {
-    flipped.value = false
+    emit('flip', null)
   }
 }
 
@@ -41,7 +43,7 @@ function handleKeydown(e: KeyboardEvent) {
         </div>
       </button>
       <div class="card-back" role="region" :aria-label="post.name + ' details'" :inert="!flipped">
-        <button class="flip-back-btn" @click.stop="flipped = false" title="Flip back">
+        <button class="flip-back-btn" @click.stop="emit('flip', null)" title="Flip back">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
           </svg>

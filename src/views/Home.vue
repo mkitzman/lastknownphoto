@@ -6,6 +6,7 @@ import PostCard from '../components/PostCard.vue'
 
 const route = useRoute()
 const selectedTag = ref<string | null>((route.query.tag as string) || null)
+const activeCardId = ref<string | null>(null)
 
 watch(() => route.query.tag, (tag) => {
   selectedTag.value = (tag as string) || null
@@ -52,7 +53,7 @@ function clearFilter() {
       <button v-if="selectedTag" class="clear-btn" @click="clearFilter">&times; Clear</button>
     </div>
     <div class="masonry">
-      <PostCard v-for="post in filteredPosts" :key="post.id" :post="post" />
+      <PostCard v-for="post in filteredPosts" :key="post.id" :post="post" :activeCardId="activeCardId" @flip="activeCardId = $event" />
     </div>
     <p v-if="!filteredPosts.length" class="empty">No posts found.</p>
   </div>
