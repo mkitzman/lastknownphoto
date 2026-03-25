@@ -2,25 +2,7 @@
 import { ref, reactive, computed } from 'vue'
 import { posts, type Post } from '../data/posts'
 
-const PASSWORD = 'lastknown2024'
-const isAuthenticated = ref(localStorage.getItem('lkp-admin') === 'true')
-const passwordInput = ref('')
-const authError = ref(false)
-
-function login() {
-  if (passwordInput.value === PASSWORD) {
-    localStorage.setItem('lkp-admin', 'true')
-    isAuthenticated.value = true
-    authError.value = false
-  } else {
-    authError.value = true
-  }
-}
-
-function logout() {
-  localStorage.removeItem('lkp-admin')
-  isAuthenticated.value = false
-}
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
 
 const mode = ref<'list' | 'add' | 'edit'>('list')
 const editingPost = ref<Post | null>(null)
@@ -157,20 +139,11 @@ function downloadAll() {
 </script>
 
 <template>
-  <!-- Login -->
-  <div class="admin-login" v-if="!isAuthenticated">
+  <!-- Not available in production -->
+  <div class="admin-login" v-if="!isLocal">
     <div class="login-box">
-      <h2>Admin Access</h2>
-      <form @submit.prevent="login">
-        <input
-          v-model="passwordInput"
-          type="password"
-          placeholder="Password"
-          autocomplete="off"
-        />
-        <button type="submit">Enter</button>
-      </form>
-      <p class="error" v-if="authError">Incorrect password</p>
+      <h2>Admin</h2>
+      <p>Admin panel is only available on localhost.</p>
     </div>
   </div>
 
@@ -181,7 +154,6 @@ function downloadAll() {
       <div class="admin-actions">
         <button @click="startAdd" class="btn-primary">+ Add Post</button>
         <button @click="downloadAll" class="btn-secondary">Export All</button>
-        <button @click="logout" class="btn-secondary">Logout</button>
       </div>
     </div>
 
