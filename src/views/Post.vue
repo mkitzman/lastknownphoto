@@ -15,6 +15,7 @@ const post = computed(() => getPostBySlug(route.params.slug as string))
     <div class="post-layout">
       <div class="post-image">
         <img :src="post.imageUrl" :alt="post.name" />
+        <span v-if="post.photoCredit" class="photo-credit">Photo: {{ post.photoCredit }}</span>
       </div>
       <div class="post-info">
         <h1>{{ post.name }}</h1>
@@ -110,6 +111,13 @@ const post = computed(() => getPostBySlug(route.params.slug as string))
 .post-image img {
   width: 100%;
   border-radius: 8px;
+}
+
+.photo-credit {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.5rem;
+  display: block;
 }
 
 .post-info {

@@ -40,6 +40,7 @@ const emptyPost = (): Post => ({
   sourceLabel: null,
   description: '',
   bio: '',
+  photoCredit: null,
   createdAt: new Date().toISOString().split('T')[0]
 })
 
@@ -265,6 +266,10 @@ function downloadAll() {
         <div class="form-group">
           <label>Source Label</label>
           <input v-model="form.sourceLabel" placeholder="e.g., Wikipedia" />
+        </div>
+        <div class="form-group">
+          <label>Photo Credit</label>
+          <input v-model="form.photoCredit" placeholder="Photographer name" />
         </div>
         <div class="form-group full">
           <label>Bio</label>

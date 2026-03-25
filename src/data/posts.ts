@@ -12,6 +12,7 @@ export interface Post {
   sourceLabel: string | null
   description: string
   bio?: string | null
+  photoCredit?: string | null
   wikipediaUrl?: string | null
   createdAt?: string | null
 }
