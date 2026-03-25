@@ -2,17 +2,19 @@
   "id": "43550813704",
   "slug": "abraham-lincoln",
   "name": "Abraham Lincoln",
-  "title": "Abraham Lincoln - taken 3/6/1865 died 4/14/1865, 56",
+  "title": "Last known photograph of Abraham Lincoln, taken on February 5, 1865, two months before his assassination at Ford's Theatre.",
   "imageUrl": "/images/abraham-lincoln.jpg",
-  "date": "2013-02-20 06:24:12 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "February 5, 1865",
+  "deathDate": "April 15, 1865",
+  "age": 56,
   "tags": [
-    "presidents"
+    "us presidents",
+    "assassination"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Abraham Lincoln - taken 3/6/1865 died 4/14/1865, 56",
+  "sourceUrl": "https://www.whitehousehistory.org/photos/fotoware?id=D54E30BE611C4F89%209A693B34F1DBB770",
+  "sourceLabel": "White House Historical Association",
+  "description": "This portrait of Abraham Lincoln was taken by photographer Alexander Gardner on February 5, 1865, and is the last in a series of photographs taken of the President. Originally believed to have been captured on April 10, 1865 — just four days before his assassination — researchers later established the earlier February date. Lincoln was shot by John Wilkes Booth at Ford's Theatre on the evening of April 14, 1865, and died the following morning at the age of 56.",
   "bio": "Abraham Lincoln was the 16th President of the United States, who led the nation through the Civil War and abolished slavery with the Emancipation Proclamation and the 13th Amendment.",
+  "photoCredit": "Alexander Gardner",
   "createdAt": "2026-03-22"
 }
