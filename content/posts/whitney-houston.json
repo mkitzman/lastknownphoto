@@ -2,18 +2,17 @@
   "id": "146122929768",
   "slug": "whitney-houston",
   "name": "Whitney Houston",
-  "title": "Whitney Houston - taken 2/10/2012 died the next day on 2/11/2012, 48",
+  "title": "Last known photo of Whitney Houston, taken on February 10, 2012, at a pre-Grammy Awards party — the night before her death.",
   "imageUrl": "/images/whitney-houston.jpg",
-  "date": "2016-06-18 20:53:17 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "February 10, 2012",
+  "deathDate": "February 11, 2012",
+  "age": 48,
   "tags": [
-    "singer",
-    "musician"
+    "singer"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Whitney Houston - taken 2/10/2012 died the next day on 2/11/2012, 48",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Whitney_Houston",
+  "sourceLabel": "Wikipedia",
+  "description": "Whitney Houston was photographed on the evening of February 10, 2012, at a pre-Grammy Awards party hosted by Clive Davis at the Beverly Hilton Hotel in Beverly Hills. The following afternoon, on February 11, she was found submerged in the bathtub of her suite at the same hotel by her personal assistant. She was pronounced dead at the scene. The coroner ruled her death an accidental drowning, with cocaine use and heart disease listed as contributing factors. She was 48 years old. The Grammy Awards ceremony took place that evening, just hours after her death.",
   "bio": "Whitney Houston was an American singer and actress, one of the best-selling music artists of all time. Known as \"The Voice\", her powerful vocals and hits like \"I Will Always Love You\" made her a global superstar.",
   "createdAt": "2026-03-22"
 }

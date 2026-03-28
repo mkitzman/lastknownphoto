@@ -2,17 +2,17 @@
   "id": "146123887858",
   "slug": "robin-williams",
   "name": "Robin Williams",
-  "title": "Robin Williams - taken 8/10/14 died the next day on 8/11/14, 62",
+  "title": "Last known photo of Robin Williams, taken on August 10, 2014, the night before his death.",
   "imageUrl": "/images/robin-williams.jpg",
-  "date": "2016-06-18 21:18:29 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "August 10, 2014",
+  "deathDate": "August 11, 2014",
+  "age": 63,
   "tags": [
     "actor"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Robin Williams - taken 8/10/14 died the next day on 8/11/14, 62",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Robin_Williams",
+  "sourceLabel": "Wikipedia",
+  "description": "Robin Williams was photographed on August 10, 2014, the night before his death. Williams had been quietly suffering from what was later diagnosed as Lewy body dementia, a progressive brain disease that causes a range of symptoms including depression, anxiety, and paranoia. On the morning of August 11, his personal assistant found him unresponsive in his home in Paradise Cay, California. His death was ruled a suicide by hanging. He was 63 years old. His widow, Susan Schneider Williams, later revealed the severity of his undiagnosed condition, describing it as \"the terrorist inside my husband's brain.\"",
   "bio": "Robin Williams was an American actor and comedian known for his improvisational skills and versatile performances. From \"Good Will Hunting\" to \"Mrs. Doubtfire\", he brought joy to millions with his unmatched energy and warmth.",
   "createdAt": "2026-03-22"
 }

@@ -2,18 +2,17 @@
   "id": "146123713088",
   "slug": "paul-walker",
   "name": "Paul Walker",
-  "title": "Paul Walker - taken 11/30/11 died shortly after photo on  11/30/11, 40",
+  "title": "Last known photo of Paul Walker, taken on November 30, 2013, at a charity car show shortly before the fatal crash.",
   "imageUrl": "/images/paul-walker.jpg",
-  "date": "2016-06-18 21:13:57 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "November 30, 2013",
+  "deathDate": "November 30, 2013",
+  "age": 40,
   "tags": [
-    "fast and the furious",
     "actor"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Paul Walker - taken 11/30/11 died shortly after photo on  11/30/11, 40",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Paul_Walker",
+  "sourceLabel": "Wikipedia",
+  "description": "Paul Walker was photographed on November 30, 2013, at a charity event for his organization Reach Out Worldwide, held to benefit victims of Typhoon Hainan. After the event, Walker got into a Porsche Carrera GT driven by his friend Roger Rodas. The car lost control on a street in Valencia, California, struck a concrete lamp post and two trees, and burst into flames. Both Walker and Rodas were killed instantly. An investigation determined the car was traveling between 80-93 mph in a 45 mph zone. Walker was 40 years old.",
   "bio": "Paul Walker was an American actor best known for his role as Brian O'Conner in the \"Fast & Furious\" franchise. He was also a passionate marine biologist and humanitarian.",
   "createdAt": "2026-03-22"
 }
