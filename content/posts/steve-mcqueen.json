@@ -2,17 +2,17 @@
   "id": "152858656768",
   "slug": "steve-mcqueen",
   "name": "Steve McQueen",
-  "title": "Steve McQueen, taken sometime in late 1979, died 11/ 7/1980, 50",
+  "title": "Last known photo of Steve McQueen, taken in late 1979, months before his death from mesothelioma.",
   "imageUrl": "/images/steve-mcqueen.jpg",
-  "date": "2016-11-07 15:50:18 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "Late 1979",
+  "deathDate": "November 7, 1980",
+  "age": 50,
   "tags": [
     "actor"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Steve McQueen, taken sometime in late 1979, died 11/ 7/1980, 50",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Steve_McQueen",
+  "sourceLabel": "Wikipedia",
+  "description": "Steve McQueen, known as \"The King of Cool\", was photographed in late 1979 during the final period of his career. In late 1978, McQueen had developed a persistent cough that was eventually diagnosed as pleural mesothelioma, a cancer linked to asbestos exposure — likely from his years in the Marines and his work removing asbestos from movie set sound stages. After conventional treatments failed, he sought experimental therapy at a clinic in Juárez, Mexico. He died on November 7, 1980, at a hospital in Ciudad Juárez following surgery to remove a large tumor from his abdomen. He was 50 years old.",
   "bio": "Steve McQueen was an American actor known as \"The King of Cool\". His roles in \"Bullitt\", \"The Great Escape\", and \"The Thomas Crown Affair\" made him one of the biggest box office draws of the 1960s and 70s.",
   "createdAt": "2026-03-22"
 }
