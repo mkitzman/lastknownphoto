@@ -2,18 +2,18 @@
   "id": "6632695139",
   "slug": "marilyn-monroe",
   "name": "Marilyn Monroe",
-  "title": "Marilyn Monroe - taken 7/31/62 died a week later on 8/5/62, 36",
+  "title": "Last known photo of Marilyn Monroe, believed to have been taken in early August 1962, just days before her death.",
   "imageUrl": "/images/marilyn-monroe.jpg",
-  "date": "2011-06-17 21:19:00 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "August 1962",
+  "deathDate": "August 4, 1962",
+  "age": 36,
   "tags": [
     "actress",
     "model"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Marilyn Monroe - taken 7/31/62 died a week later on 8/5/62, 36",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Marilyn_Monroe",
+  "sourceLabel": "Wikipedia",
+  "description": "Marilyn Monroe was photographed in early August 1962, during the final days of her life. Monroe had been battling depression and substance abuse, and had recently been fired from and rehired for the film \"Something's Got to Give\". On the night of August 4, 1962, she was found dead in her bedroom at her home in Brentwood, Los Angeles, by her housekeeper and psychiatrist. The cause of death was ruled as acute barbiturate poisoning — a probable suicide. She was 36 years old. The circumstances surrounding her death have remained the subject of speculation and conspiracy theories for decades.",
   "bio": "Marilyn Monroe was an American actress, model, and singer who became one of the most iconic sex symbols of the 20th century. Her films, including \"Some Like It Hot\" and \"Gentlemen Prefer Blondes\", remain classics.",
   "createdAt": "2026-03-22"
 }

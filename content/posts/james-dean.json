@@ -2,17 +2,17 @@
   "id": "31448719394",
   "slug": "james-dean",
   "name": "James Dean",
-  "title": "James Dean - taken 9/30/55 died in car wreck later that day 9/30/55, 24",
+  "title": "Last known photo of James Dean, taken on September 30, 1955, at a gas station hours before his fatal car crash.",
   "imageUrl": "/images/james-dean.jpg",
-  "date": "2012-09-13 05:15:29 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "September 30, 1955",
+  "deathDate": "September 30, 1955",
+  "age": 24,
   "tags": [
     "actor"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "James Dean - taken 9/30/55 died in car wreck later that day 9/30/55, 24",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_James_Dean",
+  "sourceLabel": "Wikipedia",
+  "description": "James Dean was photographed on September 30, 1955, at a gas station in the town of Lost Hills, California, while en route to a car racing event in Salinas. Dean was driving his new Porsche 550 Spyder, which he had nicknamed \"Little Bastard\". Later that afternoon, at the intersection of Routes 466 and 41 near Cholame, a Ford Tudor driven by Donald Turnupseed made a left turn into Dean's path. The collision was nearly head-on. Dean suffered a broken neck and massive internal injuries, and was pronounced dead on arrival at Paso Robles War Memorial Hospital. He was 24 years old, with only three major films to his name.",
   "bio": "James Dean was an American actor who became a cultural icon of teenage disillusionment and social estrangement. His roles in \"Rebel Without a Cause\" and \"East of Eden\" defined a generation.",
   "createdAt": "2026-03-22"
 }

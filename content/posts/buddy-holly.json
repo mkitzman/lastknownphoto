@@ -2,17 +2,17 @@
   "id": "146123027938",
   "slug": "buddy-holly",
   "name": "Buddy Holly",
-  "title": "Buddy Holly - taken 2/3/1959 died later that night on 2/3/1959, 22",
+  "title": "Last known photo of Buddy Holly, taken on February 3, 1959, before boarding the plane that crashed in an Iowa cornfield.",
   "imageUrl": "/images/buddy-holly.jpg",
-  "date": "2016-06-18 20:55:57 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "February 3, 1959",
+  "deathDate": "February 3, 1959",
+  "age": 22,
   "tags": [
     "musician"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Buddy Holly - taken 2/3/1959 died later that night on 2/3/1959, 22",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Day_the_Music_Died",
+  "sourceLabel": "Wikipedia",
+  "description": "Buddy Holly was photographed on February 3, 1959, at the Surf Ballroom in Clear Lake, Iowa, after performing his final concert on the Winter Dance Party tour. Tired of the freezing tour bus, Holly chartered a small Beechcraft Bonanza to fly to the next venue in Moorhead, Minnesota. The plane took off just after 1 AM in light snow and poor visibility. Pilot Roger Peterson lost control shortly after takeoff, and the plane crashed into a cornfield about five miles northwest of the airport, killing Holly, Ritchie Valens, J.P. \"The Big Bopper\" Richardson, and Peterson. Holly was 22 years old. The tragedy was later immortalized as \"The Day the Music Died\" in Don McLean's song \"American Pie\".",
   "bio": "Buddy Holly was a pioneering American rock and roll musician and songwriter. Despite his brief career, he was a central figure in early rock and roll and influenced artists from the Beatles to the Rolling Stones.",
   "createdAt": "2026-03-22"
 }
