@@ -2,18 +2,18 @@
   "id": "20596603443",
   "slug": "rms-titantic",
   "name": "RMS Titantic",
-  "title": "RMS Titantic - taken 4/12/1912 sank 4/14/1912",
+  "title": "Last known photo of the RMS Titanic, taken on April 12, 1912, as the ship departed Queenstown, Ireland on its maiden voyage.",
   "imageUrl": "/images/rms-titantic.jpg",
-  "date": "2012-04-06 17:09:00 GMT",
-  "deathDate": "",
+  "date": "April 12, 1912",
+  "deathDate": "April 15, 1912",
   "age": null,
   "tags": [
     "ships",
     "disasters"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "RMS Titantic - taken 4/12/1912 sank 4/14/1912",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic",
+  "sourceLabel": "Wikipedia",
+  "description": "The RMS Titanic was photographed on April 12, 1912, as it departed Queenstown (now Cobh), Ireland — its final port of call before heading into the open Atlantic on its maiden voyage to New York City. Three days later, on the night of April 14, the ship struck an iceberg at 11:40 PM in the North Atlantic. The collision ruptured the hull along the starboard side, flooding five of the ship's sixteen watertight compartments. The Titanic sank at 2:20 AM on April 15. Of the estimated 2,224 passengers and crew aboard, more than 1,500 perished in the frigid waters, making it one of the deadliest peacetime maritime disasters in history.",
   "bio": "The RMS Titanic was a British ocean liner that sank on its maiden voyage in April 1912 after striking an iceberg. The disaster claimed over 1,500 lives and remains one of the deadliest peacetime maritime disasters in history.",
   "createdAt": "2026-03-22"
 }
