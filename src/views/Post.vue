@@ -22,7 +22,9 @@ const allImages = computed(() => {
     <button class="back-btn" @click="router.back()">&larr; Back</button>
     <div class="post-layout">
       <div class="post-image">
-        <img :src="currentImage" :alt="post.name" class="main-image" />
+        <div class="main-image-wrapper">
+          <img :src="currentImage" :alt="post.name" class="main-image" />
+        </div>
         <div class="image-thumbs" v-if="allImages.length > 1">
           <button
             v-for="(img, i) in allImages"
@@ -128,8 +130,25 @@ const allImages = computed(() => {
   }
 }
 
+.post-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-image-wrapper {
+  aspect-ratio: 3 / 4;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-image {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 8px;
   transition: opacity 0.3s ease;
 }
