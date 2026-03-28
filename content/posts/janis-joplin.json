@@ -2,18 +2,19 @@
   "id": "151335166358",
   "slug": "janis-joplin",
   "name": "Janis Joplin",
-  "title": "Janis Joplin - taken at last concert 8/12/70, died of an overdose a few months later on 10/4/70, 27",
+  "title": "Last known photo of Janis Joplin, taken at her final recording session on October 1, 1970, three days before her death.",
   "imageUrl": "/images/janis-joplin.jpg",
-  "date": "2016-10-04 13:42:08 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "October 1, 1970",
+  "deathDate": "October 4, 1970",
+  "age": 27,
   "tags": [
     "musician",
-    "27 club"
+    "27 club",
+    "singer"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Janis Joplin - taken at last concert 8/12/70, died of an overdose a few months later on 10/4/70, 27",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Janis_Joplin",
+  "sourceLabel": "Wikipedia",
+  "description": "Janis Joplin was photographed during her final recording session at Sunset Sound Recorders in Hollywood on October 1, 1970, where she was working on her album \"Pearl\". Three days later, on October 4, she was found dead on the floor of her room at the Landmark Motor Hotel in Hollywood by her road manager John Cooke. The cause of death was a heroin overdose, possibly compounded by alcohol. She was 27 years old. \"Pearl\" was released posthumously in January 1971 and became her most commercially successful album, featuring the hit \"Me and Bobby McGee\".",
   "bio": "Janis Joplin was an American rock and blues singer known for her powerful, raw vocal style. She was one of the most successful and widely known female rock stars of the 1960s counterculture era.",
   "createdAt": "2026-03-22"
 }

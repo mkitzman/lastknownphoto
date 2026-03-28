@@ -2,18 +2,18 @@
   "id": "146123312563",
   "slug": "ian-curtis",
   "name": "Ian Curtis",
-  "title": "Ian Curtis - taken 5/8/80 died 5/13/80, 23",
+  "title": "Last known photo of Ian Curtis, taken on May 8, 1980, ten days before his death by suicide at age 23.",
   "imageUrl": "/images/ian-curtis.jpg",
-  "date": "2016-06-18 21:03:18 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "May 8, 1980",
+  "deathDate": "May 18, 1980",
+  "age": 23,
   "tags": [
-    "joy division",
-    "musician"
+    "musician",
+    "joy division"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Ian Curtis - taken 5/8/80 died 5/13/80, 23",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Ian_Curtis",
+  "sourceLabel": "Wikipedia",
+  "description": "Ian Curtis was photographed on May 8, 1980, during what would be one of his final appearances. Curtis had been suffering from epilepsy and depression, compounded by the stress of his marriage falling apart while he carried on an affair with Belgian journalist Annik Honoré. On the eve of Joy Division's first American tour, in the early hours of May 18, 1980, Curtis hanged himself in the kitchen of his home in Macclesfield, Cheshire. He was 23 years old. He had been listening to Iggy Pop's \"The Idiot\" and watching Werner Herzog's \"Stroszek\". Joy Division's remaining members went on to form New Order.",
   "bio": "Ian Curtis was the lead singer and lyricist of the English post-punk band Joy Division. His intense performances and introspective lyrics made him an influential figure in alternative music.",
   "createdAt": "2026-03-22"
 }
