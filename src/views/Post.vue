@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { getPostBySlug } from '../data/posts'
 
@@ -7,6 +7,14 @@ const route = useRoute()
 const router = useRouter()
 
 const post = computed(() => getPostBySlug(route.params.slug as string))
+const activeImage = ref<string | null>(null)
+
+const currentImage = computed(() => activeImage.value || post.value?.imageUrl || '')
+
+const allImages = computed(() => {
+  if (!post.value) return []
+  return [post.value.imageUrl, ...(post.value.additionalImages || [])]
+})
 </script>
 
 <template>
@@ -14,7 +22,19 @@ const post = computed(() => getPostBySlug(route.params.slug as string))
     <button class="back-btn" @click="router.back()">&larr; Back</button>
     <div class="post-layout">
       <div class="post-image">
-        <img :src="post.imageUrl" :alt="post.name" />
+        <img :src="currentImage" :alt="post.name" class="main-image" />
+        <div class="image-thumbs" v-if="allImages.length > 1">
+          <button
+            v-for="(img, i) in allImages"
+            :key="img"
+            class="thumb"
+            :class="{ active: currentImage === img }"
+            @click="activeImage = img"
+            :aria-label="'View photo ' + (i + 1)"
+          >
+            <img :src="img" :alt="post.name + ' photo ' + (i + 1)" />
+          </button>
+        </div>
         <span v-if="post.photoCredit" class="photo-credit">Photo: {{ post.photoCredit }}</span>
       </div>
       <div class="post-info">
@@ -108,9 +128,44 @@ const post = computed(() => getPostBySlug(route.params.slug as string))
   }
 }
 
-.post-image img {
+.main-image {
   width: 100%;
   border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.image-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.thumb {
+  width: 64px;
+  height: 64px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  opacity: 0.5;
+  transition: all 0.2s;
+}
+
+.thumb:hover {
+  opacity: 0.8;
+}
+
+.thumb.active {
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .photo-credit {

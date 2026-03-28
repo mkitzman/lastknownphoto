@@ -13,6 +13,7 @@ export interface Post {
   description: string
   bio?: string | null
   photoCredit?: string | null
+  additionalImages?: string[]
   wikipediaUrl?: string | null
   createdAt?: string | null
 }
