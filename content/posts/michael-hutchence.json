@@ -2,18 +2,19 @@
   "id": "153482926383",
   "slug": "michael-hutchence",
   "name": "Michael Hutchence",
-  "title": "Michael Hutchence, video still from practice on 11/21/1997, found dead of suicide the next day 11/22/1997, 37",
+  "title": "Last known image of Michael Hutchence, a video still from INXS rehearsal on November 21, 1997. He was found dead the following morning.",
   "imageUrl": "/images/michael-hutchence.png",
-  "date": "2016-11-21 19:22:04 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "November 21, 1997",
+  "deathDate": "November 22, 1997",
+  "age": 37,
   "tags": [
     "inxs",
-    "singer"
+    "musician"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Michael Hutchence, video still from practice on 11/21/1997, found dead of suicide the next day 11/22/1997, 37",
-  "bio": "Michael Hutchence was an Australian musician and the lead singer of the rock band INXS. His dynamic stage presence and soulful voice helped make INXS one of the biggest bands of the 1980s and early 1990s.",
+  "sourceUrl": "https://www.youtube.com/watch?v=9umhvfy716w",
+  "sourceLabel": "YouTube",
+  "description": "This video still captures Michael Hutchence during what would be his final INXS rehearsal on November 21, 1997. The band was in the middle of their 20th anniversary Australian tour supporting the album 'Elegantly Wasted'. That evening, actress Kym Wilson and her boyfriend visited Hutchence at his room at the Ritz-Carlton hotel in Double Bay, Sydney, staying until around 5 AM — they were the last people to see him alive. In the early morning hours, Hutchence made a series of distressed phone calls, including to his partner Paula Yates in London, who told him that Bob Geldof's custody battle would prevent her from bringing their daughter Tiger Lily to Australia. A heated call with Geldof followed. On the morning of November 22, 1997, Hutchence was found dead in his hotel room. He was 37 years old. His death was ruled a suicide.",
+  "bio": "Michael Hutchence was an Australian musician and the lead singer of the rock band INXS. His dynamic stage presence and soulful voice helped make INXS one of the biggest bands of the 1980s and early 1990s, selling over 50 million records worldwide.",
+  "photoCredit": null,
   "createdAt": "2026-03-22"
 }
