@@ -2,17 +2,17 @@
   "id": "7126251307",
   "slug": "elvis-presley",
   "name": "Elvis Presley",
-  "title": "Elvis Presley - taken 8/16/77 died later that night 8/16/77, 42",
+  "title": "Last known photo of Elvis Presley, taken in the early morning hours of August 16, 1977, returning to Graceland after a dentist visit.",
   "imageUrl": "/images/elvis-presley.jpg",
-  "date": "2011-07-01 18:03:00 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "August 16, 1977",
+  "deathDate": "August 16, 1977",
+  "age": 42,
   "tags": [
     "musician"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Elvis Presley - taken 8/16/77 died later that night 8/16/77, 42",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Elvis_Presley",
+  "sourceLabel": "Wikipedia",
+  "description": "The last known photograph of Elvis Presley was taken in the early morning hours of August 16, 1977, as he passed through the gates of Graceland in his Stutz Blackhawk after returning from a late-night dentist appointment. Later that afternoon, his girlfriend Ginger Alden found him unresponsive on his bathroom floor. He was rushed to Baptist Memorial Hospital in Memphis, where he was pronounced dead. The cause of death was cardiac arrhythmia, with contributing factors including his long-term prescription drug use. He was 42 years old.",
   "bio": "Elvis Presley was an American singer and actor, widely regarded as the \"King of Rock and Roll\". He is one of the most significant cultural icons of the 20th century and the best-selling solo music artist of all time.",
   "createdAt": "2026-03-22"
 }

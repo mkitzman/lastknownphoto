@@ -2,18 +2,19 @@
   "id": "146073505223",
   "slug": "kurt-cobain",
   "name": "Kurt Cobain",
-  "title": "Kurt Cobain - taken 3/26/94 died 4/5/94, 27",
+  "title": "Last known photo of Kurt Cobain, taken on March 26, 1994, at a family gathering in Seattle — ten days before his death.",
   "imageUrl": "/images/kurt-cobain.jpg",
-  "date": "2016-06-17 19:40:02 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "March 26, 1994",
+  "deathDate": "April 5, 1994",
+  "age": 27,
   "tags": [
-    "90s",
-    "musician"
+    "musician",
+    "27 club",
+    "grunge"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Kurt Cobain - taken 3/26/94 died 4/5/94, 27",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Kurt_Cobain",
+  "sourceLabel": "Wikipedia",
+  "description": "This photograph of Kurt Cobain was taken on March 26, 1994, at a family gathering at his home in Seattle. At the time, Cobain was struggling with heroin addiction and depression. On March 30, his wife Courtney Love arranged an intervention, and Cobain entered a rehabilitation facility in Los Angeles on March 31. He escaped over a wall on April 1 and flew back to Seattle. On April 8, 1994, his body was found at his home by an electrician. He had died by suicide on approximately April 5, at the age of 27.",
   "bio": "Kurt Cobain was the frontman and guitarist of the grunge band Nirvana. His raw songwriting and the band's album \"Nevermind\" helped bring alternative rock into the mainstream in the early 1990s.",
   "createdAt": "2026-03-22"
 }

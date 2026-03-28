@@ -2,18 +2,18 @@
   "id": "149465083663",
   "slug": "aaliyah",
   "name": "Aaliyah",
-  "title": "Aaliyah - taken 8/25/01, died shortly after in plane crash on 8/25/01, 22",
+  "title": "Last known photo of Aaliyah, taken on August 25, 2001, at the Abaco Islands in the Bahamas shortly before boarding the fatal flight.",
   "imageUrl": "/images/aaliyah.jpg",
-  "date": "2016-08-25 15:30:31 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "August 25, 2001",
+  "deathDate": "August 25, 2001",
+  "age": 22,
   "tags": [
     "singer",
-    "aaliyah dana haughton"
+    "actress"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Aaliyah - taken 8/25/01, died shortly after in plane crash on 8/25/01, 22",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Aaliyah",
+  "sourceLabel": "Wikipedia",
+  "description": "Aaliyah was photographed on August 25, 2001, at the Abaco Islands in the Bahamas, where she had been filming the music video for her single \"Rock the Boat\". After the shoot wrapped, she and her entourage boarded a twin-engine Cessna 402 to return to Florida. The plane crashed shortly after takeoff, killing Aaliyah and all eight others on board. An investigation revealed the aircraft was overloaded by several hundred pounds. She was 22 years old.",
   "bio": "Aaliyah Dana Haughton was an American singer, actress, dancer, and model. Known as the \"Princess of R&B\" and \"Queen of Urban Pop\", she was a trendsetter who helped redefine contemporary R&B and pop music.",
   "createdAt": "2026-03-22"
 }
