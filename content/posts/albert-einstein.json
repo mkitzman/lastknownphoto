@@ -2,17 +2,17 @@
   "id": "20535275661",
   "slug": "albert-einstein",
   "name": "Albert Einstein",
-  "title": "Albert Einstein taken 3/55 died 4/17/55, 76",
+  "title": "Last known photo of Albert Einstein, taken in March 1955, one month before his death in Princeton.",
   "imageUrl": "/images/albert-einstein-taken-3-55-died-4-17-55.jpg",
-  "date": "2012-04-05 17:48:00 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "March 1955",
+  "deathDate": "April 18, 1955",
+  "age": 76,
   "tags": [
     "scientist"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Albert Einstein taken 3/55 died 4/17/55, 76",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Albert_Einstein",
+  "sourceLabel": "Wikipedia",
+  "description": "Albert Einstein was photographed in March 1955, during the final weeks of his life at his home in Princeton, New Jersey. On April 17, 1955, Einstein experienced internal bleeding caused by the rupture of an abdominal aortic aneurysm. He was taken to Princeton Hospital but refused surgery, saying \"I want to go when I want. It is tasteless to prolong life artificially. I have done my share; it is time to go. I will do it elegantly.\" He died early the next morning on April 18, at the age of 76. In a controversial act, pathologist Thomas Harvey removed Einstein's brain during the autopsy without the family's permission.",
   "bio": "Albert Einstein was a German-born theoretical physicist, widely regarded as one of the greatest scientists of all time. He developed the theory of relativity and won the 1921 Nobel Prize in Physics.",
   "createdAt": "2026-03-22"
 }
