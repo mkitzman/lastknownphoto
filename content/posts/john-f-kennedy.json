@@ -2,18 +2,19 @@
   "id": "153527634093",
   "slug": "john-f-kennedy",
   "name": "John F. Kennedy",
-  "title": "John F. Kennedy, taken 11/22/63 a split second before being assassinated, pronounced dead thirty minutes later, 46",
+  "title": "Last known photo of President John F. Kennedy, captured in the presidential motorcade in Dallas moments before his assassination on November 22, 1963.",
   "imageUrl": "/images/john-f-kennedy.jpg",
-  "date": "2016-11-22 20:08:31 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "November 22, 1963",
+  "deathDate": "November 22, 1963",
+  "age": 46,
   "tags": [
-    "presidents",
-    "us presidents"
+    "us presidents",
+    "assassination"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "John F. Kennedy, taken 11/22/63 a split second before being assassinated, pronounced dead thirty minutes later, 46",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Assassination_of_John_F._Kennedy",
+  "sourceLabel": "Wikipedia",
+  "description": "This photograph captures President John F. Kennedy in the presidential motorcade as it made its way through Dealey Plaza in Dallas, Texas, on November 22, 1963 — moments before he was fatally shot. Kennedy was riding in the open-top Lincoln Continental alongside First Lady Jacqueline Kennedy, Texas Governor John Connally, and Connally's wife Nellie. Lee Harvey Oswald fired from the sixth floor of the nearby Texas School Book Depository. The motorcade rushed to Parkland Memorial Hospital, where Kennedy was pronounced dead approximately 30 minutes after the shooting. He was 46 years old. Vice President Lyndon B. Johnson was sworn in as president aboard Air Force One just over two hours later.",
   "bio": "John F. Kennedy was the 35th President of the United States. His presidency, though brief, was marked by the Cuban Missile Crisis, the Space Race, and the early stages of the Civil Rights movement.",
+  "photoCredit": null,
   "createdAt": "2026-03-22"
 }
