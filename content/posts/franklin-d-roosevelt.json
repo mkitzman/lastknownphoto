@@ -2,17 +2,17 @@
   "id": "146071409848",
   "slug": "franklin-d-roosevelt",
   "name": "Franklin D. Roosevelt",
-  "title": "Franklin D. Roosevelt - taken 4/11/45 died the next day on 4/12/45, 63",
+  "title": "Last known photo of Franklin D. Roosevelt, taken on April 11, 1945 — he died the following day of a cerebral hemorrhage.",
   "imageUrl": "/images/franklin-d-roosevelt.jpg",
-  "date": "2016-06-17 18:44:19 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "April 11, 1945",
+  "deathDate": "April 12, 1945",
+  "age": 63,
   "tags": [
-    "presidents"
+    "us presidents"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Franklin D. Roosevelt - taken 4/11/45 died the next day on 4/12/45, 63",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Franklin_D._Roosevelt",
+  "sourceLabel": "Wikipedia",
+  "description": "Franklin D. Roosevelt was photographed on April 11, 1945, at the Little White House in Warm Springs, Georgia, where he had gone to rest and recuperate. Roosevelt had been visibly declining for months, appearing gaunt and exhausted from the strain of leading the nation through World War II. The following day, April 12, while sitting for a portrait by artist Elizabeth Shoumatoff, he said \"I have a terrific pain in the back of my head\" and collapsed unconscious. He died of a massive cerebral hemorrhage later that afternoon. He was 63 years old. Harry Truman was sworn in as president that evening, learning for the first time about the existence of the atomic bomb.",
   "bio": "Franklin D. Roosevelt was the 32nd President of the United States, serving an unprecedented four terms. He led the country through the Great Depression and World War II with his New Deal programs and Allied leadership.",
   "createdAt": "2026-03-22"
 }
