@@ -2,19 +2,18 @@
   "id": "14483782416",
   "slug": "kim-jong-il",
   "name": "Kim Jong-il",
-  "title": "Kim Jong-il taken 12/15/2011 died 12/17/2011, 69",
+  "title": "Last known photo of Kim Jong-il, taken in late 2011, shortly before his death from a heart attack aboard his private train.",
   "imageUrl": "/images/kim-jong.jpg",
-  "date": "2011-12-20 00:58:00 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "December 2011",
+  "deathDate": "December 17, 2011",
+  "age": 69,
   "tags": [
-    "kim jong il",
     "dictators",
     "north korea"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Kim Jong-il taken 12/15/2011 died 12/17/2011, 69",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Kim_Jong-il",
+  "sourceLabel": "Wikipedia",
+  "description": "Kim Jong-il, the supreme leader of North Korea, was photographed in late 2011 during the final months of his rule. Kim had suffered a stroke in 2008 and his health had visibly deteriorated. On December 17, 2011, he died of a heart attack while aboard his armored private train near Pyongyang, reportedly while traveling to an area outside the capital for a field guidance tour. His death was not announced until December 19, when state television broadcast the news with his son Kim Jong-un named as his successor. He was 69 years old.",
   "bio": "Kim Jong-il was the supreme leader of North Korea from 1994 to 2011. He maintained one of the world's most isolated and authoritarian regimes during his rule.",
   "createdAt": "2026-03-22"
 }
