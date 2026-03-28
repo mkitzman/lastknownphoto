@@ -2,17 +2,19 @@
   "id": "97821823543",
   "slug": "jimi-hendrix",
   "name": "Jimi Hendrix",
-  "title": "Jimi Hendrix - Taken 9/17/70 died the next day 9/18/70, 27",
+  "title": "One of the last known photos of Jimi Hendrix, taken on September 17, 1970, in the garden behind his girlfriend Monika Dannemann's London apartment — one day before his death.",
   "imageUrl": "/images/jimi-hendrix.jpg",
-  "date": "2014-09-18 17:47:26 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "September 17, 1970",
+  "deathDate": "September 18, 1970",
+  "age": 27,
   "tags": [
-    "musician"
+    "musician",
+    "27 club"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Jimi Hendrix - Taken 9/17/70 died the next day 9/18/70, 27",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Jimi_Hendrix",
+  "sourceLabel": "Wikipedia",
+  "description": "This photo is from the last known series of images of Jimi Hendrix, taken on September 17, 1970, by his girlfriend Monika Dannemann in the garden behind her flat at the Samarkand Hotel in London. The photos show a relaxed Hendrix posing with his 'Black Beauty' Fender Stratocaster while sharing tea — a striking contrast to his legendary stage energy. The couple had spent the day in West London, visiting the Cumberland Hotel and Kensington Market before returning to Dannemann's apartment. The following morning, on September 18, 1970, Hendrix was found unresponsive. He died of barbiturate-related asphyxia at the age of 27. The exact last photo from the series is unknown.",
   "bio": "Jimi Hendrix was an American musician and guitarist widely regarded as one of the most influential electric guitarists in the history of popular music. He revolutionized the sound of rock with his innovative playing techniques.",
+  "photoCredit": "Monika Dannemann",
   "createdAt": "2026-03-22"
 }
