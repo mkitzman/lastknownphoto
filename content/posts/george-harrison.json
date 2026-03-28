@@ -2,18 +2,18 @@
   "id": "146404922768",
   "slug": "george-harrison",
   "name": "George Harrison",
-  "title": "George Harrison - taken ca. 11/27/2001 died a few days later 11/29/2001, 58",
+  "title": "Last known photo of George Harrison, taken in late November 2001, weeks before his death from lung cancer.",
   "imageUrl": "/images/george-harrison.jpg",
-  "date": "2016-06-24 13:36:39 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "November 2001",
+  "deathDate": "November 29, 2001",
+  "age": 58,
   "tags": [
-    "the beatles",
-    "musician"
+    "musician",
+    "the beatles"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "George Harrison - taken ca. 11/27/2001 died a few days later 11/29/2001, 58",
+  "sourceUrl": "https://en.wikipedia.org/wiki/George_Harrison",
+  "sourceLabel": "Wikipedia",
+  "description": "George Harrison was photographed in late November 2001 during the final weeks of his battle with lung cancer. Harrison had been diagnosed with lung cancer in 1997 and underwent treatment, but the cancer eventually spread to his brain. In his final weeks, he visited the Tuscany home of his friend and fellow musician, and later traveled to UCLA Medical Center in Los Angeles. He died on November 29, 2001, at a friend's home in Los Angeles, with his wife Olivia and son Dhani by his side. His final words were reportedly a request for his family to chant for him. He was 58 years old.",
   "bio": "George Harrison was an English musician and lead guitarist of the Beatles. Known as \"the quiet Beatle\", he was also a prolific solo artist and pioneer of the Concert for Bangladesh, one of the first major charity concerts.",
   "createdAt": "2026-03-22"
 }

@@ -2,18 +2,19 @@
   "id": "128028117513",
   "slug": "dale-earnhardt",
   "name": "Dale Earnhardt",
-  "title": "Dale Earnhardt - taken 2/18/01 died later that day 2/18/01, 49",
+  "title": "Last known photo of Dale Earnhardt, taken on February 18, 2001, at the Daytona 500 — he was killed on the final lap.",
   "imageUrl": "/images/dale-earnhardt.jpg",
-  "date": "2015-08-31 13:39:34 GMT",
-  "deathDate": "",
-  "age": null,
+  "date": "February 18, 2001",
+  "deathDate": "February 18, 2001",
+  "age": 49,
   "tags": [
-    "race car drivers",
-    "nascar"
+    "athlete",
+    "nascar",
+    "race car drivers"
   ],
-  "sourceUrl": null,
-  "sourceLabel": null,
-  "description": "Dale Earnhardt - taken 2/18/01 died later that day 2/18/01, 49",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Dale_Earnhardt",
+  "sourceLabel": "Wikipedia",
+  "description": "Dale Earnhardt was photographed on February 18, 2001, at the Daytona International Speedway during the Daytona 500. On the final lap of the race, Earnhardt's No. 3 Chevrolet made contact with Sterling Marlin's car, sending Earnhardt into the wall at approximately 150 mph. While his teammates Michael Waltrip and Dale Earnhardt Jr. finished first and second, Earnhardt was killed instantly from a basilar skull fracture. He was 49 years old. His death led to major NASCAR safety reforms, including the mandatory use of the HANS device.",
   "bio": "Dale Earnhardt was an American professional stock car racing driver known as \"The Intimidator\". He won seven NASCAR Winston Cup championships, tying Richard Petty's record.",
   "createdAt": "2026-03-22"
 }
