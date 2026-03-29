@@ -24,7 +24,7 @@ import { RouterView, RouterLink } from 'vue-router'
       </RouterView>
     </main>
     <footer class="site-footer">
-      <p>&copy; Last Known Photo</p>
+      <p>&copy; {{ new Date().getFullYear() }} Last Known Photo</p>
     </footer>
   </div>
 </template>

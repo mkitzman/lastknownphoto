@@ -15,5 +15,10 @@
   "sourceLabel": "Wikipedia",
   "description": "Steve Jobs was photographed on September 27, 2011, visibly frail from his battle with pancreatic neuroendocrine tumor. Jobs had been diagnosed in 2003 and initially pursued alternative treatments before undergoing surgery in 2004. He received a liver transplant in 2009 and took his final medical leave from Apple in January 2011. He resigned as CEO on August 24, 2011, and died at his home in Palo Alto, California, on October 5, 2011, surrounded by his family. He was 56 years old. His last words, according to his sister Mona Simpson, were \"Oh wow. Oh wow. Oh wow.\"",
   "bio": "Steve Jobs was the co-founder and CEO of Apple Inc., a visionary who revolutionized personal computing, animated movies, music, phones, and tablet computing. He transformed multiple industries through his relentless pursuit of innovation.",
+  "photoCredit": "Pacific Coast News (PCN)",
+  "additionalImages": [
+    "/images/steve-jobs-2.jpg",
+    "/images/steve-jobs-3.jpg"
+  ],
   "createdAt": "2026-03-22"
 }
