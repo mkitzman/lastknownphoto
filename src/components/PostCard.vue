@@ -164,6 +164,10 @@ function handleKeydown(e: KeyboardEvent) {
   border-radius: 8px;
   filter: grayscale(100%) contrast(1.05);
   transition: filter 0.6s ease, transform 0.6s ease;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .card-container:hover .card-front img,
