@@ -99,6 +99,10 @@ function handleKeydown(e: KeyboardEvent) {
   pointer-events: none;
 }
 
+.card.flipped .card-overlay {
+  display: none;
+}
+
 .card-front,
 .card-back {
   backface-visibility: hidden;
