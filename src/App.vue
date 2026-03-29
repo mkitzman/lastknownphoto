@@ -83,14 +83,17 @@ import { RouterView, RouterLink } from 'vue-router'
     font-size: 1.25rem;
     white-space: nowrap;
   }
-  .site-nav {
-    display: none;
-  }
 }
 
 .site-nav {
   display: flex;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+  }
 }
 
 .site-nav a {
