@@ -80,8 +80,12 @@ import { RouterView, RouterLink } from 'vue-router'
     padding: 1.25rem 1.5rem;
   }
   .site-title {
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
     white-space: nowrap;
+  }
+  .site-title .shutter-icon {
+    width: clamp(1.2rem, 4.5vw, 1.4rem);
+    height: clamp(1.2rem, 4.5vw, 1.4rem);
   }
 }
 
