@@ -1,15 +1,32 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { getWikipediaUrl, type Post } from '../data/posts'
 
 const props = defineProps<{ post: Post, activeCardId: string | null }>()
 const emit = defineEmits<{ flip: [id: string | null] }>()
 
 const flipped = computed(() => props.activeCardId === props.post.id)
+const touched = ref(false)
+const isTouchDevice = ref(false)
 
-function handleFlip() {
+function handleClick() {
+  if (isTouchDevice.value && !touched.value && !flipped.value) {
+    touched.value = true
+    return
+  }
+  touched.value = false
   emit('flip', flipped.value ? null : props.post.id)
 }
+
+function handleTouchStart() {
+  isTouchDevice.value = true
+}
+
+watch(() => props.activeCardId, () => {
+  if (props.activeCardId !== props.post.id) {
+    touched.value = false
+  }
+})
 
 function handleKeydown(e: KeyboardEvent) {
   if (e.key === 'Enter' || e.key === ' ') {
@@ -26,13 +43,15 @@ function handleKeydown(e: KeyboardEvent) {
 <template>
   <article
     class="card-container"
+    :class="{ touched }"
     @keydown="handleKeydown"
+    @touchstart.passive="handleTouchStart"
     :aria-label="post.name + ' — click to reveal details'"
   >
     <div class="card" :class="{ flipped }">
       <button
         class="card-front"
-        @click="handleFlip"
+        @click="handleClick"
         :aria-expanded="flipped"
         :aria-label="'View details for ' + post.name"
         type="button"
@@ -147,7 +166,8 @@ function handleKeydown(e: KeyboardEvent) {
   transition: filter 0.6s ease, transform 0.6s ease;
 }
 
-.card-container:hover .card-front img {
+.card-container:hover .card-front img,
+.card-container.touched .card-front img {
   filter: grayscale(0%) contrast(1);
   transform: scale(1.04);
 }
@@ -165,7 +185,8 @@ function handleKeydown(e: KeyboardEvent) {
   z-index: 1;
 }
 
-.card-container:hover .card-front::after {
+.card-container:hover .card-front::after,
+.card-container.touched .card-front::after {
   opacity: 1;
 }
 
@@ -183,7 +204,8 @@ function handleKeydown(e: KeyboardEvent) {
   z-index: 2;
 }
 
-.card-container:hover .card-overlay {
+.card-container:hover .card-overlay,
+.card-container.touched .card-overlay {
   opacity: 1;
   transform: translateY(0);
 }
