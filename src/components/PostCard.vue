@@ -6,25 +6,20 @@ const props = defineProps<{ post: Post, activeCardId: string | null }>()
 const emit = defineEmits<{ flip: [id: string | null] }>()
 
 const flipped = computed(() => props.activeCardId === props.post.id)
-const touched = ref(false)
-const isTouchDevice = ref(false)
+const colorized = ref(false)
 
-function handleClick() {
-  if (isTouchDevice.value && !touched.value && !flipped.value) {
-    touched.value = true
-    return
-  }
-  touched.value = false
+function handleFlip() {
   emit('flip', flipped.value ? null : props.post.id)
 }
 
-function handleTouchStart() {
-  isTouchDevice.value = true
+function handleColorize(e: Event) {
+  e.stopPropagation()
+  colorized.value = !colorized.value
 }
 
 watch(() => props.activeCardId, () => {
   if (props.activeCardId !== props.post.id) {
-    touched.value = false
+    colorized.value = false
   }
 })
 
@@ -43,24 +38,33 @@ function handleKeydown(e: KeyboardEvent) {
 <template>
   <article
     class="card-container"
-    :class="{ touched }"
+    :class="{ colorized }"
     @keydown="handleKeydown"
-    @touchstart.passive="handleTouchStart"
     :aria-label="post.name + ' — click to reveal details'"
   >
     <div class="card" :class="{ flipped }">
       <button
         class="card-front"
-        @click="handleClick"
+        @click="handleFlip"
         :aria-expanded="flipped"
         :aria-label="'View details for ' + post.name"
         type="button"
       >
         <img :src="post.imageUrl" :alt="post.name" loading="lazy" />
-        <div class="touch-shield" aria-hidden="true"></div>
         <div class="card-overlay" aria-hidden="true">
           <span class="card-name">{{ post.name }}</span>
         </div>
+        <button
+          class="colorize-btn"
+          @click="handleColorize"
+          type="button"
+          aria-label="Show photo in color"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
+          </svg>
+        </button>
       </button>
       <div class="card-back" role="region" :aria-label="post.name + ' details'" :inert="!flipped">
         <button class="flip-back-btn" @click.stop="emit('flip', null)" title="Flip back">
@@ -165,28 +169,10 @@ function handleKeydown(e: KeyboardEvent) {
   border-radius: 8px;
   filter: grayscale(100%) contrast(1.05);
   transition: filter 0.6s ease, transform 0.6s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  pointer-events: none;
-}
-
-.touch-shield {
-  display: none;
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .touch-shield {
-    display: block;
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    -webkit-touch-callout: none;
-  }
 }
 
 .card-container:hover .card-front img,
-.card-container.touched .card-front img {
+.card-container.colorized .card-front img {
   filter: grayscale(0%) contrast(1);
   transform: scale(1.04);
 }
@@ -205,7 +191,7 @@ function handleKeydown(e: KeyboardEvent) {
 }
 
 .card-container:hover .card-front::after,
-.card-container.touched .card-front::after {
+.card-container.colorized .card-front::after {
   opacity: 1;
 }
 
@@ -224,7 +210,7 @@ function handleKeydown(e: KeyboardEvent) {
 }
 
 .card-container:hover .card-overlay,
-.card-container.touched .card-overlay {
+.card-container.colorized .card-overlay {
   opacity: 1;
   transform: translateY(0);
 }
@@ -234,6 +220,47 @@ function handleKeydown(e: KeyboardEvent) {
   font-weight: 500;
   color: #fff;
   letter-spacing: 0.02em;
+}
+
+/* Mobile colorize button — hidden on desktop */
+.colorize-btn {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .colorize-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.6rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    z-index: 4;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  .colorize-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: rgba(255, 255, 255, 0.7);
+    transition: stroke 0.3s ease;
+  }
+
+  .card-container.colorized .colorize-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .card-container.colorized .colorize-btn svg {
+    stroke: #fff;
+  }
 }
 
 .card-back {
