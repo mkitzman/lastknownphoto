@@ -57,6 +57,7 @@ function handleKeydown(e: KeyboardEvent) {
         type="button"
       >
         <img :src="post.imageUrl" :alt="post.name" loading="lazy" />
+        <div class="touch-shield" aria-hidden="true"></div>
         <div class="card-overlay" aria-hidden="true">
           <span class="card-name">{{ post.name }}</span>
         </div>
@@ -168,6 +169,20 @@ function handleKeydown(e: KeyboardEvent) {
   -webkit-user-select: none;
   user-select: none;
   pointer-events: none;
+}
+
+.touch-shield {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .touch-shield {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    -webkit-touch-callout: none;
+  }
 }
 
 .card-container:hover .card-front img,
