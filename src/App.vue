@@ -53,9 +53,12 @@ import { RouterView, RouterLink } from 'vue-router'
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+}
+
+.site-title .shutter-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
 }
 
 .shutter-icon {
