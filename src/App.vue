@@ -74,6 +74,20 @@ import { RouterView, RouterLink } from 'vue-router'
   transition: transform 2s cubic-bezier(0.1, 0, 0.3, 1);
 }
 
+@media (max-width: 768px) {
+  .site-header {
+    justify-content: center;
+    padding: 1.25rem 1.5rem;
+  }
+  .site-title {
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+  .site-nav {
+    display: none;
+  }
+}
+
 .site-nav {
   display: flex;
   gap: 1.5rem;

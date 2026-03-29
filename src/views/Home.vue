@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, RouterLink } from 'vue-router'
 import { posts } from '../data/posts'
 import PostCard from '../components/PostCard.vue'
 
@@ -60,8 +60,8 @@ function clearFilter() {
           <path d="m6 9 6 6 6-6"/>
         </svg>
       </div>
-      <span class="post-count">{{ filteredPosts.length }} {{ filteredPosts.length === 1 ? 'post' : 'posts' }}</span>
       <button v-if="selectedTag" class="clear-btn" @click="clearFilter">&times; Clear</button>
+      <RouterLink to="/about" class="mobile-about-link">About</RouterLink>
     </div>
     <div class="masonry">
       <PostCard v-for="post in filteredPosts" :key="post.id" :post="post" :activeCardId="activeCardId" @flip="activeCardId = $event" />
@@ -81,6 +81,10 @@ function clearFilter() {
   gap: 0.75rem;
   margin-bottom: 1.5rem;
   justify-content: flex-end;
+}
+
+.mobile-about-link {
+  display: none;
 }
 
 .filter-select-wrapper {
@@ -133,11 +137,6 @@ function clearFilter() {
   border-color: var(--border-light);
 }
 
-.post-count {
-  font-size: 0.75rem;
-  color: var(--text-dim);
-}
-
 .masonry {
   columns: 4;
   column-gap: 1rem;
@@ -150,6 +149,22 @@ function clearFilter() {
 @media (max-width: 768px) {
   .masonry { columns: 2; }
   .home { padding: 1rem; }
+  .filter-bar {
+    justify-content: flex-start;
+  }
+  .mobile-about-link {
+    display: block;
+    margin-left: auto;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+  .mobile-about-link:hover {
+    color: var(--text);
+  }
 }
 
 @media (max-width: 480px) {
