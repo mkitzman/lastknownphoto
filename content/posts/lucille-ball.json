@@ -14,5 +14,11 @@
   "sourceLabel": "Wikipedia",
   "description": "Lucille Ball was photographed on March 29, 1989, at the 61st Academy Awards ceremony at the Shrine Auditorium in Los Angeles, where she appeared as a presenter alongside Bob Hope. It was her last public appearance, and audience members noted she appeared frail but in good spirits. Less than a month later, on April 18, Ball suffered an acute aortic aneurysm and underwent emergency open-heart surgery at Cedars-Sinai Medical Center. She initially recovered well, but on the morning of April 26, she suffered a second aortic dissection and died within minutes. She was 77 years old.",
   "bio": "Lucille Ball was an American actress, comedian, and producer, best known for starring in \"I Love Lucy\". She was a pioneer of television comedy and one of the first women to run a major television studio.",
+  "additionalImages": [
+    "/images/lucille-ball-2.jpg",
+    "/images/lucille-ball-3.jpg",
+    "/images/lucille-ball-4.jpg",
+    "/images/lucille-ball-5.jpg"
+  ],
   "createdAt": "2026-03-22"
 }

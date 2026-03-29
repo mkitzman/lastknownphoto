@@ -3,7 +3,7 @@
   "slug": "kobe-bryant",
   "name": "Kobe Bryant",
   "title": "Last known photo of Kobe Bryant, taken the night before his death at a basketball game with his daughter Gianna on January 25, 2020.",
-  "imageUrl": "/images/kobe-bryant.png",
+  "imageUrl": "/images/kobe-bryant.jpg",
   "date": "January 25, 2020",
   "deathDate": "January 26, 2020",
   "age": 41,
@@ -14,5 +14,9 @@
   "sourceLabel": "Reddit",
   "description": "Kobe Bryant was photographed the night before his death at a basketball game alongside his daughter Gianna. The following morning, on January 26, 2020, both Kobe and Gianna were among nine people killed in a helicopter crash in Calabasas, California.",
   "bio": "Kobe Bean Bryant was an American professional basketball player who spent his entire 20-year career with the Los Angeles Lakers. Widely regarded as one of the greatest players in NBA history, he won five NBA championships, was an 18-time All-Star, and the 2008 NBA MVP.",
+  "additionalImages": [
+    "/images/kobe-bryant-2.jpg"
+  ],
+  "photoCredit": "Brady Smigiel",
   "createdAt": "2026-03-22"
 }
