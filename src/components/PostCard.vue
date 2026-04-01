@@ -54,17 +54,17 @@ function handleKeydown(e: KeyboardEvent) {
         <div class="card-overlay" aria-hidden="true">
           <span class="card-name">{{ post.name }}</span>
         </div>
-        <button
-          class="colorize-btn"
-          @click="handleColorize"
-          type="button"
-          aria-label="Show photo in color"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
-          </svg>
-        </button>
+      </button>
+      <button
+        class="colorize-btn"
+        @click="handleColorize"
+        type="button"
+        aria-label="Show photo in color"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
+        </svg>
       </button>
       <div class="card-back" role="region" :aria-label="post.name + ' details'" :inert="!flipped">
         <button class="flip-back-btn" @click.stop="emit('flip', null)" title="Flip back">
