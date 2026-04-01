@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Jenni Rivera, known as \"La Diva de la Banda\", was photographed on December 9, 2012, after performing a concert at the Arena Monterrey in Monterrey, Mexico. Shortly after takeoff in the early morning hours, her Learjet 25 crashed in the mountainous terrain of Iturbide, Nuevo León. The plane disintegrated on impact, killing all seven people on board, including Rivera. She was 43 years old. Mexican investigators determined the crash was caused by structural failure of the aircraft, which was 43 years old and had been improperly maintained.",
   "bio": "Jenni Rivera was a Mexican-American singer, songwriter, and television personality known as \"La Diva de la Banda\". She became the top-selling female artist in Regional Mexican music.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 54,
+    "y": 42
+  }
 }

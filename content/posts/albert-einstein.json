@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Albert Einstein was photographed in March 1955, during the final weeks of his life at his home in Princeton, New Jersey. On April 17, 1955, Einstein experienced internal bleeding caused by the rupture of an abdominal aortic aneurysm. He was taken to Princeton Hospital but refused surgery, saying \"I want to go when I want. It is tasteless to prolong life artificially. I have done my share; it is time to go. I will do it elegantly.\" He died early the next morning on April 18, at the age of 76. In a controversial act, pathologist Thomas Harvey removed Einstein's brain during the autopsy without the family's permission.",
   "bio": "Albert Einstein was a German-born theoretical physicist, widely regarded as one of the greatest scientists of all time. He developed the theory of relativity and won the 1921 Nobel Prize in Physics.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  }
 }

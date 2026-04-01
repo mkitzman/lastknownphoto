@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Tiny Tim was photographed on November 30, 1996, at a benefit gala at the Women's Club of Minneapolis. During his performance of his signature song \"Tiptoe Through the Tulips\", he suffered a heart attack and collapsed onstage. He was carried offstage and rushed to Hennepin County Medical Center, where he was pronounced dead. He was 64 years old. Tiny Tim had been warned by his doctors to stop performing due to his heart condition, but he continued, reportedly saying he wanted to die onstage.",
   "bio": "Tiny Tim was an American singer, ukulele player, and musical archivist known for his distinctive high-pitched voice and performance of \"Tiptoe Through the Tulips\". He became a beloved novelty act and cultural curiosity.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 35,
+    "y": 50
+  }
 }

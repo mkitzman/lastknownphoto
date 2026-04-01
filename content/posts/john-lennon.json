@@ -17,5 +17,9 @@
   "description": "John Lennon was photographed outside his Manhattan apartment building, The Dakota, on the afternoon of December 8, 1980, signing a copy of his album 'Double Fantasy' for a fan. That fan was Mark David Chapman. Hours later, as Lennon and Yoko Ono returned home from a recording session that evening, Chapman shot Lennon four times in the back. He was 40 years old.",
   "photoCredit": "Paul Goresh",
   "bio": "John Lennon was an English singer, songwriter, and peace activist who co-founded the Beatles. His solo career and activism for peace made him one of the most influential cultural figures of the 20th century.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 74,
+    "y": 40
+  }
 }

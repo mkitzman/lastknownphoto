@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "John Gotti, the notorious boss of the Gambino crime family, was photographed on October 17, 2001, while serving a life sentence at the United States Medical Center for Federal Prisoners in Springfield, Missouri. Known as \"The Teflon Don\" for repeatedly beating criminal charges, Gotti was finally convicted in 1992 on 13 counts including murder, racketeering, and obstruction of justice. He was diagnosed with throat cancer in 1998 and underwent multiple surgeries. He died on June 10, 2002, at the federal prison hospital. He was 61 years old.",
   "bio": "John Gotti was an American gangster who became boss of the Gambino crime family. Known as \"The Teflon Don\" for his ability to evade conviction, he was one of the most powerful and well-known crime bosses in American history.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 49
+  }
 }

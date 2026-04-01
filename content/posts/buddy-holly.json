@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Buddy Holly was photographed on February 3, 1959, at the Surf Ballroom in Clear Lake, Iowa, after performing his final concert on the Winter Dance Party tour. Tired of the freezing tour bus, Holly chartered a small Beechcraft Bonanza to fly to the next venue in Moorhead, Minnesota. The plane took off just after 1 AM in light snow and poor visibility. Pilot Roger Peterson lost control shortly after takeoff, and the plane crashed into a cornfield about five miles northwest of the airport, killing Holly, Ritchie Valens, J.P. \"The Big Bopper\" Richardson, and Peterson. Holly was 22 years old. The tragedy was later immortalized as \"The Day the Music Died\" in Don McLean's song \"American Pie\".",
   "bio": "Buddy Holly was a pioneering American rock and roll musician and songwriter. Despite his brief career, he was a central figure in early rock and roll and influenced artists from the Beatles to the Rolling Stones.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 30,
+    "y": 43
+  }
 }

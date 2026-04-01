@@ -16,6 +16,7 @@ export interface Post {
   additionalImages?: string[]
   wikipediaUrl?: string | null
   createdAt?: string | null
+  focalPoint?: { x: number; y: number } | null
 }
 
 export function getWikipediaUrl(post: Post): string {

@@ -16,5 +16,9 @@
   "description": "This portrait of Abraham Lincoln was taken by photographer Alexander Gardner on February 5, 1865, and is the last in a series of photographs taken of the President. Originally believed to have been captured on April 10, 1865 — just four days before his assassination — researchers later established the earlier February date. Lincoln was shot by John Wilkes Booth at Ford's Theatre on the evening of April 14, 1865, and died the following morning at the age of 56.",
   "bio": "Abraham Lincoln was the 16th President of the United States, who led the nation through the Civil War and abolished slavery with the Emancipation Proclamation and the 13th Amendment.",
   "photoCredit": "Alexander Gardner",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 52,
+    "y": 34
+  }
 }

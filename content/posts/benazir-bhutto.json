@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Benazir Bhutto was photographed on December 27, 2007, at a campaign rally of the Pakistan Peoples Party at Liaquat National Bagh park in Rawalpindi. As she left the rally standing through the sunroof of her vehicle and waving to supporters, an attacker fired shots at her and then detonated a suicide bomb near her car. Bhutto was rushed to Rawalpindi General Hospital, where she was pronounced dead. At least 20 other people were killed in the blast. She was 54 years old. She had returned to Pakistan from self-imposed exile just two months earlier to contest upcoming elections, despite numerous death threats.",
   "bio": "Benazir Bhutto was a Pakistani politician who served as Prime Minister of Pakistan, the first woman to head a democratic government in a Muslim-majority nation.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 41,
+    "y": 40
+  }
 }

@@ -20,5 +20,9 @@
     "/images/steve-jobs-2.jpg",
     "/images/steve-jobs-3.jpg"
   ],
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 52,
+    "y": 14
+  }
 }

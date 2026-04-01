@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Paul Walker was photographed on November 30, 2013, at a charity event for his organization Reach Out Worldwide, held to benefit victims of Typhoon Hainan. After the event, Walker got into a Porsche Carrera GT driven by his friend Roger Rodas. The car lost control on a street in Valencia, California, struck a concrete lamp post and two trees, and burst into flames. Both Walker and Rodas were killed instantly. An investigation determined the car was traveling between 80-93 mph in a 45 mph zone. Walker was 40 years old.",
   "bio": "Paul Walker was an American actor best known for his role as Brian O'Conner in the \"Fast & Furious\" franchise. He was also a passionate marine biologist and humanitarian.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 21,
+    "y": 38
+  }
 }

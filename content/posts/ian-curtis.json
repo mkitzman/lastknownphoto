@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Ian Curtis was photographed on May 8, 1980, during what would be one of his final appearances. Curtis had been suffering from epilepsy and depression, compounded by the stress of his marriage falling apart while he carried on an affair with Belgian journalist Annik Honoré. On the eve of Joy Division's first American tour, in the early hours of May 18, 1980, Curtis hanged himself in the kitchen of his home in Macclesfield, Cheshire. He was 23 years old. He had been listening to Iggy Pop's \"The Idiot\" and watching Werner Herzog's \"Stroszek\". Joy Division's remaining members went on to form New Order.",
   "bio": "Ian Curtis was the lead singer and lyricist of the English post-punk band Joy Division. His intense performances and introspective lyrics made him an influential figure in alternative music.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 71,
+    "y": 54
+  }
 }

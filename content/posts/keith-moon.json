@@ -20,5 +20,9 @@
     "/images/keith-moon-3.jpg",
     "/images/keith-moon-4.jpg"
   ],
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 40,
+    "y": 25
+  }
 }

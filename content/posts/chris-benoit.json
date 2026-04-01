@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Chris Benoit was photographed around June 17, 2007, during one of his final WWE appearances. On June 25, 2007, police entered Benoit's home in Fayetteville, Georgia, and discovered three bodies. Benoit had killed his wife Nancy on June 22, their seven-year-old son Daniel on June 23, and then took his own life on June 24 by hanging. Investigators found anabolic steroids in the home, and a subsequent examination of Benoit's brain revealed severe chronic traumatic encephalopathy (CTE) from years of untreated concussions. He was 40 years old. WWE removed nearly all references to Benoit from their programming following the tragedy.",
   "bio": "Chris Benoit was a Canadian professional wrestler known for his technical skill and intensity. He held world championships in both WWE and WCW during his two-decade career.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 48,
+    "y": 35
+  }
 }

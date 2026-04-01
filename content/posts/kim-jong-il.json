@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Kim Jong-il, the supreme leader of North Korea, was photographed in late 2011 during the final months of his rule. Kim had suffered a stroke in 2008 and his health had visibly deteriorated. On December 17, 2011, he died of a heart attack while aboard his armored private train near Pyongyang, reportedly while traveling to an area outside the capital for a field guidance tour. His death was not announced until December 19, when state television broadcast the news with his son Kim Jong-un named as his successor. He was 69 years old.",
   "bio": "Kim Jong-il was the supreme leader of North Korea from 1994 to 2011. He maintained one of the world's most isolated and authoritarian regimes during his rule.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 79,
+    "y": 15
+  }
 }

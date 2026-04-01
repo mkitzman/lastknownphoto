@@ -7,11 +7,17 @@
   "date": "September 6, 2022",
   "deathDate": "September 8, 2022",
   "age": 96,
-  "tags": ["politician"],
+  "tags": [
+    "politician"
+  ],
   "sourceUrl": "https://www.cosmopolitan.com/uk/reports/a41146594/queen-last-photo/",
   "sourceLabel": "Cosmopolitan",
   "description": "Queen Elizabeth II was photographed at Balmoral Castle in Scotland on September 6, 2022, carrying out her final official duty — appointing Liz Truss as the 15th Prime Minister of her reign. Despite appearing frail and using a walking stick, she smiled as she shook hands with the incoming PM. It was the first time in her 70-year reign that the ceremony took place at Balmoral rather than Buckingham Palace. Two days later, on September 8, 2022, she passed away peacefully at Balmoral at the age of 96.",
   "bio": "Elizabeth II was Queen of the United Kingdom and other Commonwealth realms for 70 years, making her reign the longest of any British monarch in history. She ascended to the throne in 1952 and served as a symbol of stability and continuity through decades of profound change.",
   "photoCredit": "Jane Barlow / Getty Images",
-  "createdAt": "2026-03-25"
+  "createdAt": "2026-03-25",
+  "focalPoint": {
+    "x": 57,
+    "y": 31
+  }
 }

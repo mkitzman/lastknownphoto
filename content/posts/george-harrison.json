@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "George Harrison was photographed in late November 2001 during the final weeks of his battle with lung cancer. Harrison had been diagnosed with lung cancer in 1997 and underwent treatment, but the cancer eventually spread to his brain. In his final weeks, he visited the Tuscany home of his friend and fellow musician, and later traveled to UCLA Medical Center in Los Angeles. He died on November 29, 2001, at a friend's home in Los Angeles, with his wife Olivia and son Dhani by his side. His final words were reportedly a request for his family to chant for him. He was 58 years old.",
   "bio": "George Harrison was an English musician and lead guitarist of the Beatles. Known as \"the quiet Beatle\", he was also a prolific solo artist and pioneer of the Concert for Bangladesh, one of the first major charity concerts.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 29,
+    "y": 30
+  }
 }

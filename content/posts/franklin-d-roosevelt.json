@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Franklin D. Roosevelt was photographed on April 11, 1945, at the Little White House in Warm Springs, Georgia, where he had gone to rest and recuperate. Roosevelt had been visibly declining for months, appearing gaunt and exhausted from the strain of leading the nation through World War II. The following day, April 12, while sitting for a portrait by artist Elizabeth Shoumatoff, he said \"I have a terrific pain in the back of my head\" and collapsed unconscious. He died of a massive cerebral hemorrhage later that afternoon. He was 63 years old. Harry Truman was sworn in as president that evening, learning for the first time about the existence of the atomic bomb.",
   "bio": "Franklin D. Roosevelt was the 32nd President of the United States, serving an unprecedented four terms. He led the country through the Great Depression and World War II with his New Deal programs and Allied leadership.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 51,
+    "y": 22
+  }
 }

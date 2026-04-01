@@ -19,5 +19,9 @@
     "/images/ryan-dunn-2.jpg",
     "/images/ryan-dunn-3.jpg"
   ],
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 36
+  }
 }

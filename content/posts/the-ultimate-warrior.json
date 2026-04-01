@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "The Ultimate Warrior, born James Brian Hellwig, was photographed on April 8, 2014, during a taping of WWE Monday Night Raw in New Orleans. Just two days earlier, he had been inducted into the WWE Hall of Fame, and the night before he had made a dramatic appearance at WrestleMania XXX. During his Raw speech, he prophetically said: \"Every man's heart one day beats its final beat. His lungs breathe their final breath.\" Hours later, while walking to his car with his wife Dana outside their hotel in Scottsdale, Arizona, he collapsed from a massive heart attack and died. He was 54 years old.",
   "bio": "The Ultimate Warrior, born James Brian Hellwig, was an American professional wrestler known for his intense energy and face-painted persona. He was one of the biggest stars in WWE during the late 1980s and early 1990s.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 48,
+    "y": 21
+  }
 }

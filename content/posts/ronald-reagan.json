@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Ronald Reagan was photographed on February 11, 2000, during the final years of his public life. Reagan had announced his Alzheimer's disease diagnosis in a handwritten letter to the American people on November 5, 1994, writing: \"I now begin the journey that will lead me into the sunset of my life.\" He spent his final years at his home in Bel Air, Los Angeles, gradually losing his ability to recognize even close friends and family. He died on June 5, 2004, at the age of 93, of pneumonia complicated by Alzheimer's disease. He was the longest-lived U.S. president at the time of his death.",
   "bio": "Ronald Reagan was the 40th President of the United States and a former Hollywood actor. His presidency was marked by economic reforms known as \"Reaganomics\", the end of the Cold War, and a transformative conservative movement.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 52,
+    "y": 41
+  }
 }

@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Amy Winehouse was photographed on July 21, 2011, near her home in Camden, London. Two days later, on July 23, she was found dead in her bed by her security guard. An inquest determined she died of accidental alcohol poisoning, with a blood alcohol level more than five times the legal drink-drive limit. Winehouse had struggled publicly with substance abuse for years and had attempted to get sober multiple times. She was 27 years old, joining the tragic \"27 Club\" of musicians who died at that age.",
   "bio": "Amy Winehouse was a British singer and songwriter known for her powerful contralto vocals and eclectic mix of musical genres including soul, jazz, and R&B. Her album \"Back to Black\" became one of the best-selling albums in UK history.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 55,
+    "y": 16
+  }
 }

@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Dolores O'Riordan, lead singer of The Cranberries, shared her last known image on social media on January 3, 2018. She was in London for a recording session to re-record \"Zombie\" with the rock band Bad Wolves. On January 15, 2018, she was found unresponsive in her room at the London Hilton on Park Lane hotel. The coroner ruled her death as accidental drowning in a bathtub due to sedation by alcohol intoxication, with a blood alcohol level of 330 mg/dL — more than four times the legal driving limit. She was 46 years old. The Cranberries's final album, \"In the End\", was completed using vocal recordings she had made before her death.",
   "bio": "Dolores O'Riordan was an Irish singer-songwriter and the lead vocalist of the rock band The Cranberries. Her distinctive voice and songs like \"Zombie\" and \"Linger\" became defining sounds of 1990s alternative rock.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 48,
+    "y": 25
+  }
 }

@@ -16,5 +16,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Shannon Hoon, lead singer of Blind Melon, was photographed on October 20, 1995, the night of the band's concert at the Tipitina's club in New Orleans. After the show, Hoon returned to the tour bus where he continued using cocaine. The following morning, October 21, guitarist Christopher Thorn found Hoon dead on the bus. The cause of death was an accidental cocaine overdose. He was 28 years old. Hoon had struggled with drug addiction throughout Blind Melon's rise to fame, and the band had recently completed their second album \"Soup\". His daughter, Nico Blue, had been born just three months earlier.",
   "bio": "Shannon Hoon was the lead singer of the band Blind Melon. His distinctive voice and the band's hit \"No Rain\" made them one of the notable acts of the early 1990s alternative rock scene.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 57,
+    "y": 28
+  }
 }

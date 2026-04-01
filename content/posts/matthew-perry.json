@@ -15,5 +15,9 @@
   "description": "Matthew Perry posted this selfie to his Instagram on October 22, 2023, six days before his death. On October 28, he was found unresponsive in a jacuzzi at his home in Pacific Palisades, Los Angeles, and was pronounced dead at 4:17 PM. He was 54 years old. His death was later revealed to have been caused by the acute effects of ketamine. Perry had been receiving ketamine-assisted psychotherapy sessions to treat anxiety, with his last known session occurring the week before his death — though the medical examiner determined the ketamine in his system could not have been from that session, as the drug's half-life is only 3 to 4 hours. Other contributing factors included the effects of buprenorphine, drowning, and coronary artery disease.",
   "bio": "Matthew Perry was an American actor best known for his role as Chandler Bing on the sitcom \"Friends\". He was also a playwright and an advocate for addiction recovery, drawing on his own long struggle with substance abuse.",
   "photoCredit": "Matthew Perry",
-  "createdAt": "2026-03-29"
+  "createdAt": "2026-03-29",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  }
 }

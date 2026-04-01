@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "The last known photograph of Elvis Presley was taken in the early morning hours of August 16, 1977, as he passed through the gates of Graceland in his Stutz Blackhawk after returning from a late-night dentist appointment. Later that afternoon, his girlfriend Ginger Alden found him unresponsive on his bathroom floor. He was rushed to Baptist Memorial Hospital in Memphis, where he was pronounced dead. The cause of death was cardiac arrhythmia, with contributing factors including his long-term prescription drug use. He was 42 years old.",
   "bio": "Elvis Presley was an American singer and actor, widely regarded as the \"King of Rock and Roll\". He is one of the most significant cultural icons of the 20th century and the best-selling solo music artist of all time.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  }
 }

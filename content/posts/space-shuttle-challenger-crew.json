@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "The seven crew members of Space Shuttle Challenger were photographed on the morning of January 28, 1986, before boarding the orbiter for mission STS-51-L. The crew consisted of Commander Dick Scobee, Pilot Michael Smith, Mission Specialists Ellison Onizuka, Judith Resnik, and Ronald McNair, Payload Specialist Gregory Jarvis, and teacher Christa McAuliffe — who was to be the first civilian in space. Just 73 seconds after launch, a faulty O-ring seal in the right solid rocket booster failed, causing the shuttle to break apart over the Atlantic Ocean. All seven crew members were killed. The disaster was watched live on television by millions, including McAuliffe's students.",
   "bio": "The Space Shuttle Challenger crew consisted of seven astronauts, including teacher Christa McAuliffe, who perished when the shuttle broke apart 73 seconds after launch on January 28, 1986.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  }
 }

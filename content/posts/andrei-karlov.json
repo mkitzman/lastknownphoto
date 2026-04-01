@@ -16,5 +16,9 @@
   "description": "Russian Ambassador Andrei Karlov was photographed on December 19, 2016, at the opening of a photography exhibition at the Cagdas Sanatlar Merkezi gallery in Ankara, Turkey. As Karlov gave his opening remarks, off-duty Turkish police officer Mevlüt Mert Altıntaş drew a pistol and shot him multiple times from behind. The assassin shouted about the conflict in Aleppo, Syria, before being killed by Turkish special forces who stormed the gallery. Karlov died of his wounds. He was 62 years old. The moment of the assassination was captured by Associated Press photographer Burhan Ozbilici, whose images won the World Press Photo of the Year.",
   "bio": "Andrei Karlov was a Russian diplomat who served as the Ambassador of Russia to Turkey. He was assassinated during a public appearance at an art gallery in Ankara.",
   "createdAt": "2026-03-22",
-  "photoCredit": "Burhan Ozbilici / Associated Press"
+  "photoCredit": "Burhan Ozbilici / Associated Press",
+  "focalPoint": {
+    "x": 27,
+    "y": 41
+  }
 }

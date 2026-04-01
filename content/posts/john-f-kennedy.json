@@ -16,5 +16,9 @@
   "description": "This photograph captures President John F. Kennedy in the presidential motorcade as it made its way through Dealey Plaza in Dallas, Texas, on November 22, 1963 — moments before he was fatally shot. Kennedy was riding in the open-top Lincoln Continental alongside First Lady Jacqueline Kennedy, Texas Governor John Connally, and Connally's wife Nellie. Lee Harvey Oswald fired from the sixth floor of the nearby Texas School Book Depository. The motorcade rushed to Parkland Memorial Hospital, where Kennedy was pronounced dead approximately 30 minutes after the shooting. He was 46 years old. Vice President Lyndon B. Johnson was sworn in as president aboard Air Force One just over two hours later.",
   "bio": "John F. Kennedy was the 35th President of the United States. His presidency, though brief, was marked by the Cuban Missile Crisis, the Space Race, and the early stages of the Civil Rights movement.",
   "photoCredit": null,
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 33,
+    "y": 37
+  }
 }

@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Jeff Buckley was photographed on the evening of May 29, 1997, in Memphis, Tennessee, where he had been living while working on his second album. That night, Buckley went for an impromptu swim in the Wolf River Harbor, a channel of the Mississippi River, fully clothed while singing Led Zeppelin's \"Whole Lotta Love\". He was pulled under by the wake of a passing tugboat. His body was found on June 4 by a passenger on a riverboat. His death was ruled an accidental drowning, with no drugs or alcohol contributing. He was 30 years old. His unfinished second album, \"Sketches for My Sweetheart the Drunk\", was released posthumously.",
   "bio": "Jeff Buckley was an American singer-songwriter and guitarist known for his ethereal voice and critically acclaimed album \"Grace\". His rendition of Leonard Cohen's \"Hallelujah\" is considered one of the greatest covers ever recorded.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 59,
+    "y": 16
+  }
 }

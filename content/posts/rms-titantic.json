@@ -16,5 +16,9 @@
   "description": "The RMS Titanic was photographed on April 12, 1912, as it departed Queenstown (now Cobh), Ireland — its final port of call before heading into the open Atlantic on its maiden voyage to New York City. Three days later, on the night of April 14, the ship struck an iceberg at 11:40 PM in the North Atlantic. The collision ruptured the hull along the starboard side, flooding five of the ship's sixteen watertight compartments. The Titanic sank at 2:20 AM on April 15. Of the estimated 2,224 passengers and crew aboard, more than 1,500 perished in the frigid waters, making it one of the deadliest peacetime maritime disasters in history.",
   "bio": "The RMS Titanic was a British ocean liner that sank on its maiden voyage in April 1912 after striking an iceberg. The disaster claimed over 1,500 lives and remains one of the deadliest peacetime maritime disasters in history.",
   "photoCredit": "Father Francis Browne",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  }
 }

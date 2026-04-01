@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Gerald Ford was photographed on April 23, 2006, during one of his final public appearances. Ford had been in declining health for several years, hospitalized multiple times for heart problems and pneumonia. He died on December 26, 2006, at his home in Rancho Mirage, California, from arteriosclerotic cerebrovascular disease and diffuse arteriosclerosis. At 93 years and 165 days, he had surpassed Ronald Reagan as the longest-lived U.S. president, a record he held until George H.W. Bush surpassed it in 2017. Ford remains the only person to serve as both vice president and president without being elected to either office.",
   "bio": "Gerald Ford was the 38th President of the United States, the only person to serve as both vice president and president without being elected to either office. He helped restore public trust after the Watergate scandal.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 24
+  }
 }

@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Nancy Spungen was photographed at the Hotel Chelsea in New York City in late October 1978, during the final days of her turbulent relationship with Sex Pistols bassist Sid Vicious. On the morning of October 12, 1978, Spungen was found dead on the bathroom floor of Room 100, stabbed once in the abdomen with a hunting knife. Vicious was arrested and charged with her murder but maintained he had no memory of the events. He was released on bail but died of a heroin overdose on February 2, 1979, before the case went to trial. Spungen was 20 years old.",
   "bio": "Nancy Spungen was an American woman known for her relationship with Sex Pistols bassist Sid Vicious. Their turbulent relationship became emblematic of the darker side of the punk rock movement.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 48,
+    "y": 32
+  }
 }

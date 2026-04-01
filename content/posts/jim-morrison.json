@@ -16,7 +16,18 @@
   "sourceLabel": "Far Out Magazine",
   "description": "This photo is from the last known series of images taken of Jim Morrison, captured on June 28, 1971, by his friend Alain Ronay during a day trip to Saint-Leu-d'Esserent, north of Paris. Morrison had left Los Angeles after finishing recording sessions for the Doors' album 'L.A. Woman', seeking distance from the Hollywood scene. In the photos he appears relaxed and content, visiting a local bar and movie theater with his girlfriend Pamela Courson. Five days later, on July 3, 1971, Morrison was found dead in the bathtub of his apartment on Rue Beautreillis in Paris. He was 27 years old. The exact photo that was taken last in the series is unknown.",
   "bio": "Jim Morrison was an American singer and poet, best known as the lead vocalist of the Doors. His charismatic stage presence and poetic lyrics made him one of the most iconic frontmen in rock history.",
-  "additionalImages": ["/images/jim-morrison-2.jpg", "/images/jim-morrison-3.jpg", "/images/jim-morrison-4.jpg", "/images/jim-morrison-5.jpg", "/images/jim-morrison-6.jpg", "/images/jim-morrison-7.jpg"],
+  "additionalImages": [
+    "/images/jim-morrison-2.jpg",
+    "/images/jim-morrison-3.jpg",
+    "/images/jim-morrison-4.jpg",
+    "/images/jim-morrison-5.jpg",
+    "/images/jim-morrison-6.jpg",
+    "/images/jim-morrison-7.jpg"
+  ],
   "photoCredit": "Alain Ronay",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 41,
+    "y": 45
+  }
 }

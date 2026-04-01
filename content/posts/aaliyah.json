@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Aaliyah was photographed on August 25, 2001, at the Abaco Islands in the Bahamas, where she had been filming the music video for her single \"Rock the Boat\". After the shoot wrapped, she and her entourage boarded a twin-engine Cessna 402 to return to Florida. The plane crashed shortly after takeoff, killing Aaliyah and all eight others on board. An investigation revealed the aircraft was overloaded by several hundred pounds. She was 22 years old.",
   "bio": "Aaliyah Dana Haughton was an American singer, actress, dancer, and model. Known as the \"Princess of R&B\" and \"Queen of Urban Pop\", she was a trendsetter who helped redefine contemporary R&B and pop music.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 54,
+    "y": 42
+  }
 }

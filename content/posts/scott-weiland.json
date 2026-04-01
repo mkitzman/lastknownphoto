@@ -17,5 +17,9 @@
   "description": "Scott Weiland was photographed on the night of December 2, 2015, during what would be his final performance with his band the Wildabouts. Weiland had been on tour despite visibly declining health, with concerts receiving poor reviews noting his slurred speech and confusion. On the morning of December 3, his tour manager found him unresponsive on the band's tour bus, which was parked in Bloomington, Minnesota. He was pronounced dead at the scene. The cause of death was an accidental overdose of cocaine, MDA, and alcohol. He was 48 years old.",
   "bio": "Scott Weiland was an American singer and songwriter, best known as the lead vocalist of Stone Temple Pilots and Velvet Revolver. His powerful voice and dynamic stage presence defined 1990s alternative rock.",
   "photoCredit": "Douglas Wigand",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 43,
+    "y": 39
+  }
 }

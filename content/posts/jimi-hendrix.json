@@ -16,6 +16,15 @@
   "description": "This photo is from the last known series of images of Jimi Hendrix, taken on September 17, 1970, by his girlfriend Monika Dannemann in the garden behind her flat at the Samarkand Hotel in London. The photos show a relaxed Hendrix posing with his 'Black Beauty' Fender Stratocaster while sharing tea — a striking contrast to his legendary stage energy. The couple had spent the day in West London, visiting the Cumberland Hotel and Kensington Market before returning to Dannemann's apartment. The following morning, on September 18, 1970, Hendrix was found unresponsive. He died of barbiturate-related asphyxia at the age of 27. The exact last photo from the series is unknown.",
   "bio": "Jimi Hendrix was an American musician and guitarist widely regarded as one of the most influential electric guitarists in the history of popular music. He revolutionized the sound of rock with his innovative playing techniques.",
   "photoCredit": "Monika Dannemann",
-  "additionalImages": ["/images/jimi-hendrix-2.jpg", "/images/jimi-hendrix-3.jpg", "/images/jimi-hendrix-4.jpg", "/images/jimi-hendrix-5.jpg"],
-  "createdAt": "2026-03-22"
+  "additionalImages": [
+    "/images/jimi-hendrix-2.jpg",
+    "/images/jimi-hendrix-3.jpg",
+    "/images/jimi-hendrix-4.jpg",
+    "/images/jimi-hendrix-5.jpg"
+  ],
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 45,
+    "y": 40
+  }
 }

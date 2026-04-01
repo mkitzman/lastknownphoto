@@ -14,5 +14,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Paramahansa Yogananda was photographed on March 7, 1952, at the Biltmore Hotel in Los Angeles during a banquet honoring Binay Ranjan Sen, the Indian Ambassador to the United States. After concluding his speech with the words \"Where I came from and where I am going, I do not know. But where I am going is my Father's home,\" Yogananda lifted his eyes, entered a state of ecstasy (mahasamadhi), and collapsed. He was pronounced dead of heart failure. He was 59 years old. His body reportedly showed no signs of decay for 20 days after death, a phenomenon that drew widespread attention.",
   "bio": "Paramahansa Yogananda was an Indian monk and yogi who introduced millions of Westerners to the teachings of meditation and Kriya Yoga through his book \"Autobiography of a Yogi\".",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 48,
+    "y": 40
+  }
 }

@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { getWikipediaUrl, type Post } from '../data/posts'
 
-const props = defineProps<{ post: Post, activeCardId: string | null }>()
+const props = defineProps<{ post: Post, activeCardId: string | null, bento?: boolean }>()
 const emit = defineEmits<{ flip: [id: string | null] }>()
 
 const flipped = computed(() => props.activeCardId === props.post.id)
@@ -38,7 +38,7 @@ function handleKeydown(e: KeyboardEvent) {
 <template>
   <article
     class="card-container"
-    :class="{ colorized }"
+    :class="{ colorized, 'bento-card': bento }"
     @keydown="handleKeydown"
     :aria-label="post.name + ' — click to reveal details'"
   >
@@ -50,7 +50,7 @@ function handleKeydown(e: KeyboardEvent) {
         :aria-label="'View details for ' + post.name"
         type="button"
       >
-        <img :src="post.imageUrl" :alt="post.name" loading="lazy" />
+        <img :src="post.imageUrl" :alt="post.name" loading="lazy" :style="post.focalPoint ? { objectPosition: post.focalPoint.x + '% ' + post.focalPoint.y + '%' } : undefined" />
         <div class="card-overlay" aria-hidden="true">
           <span class="card-name">{{ post.name }}</span>
         </div>
@@ -362,5 +362,24 @@ function handleKeydown(e: KeyboardEvent) {
 .card-cta {
   font-size: 0.75rem;
   color: var(--accent);
+}
+
+/* Bento mode overrides */
+.bento-card {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.bento-card .card {
+  height: 100%;
+}
+
+.bento-card .card-front {
+  height: 100%;
+}
+
+.bento-card .card-front img {
+  height: 100%;
+  object-fit: cover;
 }
 </style>

@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Bob Marley was photographed in early 1981, during the final months of his life. In 1977, Marley had been diagnosed with acral lentiginous melanoma under his toenail, which he initially refused to treat with amputation due to his Rastafari beliefs. By 1980, the cancer had spread to his brain, lungs, and liver. His last concert was on September 23, 1980, at the Stanley Theater in Pittsburgh. He sought treatment at the clinic of Josef Issels in Bavaria, Germany, but the cancer was too advanced. He died on May 11, 1981, at Cedars of Lebanon Hospital in Miami while en route home to Jamaica. He was 36 years old.",
   "bio": "Bob Marley was a Jamaican singer-songwriter who became an international icon of reggae music. His music and message of love, peace, and social justice transcended borders and generations.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 60,
+    "y": 32
+  }
 }

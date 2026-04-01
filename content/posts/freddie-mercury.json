@@ -15,5 +15,9 @@
   "sourceLabel": "Wikipedia",
   "description": "Freddie Mercury was photographed in 1991 at his home at Garden Lodge in Kensington, London, during the final months of his life. Mercury had been privately battling AIDS for several years, continuing to record music with Queen despite his declining health. On November 23, 1991, he issued a public statement confirming he had AIDS, becoming one of the most high-profile figures to do so. Just 24 hours later, on the evening of November 24, he died of bronchial pneumonia resulting from AIDS at his home. He was 45 years old. His death brought worldwide attention to the AIDS epidemic.",
   "bio": "Freddie Mercury was a British singer, songwriter, and the lead vocalist of the rock band Queen. Regarded as one of the greatest singers in the history of rock music, he was known for his flamboyant stage persona and four-octave vocal range.",
-  "createdAt": "2026-03-22"
+  "createdAt": "2026-03-22",
+  "focalPoint": {
+    "x": 50,
+    "y": 14
+  }
 }
