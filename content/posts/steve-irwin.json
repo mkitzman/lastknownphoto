@@ -2,9 +2,9 @@
   "id": "20535785322",
   "slug": "steve-irwin",
   "name": "Steve Irwin",
-  "title": "Last known photo of Steve Irwin, taken on September 4, 2006, the day he was killed by a stingray barb while filming.",
+  "title": "Last known photo of Steve Irwin, taken by marine biologist Chris Jones on September 2, 2006, on his boat Croc 1 off the Queensland coast — two days before his death.",
   "imageUrl": "/images/steve-irwin-taken-9-4-2006-died-later-that-day-on-9-4-2006.jpg",
-  "date": "September 4, 2006",
+  "date": "September 2, 2006",
   "deathDate": "September 4, 2006",
   "age": 44,
   "tags": [
@@ -14,6 +14,7 @@
   "sourceLabel": "Wikipedia",
   "description": "Steve Irwin, known as \"The Crocodile Hunter\", was photographed on September 4, 2006, while filming a documentary called \"Ocean's Deadliest\" at Batt Reef near Port Douglas, Queensland, Australia. During a snorkeling break between takes, Irwin was swimming above a large stingray when it struck him hundreds of times with its tail barb, piercing his heart. Crew members pulled him onto the boat and performed CPR, but he was pronounced dead upon arrival at the nearby Calliope River medical facility. He was 44 years old. His cameraman captured the incident on film, but the footage was never released per his family's wishes.",
   "bio": "Steve Irwin, known as \"The Crocodile Hunter\", was an Australian wildlife expert and television personality. His infectious enthusiasm for wildlife conservation made him one of the most beloved nature presenters in history.",
+  "photoCredit": "Chris Jones",
   "createdAt": "2026-03-22",
   "focalPoint": {
     "x": 45,
