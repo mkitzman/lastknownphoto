@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 58,
     "y": 24
+  },
+  "location": {
+    "name": "Minnesota State University, Mankato, MN",
+    "lat": 44.1453,
+    "lng": -93.9994,
+    "mapsUrl": "https://www.google.com/maps/search/Minnesota+State+University+Mankato+Vikings+Training+Camp"
   }
 }

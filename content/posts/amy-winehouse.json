@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 55,
     "y": 16
+  },
+  "location": {
+    "name": "30 Camden Square, London",
+    "lat": 51.5394,
+    "lng": -0.1427,
+    "mapsUrl": "https://www.google.com/maps/search/30+Camden+Square+London+NW1"
   }
 }

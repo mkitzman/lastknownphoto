@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 30,
     "y": 43
+  },
+  "location": {
+    "name": "Surf Ballroom, Clear Lake, Iowa",
+    "lat": 43.138,
+    "lng": -93.3802,
+    "mapsUrl": "https://www.google.com/maps/search/Surf+Ballroom+460+North+Shore+Drive+Clear+Lake+Iowa"
   }
 }

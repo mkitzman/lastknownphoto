@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 50,
     "y": 50
+  },
+  "location": {
+    "name": "112 Mercer Street, Princeton, NJ",
+    "lat": 40.3487,
+    "lng": -74.6593,
+    "mapsUrl": "https://www.google.com/maps/search/112+Mercer+Street+Princeton+NJ"
   }
 }

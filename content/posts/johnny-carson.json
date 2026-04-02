@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 59,
     "y": 19
+  },
+  "location": {
+    "name": "Malibu, California",
+    "lat": 34.0259,
+    "lng": -118.7798,
+    "mapsUrl": "https://www.google.com/maps/search/Point+Dume+Malibu+California"
   }
 }

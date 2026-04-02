@@ -21,5 +21,11 @@
   "focalPoint": {
     "x": 74,
     "y": 40
+  },
+  "location": {
+    "name": "The Dakota, 1 W 72nd St, New York, NY",
+    "lat": 40.7763,
+    "lng": -73.9762,
+    "mapsUrl": "https://www.google.com/maps/search/The+Dakota+1+West+72nd+Street+New+York"
   }
 }

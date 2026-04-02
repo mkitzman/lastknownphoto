@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 45,
     "y": 38
+  },
+  "location": {
+    "name": "Batt Reef, Port Douglas, Queensland, Australia",
+    "lat": -16.15,
+    "lng": 145.87,
+    "mapsUrl": "https://www.google.com/maps/search/Batt+Reef+Port+Douglas+Queensland+Australia"
   }
 }

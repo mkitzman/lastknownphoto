@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 55,
     "y": 22
+  },
+  "location": {
+    "name": "12305 Fifth Helena Dr, Brentwood, Los Angeles, CA",
+    "lat": 34.0499,
+    "lng": -118.4685,
+    "mapsUrl": "https://www.google.com/maps/search/12305+Fifth+Helena+Drive+Brentwood+Los+Angeles"
   }
 }

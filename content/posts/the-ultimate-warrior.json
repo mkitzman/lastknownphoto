@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 48,
     "y": 21
+  },
+  "location": {
+    "name": "Smoothie King Center, New Orleans, LA",
+    "lat": 29.949,
+    "lng": -90.0821,
+    "mapsUrl": "https://www.google.com/maps/search/Smoothie+King+Center+1501+Dave+Dixon+Drive+New+Orleans"
   }
 }

@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 53,
     "y": 37
+  },
+  "location": {
+    "name": "NBC News Bureau, 4001 Nebraska Ave NW, Washington, D.C.",
+    "lat": 38.8951,
+    "lng": -77.0148,
+    "mapsUrl": "https://www.google.com/maps/search/NBC+News+Washington+Bureau+4001+Nebraska+Ave+Washington+DC"
   }
 }

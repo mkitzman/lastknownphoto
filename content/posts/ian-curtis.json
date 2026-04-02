@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 71,
     "y": 54
+  },
+  "location": {
+    "name": "High Hall, Birmingham University, England",
+    "lat": 52.4475,
+    "lng": -1.9301,
+    "mapsUrl": "https://www.google.com/maps/search/Birmingham+University+High+Hall+Birmingham"
   }
 }

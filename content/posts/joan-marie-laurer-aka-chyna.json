@@ -23,5 +23,11 @@
   "focalPoint": {
     "x": 50,
     "y": 50
+  },
+  "location": {
+    "name": "Redondo Beach, California",
+    "lat": 33.8492,
+    "lng": -118.3884,
+    "mapsUrl": "https://www.google.com/maps/search/Redondo+Beach+California"
   }
 }

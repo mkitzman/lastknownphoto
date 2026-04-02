@@ -24,5 +24,11 @@
   "focalPoint": {
     "x": 40,
     "y": 25
+  },
+  "location": {
+    "name": "9 Curzon Place, Mayfair, London",
+    "lat": 51.5074,
+    "lng": -0.149,
+    "mapsUrl": "https://www.google.com/maps/search/Curzon+Square+Mayfair+London"
   }
 }

@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 51,
     "y": 46
+  },
+  "location": {
+    "name": "Navasota, Texas",
+    "lat": 30.388,
+    "lng": -96.0878,
+    "mapsUrl": "https://www.google.com/maps/search/Navasota+Texas"
   }
 }

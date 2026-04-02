@@ -22,5 +22,11 @@
   "focalPoint": {
     "x": 43,
     "y": 35
+  },
+  "location": {
+    "name": "Paradise Cay, Tiburon, CA",
+    "lat": 37.8913,
+    "lng": -122.4573,
+    "mapsUrl": "https://www.google.com/maps/search/Paradise+Cay+Tiburon+CA"
   }
 }

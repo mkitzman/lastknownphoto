@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 47,
     "y": 22
+  },
+  "location": {
+    "name": "Hotel Boscolo Exedra, Rome, Italy",
+    "lat": 41.903,
+    "lng": 12.4963,
+    "mapsUrl": "https://www.google.com/maps/search/Anantara+Palazzo+Naiadi+Rome+Hotel+Piazza+della+Repubblica"
   }
 }

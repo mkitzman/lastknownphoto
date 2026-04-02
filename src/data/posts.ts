@@ -17,6 +17,12 @@ export interface Post {
   wikipediaUrl?: string | null
   createdAt?: string | null
   focalPoint?: { x: number; y: number } | null
+  location?: {
+    name: string
+    lat: number
+    lng: number
+    mapsUrl: string
+  } | null
 }
 
 export function getWikipediaUrl(post: Post): string {

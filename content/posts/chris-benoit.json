@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 48,
     "y": 35
+  },
+  "location": {
+    "name": "American Bank Center, Corpus Christi, TX",
+    "lat": 27.8114,
+    "lng": -97.391,
+    "mapsUrl": "https://www.google.com/maps/search/American+Bank+Center+Corpus+Christi+Texas"
   }
 }

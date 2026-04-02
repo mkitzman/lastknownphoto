@@ -9,6 +9,20 @@ const router = useRouter()
 const post = computed(() => getPostBySlug(route.params.slug as string))
 const activeImage = ref<string | null>(null)
 
+function toDMS(decimal: number, isLat: boolean): string {
+  const abs = Math.abs(decimal)
+  const d = Math.floor(abs)
+  const mFloat = (abs - d) * 60
+  const m = Math.floor(mFloat)
+  const s = ((mFloat - m) * 60).toFixed(1)
+  const dir = isLat ? (decimal >= 0 ? 'N' : 'S') : (decimal >= 0 ? 'E' : 'W')
+  return `${d}\u00B0${m}'${s}"${dir}`
+}
+
+function coordsDisplay(lat: number, lng: number): string {
+  return `${toDMS(lat, true)} ${toDMS(lng, false)}`
+}
+
 const currentImage = computed(() => activeImage.value || post.value?.imageUrl || '')
 
 const allImages = computed(() => {
@@ -58,6 +72,24 @@ const allImages = computed(() => {
           <div class="meta-item" v-if="post.age">
             <span class="meta-label">Age</span>
             <span class="meta-value">{{ post.age }}</span>
+          </div>
+        </div>
+        <div class="post-location" v-if="post.location">
+          <div class="meta-item">
+            <span class="meta-label">Photo Location</span>
+            <span class="meta-value location-name">{{ post.location.name }}</span>
+            <a
+              :href="post.location.mapsUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="coords-link"
+              :title="'Open in Google Maps'"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              {{ coordsDisplay(post.location.lat, post.location.lng) }}
+            </a>
           </div>
         </div>
         <div class="post-tags" v-if="post.tags.length">
@@ -248,6 +280,31 @@ const allImages = computed(() => {
 .meta-value {
   font-size: 0.9rem;
   color: var(--text);
+}
+
+.post-location {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-name {
+  margin-bottom: 0.25rem;
+}
+
+.coords-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.coords-link:hover {
+  color: var(--accent);
 }
 
 .post-tags {

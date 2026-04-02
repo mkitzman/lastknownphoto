@@ -20,5 +20,11 @@
   "focalPoint": {
     "x": 27,
     "y": 41
+  },
+  "location": {
+    "name": "Cagdas Sanatlar Merkezi, Ankara, Turkey",
+    "lat": 39.9208,
+    "lng": 32.8541,
+    "mapsUrl": "https://www.google.com/maps/search/Cagdas+Sanatlar+Merkezi+Ankara+Turkey"
   }
 }

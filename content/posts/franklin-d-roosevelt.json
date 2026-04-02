@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 51,
     "y": 22
+  },
+  "location": {
+    "name": "Little White House, Warm Springs, GA",
+    "lat": 32.8874,
+    "lng": -84.693,
+    "mapsUrl": "https://www.google.com/maps/search/Little+White+House+401+Little+White+House+Road+Warm+Springs+GA"
   }
 }

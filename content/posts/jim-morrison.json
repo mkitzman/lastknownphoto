@@ -29,5 +29,11 @@
   "focalPoint": {
     "x": 41,
     "y": 45
+  },
+  "location": {
+    "name": "Saint-Leu-d'Esserent, France",
+    "lat": 49.2175,
+    "lng": 2.3953,
+    "mapsUrl": "https://www.google.com/maps/search/Saint-Leu-d'Esserent+France"
   }
 }

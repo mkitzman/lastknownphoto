@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 57,
     "y": 31
+  },
+  "location": {
+    "name": "Balmoral Castle, Aberdeenshire, Scotland",
+    "lat": 57.0396,
+    "lng": -3.2285,
+    "mapsUrl": "https://www.google.com/maps/search/Balmoral+Castle+Aberdeenshire+Scotland"
   }
 }

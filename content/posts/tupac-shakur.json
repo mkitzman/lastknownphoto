@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 43,
     "y": 34
+  },
+  "location": {
+    "name": "MGM Grand, Las Vegas, NV",
+    "lat": 36.1025,
+    "lng": -115.1702,
+    "mapsUrl": "https://www.google.com/maps/search/MGM+Grand+Las+Vegas"
   }
 }

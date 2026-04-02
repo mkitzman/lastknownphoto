@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 35,
     "y": 50
+  },
+  "location": {
+    "name": "Woman's Club of Minneapolis, MN",
+    "lat": 44.9666,
+    "lng": -93.2873,
+    "mapsUrl": "https://www.google.com/maps/search/Womans+Club+of+Minneapolis+410+Oak+Grove+St+Minneapolis+MN"
   }
 }

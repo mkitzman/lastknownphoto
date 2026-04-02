@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 51,
     "y": 24
+  },
+  "location": {
+    "name": "Ritz Paris, 15 Place Vendome, Paris",
+    "lat": 48.8682,
+    "lng": 2.3292,
+    "mapsUrl": "https://www.google.com/maps/search/Ritz+Paris+15+Place+Vendome+Paris"
   }
 }

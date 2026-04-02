@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 50,
     "y": 49
+  },
+  "location": {
+    "name": "US Medical Center for Federal Prisoners, Springfield, MO",
+    "lat": 37.1897,
+    "lng": -93.2913,
+    "mapsUrl": "https://www.google.com/maps/search/United+States+Medical+Center+for+Federal+Prisoners+Springfield+Missouri"
   }
 }

@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 37,
     "y": 43
+  },
+  "location": {
+    "name": "LBJ Ranch, Stonewall, TX",
+    "lat": 30.2377,
+    "lng": -98.6263,
+    "mapsUrl": "https://www.google.com/maps/search/LBJ+Ranch+1472+State+Park+Rd+52+Stonewall+TX+78671"
   }
 }

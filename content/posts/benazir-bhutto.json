@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 41,
     "y": 40
+  },
+  "location": {
+    "name": "Liaquat National Bagh, Rawalpindi, Pakistan",
+    "lat": 33.5977,
+    "lng": 73.0479,
+    "mapsUrl": "https://www.google.com/maps/search/Liaquat+National+Bagh+Rawalpindi+Pakistan"
   }
 }

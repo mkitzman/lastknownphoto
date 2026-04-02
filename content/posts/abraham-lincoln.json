@@ -20,5 +20,11 @@
   "focalPoint": {
     "x": 52,
     "y": 34
+  },
+  "location": {
+    "name": "Alexander Gardner's Studio, Washington, D.C.",
+    "lat": 38.8951,
+    "lng": -77.0253,
+    "mapsUrl": "https://www.google.com/maps/search/511+7th+Street+NW+Washington+DC"
   }
 }

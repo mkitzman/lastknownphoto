@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 50,
     "y": 28
+  },
+  "location": {
+    "name": "Bus 142, Stampede Trail, Alaska",
+    "lat": 63.8676,
+    "lng": -149.7692,
+    "mapsUrl": "https://www.google.com/maps/search/Stampede+Trail+Bus+142+Denali+Alaska"
   }
 }

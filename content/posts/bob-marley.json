@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 60,
     "y": 32
+  },
+  "location": {
+    "name": "56 Hope Road, Kingston, Jamaica",
+    "lat": 18.013,
+    "lng": -76.7861,
+    "mapsUrl": "https://www.google.com/maps/search/Bob+Marley+Museum+56+Hope+Road+Kingston+Jamaica"
   }
 }

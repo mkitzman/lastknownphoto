@@ -20,5 +20,11 @@
   "focalPoint": {
     "x": 41,
     "y": 37
+  },
+  "location": {
+    "name": "Solnahallen, Stockholm, Sweden",
+    "lat": 59.3589,
+    "lng": 17.9889,
+    "mapsUrl": "https://www.google.com/maps/search/Solnahallen+Solna+Sweden"
   }
 }

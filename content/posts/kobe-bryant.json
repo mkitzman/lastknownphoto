@@ -22,5 +22,11 @@
   "focalPoint": {
     "x": 53,
     "y": 66
+  },
+  "location": {
+    "name": "Staples Center, Los Angeles, CA",
+    "lat": 34.043,
+    "lng": -118.2673,
+    "mapsUrl": "https://www.google.com/maps/search/Crypto.com+Arena+Los+Angeles+California"
   }
 }

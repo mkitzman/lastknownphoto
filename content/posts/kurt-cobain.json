@@ -20,5 +20,11 @@
   "focalPoint": {
     "x": 56,
     "y": 23
+  },
+  "location": {
+    "name": "171 Lake Washington Blvd E, Seattle, WA",
+    "lat": 47.6192,
+    "lng": -122.2822,
+    "mapsUrl": "https://www.google.com/maps/search/171+Lake+Washington+Blvd+E+Seattle+Washington"
   }
 }

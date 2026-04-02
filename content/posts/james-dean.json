@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 52,
     "y": 22
+  },
+  "location": {
+    "name": "Blackwells Corner, Lost Hills, CA",
+    "lat": 35.7374,
+    "lng": -119.9468,
+    "mapsUrl": "https://www.google.com/maps/search/Blackwells+Corner+Lost+Hills+California"
   }
 }

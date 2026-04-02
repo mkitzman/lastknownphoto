@@ -23,5 +23,11 @@
   "focalPoint": {
     "x": 33,
     "y": 36
+  },
+  "location": {
+    "name": "Beverly Hilton Hotel, Beverly Hills, CA",
+    "lat": 34.0643,
+    "lng": -118.4157,
+    "mapsUrl": "https://www.google.com/maps/search/Beverly+Hilton+Hotel+9876+Wilshire+Blvd+Beverly+Hills+CA"
   }
 }

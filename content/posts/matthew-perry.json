@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 50,
     "y": 50
+  },
+  "location": {
+    "name": "Pacific Palisades, Los Angeles, CA",
+    "lat": 34.0459,
+    "lng": -118.5302,
+    "mapsUrl": "https://www.google.com/maps/search/Pacific+Palisades+Los+Angeles+CA"
   }
 }

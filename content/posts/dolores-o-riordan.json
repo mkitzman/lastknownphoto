@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 48,
     "y": 25
+  },
+  "location": {
+    "name": "London Hilton on Park Lane, London",
+    "lat": 51.5029,
+    "lng": -0.151,
+    "mapsUrl": "https://www.google.com/maps/search/London+Hilton+on+Park+Lane+22+Park+Lane+London"
   }
 }

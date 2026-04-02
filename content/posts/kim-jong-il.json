@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 79,
     "y": 15
+  },
+  "location": {
+    "name": "Pyongyang, North Korea",
+    "lat": 39.0392,
+    "lng": 125.7625,
+    "mapsUrl": "https://www.google.com/maps/search/Pyongyang+North+Korea"
   }
 }

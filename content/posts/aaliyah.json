@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 54,
     "y": 42
+  },
+  "location": {
+    "name": "Marsh Harbour, Abaco Islands, Bahamas",
+    "lat": 26.5412,
+    "lng": -77.0636,
+    "mapsUrl": "https://www.google.com/maps/search/Marsh+Harbour+Abaco+Islands+Bahamas"
   }
 }

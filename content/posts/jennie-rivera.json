@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 54,
     "y": 42
+  },
+  "location": {
+    "name": "Arena Monterrey, Monterrey, Mexico",
+    "lat": 25.6778,
+    "lng": -100.2871,
+    "mapsUrl": "https://www.google.com/maps/search/Arena+Monterrey+Monterrey+Mexico"
   }
 }

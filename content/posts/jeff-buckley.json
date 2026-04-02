@@ -19,5 +19,11 @@
   "focalPoint": {
     "x": 59,
     "y": 16
+  },
+  "location": {
+    "name": "Wolf River Harbor, Memphis, TN",
+    "lat": 35.153,
+    "lng": -90.0561,
+    "mapsUrl": "https://www.google.com/maps/search/Wolf+River+Harbor+Memphis+Tennessee"
   }
 }

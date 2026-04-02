@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 50,
     "y": 50
+  },
+  "location": {
+    "name": "Kennedy Space Center, Launch Complex 39B, FL",
+    "lat": 28.6272,
+    "lng": -80.6208,
+    "mapsUrl": "https://www.google.com/maps/search/Kennedy+Space+Center+Launch+Complex+39B+Florida"
   }
 }

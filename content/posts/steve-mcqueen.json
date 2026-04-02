@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 45,
     "y": 50
+  },
+  "location": {
+    "name": "Santa Paula, CA",
+    "lat": 34.3542,
+    "lng": -119.0593,
+    "mapsUrl": "https://www.google.com/maps/search/Santa+Paula+Airport+Santa+Paula+CA"
   }
 }

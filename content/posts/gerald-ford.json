@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 50,
     "y": 24
+  },
+  "location": {
+    "name": "Rancho Mirage, California",
+    "lat": 33.7375,
+    "lng": -116.4194,
+    "mapsUrl": "https://www.google.com/maps/search/Rancho+Mirage+California"
   }
 }

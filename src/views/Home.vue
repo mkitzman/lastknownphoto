@@ -27,26 +27,67 @@ function toggleLayout() {
   localStorage.setItem('layoutMode', layoutMode.value)
 }
 
-// Calculate how many filler logo cells are needed to complete the bento grid.
-// Each 8-item cycle consumes 13 grid cells (4+1+1+2+1+2+1+1) in a 4-col grid.
-// We figure out how many cells the posts occupy, then pad to fill complete rows.
+// Simulate CSS Grid's dense packing to find exactly how many 1x1 fillers are
+// needed to eliminate all gaps. We model the grid as a 2D boolean array and
+// place items using the same spanning rules as the CSS nth-child selectors.
 const fillerCount = computed(() => {
   if (layoutMode.value !== 'bento') return 0
   const count = filteredPosts.value.length
   if (count === 0) return 0
-  const cols = 4 // base column count
-  // Count how many grid cells are consumed by the posts
-  let cells = 0
-  for (let i = 0; i < count; i++) {
-    const pos = i % 8
-    if (pos === 0) cells += 4      // 2col x 2row
-    else if (pos === 3) cells += 2  // 1col x 2row
-    else if (pos === 5) cells += 2  // 2col x 1row
-    else cells += 1
+  const cols = 4
+
+  // Determine span for each post based on the CSS nth-child pattern
+  function getSpan(index: number): [number, number] {
+    const pos = index % 8
+    if (pos === 0) return [2, 2] // 2col x 2row
+    if (pos === 3) return [1, 2] // 1col x 2row
+    if (pos === 5) return [2, 1] // 2col x 1row
+    return [1, 1]
   }
-  // Pad to fill complete rows
-  const remainder = cells % cols
-  return remainder === 0 ? 0 : cols - remainder
+
+  // Grid simulation: track occupied cells
+  const grid: boolean[][] = []
+  function ensureRows(r: number) {
+    while (grid.length <= r) grid.push(new Array(cols).fill(false))
+  }
+  function canPlace(r: number, c: number, spanC: number, spanR: number): boolean {
+    ensureRows(r + spanR - 1)
+    for (let dr = 0; dr < spanR; dr++)
+      for (let dc = 0; dc < spanC; dc++)
+        if (c + dc >= cols || grid[r + dr][c + dc]) return false
+    return true
+  }
+  function place(r: number, c: number, spanC: number, spanR: number) {
+    for (let dr = 0; dr < spanR; dr++)
+      for (let dc = 0; dc < spanC; dc++)
+        grid[r + dr][c + dc] = true
+  }
+  function placeItem(spanC: number, spanR: number) {
+    for (let r = 0; ; r++) {
+      ensureRows(r)
+      for (let c = 0; c <= cols - spanC; c++) {
+        if (canPlace(r, c, spanC, spanR)) {
+          place(r, c, spanC, spanR)
+          return
+        }
+      }
+    }
+  }
+
+  // Place all posts
+  for (let i = 0; i < count; i++) {
+    const [sc, sr] = getSpan(i)
+    placeItem(sc, sr)
+  }
+
+  // Count empty cells in occupied rows
+  let empties = 0
+  for (const row of grid) {
+    for (const cell of row) {
+      if (!cell) empties++
+    }
+  }
+  return empties
 })
 
 watch(() => route.query.tag, (tag) => {

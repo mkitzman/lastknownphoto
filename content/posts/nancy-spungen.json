@@ -18,5 +18,11 @@
   "focalPoint": {
     "x": 48,
     "y": 32
+  },
+  "location": {
+    "name": "Hotel Chelsea, 222 W 23rd St, New York, NY",
+    "lat": 40.7439,
+    "lng": -73.9981,
+    "mapsUrl": "https://www.google.com/maps/search/Hotel+Chelsea+222+West+23rd+Street+New+York"
   }
 }

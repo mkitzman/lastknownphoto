@@ -24,5 +24,11 @@
   "focalPoint": {
     "x": 61,
     "y": 29
+  },
+  "location": {
+    "name": "Shrine Auditorium, Los Angeles, CA",
+    "lat": 34.0186,
+    "lng": -118.2816,
+    "mapsUrl": "https://www.google.com/maps/search/Shrine+Auditorium+665+W+Jefferson+Blvd+Los+Angeles"
   }
 }
