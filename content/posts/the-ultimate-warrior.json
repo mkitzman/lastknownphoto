@@ -2,9 +2,9 @@
   "id": "82319484255",
   "slug": "the-ultimate-warrior",
   "name": "The Ultimate Warrior",
-  "title": "Last known photo of The Ultimate Warrior, taken on April 8, 2014 — he died later that night, just days after being inducted into the WWE Hall of Fame.",
+  "title": "Last known fan photo of The Ultimate Warrior, taken by Dale Fitzpatrick at the New Orleans airport on April 9, 2014, just hours before his death.",
   "imageUrl": "/images/the-ultimate-warrior.jpg",
-  "date": "April 8, 2014",
+  "date": "April 9, 2014",
   "deathDate": "April 8, 2014",
   "age": 54,
   "tags": [
@@ -14,15 +14,16 @@
   "sourceLabel": "Wikipedia",
   "description": "The Ultimate Warrior, born James Brian Hellwig, was photographed on April 8, 2014, during a taping of WWE Monday Night Raw in New Orleans. Just two days earlier, he had been inducted into the WWE Hall of Fame, and the night before he had made a dramatic appearance at WrestleMania XXX. During his Raw speech, he prophetically said: \"Every man's heart one day beats its final beat. His lungs breathe their final breath.\" Hours later, while walking to his car with his wife Dana outside their hotel in Scottsdale, Arizona, he collapsed from a massive heart attack and died. He was 54 years old.",
   "bio": "The Ultimate Warrior, born James Brian Hellwig, was an American professional wrestler known for his intense energy and face-painted persona. He was one of the biggest stars in WWE during the late 1980s and early 1990s.",
+  "photoCredit": "Dale Fitzpatrick",
   "createdAt": "2026-03-22",
   "focalPoint": {
     "x": 48,
     "y": 21
   },
   "location": {
-    "name": "Smoothie King Center, New Orleans, LA",
-    "lat": 29.949,
-    "lng": -90.0821,
-    "mapsUrl": "https://www.google.com/maps/search/Smoothie+King+Center+1501+Dave+Dixon+Drive+New+Orleans"
+    "name": "Louis Armstrong New Orleans International Airport, LA",
+    "lat": 29.9934,
+    "lng": -90.2580,
+    "mapsUrl": "https://www.google.com/maps/search/Louis+Armstrong+New+Orleans+International+Airport"
   }
 }

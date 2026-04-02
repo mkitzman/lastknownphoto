@@ -15,15 +15,16 @@
   "sourceLabel": "Wikipedia",
   "description": "Tupac Shakur was photographed on the night of September 7, 1996, in Las Vegas after attending the Mike Tyson vs. Bruce Seldon boxing match at the MGM Grand. Later that evening, while stopped at a red light on Flamingo Road, a white Cadillac pulled alongside the BMW driven by Death Row Records CEO Suge Knight, and an unknown assailant fired multiple rounds into the passenger side. Tupac was hit four times. He was rushed to University Medical Center, where he died six days later on September 13, 1996, at the age of 25.",
   "bio": "Tupac Shakur was an American rapper, actor, and activist considered one of the most influential hip-hop artists of all time. His music addressed social issues including racism, poverty, and violence in inner cities.",
+  "photoCredit": "Leonard Jefferson",
   "createdAt": "2026-03-22",
   "focalPoint": {
     "x": 43,
     "y": 34
   },
   "location": {
-    "name": "MGM Grand, Las Vegas, NV",
-    "lat": 36.1025,
-    "lng": -115.1702,
-    "mapsUrl": "https://www.google.com/maps/search/MGM+Grand+Las+Vegas"
+    "name": "Flamingo Rd & Koval Ln, Las Vegas, NV",
+    "lat": 36.1152,
+    "lng": -115.1657,
+    "mapsUrl": "https://www.google.com/maps/search/Flamingo+Rd+and+Koval+Ln+Las+Vegas+NV"
   }
 }

@@ -2,28 +2,29 @@
   "id": "146123312563",
   "slug": "ian-curtis",
   "name": "Ian Curtis",
-  "title": "Last known photo of Ian Curtis, taken on May 8, 1980, ten days before his death by suicide at age 23.",
+  "title": "Last known photo of Ian Curtis, taken in May 1980 for a passport he would use for Joy Division's first North American tour. He died the night before they were due to leave.",
   "imageUrl": "/images/ian-curtis.jpg",
-  "date": "May 8, 1980",
+  "date": "May 1980",
   "deathDate": "May 18, 1980",
   "age": 23,
   "tags": [
     "musician",
     "joy division"
   ],
-  "sourceUrl": "https://en.wikipedia.org/wiki/Ian_Curtis",
-  "sourceLabel": "Wikipedia",
-  "description": "Ian Curtis was photographed on May 8, 1980, during what would be one of his final appearances. Curtis had been suffering from epilepsy and depression, compounded by the stress of his marriage falling apart while he carried on an affair with Belgian journalist Annik Honoré. On the eve of Joy Division's first American tour, in the early hours of May 18, 1980, Curtis hanged himself in the kitchen of his home in Macclesfield, Cheshire. He was 23 years old. He had been listening to Iggy Pop's \"The Idiot\" and watching Werner Herzog's \"Stroszek\". Joy Division's remaining members went on to form New Order.",
+  "sourceUrl": "https://www.manchestereveningnews.co.uk/news/greater-manchester-news/striking-last-ever-photo-ian-23832934",
+  "sourceLabel": "Manchester Evening News",
+  "description": "The last known photo of Ian Curtis was taken for a passport he would need for Joy Division's first North American tour. Curtis had been suffering from epilepsy and depression, compounded by the stress of his marriage falling apart while he carried on an affair with Belgian journalist Annik Honoré. On the eve of the tour, in the early hours of May 18, 1980, Curtis hanged himself in the kitchen of his home in Macclesfield, Cheshire. He was 23 years old. He had been listening to Iggy Pop's \"The Idiot\" and watching Werner Herzog's \"Stroszek\". Joy Division's remaining members went on to form New Order.",
   "bio": "Ian Curtis was the lead singer and lyricist of the English post-punk band Joy Division. His intense performances and introspective lyrics made him an influential figure in alternative music.",
+  "photoCredit": "Ian Curtis (self, passport photo)",
   "createdAt": "2026-03-22",
   "focalPoint": {
-    "x": 71,
-    "y": 54
+    "x": 50,
+    "y": 49
   },
   "location": {
-    "name": "High Hall, Birmingham University, England",
-    "lat": 52.4475,
-    "lng": -1.9301,
-    "mapsUrl": "https://www.google.com/maps/search/Birmingham+University+High+Hall+Birmingham"
+    "name": "Macclesfield, Cheshire, England",
+    "lat": 53.2587,
+    "lng": -2.1257,
+    "mapsUrl": "https://www.google.com/maps/search/Macclesfield+Cheshire+England"
   }
 }

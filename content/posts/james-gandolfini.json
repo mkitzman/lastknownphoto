@@ -13,17 +13,18 @@
   ],
   "sourceUrl": "https://en.wikipedia.org/wiki/James_Gandolfini",
   "sourceLabel": "Wikipedia",
-  "description": "James Gandolfini was photographed on June 18, 2013, while vacationing in Rome, Italy, with his 13-year-old son Michael. They had visited the Vatican that day and dined at the Hotel Boscolo's restaurant that evening. On the night of June 19, Michael found his father unresponsive on the bathroom floor of their hotel room and called for help. Gandolfini was rushed to the Policlinico Umberto I hospital, where he was pronounced dead of a heart attack. He was 51 years old. Best known for his iconic portrayal of Tony Soprano, he had been in Rome for the Taormina Film Festival in Sicily.",
+  "description": "James Gandolfini was photographed on June 18, 2013, by travelers Blake Kahn and Dee Duncan from Atlanta, while vacationing in Rome, Italy, with his 13-year-old son Michael. The photos showed him appearing healthy and happy while dining at the Sabatini restaurant. On the night of June 19, Michael found his father unresponsive on the bathroom floor of their hotel room and called for help. Gandolfini was rushed to the Policlinico Umberto I hospital, where he was pronounced dead of a heart attack. He was 51 years old. Best known for his iconic portrayal of Tony Soprano, he had been in Rome for the Taormina Film Festival in Sicily.",
   "bio": "James Gandolfini was an American actor best known for his role as Tony Soprano in the HBO series \"The Sopranos\", widely considered one of the greatest television performances of all time.",
+  "photoCredit": "Blake Kahn and Dee Duncan",
   "createdAt": "2026-03-22",
   "focalPoint": {
     "x": 47,
     "y": 22
   },
   "location": {
-    "name": "Hotel Boscolo Exedra, Rome, Italy",
-    "lat": 41.903,
-    "lng": 12.4963,
-    "mapsUrl": "https://www.google.com/maps/search/Anantara+Palazzo+Naiadi+Rome+Hotel+Piazza+della+Repubblica"
+    "name": "Sabatini Restaurant, Piazza di Santa Maria in Trastevere, Rome, Italy",
+    "lat": 41.8895,
+    "lng": 12.4695,
+    "mapsUrl": "https://www.google.com/maps/search/Sabatini+Restaurant+Piazza+Santa+Maria+Trastevere+Rome"
   }
 }
