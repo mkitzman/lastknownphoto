@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { RouterView, RouterLink } from 'vue-router'
+import { computed } from 'vue'
+import { RouterView, RouterLink, useRoute } from 'vue-router'
+
+const route = useRoute()
+const isMapPage = computed(() => route.name === 'map')
 </script>
 
 <template>
@@ -13,6 +17,7 @@ import { RouterView, RouterLink } from 'vue-router'
         </svg>
       </RouterLink>
       <nav class="site-nav">
+        <RouterLink to="/map">Map</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </header>
@@ -23,7 +28,7 @@ import { RouterView, RouterLink } from 'vue-router'
         </transition>
       </RouterView>
     </main>
-    <footer class="site-footer">
+    <footer v-if="!isMapPage" class="site-footer">
       <p>&copy; {{ new Date().getFullYear() }} Last Known Photo</p>
     </footer>
   </div>
