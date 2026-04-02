@@ -2,9 +2,9 @@
   "id": "152858656768",
   "slug": "steve-mcqueen",
   "name": "Steve McQueen",
-  "title": "Last known photo of Steve McQueen, taken in late 1979, months before his death from mesothelioma.",
+  "title": "Last known public photo of Steve McQueen, taken on April 1, 1980, at a screening of his film Tom Horn in Oxnard, California — seven months before his death from mesothelioma.",
   "imageUrl": "/images/steve-mcqueen.jpg",
-  "date": "Late 1979",
+  "date": "April 1, 1980",
   "deathDate": "November 7, 1980",
   "age": 50,
   "tags": [
@@ -12,17 +12,22 @@
   ],
   "sourceUrl": "https://en.wikipedia.org/wiki/Steve_McQueen",
   "sourceLabel": "Wikipedia",
-  "description": "Steve McQueen, known as \"The King of Cool\", was photographed in late 1979 during the final period of his career. In late 1978, McQueen had developed a persistent cough that was eventually diagnosed as pleural mesothelioma, a cancer linked to asbestos exposure — likely from his years in the Marines and his work removing asbestos from movie set sound stages. After conventional treatments failed, he sought experimental therapy at a clinic in Juárez, Mexico. He died on November 7, 1980, at a hospital in Ciudad Juárez following surgery to remove a large tumor from his abdomen. He was 50 years old.",
+  "description": "Steve McQueen's last public appearance was on April 1, 1980, in Oxnard, California, where he attended an early screening of his film Tom Horn. Appearing frail and bearded, McQueen asked the press if they had taken enough pictures before departing. In late 1978, McQueen had developed a persistent cough that was eventually diagnosed as pleural mesothelioma, a cancer linked to asbestos exposure — likely from his years in the Marines and his work removing asbestos from movie set sound stages. Soon after this appearance, he left for Mexico to pursue alternative cancer treatments. He died on November 7, 1980, at a hospital in Ciudad Juárez following surgery to remove a large tumor from his abdomen. He was 50 years old.",
   "bio": "Steve McQueen was an American actor known as \"The King of Cool\". His roles in \"Bullitt\", \"The Great Escape\", and \"The Thomas Crown Affair\" made him one of the biggest box office draws of the 1960s and 70s.",
+  "photoCredit": "Ron Galella / Getty Images",
+  "additionalImages": [
+    "/images/steve-mcqueen-2.jpg",
+    "/images/steve-mcqueen-3.jpg"
+  ],
   "createdAt": "2026-03-22",
   "focalPoint": {
-    "x": 45,
-    "y": 50
+    "x": 49,
+    "y": 37
   },
   "location": {
-    "name": "Santa Paula, CA",
-    "lat": 34.3542,
-    "lng": -119.0593,
-    "mapsUrl": "https://www.google.com/maps/search/Santa+Paula+Airport+Santa+Paula+CA"
+    "name": "Channel Islands Cinema (believed), 111 W Gonzales Rd, Oxnard, CA 93036",
+    "lat": 34.2028,
+    "lng": -119.1773,
+    "mapsUrl": "https://www.google.com/maps/search/111+W+Gonzales+Rd+Oxnard+CA+93036"
   }
 }

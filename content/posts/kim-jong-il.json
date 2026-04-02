@@ -2,9 +2,9 @@
   "id": "14483782416",
   "slug": "kim-jong-il",
   "name": "Kim Jong-il",
-  "title": "Last known photo of Kim Jong-il, taken in late 2011, shortly before his death from a heart attack aboard his private train.",
+  "title": "Last known photo of Kim Jong-il, taken around December 15, 2011, at the Kwangbok Area Supermarket in Pyongyang — two days before his death aboard his private train.",
   "imageUrl": "/images/kim-jong.jpg",
-  "date": "December 2011",
+  "date": "December 15, 2011",
   "deathDate": "December 17, 2011",
   "age": 69,
   "tags": [
@@ -13,7 +13,7 @@
   ],
   "sourceUrl": "https://en.wikipedia.org/wiki/Kim_Jong-il",
   "sourceLabel": "Wikipedia",
-  "description": "Kim Jong-il, the supreme leader of North Korea, was photographed in late 2011 during the final months of his rule. Kim had suffered a stroke in 2008 and his health had visibly deteriorated. On December 17, 2011, he died of a heart attack while aboard his armored private train near Pyongyang, reportedly while traveling to an area outside the capital for a field guidance tour. His death was not announced until December 19, when state television broadcast the news with his son Kim Jong-un named as his successor. He was 69 years old.",
+  "description": "Kim Jong-il's last public appearance was around December 15, 2011, at the Kwangbok Area Supermarket in the Mangyongdae District of western Pyongyang. The images, released shortly before his death announcement, showed him on an escalator inspecting the new Chinese-partnered department store, with his son Kim Jong-un visible behind him. The facility was a joint venture with Chinese company Feihaimengxin International Trade Co. and was designed as a modern, capitalist-style shopping center serving elite residents. Kim had suffered a stroke in 2008 and his health had visibly deteriorated. On December 17, 2011, he died of a heart attack while aboard his armored private train near Pyongyang. His death was not announced until December 19, when state television broadcast the news with Kim Jong-un named as his successor. He was 69 years old.",
   "bio": "Kim Jong-il was the supreme leader of North Korea from 1994 to 2011. He maintained one of the world's most isolated and authoritarian regimes during his rule.",
   "createdAt": "2026-03-22",
   "focalPoint": {
@@ -21,9 +21,9 @@
     "y": 15
   },
   "location": {
-    "name": "Pyongyang, North Korea",
-    "lat": 39.0392,
-    "lng": 125.7625,
-    "mapsUrl": "https://www.google.com/maps/search/Pyongyang+North+Korea"
+    "name": "Kwangbok Area Supermarket, Mangyongdae District, Pyongyang, North Korea",
+    "lat": 39.0083,
+    "lng": 125.7178,
+    "mapsUrl": "https://www.google.com/maps/search/Kwangbok+Area+Supermarket+Pyongyang+North+Korea"
   }
 }
