@@ -2,7 +2,7 @@
   "id": "17280911524",
   "slug": "paramahansa-yogananda",
   "name": "Paramahansa Yogananda",
-  "title": "Last known photo of Paramahansa Yogananda, taken on March 7, 1952, at a banquet honoring the Indian Ambassador — he died moments after this photo was taken.",
+  "title": "\"The Last Smile\" — the last known photo of Paramahansa Yogananda, taken on March 7, 1952, at a banquet honoring the Indian Ambassador. He died moments after this photo was taken.",
   "imageUrl": "/images/paramahansa-yogananda.jpg",
   "date": "March 7, 1952",
   "deathDate": "March 7, 1952",
@@ -24,5 +24,6 @@
     "lat": 34.0487,
     "lng": -118.2551,
     "mapsUrl": "https://www.google.com/maps/search/Millennium+Biltmore+Hotel+506+S+Grand+Ave+Los+Angeles"
-  }
+  },
+  "photoCredit": "Unknown"
 }

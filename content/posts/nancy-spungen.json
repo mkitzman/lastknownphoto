@@ -2,7 +2,7 @@
   "id": "146404637808",
   "slug": "nancy-spungen",
   "name": "Nancy Spungen",
-  "title": "Last known photo of Nancy Spungen, taken on October 26, 1978, at the Hotel Chelsea in New York, hours before her death.",
+  "title": "Last known photo of Nancy Spungen, taken by Alan Zindman on October 7, 1978, in New York City — originally published in The Village Voice on October 23, 1978.",
   "imageUrl": "/images/nancy-spungen.jpg",
   "date": "October 26, 1978",
   "deathDate": "October 12, 1978",
@@ -24,5 +24,6 @@
     "lat": 40.7439,
     "lng": -73.9981,
     "mapsUrl": "https://www.google.com/maps/search/Hotel+Chelsea+222+West+23rd+Street+New+York"
-  }
+  },
+  "photoCredit": "Alan Zindman / The Village Voice"
 }
