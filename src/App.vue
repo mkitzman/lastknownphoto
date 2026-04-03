@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { RouterView, RouterLink, useRoute } from 'vue-router'
 
 const route = useRoute()
 const isMapPage = computed(() => route.name === 'map')
+const introDone = ref(false)
+
+function onIntroDone() {
+  introDone.value = true
+}
 </script>
 
 <template>
@@ -11,7 +16,7 @@ const isMapPage = computed(() => route.name === 'map')
     <header class="site-header">
       <RouterLink to="/" class="site-title">
         <span class="title-text">Last Known Photo</span>
-        <svg class="shutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="shutter-icon" :class="{ 'intro': !introDone }" @animationend="onIntroDone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10" />
           <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
         </svg>
@@ -76,17 +81,18 @@ const isMapPage = computed(() => route.name === 'map')
 .site-title .shutter-icon {
   margin-left: 0.5rem;
   flex-shrink: 0;
+}
+
+.site-title .shutter-icon.intro {
   animation: shutter-intro 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 0.15s both;
 }
 
 @keyframes shutter-intro {
   0% {
     transform: translateX(-18ch) rotate(0deg);
-    opacity: 1;
   }
   100% {
     transform: translateX(0) rotate(720deg);
-    opacity: 1;
   }
 }
 
@@ -94,11 +100,11 @@ const isMapPage = computed(() => route.name === 'map')
   width: 1.4rem;
   height: 1.4rem;
   stroke: #a8a8a8;
+  transform: rotate(0deg);
   transition: transform 1.5s cubic-bezier(0.2, 0, 0.1, 1);
 }
 
-.site-title:hover .shutter-icon {
-  animation: none;
+.site-title:hover .shutter-icon:not(.intro) {
   transform: rotate(720deg);
   transition: transform 2s cubic-bezier(0.1, 0, 0.3, 1);
 }
