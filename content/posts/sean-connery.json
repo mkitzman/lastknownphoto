@@ -1,0 +1,30 @@
+{
+  "id": "seanconnery01",
+  "slug": "sean-connery",
+  "name": "Sean Connery",
+  "title": "Last known photo of Sean Connery, taken on May 6, 2020, at his home in Lyford Cay, Nassau, Bahamas — five months before his death.",
+  "imageUrl": "/images/sean-connery.jpg",
+  "date": "May 6, 2020",
+  "deathDate": "October 31, 2020",
+  "age": 90,
+  "tags": [
+    "actor"
+  ],
+  "sourceUrl": "https://www.dailymail.co.uk/tvshowbiz/article-8902079/Sir-Sean-Connery-clasps-devoted-wife-Micheline-Roquebrunes-hand-photo.html",
+  "sourceLabel": "Daily Mail",
+  "description": "Sean Connery was photographed on May 6, 2020 — his 45th wedding anniversary — at his home in the Lyford Cay community in Nassau, Bahamas, clasping the hand of his wife Micheline Roquebrune. It is one of the last known images of the legendary actor. Connery had lived in the Bahamas for decades, but his final months were blighted by dementia. \"It was no life for him,\" Micheline said. \"He was not able to express himself latterly.\" He died peacefully in his sleep on October 31, 2020, at the age of 90, with Micheline by his side. \"I was with him all the time and he just slipped away. It was what he wanted,\" she said. His death certificate listed pneumonia, heart failure, and old age as the causes, with dementia as a contributing factor.",
+  "bio": "Sir Sean Connery was a Scottish actor widely regarded as one of the greatest movie stars of his generation. He was the first actor to portray James Bond on film, defining the role across seven films. He won an Academy Award for Best Supporting Actor for \"The Untouchables\" (1987).",
+  "photoCredit": "Aaron Tinney",
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Sean_Connery",
+  "createdAt": "2026-04-05",
+  "focalPoint": {
+    "x": 50,
+    "y": 40
+  },
+  "location": {
+    "name": "Lyford Cay, Nassau, Bahamas",
+    "lat": 25.028046,
+    "lng": -77.530812,
+    "mapsUrl": "https://www.google.com/maps/@25.028046,-77.530812,19z"
+  }
+}
