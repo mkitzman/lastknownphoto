@@ -1,0 +1,29 @@
+{
+  "id": "jimmybuffett01",
+  "slug": "jimmy-buffett",
+  "name": "Jimmy Buffett",
+  "title": "Last known photo of Jimmy Buffett, taken on July 9, 2023, during an impromptu visit to WLNG radio in Sag Harbor, New York.",
+  "imageUrl": "/images/jimmy-buffett.jpg",
+  "date": "July 9, 2023",
+  "deathDate": "September 1, 2023",
+  "age": 76,
+  "tags": [
+    "musician"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Jimmy_Buffett",
+  "sourceLabel": "Wikipedia",
+  "description": "Jimmy Buffett was photographed on July 9, 2023, during an impromptu 45-minute visit to the WLNG 92.1 FM radio station in Sag Harbor, New York. He appeared on the program \"Lunch on the Deck,\" hosted by Bill Evans and Jessica Ambrose, to give a world premiere of his then-new song, \"My Gummy Just Kicked In.\" A local resident of nearby North Haven, Buffett was in high spirits, sharing stories about living across the street from the station in the 1970s. At the time, he had been privately battling Merkel cell carcinoma — a rare and aggressive skin cancer — for four years. The visit came just weeks after his final stage performance in Rhode Island. He died on September 1, 2023, at the age of 76.",
+  "bio": "Jimmy Buffett was an American singer-songwriter, musician, and author best known for his laid-back \"island escapism\" lifestyle and songs like \"Margaritaville\" and \"Cheeseburger in Paradise.\" He built a business empire around his music, including the Margaritaville restaurant chain and resorts.",
+  "photoCredit": "Sandra Foschi",
+  "createdAt": "2026-04-04",
+  "focalPoint": {
+    "x": 30,
+    "y": 30
+  },
+  "location": {
+    "name": "WLNG 92.1 FM, 1619 Main St, Sag Harbor, NY",
+    "lat": 40.9998,
+    "lng": -72.2934,
+    "mapsUrl": "https://www.google.com/maps/search/WLNG+1619+Main+St+Sag+Harbor+NY"
+  }
+}
