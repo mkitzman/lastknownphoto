@@ -57,9 +57,7 @@ const allImages = computed(() => {
         <h1>{{ post.name }}</h1>
         <p class="post-bio" v-if="post.bio">{{ post.bio }}</p>
         <p class="post-title">{{ post.title }}</p>
-        <p class="post-description" v-if="post.description && post.description !== post.title">
-          {{ post.description }}
-        </p>
+        <p class="post-description" v-if="post.description && post.description !== post.title" v-html="post.description"></p>
         <div class="post-meta">
           <div class="meta-item" v-if="post.date">
             <span class="meta-label">Photo Date</span>
