@@ -1,0 +1,36 @@
+{
+  "id": "chris-cornell-01",
+  "slug": "chris-cornell",
+  "name": "Chris Cornell",
+  "title": "Last known image of Chris Cornell — a video still captured just after the final song of Soundgarden's show at Detroit's Fox Theatre on May 18, 2017, as the band was about to leave the stage.",
+  "imageUrl": "/images/chris-cornell.jpg",
+  "date": "May 18, 2017",
+  "deathDate": "May 18, 2017",
+  "age": 52,
+  "tags": [
+    "musician",
+    "soundgarden",
+    "audioslave"
+  ],
+  "sourceUrl": "https://wcsx.com/galleries/remembering-chris-cornell/",
+  "sourceLabel": "WCSX",
+  "description": "This image is a still from <a href=\"https://www.youtube.com/watch?v=kk8JHFc9VVE\" target=\"_blank\" rel=\"noopener noreferrer\">fan-recorded video</a> of Chris Cornell performing his final song — a medley of \"Slaves and Bulldozers\" and Led Zeppelin's \"In My Time of Dying\" — during Soundgarden's concert at the Fox Theatre in Detroit on May 18, 2017. Hours after leaving the stage, Cornell was found dead in his room at the MGM Grand Detroit hotel. His death was ruled a suicide by hanging. He had been battling substance abuse and depression, and his wife later attributed his death in part to the anti-anxiety medication Ativan. He was 52 years old. The additional images included here were taken earlier in the same concert by photographer Ken Settle, and are higher quality but not the very last — note that Cornell is still wearing his jacket, which he removed later in the set.",
+  "bio": "Chris Cornell was an American musician best known as the lead vocalist for the rock bands Soundgarden and Audioslave. With his four-octave vocal range and songwriting, he was one of the defining voices of the grunge era.",
+  "photoCredit": "Main: fan video still. Additional: Ken Settle",
+  "additionalImages": [
+    "/images/chris-cornell-2.jpg",
+    "/images/chris-cornell-3.jpg",
+    "/images/chris-cornell-4.jpg"
+  ],
+  "createdAt": "2026-04-06",
+  "focalPoint": {
+    "x": 47,
+    "y": 39
+  },
+  "location": {
+    "name": "Fox Theatre, 2211 Woodward Ave, Detroit, MI",
+    "lat": 42.3381,
+    "lng": -83.0524,
+    "mapsUrl": "https://www.google.com/maps/search/Fox+Theatre+2211+Woodward+Ave+Detroit+MI"
+  }
+}
