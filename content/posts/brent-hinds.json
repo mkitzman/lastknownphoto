@@ -1,0 +1,36 @@
+{
+  "id": "brent-hinds-01",
+  "slug": "brent-hinds",
+  "name": "Brent Hinds",
+  "title": "The last known photos of Brent Hinds are from a series he posted to his own Instagram on August 9, 2025, from The Nick in Birmingham, Alabama — just weeks before his death.",
+  "imageUrl": "/images/brent-hinds.jpg",
+  "date": "August 9, 2025",
+  "deathDate": "August 20, 2025",
+  "age": 51,
+  "tags": [
+    "musician",
+    "mastodon",
+    "metal"
+  ],
+  "sourceUrl": "https://www.instagram.com/p/DNJsRHhuYW8/",
+  "sourceLabel": "Instagram",
+  "description": "These photos were posted by Brent Hinds to his own Instagram on August 9, 2025, taken at The Nick, a legendary dive bar and music venue in Birmingham, Alabama. Eleven days later, on the night of August 20, 2025, Hinds died in a motorcycle accident in Birmingham when his motorcycle collided with an SUV. He was 51 years old. Co-founder and guitarist of the progressive metal band Mastodon, Hinds had announced his departure from the band earlier that year. His death came as a shock to the metal community, with tributes pouring in from bands and fans worldwide.",
+  "bio": "Brent Hinds was an American musician best known as a co-founder, guitarist, and vocalist of the Atlanta-based progressive metal band Mastodon. Over more than two decades with the group, he helped shape the sound of modern heavy metal.",
+  "photoCredit": "Brent Hinds (self, via Instagram)",
+  "additionalImages": [
+    "/images/brent-hinds-2.jpg",
+    "/images/brent-hinds-3.jpg",
+    "/images/brent-hinds-4.jpg"
+  ],
+  "createdAt": "2026-04-08",
+  "focalPoint": {
+    "x": 47,
+    "y": 50
+  },
+  "location": {
+    "name": "The Nick, 2514 10th Ave S, Birmingham, AL 35205",
+    "lat": 33.4957,
+    "lng": -86.7894,
+    "mapsUrl": "https://www.google.com/maps/search/The+Nick+2514+10th+Ave+S+Birmingham+AL+35205"
+  }
+}
