@@ -245,7 +245,7 @@ const allImages = computed(() => {
 }
 
 .post-title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.7;
 }

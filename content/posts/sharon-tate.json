@@ -1,0 +1,36 @@
+{
+  "id": "sharon-tate-01",
+  "slug": "sharon-tate",
+  "name": "Sharon Tate",
+  "title": "The last known photos of Sharon Tate are from a series taken by photographer Terry O'Neill in London on August 6, 1969 — three days before she was murdered by members of the Manson Family.",
+  "imageUrl": "/images/sharon-tate.jpg",
+  "date": "August 6, 1969",
+  "deathDate": "August 9, 1969",
+  "age": 26,
+  "tags": [
+    "actress",
+    "murder"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Sharon_Tate",
+  "sourceLabel": "Wikipedia",
+  "description": "These photos of a heavily pregnant Sharon Tate were taken by photographer Terry O'Neill on August 6, 1969, near her London home at 97 West Eaton Place in Belgravia. She had been staying in London while her husband, director Roman Polanski, worked on a film, and was preparing to return to Los Angeles for the birth of their child. Three days later, on the night of August 8–9, Tate and four others were murdered at her home on Cielo Drive in Los Angeles by members of Charles Manson's cult. The murders shocked the nation and came to symbolize the dark end of the 1960s counterculture era.",
+  "bio": "Sharon Tate was an American actress and model. She appeared in television commercials before moving on to small film roles, and was praised for her performance in Valley of the Dolls (1967). She was married to director Roman Polanski at the time of her death.",
+  "photoCredit": "Terry O'Neill",
+  "additionalImages": [
+    "/images/sharon-tate-2.jpg",
+    "/images/sharon-tate-3.jpg",
+    "/images/sharon-tate-4.jpg",
+    "/images/sharon-tate-5.jpg"
+  ],
+  "createdAt": "2026-04-08",
+  "focalPoint": {
+    "x": 48,
+    "y": 31
+  },
+  "location": {
+    "name": "97 West Eaton Place, Belgravia, London, England",
+    "lat": 51.4958,
+    "lng": -0.1538,
+    "mapsUrl": "https://www.google.com/maps/search/97+West+Eaton+Place+Belgravia+London"
+  }
+}
