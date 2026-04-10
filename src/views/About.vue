@@ -47,6 +47,9 @@
 
       <div class="about-footer">
         <p>We hope these images encourage you to look at your own "unremarkable" day with a little more attention.</p>
+        <p class="studio-credit">
+          <a href="https://www.michaelkitzman.com/" target="_blank" rel="noreferrer">An Unreal City project</a>
+        </p>
       </div>
     </div>
   </div>
@@ -115,5 +118,20 @@ p strong {
   font-size: 0.9rem;
   color: var(--text-dim);
   font-style: italic;
+}
+
+.studio-credit {
+  margin-top: 2rem;
+}
+
+.studio-credit a {
+  color: var(--text-dim);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+
+.studio-credit a:hover {
+  color: var(--text);
 }
 </style>
