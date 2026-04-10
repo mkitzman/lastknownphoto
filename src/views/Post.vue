@@ -51,7 +51,8 @@ const allImages = computed(() => {
             <img :src="img" :alt="post.name + ' photo ' + (i + 1)" />
           </button>
         </div>
-        <span v-if="post.photoCredit" class="photo-credit">Photo: {{ post.photoCredit }}</span>
+        <span v-if="post.photoCredit" class="photo-credit">{{ post.photoCredit }}</span>
+        <span v-if="post.additionalImagesNote" class="photo-credit additional-note">{{ post.additionalImagesNote }}</span>
       </div>
       <div class="post-info">
         <h1>{{ post.name }}</h1>

@@ -14,6 +14,7 @@ export interface Post {
   bio?: string | null
   photoCredit?: string | null
   additionalImages?: string[]
+  additionalImagesNote?: string | null
   wikipediaUrl?: string | null
   createdAt?: string | null
   focalPoint?: { x: number; y: number } | null

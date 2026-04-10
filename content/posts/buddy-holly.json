@@ -3,6 +3,8 @@
   "slug": "buddy-holly",
   "name": "Buddy Holly",
   "title": "Last known photo of Buddy Holly, taken on February 3, 1959, before boarding the plane that crashed in an Iowa cornfield.",
+  "photoCredit": "Concert photo believed to be taken by Mary Gerber, a 16-year-old attendee at the Surf Ballroom that night.",
+  "additionalImagesNote": "Additional images believed to be from the Winter Dance Party tour (Jan-Feb 1959). Specific dates and venues unconfirmed.",
   "imageUrl": "/images/buddy-holly.jpg",
   "date": "February 3, 1959",
   "deathDate": "February 3, 1959",
@@ -14,10 +16,15 @@
   "sourceLabel": "Wikipedia",
   "description": "Buddy Holly was photographed on February 3, 1959, at the Surf Ballroom in Clear Lake, Iowa, after performing his final concert on the Winter Dance Party tour. Tired of the freezing tour bus, Holly chartered a small Beechcraft Bonanza to fly to the next venue in Moorhead, Minnesota. The plane took off just after 1 AM in light snow and poor visibility. Pilot Roger Peterson lost control shortly after takeoff, and the plane crashed into a cornfield about five miles northwest of the airport, killing Holly, Ritchie Valens, J.P. \"The Big Bopper\" Richardson, and Peterson. Holly was 22 years old. The tragedy was later immortalized as \"The Day the Music Died\" in Don McLean's song \"American Pie\".",
   "bio": "Buddy Holly was a pioneering American rock and roll musician and songwriter. Despite his brief career, he was a central figure in early rock and roll and influenced artists from the Beatles to the Rolling Stones.",
+  "additionalImages": [
+    "/images/buddy-holly-old.jpg",
+    "/images/buddy-holly-2.jpg",
+    "/images/buddy-holly-3.jpg"
+  ],
   "createdAt": "2026-03-22",
   "focalPoint": {
-    "x": 30,
-    "y": 43
+    "x": 55,
+    "y": 35
   },
   "location": {
     "name": "Surf Ballroom, Clear Lake, Iowa",
