@@ -1,0 +1,34 @@
+{
+  "id": "271969070369",
+  "slug": "brian-jones",
+  "name": "Brian Jones",
+  "title": "Last known photo of Brian Jones, taken at Cotchford Farm in Hartfield, East Sussex, June 1969 — weeks before his death by drowning in his swimming pool.",
+  "imageUrl": "/images/brian-jones.jpg",
+  "date": "June 1969",
+  "deathDate": "July 3, 1969",
+  "age": 27,
+  "tags": [
+    "musician",
+    "27 club"
+  ],
+  "sourceUrl": "https://borntorockandroll.wordpress.com/2009/07/03/looking-tired-brian-jones-40-years-on/",
+  "sourceLabel": "Born to Rock and Roll",
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Brian_Jones",
+  "photoCredit": "Photo by Helen Spittal",
+  "description": "Brian Jones was photographed at Cotchford Farm, his home in Hartfield, East Sussex, in June 1969. He appears tired and gaunt in the image, looking far older than his 27 years. Jones had been fired from the Rolling Stones on June 8, replaced by Mick Taylor, after years of drug abuse and declining health had made him unreliable. Less than a month later, on the night of July 2-3, Jones was found motionless at the bottom of his swimming pool. He was pronounced dead at the scene. His death was officially ruled \"death by misadventure\" — drowning while under the influence of drugs and alcohol — though the circumstances have been disputed for decades. Cotchford Farm had previously been owned by A.A. Milne, the creator of Winnie-the-Pooh.",
+  "bio": "Brian Jones was the founder and original leader of the Rolling Stones. A multi-instrumentalist, he played guitar, harmonica, sitar, marimba, and dozens of other instruments across the band's early records. His musical vision shaped the band's blues-rooted sound before internal conflicts and substance abuse led to his departure.",
+  "additionalImages": [
+    "/images/brian-jones-2.jpg"
+  ],
+  "createdAt": "2026-04-11",
+  "focalPoint": {
+    "x": 67,
+    "y": 32
+  },
+  "location": {
+    "name": "Cotchford Farm, Hartfield, East Sussex",
+    "lat": 51.0847,
+    "lng": 0.0539,
+    "mapsUrl": "https://www.google.com/maps/search/Cotchford+Farm+Wych+Cross+Hartfield+East+Sussex+TN7+4EQ"
+  }
+}
