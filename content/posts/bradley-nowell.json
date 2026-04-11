@@ -25,5 +25,6 @@
     "lat": 38.2332,
     "lng": -122.6367,
     "mapsUrl": "https://www.google.com/maps/search/Phoenix+Theater+201+Washington+St+Petaluma+CA"
-  }
+  },
+  "aspectRatio": "square"
 }

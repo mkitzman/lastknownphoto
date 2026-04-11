@@ -26,5 +26,6 @@
     "lng": -90.0561,
     "mapsUrl": "https://www.google.com/maps/search/Wolf+River+Harbor+Memphis+Tennessee"
   },
-  "photoCredit": "Gene Bowen"
+  "photoCredit": "Gene Bowen",
+  "aspectRatio": "square"
 }

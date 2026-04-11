@@ -25,5 +25,6 @@
     "lng": -118.5631,
     "mapsUrl": "https://www.google.com/maps/search/Always+Evolving+Valencia+Santa+Clarita+CA"
   },
-  "photoCredit": "Unknown"
+  "photoCredit": "Unknown",
+  "aspectRatio": "landscape"
 }

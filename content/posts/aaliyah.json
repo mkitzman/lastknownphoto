@@ -26,5 +26,6 @@
     "lng": -77.0636,
     "mapsUrl": "https://www.google.com/maps/search/Marsh+Harbour+Abaco+Islands+Bahamas"
   },
-  "photoCredit": "Fatima Robinson"
+  "photoCredit": "Fatima Robinson",
+  "aspectRatio": "square"
 }

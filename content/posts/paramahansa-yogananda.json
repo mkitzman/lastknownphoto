@@ -25,5 +25,6 @@
     "lng": -118.2551,
     "mapsUrl": "https://www.google.com/maps/search/Millennium+Biltmore+Hotel+506+S+Grand+Ave+Los+Angeles"
   },
-  "photoCredit": "Unknown"
+  "photoCredit": "Unknown",
+  "aspectRatio": "square"
 }

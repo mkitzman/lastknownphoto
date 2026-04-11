@@ -32,5 +32,6 @@
     "lat": 42.3381,
     "lng": -83.0524,
     "mapsUrl": "https://www.google.com/maps/search/Fox+Theatre+2211+Woodward+Ave+Detroit+MI"
-  }
+  },
+  "aspectRatio": "landscape"
 }

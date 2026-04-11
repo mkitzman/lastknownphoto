@@ -26,5 +26,6 @@
     "lat": 34.0981,
     "lng": -118.3364,
     "mapsUrl": "https://www.google.com/maps/search/Sunset+Sound+Recorders+6650+Sunset+Blvd+Hollywood+CA"
-  }
+  },
+  "aspectRatio": "portrait"
 }

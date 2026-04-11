@@ -26,5 +26,6 @@
     "lat": 59.3589,
     "lng": 17.9889,
     "mapsUrl": "https://www.google.com/maps/search/Solnahallen+Solna+Sweden"
-  }
+  },
+  "aspectRatio": "square"
 }

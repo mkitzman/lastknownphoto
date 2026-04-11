@@ -25,5 +25,6 @@
     "lng": -118.8048,
     "mapsUrl": "https://www.google.com/maps/search/6962+Wildlife+Rd+Malibu+CA"
   },
-  "photoCredit": "Unknown"
+  "photoCredit": "Unknown",
+  "aspectRatio": "portrait"
 }

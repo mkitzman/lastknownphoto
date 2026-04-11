@@ -24,5 +24,6 @@
     "lat": 33.7394,
     "lng": -116.4108,
     "mapsUrl": "https://www.google.com/maps/search/40471+Sand+Dune+Rd+Rancho+Mirage+CA+92270"
-  }
+  },
+  "aspectRatio": "landscape"
 }

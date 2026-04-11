@@ -27,5 +27,6 @@
     "lat": 29.1856,
     "lng": -81.0706,
     "mapsUrl": "https://www.google.com/maps/search/Daytona+International+Speedway+Daytona+Beach+FL"
-  }
+  },
+  "aspectRatio": "landscape"
 }

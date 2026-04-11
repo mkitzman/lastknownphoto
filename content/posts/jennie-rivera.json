@@ -25,5 +25,6 @@
     "lng": -100.2871,
     "mapsUrl": "https://www.google.com/maps/search/Arena+Monterrey+Monterrey+Mexico"
   },
-  "photoCredit": "Jacob Yebale"
+  "photoCredit": "Jacob Yebale",
+  "aspectRatio": "square"
 }

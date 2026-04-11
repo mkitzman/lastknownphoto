@@ -25,5 +25,6 @@
     "lng": -77.0148,
     "mapsUrl": "https://www.google.com/maps/search/NBC+News+Washington+Bureau+4001+Nebraska+Ave+Washington+DC"
   },
-  "photoCredit": "Unknown"
+  "photoCredit": "Unknown",
+  "aspectRatio": "landscape"
 }

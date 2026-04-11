@@ -25,5 +25,6 @@
     "lat": 40.9998,
     "lng": -72.2934,
     "mapsUrl": "https://www.google.com/maps/search/WLNG+1619+Main+St+Sag+Harbor+NY"
-  }
+  },
+  "aspectRatio": "square"
 }

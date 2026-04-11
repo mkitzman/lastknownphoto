@@ -25,5 +25,6 @@
     "lat": -16.15,
     "lng": 145.87,
     "mapsUrl": "https://www.google.com/maps/search/Batt+Reef+Port+Douglas+Queensland+Australia"
-  }
+  },
+  "aspectRatio": "landscape"
 }

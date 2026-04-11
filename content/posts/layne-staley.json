@@ -26,5 +26,6 @@
     "lat": 47.6624,
     "lng": -117.404,
     "mapsUrl": "https://www.google.com/maps/search/Spokane+Arena+Spokane+Washington"
-  }
+  },
+  "aspectRatio": "landscape"
 }

@@ -25,5 +25,6 @@
     "lat": 35.7374,
     "lng": -119.9468,
     "mapsUrl": "https://www.google.com/maps/search/Blackwells+Corner+Lost+Hills+California"
-  }
+  },
+  "aspectRatio": "landscape"
 }

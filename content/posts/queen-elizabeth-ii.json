@@ -25,5 +25,6 @@
     "lat": 57.0396,
     "lng": -3.2285,
     "mapsUrl": "https://www.google.com/maps/search/Balmoral+Castle+Aberdeenshire+Scotland"
-  }
+  },
+  "aspectRatio": "portrait"
 }

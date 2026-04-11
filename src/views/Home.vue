@@ -13,7 +13,45 @@ function shuffle<T>(array: T[]): T[] {
   return shuffled
 }
 
-const shuffledPosts = shuffle(posts)
+// Aspect-ratio-aware bento placement:
+// Position 0 (8n+1): 2x2 featured — any ratio works
+// Position 3 (8n+4): 1x2 tall — prefer portrait
+// Position 5 (8n+6): 2x1 wide — prefer landscape
+// Others: 1x1 — any ratio works
+function bentoSort(allPosts: typeof posts): typeof posts {
+  const shuffled = shuffle(allPosts)
+  const portraits = shuffled.filter(p => p.aspectRatio === 'portrait')
+  const landscapes = shuffled.filter(p => p.aspectRatio === 'landscape')
+  const others = shuffled.filter(p => p.aspectRatio !== 'portrait' && p.aspectRatio !== 'landscape')
+
+  const result: typeof posts = new Array(shuffled.length)
+  const used = new Set<string>()
+
+  // Fill tall slots (position 3, 11, 19...) with portraits
+  for (let i = 3; i < shuffled.length; i += 8) {
+    const pick = portraits.find(p => !used.has(p.id)) || others.find(p => !used.has(p.id))
+    if (pick) { result[i] = pick; used.add(pick.id) }
+  }
+
+  // Fill wide slots (position 5, 13, 21...) with landscapes
+  for (let i = 5; i < shuffled.length; i += 8) {
+    const pick = landscapes.find(p => !used.has(p.id)) || others.find(p => !used.has(p.id))
+    if (pick) { result[i] = pick; used.add(pick.id) }
+  }
+
+  // Fill remaining slots with whatever's left
+  const remaining = shuffled.filter(p => !used.has(p.id))
+  let ri = 0
+  for (let i = 0; i < result.length; i++) {
+    if (!result[i] && ri < remaining.length) {
+      result[i] = remaining[ri++]
+    }
+  }
+
+  return result.filter(Boolean)
+}
+
+const shuffledPosts = bentoSort(posts)
 
 const route = useRoute()
 const selectedTag = ref<string | null>((route.query.tag as string) || null)

@@ -29,5 +29,6 @@
     "lat": 39.9607,
     "lng": -75.6055,
     "mapsUrl": "https://www.google.com/maps/search/Barnabys+of+America+West+Chester+PA"
-  }
+  },
+  "aspectRatio": "landscape"
 }

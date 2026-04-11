@@ -26,5 +26,6 @@
     "lat": -33.8768,
     "lng": 151.243,
     "mapsUrl": "https://www.google.com/maps/search/Ritz+Carlton+Double+Bay+Sydney"
-  }
+  },
+  "aspectRatio": "landscape"
 }

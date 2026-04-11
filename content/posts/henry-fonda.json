@@ -24,5 +24,6 @@
     "lat": 34.0778,
     "lng": -118.4756,
     "mapsUrl": "https://www.google.com/maps/search/10744+W+Chalon+Rd+Los+Angeles+CA+90049"
-  }
+  },
+  "aspectRatio": "portrait"
 }

@@ -28,5 +28,6 @@
     "lat": 37.8913,
     "lng": -122.4573,
     "mapsUrl": "https://www.google.com/maps/search/Paradise+Cay+Tiburon+CA"
-  }
+  },
+  "aspectRatio": "square"
 }

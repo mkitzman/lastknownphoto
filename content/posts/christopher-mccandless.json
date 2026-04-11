@@ -25,5 +25,6 @@
     "lat": 63.8676,
     "lng": -149.7692,
     "mapsUrl": "https://www.google.com/maps/search/Stampede+Trail+Bus+142+Denali+Alaska"
-  }
+  },
+  "aspectRatio": "square"
 }

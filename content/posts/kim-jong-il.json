@@ -25,5 +25,6 @@
     "lat": 39.0083,
     "lng": 125.7178,
     "mapsUrl": "https://www.google.com/maps/search/Kwangbok+Area+Supermarket+Pyongyang+North+Korea"
-  }
+  },
+  "aspectRatio": "landscape"
 }

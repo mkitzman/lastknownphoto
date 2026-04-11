@@ -29,5 +29,6 @@
     "lat": 33.8562,
     "lng": -118.3932,
     "mapsUrl": "https://www.google.com/maps/search/916+Esplanade+Redondo+Beach+CA"
-  }
+  },
+  "aspectRatio": "portrait"
 }

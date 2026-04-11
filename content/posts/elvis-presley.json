@@ -24,5 +24,6 @@
     "lat": 35.0477,
     "lng": -90.0261,
     "mapsUrl": "https://www.google.com/maps/search/Graceland+3764+Elvis+Presley+Blvd+Memphis+TN"
-  }
+  },
+  "aspectRatio": "landscape"
 }

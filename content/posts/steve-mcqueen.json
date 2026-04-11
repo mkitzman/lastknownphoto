@@ -29,5 +29,6 @@
     "lat": 34.2028,
     "lng": -119.1773,
     "mapsUrl": "https://www.google.com/maps/search/111+W+Gonzales+Rd+Oxnard+CA+93036"
-  }
+  },
+  "aspectRatio": "landscape"
 }

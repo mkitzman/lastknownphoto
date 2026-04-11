@@ -31,5 +31,6 @@
     "lat": 34.0186,
     "lng": -118.2816,
     "mapsUrl": "https://www.google.com/maps/search/Shrine+Auditorium+665+W+Jefferson+Blvd+Los+Angeles"
-  }
+  },
+  "aspectRatio": "landscape"
 }

@@ -26,5 +26,6 @@
     "lat": 25.028046,
     "lng": -77.530812,
     "mapsUrl": "https://www.google.com/maps/@25.028046,-77.530812,19z"
-  }
+  },
+  "aspectRatio": "square"
 }

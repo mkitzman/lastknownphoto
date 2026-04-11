@@ -26,5 +26,6 @@
     "lat": 51.5394,
     "lng": -0.1427,
     "mapsUrl": "https://www.google.com/maps/search/30+Camden+Square+London+NW1"
-  }
+  },
+  "aspectRatio": "portrait"
 }

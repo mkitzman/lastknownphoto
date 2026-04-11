@@ -15,6 +15,7 @@ export interface Post {
   photoCredit?: string | null
   additionalImages?: string[]
   additionalImagesNote?: string | null
+  aspectRatio?: 'portrait' | 'landscape' | 'square' | null
   wikipediaUrl?: string | null
   createdAt?: string | null
   focalPoint?: { x: number; y: number } | null

@@ -26,5 +26,6 @@
     "lat": 41.8895,
     "lng": 12.4695,
     "mapsUrl": "https://www.google.com/maps/search/Sabatini+Restaurant+Piazza+Santa+Maria+Trastevere+Rome"
-  }
+  },
+  "aspectRatio": "square"
 }

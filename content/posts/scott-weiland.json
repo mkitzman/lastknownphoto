@@ -27,5 +27,6 @@
     "lat": 45.0358,
     "lng": -93.5813,
     "mapsUrl": "https://www.google.com/maps/search/Medina+Entertainment+Center+500+Highway+55+Medina+MN"
-  }
+  },
+  "aspectRatio": "portrait"
 }

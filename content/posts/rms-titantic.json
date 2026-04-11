@@ -26,5 +26,6 @@
     "lat": 51.8503,
     "lng": -8.2943,
     "mapsUrl": "https://www.google.com/maps/search/Cobh+Harbour+Cork+Ireland"
-  }
+  },
+  "aspectRatio": "landscape"
 }

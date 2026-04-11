@@ -26,5 +26,6 @@
     "lat": 47.6192,
     "lng": -122.2822,
     "mapsUrl": "https://www.google.com/maps/search/171+Lake+Washington+Blvd+E+Seattle+Washington"
-  }
+  },
+  "aspectRatio": "square"
 }

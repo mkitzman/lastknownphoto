@@ -32,5 +32,6 @@
     "lat": 51.5131,
     "lng": -0.2006,
     "mapsUrl": "https://www.google.com/maps/search/22+Lansdowne+Crescent+Notting+Hill+London"
-  }
+  },
+  "aspectRatio": "square"
 }

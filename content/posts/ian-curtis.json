@@ -26,5 +26,6 @@
     "lat": 53.2587,
     "lng": -2.1257,
     "mapsUrl": "https://www.google.com/maps/search/Macclesfield+Cheshire+England"
-  }
+  },
+  "aspectRatio": "portrait"
 }

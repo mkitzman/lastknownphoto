@@ -26,5 +26,6 @@
     "lat": 33.5801,
     "lng": -85.0766,
     "mapsUrl": "https://www.google.com/maps/search/702+Dixie+St+Carrollton+GA+30117"
-  }
+  },
+  "aspectRatio": "landscape"
 }

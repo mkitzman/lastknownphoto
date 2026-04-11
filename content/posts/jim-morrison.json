@@ -35,5 +35,6 @@
     "lat": 49.2175,
     "lng": 2.3953,
     "mapsUrl": "https://www.google.com/maps/search/Saint-Leu-d'Esserent+France"
-  }
+  },
+  "aspectRatio": "square"
 }
