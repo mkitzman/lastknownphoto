@@ -73,7 +73,7 @@ function handleKeydown(e: KeyboardEvent) {
           </svg>
         </button>
         <h3>{{ post.name }}</h3>
-        <p class="card-desc">{{ post.description || post.title }}</p>
+        <p class="card-desc" v-html="post.description || post.title"></p>
         <div class="card-meta" v-if="post.date || post.deathDate || post.age">
           <div class="meta-item" v-if="post.date">
             <span class="meta-label">Photo Date</span>
