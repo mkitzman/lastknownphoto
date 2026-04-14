@@ -1,0 +1,30 @@
+{
+  "id": "johnny-cash-01",
+  "slug": "johnny-cash",
+  "name": "Johnny Cash",
+  "title": "The final photo of Johnny Cash, taken by Marty Stuart on September 8, 2003 — four days before his death.",
+  "imageUrl": "/images/johnny-cash.jpg",
+  "date": "September 8, 2003",
+  "deathDate": "September 12, 2003",
+  "age": 71,
+  "tags": [
+    "musician",
+    "country"
+  ],
+  "sourceUrl": "https://www.whiskeyriff.com/2024/08/06/he-looked-like-an-old-president-marty-stuart-reflects-on-taking-the-final-photo-of-johnny-cash/",
+  "sourceLabel": "Whiskey Riff",
+  "description": "This is the final photograph of Johnny Cash, taken by his friend and fellow musician Marty Stuart on September 8, 2003, at Cash's home on Old Hickory Lake in Hendersonville, Tennessee. Stuart later reflected on the moment: \"He was sitting there in the light. The afternoon light from the lake was touching him on his back. I said 'JR, let me take your picture.' He said, 'ok.' I shot three frames. In the first two he looked like a little old man. I said, 'JR!' and he sat up straight and he pulled that collar. And he became John R. Cash, and I got the picture.\" Cash had been in declining health since the death of his wife June Carter Cash on May 15, 2003, and had been hospitalized with complications from diabetes. He died four days after this photo, on September 12, 2003, at Baptist Hospital in Nashville. He was 71 years old.",
+  "bio": "Johnny Cash was an American singer-songwriter and one of the most influential musicians of the 20th century. Known as the \"Man in Black,\" his career spanned five decades and bridged country, rock, blues, folk, and gospel music. His iconic live recordings at Folsom and San Quentin prisons remain landmarks of American music.",
+  "photoCredit": "Marty Stuart",
+  "createdAt": "2026-04-14",
+  "focalPoint": {
+    "x": 51,
+    "y": 41
+  },
+  "location": {
+    "name": "Home of Johnny Cash & June Carter Cash, 200 Caudill Dr, Hendersonville, TN 37075",
+    "lat": 36.3192,
+    "lng": -86.5551,
+    "mapsUrl": "https://www.google.com/maps/search/Home+of+Johnny+Cash+June+Carter+Cash+200+Caudill+Dr+Hendersonville+TN"
+  }
+}
