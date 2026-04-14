@@ -1,4 +1,9 @@
 <script setup lang="ts">
+function openContact() {
+  const u = 'unrealcityproject'
+  const d = 'gmail.com'
+  window.location.href = 'mai' + 'lto:' + u + '@' + d
+}
 </script>
 
 <template>
@@ -40,13 +45,21 @@
         This isn't an archive of tragedy; it is an archive of presence. These photos serve as a reminder that the "insignificant" moments of our lives are often the most precious.
       </p>
 
+      <p>We hope these images encourage you to look at your own "unremarkable" day with a little more attention.</p>
+
       <blockquote>
         "Enjoy every sandwich"
         <cite>— Warren Zevon</cite>
       </blockquote>
 
+      <div class="image-notice">
+        <h2>Image Use & Attribution</h2>
+        <p>
+          This is a non-commercial historical archive created for educational and documentary purposes. All photographs remain the property of their respective copyright holders and are used here under fair use (17 U.S.C. &sect; 107) for purposes of commentary, criticism, and historical documentation. Photographer credits are provided where known. If you are a rights holder and would like an image credited, modified, or removed, please <a href="#" class="contact-link" @click.prevent="openContact">get in touch</a>.
+        </p>
+      </div>
+
       <div class="about-footer">
-        <p>We hope these images encourage you to look at your own "unremarkable" day with a little more attention.</p>
         <p class="studio-credit">
           <a href="https://www.michaelkitzman.com/" target="_blank" rel="noreferrer">An Unreal City project</a>
         </p>
@@ -108,10 +121,33 @@ p strong {
   font-weight: 700;
 }
 
-.about-footer {
-  margin-top: 3rem;
-  padding-top: 2rem;
+.image-notice {
+  margin-top: 0.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border);
+  text-align: justify;
+}
+
+.image-notice h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.image-notice p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.image-notice a {
+  color: var(--accent);
+}
+
+.about-footer {
+  margin-top: 2rem;
 }
 
 .about-footer p {
