@@ -52,10 +52,12 @@ onMounted(() => {
   for (const post of postsWithLocation) {
     const loc = post.location!
     const truncDesc = post.title.length > 120 ? post.title.slice(0, 120) + '...' : post.title
+    const fp = post.focalPoint
+    const objectPosition = fp ? `${fp.x}% ${fp.y}%` : '50% 50%'
 
     const popupContent = `
       <div class="map-popup">
-        <img src="${post.imageUrl}" alt="${post.name}" />
+        <img src="${post.imageUrl}" alt="${post.name}" style="object-position: ${objectPosition}" />
         <div class="map-popup-body">
           <h3>${post.name}</h3>
           <p class="map-popup-location">${loc.name}</p>

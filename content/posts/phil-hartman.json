@@ -1,0 +1,33 @@
+{
+  "id": "phil-hartman-01",
+  "slug": "phil-hartman",
+  "name": "Phil Hartman",
+  "title": "Last known photo of Phil Hartman with his wife Brynn, taken on May 8, 1998, at a private dinner party at Chasen's Restaurant in Beverly Hills, California — just 20 days before his death.",
+  "imageUrl": "/images/phil-hartman.jpg",
+  "date": "May 8, 1998",
+  "deathDate": "May 28, 1998",
+  "age": 49,
+  "tags": [
+    "actor",
+    "comedian",
+    "snl",
+    "newsradio"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Phil_Hartman",
+  "sourceLabel": "Wikipedia",
+  "description": "Phil Hartman and his wife Brynn Omdahl were photographed on May 8, 1998, attending a private dinner party at Chasen's Restaurant in Beverly Hills, California. The photo was taken near the end of the fourth season of NewsRadio, in which Hartman starred. Days earlier, on May 4, Hartman had made a public appearance at Planet Hollywood in Las Vegas. At the time, the couple's marriage was under severe strain due to Brynn's struggles with substance abuse; reports indicate she had recently relapsed after a period of sobriety. In the early morning hours of May 28, 1998, Brynn Hartman shot and killed Phil as he slept in their Encino, California home, then died by suicide hours later. He was 49 years old.",
+  "bio": "Phil Hartman was an American comedian, actor, screenwriter, and graphic designer. Best known for his eight seasons on Saturday Night Live, his starring role as Bill McNeal on NewsRadio, and voice work on The Simpsons as Troy McClure and Lionel Hutz.",
+  "photoCredit": "Jeff Kravitz / Associated Press",
+  "createdAt": "2026-04-17",
+  "location": {
+    "name": "Chasen's Restaurant, 246 N Canon Dr, Beverly Hills, CA 90210",
+    "lat": 34.0687,
+    "lng": -118.4014,
+    "mapsUrl": "https://www.google.com/maps/search/246+N+Canon+Dr+Beverly+Hills+CA+90210"
+  },
+  "aspectRatio": "portrait",
+  "focalPoint": {
+    "x": 28,
+    "y": 20
+  }
+}
