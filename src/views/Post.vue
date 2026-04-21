@@ -30,6 +30,11 @@ const allImages = computed(() => {
   return [post.value.imageUrl, ...(post.value.additionalImages || [])]
 })
 
+const currentPlateIndex = computed(() => {
+  const i = allImages.value.indexOf(currentImage.value)
+  return i >= 0 ? i + 1 : 1
+})
+
 const decade = computed(() => post.value ? getDecade(post.value) : null)
 const years = computed(() => post.value ? getYears(post.value) : null)
 const profession = computed(() => post.value ? getProfession(post.value) : null)
@@ -68,7 +73,7 @@ const recordIndex = computed(() => {
           </button>
         </div>
         <div class="photo-caption">
-          <span>Plate 01 of {{ String(allImages.length).padStart(2, '0') }}</span>
+          <span>Plate {{ String(currentPlateIndex).padStart(2, '0') }} of {{ String(allImages.length).padStart(2, '0') }}</span>
           <span v-if="post.photoCredit">{{ post.photoCredit }}</span>
         </div>
         <div v-if="post.additionalImagesNote" class="photo-note">{{ post.additionalImagesNote }}</div>
@@ -82,8 +87,8 @@ const recordIndex = computed(() => {
           <span v-if="years && profession"> · </span>
           <span v-if="profession">{{ profession }}</span>
         </div>
+        <p v-if="post.description || post.title" class="record-note" v-html="post.description || post.title"></p>
         <p class="record-bio" v-if="post.bio">{{ post.bio }}</p>
-        <p class="record-note">{{ post.description || post.title }}</p>
 
         <dl class="record-meta">
           <template v-if="post.date">
@@ -242,6 +247,8 @@ const recordIndex = computed(() => {
 
 .photo-caption {
   margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairline-strong);
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -308,6 +315,18 @@ const recordIndex = computed(() => {
   max-width: 520px;
   opacity: 0.9;
   font-weight: 400;
+}
+
+.record-note :deep(a) {
+  color: #c8a87c;
+  text-decoration: none;
+  transition: text-decoration 0.2s, color 0.2s;
+}
+
+.record-note :deep(a:hover) {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .record-meta {
