@@ -1,385 +1,183 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { getWikipediaUrl, type Post } from '../data/posts'
+import { computed } from 'vue'
+import { RouterLink } from 'vue-router'
+import { type Post, getDecade, getYears, getProfession, getInterval } from '../data/posts'
 
-const props = defineProps<{ post: Post, activeCardId: string | null, bento?: boolean }>()
-const emit = defineEmits<{ flip: [id: string | null] }>()
+const props = defineProps<{ post: Post }>()
 
-const flipped = computed(() => props.activeCardId === props.post.id)
-const colorized = ref(false)
-
-function handleFlip() {
-  emit('flip', flipped.value ? null : props.post.id)
-}
-
-function handleColorize(e: Event) {
-  e.stopPropagation()
-  colorized.value = !colorized.value
-}
-
-watch(() => props.activeCardId, () => {
-  if (props.activeCardId !== props.post.id) {
-    colorized.value = false
-  }
+const decade = computed(() => getDecade(props.post))
+const years = computed(() => getYears(props.post))
+const profession = computed(() => getProfession(props.post))
+const interval = computed(() => getInterval(props.post))
+const objectPosition = computed(() => {
+  const fp = props.post.focalPoint
+  return fp ? `${fp.x}% ${fp.y}%` : '50% 50%'
 })
-
-function handleKeydown(e: KeyboardEvent) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault()
-    handleFlip()
-  }
-  if (e.key === 'Escape' && flipped.value) {
-    emit('flip', null)
-  }
-}
-
 </script>
 
 <template>
-  <article
-    class="card-container"
-    :class="{ colorized, 'bento-card': bento }"
-    @keydown="handleKeydown"
-    :aria-label="post.name + ' — click to reveal details'"
-  >
-    <div class="card" :class="{ flipped }">
-      <button
-        class="card-front"
-        @click="handleFlip"
-        :aria-expanded="flipped"
-        :aria-label="'View details for ' + post.name"
-        type="button"
-      >
-        <img :src="post.imageUrl" :alt="post.name" loading="lazy" :style="post.focalPoint ? { objectPosition: post.focalPoint.x + '% ' + post.focalPoint.y + '%' } : undefined" />
-        <div class="card-overlay" aria-hidden="true">
-          <span class="card-name">{{ post.name }}</span>
-        </div>
-      </button>
-      <button
-        class="colorize-btn"
-        @click="handleColorize"
-        type="button"
-        aria-label="Show photo in color"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
-        </svg>
-      </button>
-      <div class="card-back" role="region" :aria-label="post.name + ' details'" :inert="!flipped">
-        <button class="flip-back-btn" @click.stop="emit('flip', null)" title="Flip back">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
-          </svg>
-        </button>
-        <h3>{{ post.name }}</h3>
-        <p class="card-desc" v-html="post.description || post.title"></p>
-        <div class="card-meta" v-if="post.date || post.deathDate || post.age">
-          <div class="meta-item" v-if="post.date">
-            <span class="meta-label">Photo Date</span>
-            <span class="meta-value">{{ post.date }}</span>
-          </div>
-          <div class="meta-item" v-if="post.deathDate">
-            <span class="meta-label">Death Date</span>
-            <span class="meta-value">{{ post.deathDate }}</span>
-          </div>
-          <div class="meta-item" v-if="post.age">
-            <span class="meta-label">Age</span>
-            <span class="meta-value">{{ post.age }}</span>
+  <article class="register-card">
+    <RouterLink :to="{ name: 'post', params: { slug: post.slug } }" class="card-link" :aria-label="`View record for ${post.name}`">
+      <div class="eyebrow-row">
+        <span>{{ post.slug.replace(/-/g, ' ') }}</span>
+        <span v-if="decade">{{ decade }}</span>
+      </div>
+      <div class="photo-frame">
+        <img
+          :src="post.imageUrl"
+          :alt="post.name"
+          loading="lazy"
+          :style="{ objectPosition }"
+        />
+        <div class="hairline" aria-hidden="true"></div>
+      </div>
+      <div class="meta-row">
+        <div class="identity">
+          <div class="name">{{ post.name }}</div>
+          <div class="subline" v-if="years || profession">
+            <span v-if="years">{{ years }}</span>
+            <span v-if="years && profession"> · </span>
+            <span v-if="profession">{{ profession }}</span>
           </div>
         </div>
-        <div class="card-bottom">
-          <a :href="getWikipediaUrl(post)" target="_blank" rel="noopener noreferrer" class="wiki-link" @click.stop title="Wikipedia">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-          </a>
-          <router-link :to="{ name: 'post', params: { slug: post.slug } }" class="card-cta" @click.stop>Read more &rarr;</router-link>
+        <div class="interval" v-if="interval">
+          −{{ interval }}<br />
+          <span class="interval-caption">before</span>
         </div>
       </div>
-    </div>
+    </RouterLink>
   </article>
 </template>
 
 <style scoped>
-.card-container {
-  break-inside: avoid;
-  margin-bottom: 1rem;
+.register-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--fg);
   cursor: pointer;
-  perspective: 1000px;
 }
 
-.card {
-  position: relative;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
+.eyebrow-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
 }
 
-.card.flipped {
-  transform: rotateY(180deg);
-}
-
-.card.flipped .card-front {
-  pointer-events: none;
-}
-
-.card.flipped .card-overlay {
-  display: none;
-}
-
-.card-front,
-.card-back {
-  backface-visibility: hidden;
-  border-radius: 8px;
+.eyebrow-row > :first-child {
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  max-width: 60%;
 }
 
-.card-front {
+.photo-frame {
   position: relative;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-  border-radius: 8px;
-  border: none;
-  padding: 0;
-  background: none;
+  background: var(--ink-750);
+}
+
+.photo-frame img {
   width: 100%;
-  cursor: pointer;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.55) contrast(1);
+  transform: scale(1);
+  transition: transform 900ms cubic-bezier(0.2, 0.7, 0.3, 1), filter 600ms ease;
+}
+
+.card-link:hover .photo-frame img,
+.card-link:focus-visible .photo-frame img {
+  transform: scale(1.02);
+  filter: saturate(0.75) contrast(1);
+}
+
+.hairline {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  height: 6px;
+  background-image:
+    linear-gradient(to right, var(--bone-100), var(--bone-100)),
+    repeating-linear-gradient(to right, var(--bone-100) 0 1px, transparent 1px 10px);
+  background-size: 100% 1px, 100% 4px;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat, repeat-x;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: difference;
+  opacity: 0.9;
+}
+
+.card-link:hover .hairline,
+.card-link:focus-visible .hairline {
+  transform: scaleX(1);
+}
+
+.card-link:focus-visible {
   outline: none;
 }
 
-.card-front:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 8px;
+.card-link:focus-visible .photo-frame {
+  box-shadow: 0 0 0 2px var(--fg);
 }
 
-.card-front:focus-visible img {
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.04);
+.meta-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 12px;
 }
 
-.card-front:focus-visible ~ .card-overlay,
-.card-container:focus-within .card-overlay {
-  opacity: 1;
-  transform: translateY(0);
+.name {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1.15;
 }
 
-.card-front img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-  filter: grayscale(100%) contrast(1.05);
-  transition: filter 0.6s ease, transform 0.6s ease;
+.subline {
+  margin-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: var(--fg-muted);
+  text-transform: capitalize;
 }
 
-.card-container:hover .card-front img,
-.card-container.colorized .card-front img {
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.04);
-}
-
-/* Vignette overlay */
-.card-front::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.card-container:hover .card-front::after,
-.card-container.colorized .card-front::after {
-  opacity: 1;
-}
-
-.card-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem 1rem 1rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-  border-radius: 0 0 8px 8px;
-  opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  z-index: 2;
-}
-
-.card-container:hover .card-overlay,
-.card-container.colorized .card-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card-name {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: 0.02em;
-}
-
-/* Mobile colorize button — hidden on desktop */
-.colorize-btn {
-  display: none;
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .colorize-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0.6rem;
-    right: 0.6rem;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    z-index: 4;
-    padding: 0;
-    transition: all 0.3s ease;
-  }
-
-  .colorize-btn svg {
-    width: 18px;
-    height: 18px;
-    stroke: rgba(255, 255, 255, 0.7);
-    transition: stroke 0.3s ease;
-  }
-
-  .card-container.colorized .colorize-btn {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-  }
-
-  .card-container.colorized .colorize-btn svg {
-    stroke: #fff;
-  }
-}
-
-.card-back {
-  position: absolute;
-  inset: 0;
-  transform: rotateY(180deg);
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.75rem;
-  overflow-y: auto;
-}
-
-.flip-back-btn {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-light);
-  color: var(--text-muted);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  padding: 0;
-}
-
-.flip-back-btn:hover {
-  color: var(--text);
-  border-color: var(--text-dim);
-}
-
-.card-back h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.card-desc {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-.card-meta {
-  display: flex;
-  gap: 1.25rem;
-}
-
-.meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.meta-label {
-  font-size: 0.65rem;
+.interval {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-dim);
+  text-align: right;
+  color: var(--fg);
+  opacity: 0;
+  transition: opacity 400ms ease;
+  line-height: 1.4;
 }
 
-.meta-value {
-  font-size: 0.8rem;
-  color: var(--text);
+.card-link:hover .interval,
+.card-link:focus-visible .interval {
+  opacity: 1;
 }
 
-.card-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-}
-
-.wiki-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--bg-elevated);
-  color: var(--text-muted);
-  transition: all 0.2s;
-}
-
-.wiki-link:hover {
-  color: var(--text);
-  background: var(--border-light);
-}
-
-.card-cta {
-  font-size: 0.75rem;
-  color: var(--accent);
-}
-
-/* Bento mode overrides */
-.bento-card {
-  margin-bottom: 0;
-  height: 100%;
-}
-
-.bento-card .card {
-  height: 100%;
-}
-
-.bento-card .card-front {
-  height: 100%;
-}
-
-.bento-card .card-front img {
-  height: 100%;
-  object-fit: cover;
+.interval-caption {
+  opacity: 0.5;
 }
 </style>

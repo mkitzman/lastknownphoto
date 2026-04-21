@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { getPostBySlug } from '../data/posts'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
+import { getPostBySlug, getDecade, getYears, getProfession, getInterval, getWikipediaUrl, posts } from '../data/posts'
 
 const route = useRoute()
 const router = useRouter()
@@ -29,17 +29,32 @@ const allImages = computed(() => {
   if (!post.value) return []
   return [post.value.imageUrl, ...(post.value.additionalImages || [])]
 })
+
+const decade = computed(() => post.value ? getDecade(post.value) : null)
+const years = computed(() => post.value ? getYears(post.value) : null)
+const profession = computed(() => post.value ? getProfession(post.value) : null)
+const interval = computed(() => post.value ? getInterval(post.value) : null)
+
+const recordIndex = computed(() => {
+  if (!post.value) return 0
+  return posts.findIndex(p => p.slug === post.value!.slug) + 1
+})
 </script>
 
 <template>
-  <div class="post-page" v-if="post">
-    <button class="back-btn" @click="router.back()">&larr; Back</button>
-    <div class="post-layout">
-      <div class="post-image">
-        <div class="main-image-wrapper">
-          <img :src="currentImage" :alt="post.name" class="main-image" />
+  <div class="record" v-if="post">
+    <div class="record-topbar">
+      <button class="topbar-link" @click="router.back()">← Archive</button>
+      <span class="topbar-slug">{{ post.slug }}</span>
+      <span class="topbar-index">Record {{ String(recordIndex).padStart(3, '0') }} / {{ posts.length }}</span>
+    </div>
+
+    <section class="record-layout">
+      <div class="record-photo">
+        <div class="photo-frame">
+          <img :src="currentImage" :alt="post.name" />
         </div>
-        <div class="image-thumbs" v-if="allImages.length > 1">
+        <div class="photo-thumbs" v-if="allImages.length > 1">
           <button
             v-for="(img, i) in allImages"
             :key="img"
@@ -47,168 +62,175 @@ const allImages = computed(() => {
             :class="{ active: currentImage === img }"
             @click="activeImage = img"
             :aria-label="'View photo ' + (i + 1)"
+            type="button"
           >
             <img :src="img" :alt="post.name + ' photo ' + (i + 1)" />
           </button>
         </div>
-        <span v-if="post.photoCredit" class="photo-credit">{{ post.photoCredit }}</span>
-        <span v-if="post.additionalImagesNote" class="photo-credit additional-note">{{ post.additionalImagesNote }}</span>
+        <div class="photo-caption">
+          <span>Plate 01 of {{ String(allImages.length).padStart(2, '0') }}</span>
+          <span v-if="post.photoCredit">{{ post.photoCredit }}</span>
+        </div>
+        <div v-if="post.additionalImagesNote" class="photo-note">{{ post.additionalImagesNote }}</div>
       </div>
-      <div class="post-info">
-        <h1>{{ post.name }}</h1>
-        <p class="post-bio" v-if="post.bio">{{ post.bio }}</p>
-        <p class="post-title">{{ post.title }}</p>
-        <p class="post-description" v-if="post.description && post.description !== post.title" v-html="post.description"></p>
-        <div class="post-meta">
-          <div class="meta-item" v-if="post.date">
-            <span class="meta-label">Photo Date</span>
-            <span class="meta-value">{{ post.date }}</span>
-          </div>
-          <div class="meta-item" v-if="post.deathDate">
-            <span class="meta-label">Death Date</span>
-            <span class="meta-value">{{ post.deathDate }}</span>
-          </div>
-          <div class="meta-item" v-if="post.age">
-            <span class="meta-label">Age</span>
-            <span class="meta-value">{{ post.age }}</span>
-          </div>
+
+      <div class="record-info">
+        <div class="record-eyebrow">Record {{ post.slug }}</div>
+        <h1 class="record-title">{{ post.name }}</h1>
+        <div class="record-subline" v-if="years || profession">
+          <span v-if="years">{{ years }}</span>
+          <span v-if="years && profession"> · </span>
+          <span v-if="profession">{{ profession }}</span>
         </div>
-        <div class="post-location" v-if="post.location">
-          <div class="meta-item">
-            <span class="meta-label">Photo Location</span>
-            <span class="meta-value location-name">{{ post.location.name }}</span>
-            <a
-              :href="post.location.mapsUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="coords-link"
-              :title="'Open in Google Maps'"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-              {{ coordsDisplay(post.location.lat, post.location.lng) }}
-            </a>
-          </div>
-        </div>
-        <div class="post-tags" v-if="post.tags.length">
-          <router-link
+        <p class="record-bio" v-if="post.bio">{{ post.bio }}</p>
+        <p class="record-note">{{ post.description || post.title }}</p>
+
+        <dl class="record-meta">
+          <template v-if="post.date">
+            <dt>Date of record</dt>
+            <dd>{{ post.date }}</dd>
+          </template>
+          <template v-if="post.deathDate">
+            <dt>Date of death</dt>
+            <dd>{{ post.deathDate }}</dd>
+          </template>
+          <template v-if="post.age != null">
+            <dt>Age</dt>
+            <dd>{{ post.age }}</dd>
+          </template>
+          <template v-if="interval">
+            <dt>Interval to death</dt>
+            <dd>~{{ interval }}</dd>
+          </template>
+          <template v-if="post.location">
+            <dt>Location</dt>
+            <dd>
+              <div class="location-name">{{ post.location.name }}</div>
+              <a :href="post.location.mapsUrl" target="_blank" rel="noopener noreferrer" class="coords-link">
+                {{ coordsDisplay(post.location.lat, post.location.lng) }}
+              </a>
+            </dd>
+          </template>
+          <template v-if="post.photoCredit">
+            <dt>Photographer</dt>
+            <dd>{{ post.photoCredit }}</dd>
+          </template>
+          <template v-if="decade">
+            <dt>Decade</dt>
+            <dd>{{ decade }}</dd>
+          </template>
+        </dl>
+
+        <div class="record-tags" v-if="post.tags.length">
+          <RouterLink
             v-for="tag in post.tags"
             :key="tag"
-            :to="{ name: 'home', query: { tag } }"
+            :to="{ name: 'home', query: { mode: 'tag', tag } }"
             class="tag"
-          >
-            {{ tag }}
-          </router-link>
+          >{{ tag }}</RouterLink>
         </div>
-        <a
-          v-if="post.sourceUrl"
-          :href="post.sourceUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="source-link"
-        >
-          {{ post.sourceLabel || 'Source' }} &rarr;
-        </a>
+
+        <div class="record-links">
+          <a
+            v-if="post.sourceUrl"
+            :href="post.sourceUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="record-link"
+          >{{ post.sourceLabel || 'Source' }} →</a>
+          <a
+            :href="getWikipediaUrl(post)"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="record-link"
+          >Wikipedia →</a>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
   <div class="not-found" v-else>
-    <h2>Post not found</h2>
-    <router-link to="/">Return to archive</router-link>
+    <h2>Record not found</h2>
+    <RouterLink to="/">Return to archive</RouterLink>
   </div>
 </template>
 
 <style scoped>
-.post-page {
-  padding: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+.record {
+  color: var(--fg);
 }
 
-.back-btn {
+.record-topbar {
+  padding: 32px 56px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.topbar-link {
   background: none;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  border: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  padding: 0;
   cursor: pointer;
-  font-family: var(--font);
-  font-size: 0.85rem;
-  margin-bottom: 2rem;
-  transition: all 0.2s;
 }
 
-.back-btn:hover {
-  border-color: var(--border-light);
-  color: var(--text);
+.topbar-link:hover {
+  color: var(--fg);
 }
 
-.post-layout {
+.record-layout {
+  padding: 48px 56px 72px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 72px;
   align-items: start;
 }
 
-@media (max-width: 768px) {
-  .post-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .post-page {
-    padding: 1rem;
-  }
-}
-
-.post-image {
-  display: flex;
-  flex-direction: column;
-}
-
-.main-image-wrapper {
-  aspect-ratio: 3 / 4;
-  background: var(--bg-card);
-  border-radius: 8px;
+.photo-frame {
+  aspect-ratio: 4 / 5;
+  background: var(--ink-750);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.main-image {
+.photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 8px;
-  transition: opacity 0.3s ease;
+  filter: saturate(0.6);
 }
 
-.image-thumbs {
+.photo-thumbs {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
+  gap: 8px;
+  margin-top: 14px;
 }
 
 .thumb {
-  width: 64px;
-  height: 64px;
-  border: 2px solid transparent;
-  border-radius: 6px;
+  width: 58px;
+  height: 58px;
+  border: 1px solid transparent;
   overflow: hidden;
   cursor: pointer;
   padding: 0;
-  background: none;
+  background: var(--ink-750);
   opacity: 0.5;
-  transition: all 0.2s;
+  transition: opacity 0.2s, border-color 0.2s;
 }
 
 .thumb:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .thumb.active {
-  border-color: var(--accent);
+  border-color: var(--fg);
   opacity: 1;
 }
 
@@ -218,136 +240,203 @@ const allImages = computed(() => {
   object-fit: cover;
 }
 
-.photo-credit {
-  font-size: 0.75rem;
-  color: var(--text-dim);
-  margin-top: 0.5rem;
-  display: block;
-}
-
-.post-info {
+.photo-caption {
+  margin-top: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.post-info h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.post-bio {
-  font-size: 0.95rem;
-  color: var(--accent);
-  line-height: 1.7;
-  font-style: italic;
-}
-
-.post-title {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-.post-description {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-.post-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.meta-label {
-  font-size: 0.7rem;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-dim);
+  opacity: 0.5;
 }
 
-.meta-value {
-  font-size: 0.9rem;
-  color: var(--text);
+.photo-note {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.4;
 }
 
-.post-location {
-  display: flex;
-  flex-direction: column;
+.record-info {
+  padding-top: 12px;
+}
+
+.record-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-bottom: 20px;
+}
+
+.record-title {
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -1.8px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.record-subline {
+  font-size: 16px;
+  opacity: 0.55;
+  margin-top: 14px;
+  letter-spacing: -0.1px;
+  text-transform: capitalize;
+}
+
+.record-bio {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 32px;
+  max-width: 520px;
+  opacity: 0.8;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.record-note {
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: -0.05px;
+  margin-top: 24px;
+  max-width: 520px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.record-meta {
+  margin-top: 44px;
+  border-top: 1px solid var(--hairline-strong);
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  column-gap: 32px;
+  font-size: 13px;
+}
+
+.record-meta dt {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hairline-soft);
+}
+
+.record-meta dd {
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hairline-soft);
+  letter-spacing: -0.05px;
+  color: var(--fg);
 }
 
 .location-name {
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px;
 }
 
 .coords-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.8rem;
-  color: var(--text-dim);
-  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: color 0.2s;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  color: var(--fg-muted);
 }
 
 .coords-link:hover {
-  color: var(--accent);
+  color: var(--fg);
 }
 
-.post-tags {
+.record-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
+  margin-top: 36px;
 }
 
 .tag {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.7rem;
-  background: var(--bg-elevated);
-  border-radius: 3px;
-  color: var(--accent);
-  text-transform: lowercase;
-  text-decoration: none;
-  transition: background 0.2s;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid var(--hairline-strong);
+  color: var(--fg-muted);
 }
 
 .tag:hover {
-  background: var(--border-light);
+  color: var(--fg);
+  border-color: var(--fg);
 }
 
-.source-link {
-  font-size: 0.85rem;
-  color: var(--accent);
-  align-self: flex-start;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  transition: all 0.2s;
+.record-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 36px;
+  flex-wrap: wrap;
 }
 
-.source-link:hover {
-  border-color: var(--accent);
+.record-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--fg);
+  border-bottom: 1px solid var(--hairline-strong);
+  padding-bottom: 4px;
+}
+
+.record-link:hover {
+  border-bottom-color: var(--fg);
 }
 
 .not-found {
   text-align: center;
   padding: 6rem 2rem;
+  color: var(--fg-muted);
 }
 
 .not-found h2 {
   margin-bottom: 1rem;
-  color: var(--text-muted);
+  font-weight: 300;
+}
+
+@media (max-width: 1100px) {
+  .record-topbar {
+    padding: 24px 40px 20px;
+  }
+  .record-layout {
+    padding: 32px 40px 56px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .record-title {
+    font-size: 48px;
+    letter-spacing: -1.2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .record-topbar {
+    padding: 20px 24px 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .record-layout {
+    padding: 24px 24px 48px;
+  }
+  .record-title {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+  .record-meta {
+    grid-template-columns: 120px 1fr;
+    column-gap: 20px;
+  }
 }
 </style>

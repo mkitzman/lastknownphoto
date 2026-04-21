@@ -1,15 +1,39 @@
 :root {
-  --bg: #0a0a0a;
-  --bg-card: #141414;
-  --bg-card-hover: #1a1a1a;
-  --bg-elevated: #1e1e1e;
-  --text: #e8e8e8;
-  --text-muted: #888;
-  --text-dim: #7a7a7a;
-  --accent: #c8a87c;
-  --border: #222;
-  --border-light: #333;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Register palette */
+  --ink-900: #0f0d0b;
+  --ink-800: #1a1612;
+  --ink-750: #1f1a14;
+  --ink-700: #2a2419;
+  --bone-100: #e8e1d4;
+  --bone-50: #eee6d5;
+  --bone-200: #e4dcc9;
+  --card-50: #f2ead6;
+  --dev-overlay: #f4efe5;
+
+  /* Semantic */
+  --bg: var(--ink-800);
+  --fg: var(--bone-100);
+  --fg-muted: rgba(232, 225, 212, 0.65);
+  --fg-dim: rgba(232, 225, 212, 0.45);
+  --fg-faint: rgba(232, 225, 212, 0.3);
+  --hairline: rgba(232, 225, 212, 0.1);
+  --hairline-strong: rgba(232, 225, 212, 0.15);
+  --hairline-soft: rgba(232, 225, 212, 0.08);
+
+  --font-sans: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Legacy aliases — keep for Admin view until it gets its own pass */
+  --bg-card: var(--ink-750);
+  --bg-card-hover: var(--ink-700);
+  --bg-elevated: var(--ink-700);
+  --text: var(--fg);
+  --text-muted: var(--fg-muted);
+  --text-dim: var(--fg-dim);
+  --accent: var(--bone-100);
+  --border: var(--hairline-strong);
+  --border-light: var(--hairline-strong);
+  --font: var(--font-sans);
 }
 
 *,
@@ -27,20 +51,17 @@ html {
 }
 
 body {
-  font-family: var(--font);
+  font-family: var(--font-sans);
+  font-weight: 300;
   background: var(--bg);
-  color: var(--text);
+  color: var(--fg);
   line-height: 1.6;
 }
 
 a {
-  color: var(--accent);
+  color: var(--fg);
   text-decoration: none;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: var(--text);
+  transition: color 0.2s, border-color 0.2s, opacity 0.2s;
 }
 
 img {
@@ -48,10 +69,18 @@ img {
   display: block;
 }
 
+/* Mono utility */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
 /* Page transitions */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.25s ease;
+  transition: opacity 0.35s ease;
 }
 
 .fade-enter-from,
@@ -69,15 +98,14 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-light);
-  border-radius: 4px;
+  background: var(--hairline-strong);
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-dim);
+  background: var(--fg-dim);
 }
 
-/* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
