@@ -88,7 +88,7 @@ const recordIndex = computed(() => {
           <span v-if="profession">{{ profession }}</span>
         </div>
         <p v-if="post.description || post.title" class="record-note" v-html="post.description || post.title"></p>
-        <p class="record-bio" v-if="post.bio">{{ post.bio }}</p>
+        <p class="record-bio" v-if="post.bio" v-html="post.bio"></p>
 
         <dl class="record-meta">
           <template v-if="post.date">
