@@ -1,0 +1,37 @@
+{
+  "id": "mac-miller-01",
+  "slug": "mac-miller",
+  "name": "Mac Miller",
+  "title": "Last known photo of Mac Miller — a portrait from his final press shoot at the Bowery Hotel in New York, posted to his Instagram on September 6, 2018, a day before his death.",
+  "imageUrl": "/images/mac-miller.jpg",
+  "date": "September 6, 2018",
+  "deathDate": "September 7, 2018",
+  "age": 26,
+  "tags": [
+    "musician",
+    "rapper",
+    "hip-hop"
+  ],
+  "sourceUrl": "https://www.vulture.com/2018/09/mac-miller-profile.html",
+  "sourceLabel": "Vulture",
+  "description": "Mac Miller was photographed at the <strong>Bowery Hotel</strong> in New York during a press shoot by <a href=\"https://www.christaanfelber.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Christaan Felber</a> for a <a href=\"https://www.vulture.com/2018/09/mac-miller-profile.html\" target=\"_blank\" rel=\"noopener noreferrer\">Vulture profile</a> timed to his fifth studio album, <em>Swimming</em>, released weeks earlier. Miller posted one portrait from the session to his Instagram on September 6, 2018 — his final post. A day later, on September 7, he was found unresponsive at his home in Studio City, Los Angeles. A coroner ruled the death accidental; toxicology reported fentanyl, cocaine, and alcohol. He was 26 years old. Background on the shoot and the article is covered in <a href=\"https://www.youtube.com/watch?v=KrdCYyGwtDY\" target=\"_blank\" rel=\"noopener noreferrer\">this retrospective video</a>.",
+  "bio": "Mac Miller (born Malcolm James McCormick) was an American rapper, singer, and producer from Pittsburgh. Over a decade-long career he released five studio albums and was widely respected among peers for a restless musical evolution from mixtape-era party rap to introspective, jazz-inflected songwriting. His posthumous album <em>Circles</em> was released in 2020.",
+  "photoCredit": "Christaan Felber for Vulture",
+  "additionalImages": [
+    "/images/mac-miller-2.jpg",
+    "/images/mac-miller-3.jpg",
+    "/images/mac-miller-4.jpg"
+  ],
+  "createdAt": "2026-04-22",
+  "location": {
+    "name": "The Bowery Hotel, 335 Bowery, New York, NY 10003",
+    "lat": 40.726002,
+    "lng": -73.991547,
+    "mapsUrl": "https://www.google.com/maps/search/Bowery+Hotel+335+Bowery+New+York+NY+10003"
+  },
+  "aspectRatio": "portrait",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  }
+}
