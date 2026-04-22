@@ -1,0 +1,36 @@
+{
+  "id": "sinead-oconnor-01",
+  "slug": "sinead-oconnor",
+  "name": "Sinéad O'Connor",
+  "title": "Last known photographs of Sinéad O'Connor, taken on March 9, 2023, at the RTÉ Choice Music Prize ceremony at Vicar Street in Dublin, roughly four and a half months before her death.",
+  "imageUrl": "/images/sinead-oconnor.jpg",
+  "date": "March 9, 2023",
+  "deathDate": "July 26, 2023",
+  "age": 56,
+  "tags": [
+    "musician",
+    "singer",
+    "irish"
+  ],
+  "sourceUrl": "https://nypost.com/2023/07/27/sinead-oconnors-final-photo-shows-her-beaming-while-accepting-award-months-before-death/",
+  "sourceLabel": "New York Post",
+  "description": "Sinéad O'Connor was photographed on March 9, 2023, at the 2023 RTÉ Choice Music Prize ceremony held at Vicar Street in Dublin, where she was presented with the Classic Irish Album award for her 1990 record <em>I Do Not Want What I Haven't Got</em>. She appeared in high spirits, beaming as she accepted the prize. It was her last major public appearance. On July 26, 2023, O'Connor was found unresponsive at her home in Herne Hill, London. A coroner later ruled that she died of natural causes from chronic obstructive pulmonary disease and asthma, exacerbated by a low-grade cervical infection. She was 56 years old.",
+  "bio": "Sinéad O'Connor was an Irish singer and songwriter best known for her 1990 cover of Prince's \"Nothing Compares 2 U.\" Over a three-decade career she released ten studio albums and became equally known for her activism, her 1992 <em>Saturday Night Live</em> protest against the Catholic Church, and her candor about her mental health.",
+  "photoCredit": "Kieran Frost / Redferns",
+  "additionalImages": [
+    "/images/sinead-oconnor-2.jpg",
+    "/images/sinead-oconnor-3.jpg"
+  ],
+  "createdAt": "2026-04-22",
+  "location": {
+    "name": "Vicar Street, 58-59 Thomas Street, The Liberties, Dublin 8, Ireland",
+    "lat": 53.342666,
+    "lng": -6.277813,
+    "mapsUrl": "https://www.google.com/maps/search/Vicar+Street+58-59+Thomas+Street+Dublin+8+Ireland"
+  },
+  "aspectRatio": "landscape",
+  "focalPoint": {
+    "x": 25,
+    "y": 32
+  }
+}
