@@ -1,0 +1,32 @@
+{
+  "id": "mark-twain-01",
+  "slug": "mark-twain",
+  "name": "Mark Twain",
+  "title": "Last known photograph of Mark Twain, taken on April 4, 1910, on the porch of Stormfield — his Italian villa-style home in Redding, Connecticut — seventeen days before his death.",
+  "imageUrl": "/images/mark-twain.jpg",
+  "date": "April 4, 1910",
+  "deathDate": "April 21, 1910",
+  "age": 74,
+  "tags": [
+    "writer",
+    "author",
+    "humorist"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Stormfield",
+  "sourceLabel": "Wikipedia — Stormfield",
+  "description": "The last known photo of Mark Twain — born <strong>Samuel Langhorne Clemens</strong> — was taken on April 4, 1910 at <a href=\"https://en.wikipedia.org/wiki/Stormfield\" target=\"_blank\" rel=\"noopener noreferrer\">Stormfield</a>, the Italian villa-style estate in Redding, Connecticut, that he built in 1908 and named after one of his short stories. Twain was suffering from chest pains brought on by chronic angina, and had recently returned from a trip to Bermuda where he had hoped the climate would ease his condition. Seventeen days later, on April 21, 1910, he died of a heart attack at Stormfield. He had famously predicted his own death the year prior: \"I came in with Halley's Comet in 1835. It is coming again next year, and I expect to go out with it.\" The comet reached perihelion on April 20, 1910 — one day before he died. He was 74 years old.",
+  "bio": "Samuel Langhorne Clemens, who wrote under the pen name <strong>Mark Twain</strong>, was an American writer, humorist, and lecturer. He is best known for <em>The Adventures of Tom Sawyer</em> (1876) and its sequel <em>Adventures of Huckleberry Finn</em> (1884), often cited as &ldquo;the Great American Novel.&rdquo; His other major works include <em>Life on the Mississippi</em>, <em>A Connecticut Yankee in King Arthur's Court</em>, and the travelogue <em>The Innocents Abroad</em>. He was widely regarded in his lifetime as the greatest humorist the United States had produced.",
+  "photoCredit": "Photographer unknown",
+  "createdAt": "2026-04-25",
+  "location": {
+    "name": "Stormfield, 30 Mark Twain Lane, Redding, CT 06896",
+    "lat": 41.29261,
+    "lng": -73.403745,
+    "mapsUrl": "https://www.google.com/maps/search/30+Mark+Twain+Lane+Redding+CT+06896"
+  },
+  "aspectRatio": "portrait",
+  "focalPoint": {
+    "x": 55,
+    "y": 24
+  }
+}
