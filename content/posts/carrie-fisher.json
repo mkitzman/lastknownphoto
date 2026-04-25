@@ -1,0 +1,32 @@
+{
+  "id": "carrie-fisher-01",
+  "slug": "carrie-fisher",
+  "name": "Carrie Fisher",
+  "title": "Last known photo of Carrie Fisher, taken by a fan on Chiltern Street in Marylebone during the final days of her London book tour, December 2016.",
+  "imageUrl": "/images/carrie-fisher.jpg",
+  "date": "December 2016",
+  "deathDate": "December 27, 2016",
+  "age": 60,
+  "tags": [
+    "actor",
+    "writer",
+    "star-wars"
+  ],
+  "sourceUrl": "https://www.dailymail.com/news/article-4072808/Carrie-Fisher-posed-picture-fan-final-days-London.html",
+  "sourceLabel": "Daily Mail",
+  "description": "Carrie Fisher was photographed in front of <a href=\"https://maps.app.goo.gl/ttg3dEBATKMP6mVB9\" target=\"_blank\" rel=\"noopener noreferrer\">a store on Chiltern Street</a> in Marylebone, London, by fan <strong>Jonny Kennedy</strong>, who stopped her for a picture. She was in London wrapping the European leg of the book tour for her memoir <em>The Princess Diarist</em>; her <a href=\"https://www.youtube.com/results?search_query=carrie+fisher+8+out+of+10+cats\" target=\"_blank\" rel=\"noopener noreferrer\">final television appearance</a> aired on the UK panel show <em>8 Out of 10 Cats</em> on December 21, 2016. Two days later, on December 23, Fisher boarded a flight from London to Los Angeles and suffered cardiac arrest roughly fifteen minutes before landing. She was hospitalised at Ronald Reagan UCLA Medical Center and died four days later, on December 27, 2016. She was 60 years old.",
+  "bio": "Carrie Fisher was an American actor, writer, and screenwriter. She is best known for playing <strong>Princess Leia</strong> in the original <em>Star Wars</em> trilogy (1977–1983) and reprising the role in <em>The Force Awakens</em> (2015) and <em>The Last Jedi</em> (2017). She was also a celebrated novelist and memoirist — works include <em>Postcards from the Edge</em> (1987) and <em>Wishful Drinking</em> (2008) — and worked extensively as an uncredited Hollywood script doctor. She was the daughter of singer Eddie Fisher and actress Debbie Reynolds.",
+  "photoCredit": "Jonny Kennedy",
+  "createdAt": "2026-04-25",
+  "location": {
+    "name": "13-15 Chiltern Street, Marylebone, London W1U 7PG, United Kingdom",
+    "lat": 51.518975,
+    "lng": -0.155025,
+    "mapsUrl": "https://www.google.com/maps/search/13-15+Chiltern+Street+London+W1U+7PG"
+  },
+  "aspectRatio": "portrait",
+  "focalPoint": {
+    "x": 40,
+    "y": 49
+  }
+}
