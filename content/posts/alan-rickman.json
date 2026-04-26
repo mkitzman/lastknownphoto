@@ -1,0 +1,31 @@
+{
+  "id": "alan-rickman-01",
+  "slug": "alan-rickman",
+  "name": "Alan Rickman",
+  "title": "Last known photo of Alan Rickman, taken on December 7, 2015 at the press night for Martin McDonagh's play Hangmen at Wyndham's Theatre in London — just over a month before his death.",
+  "imageUrl": "/images/alan-rickman.jpg",
+  "date": "December 7, 2015",
+  "deathDate": "January 14, 2016",
+  "age": 69,
+  "tags": [
+    "actor",
+    "british"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Alan_Rickman",
+  "sourceLabel": "Wikipedia",
+  "description": "The last known photo of Alan Rickman was taken on December 7, 2015 at the press night for Martin McDonagh's play <a href=\"https://en.wikipedia.org/wiki/Hangmen_(play)\" target=\"_blank\" rel=\"noopener noreferrer\"><em>Hangmen</em></a> at <a href=\"https://en.wikipedia.org/wiki/Wyndham%27s_Theatre\" target=\"_blank\" rel=\"noopener noreferrer\">Wyndham's Theatre</a> on Charing Cross Road, London. He had been privately battling pancreatic cancer, a diagnosis he kept from all but his closest circle. Just over a month later, on January 14, 2016, he died at his home in London. He was 69 years old.",
+  "bio": "Alan Sidney Patrick Rickman was an English actor and director. A graduate of the <a href=\"https://www.rada.ac.uk/\" target=\"_blank\" rel=\"noopener noreferrer\">Royal Academy of Dramatic Art</a>, he was renowned for his sonorous voice and deliberate phrasing. He rose to international fame as Hans Gruber in <em>Die Hard</em> (1988), and reached a new generation as Severus Snape across the eight <em>Harry Potter</em> films (2001–2011). Other notable roles include the Sheriff of Nottingham in <em>Robin Hood: Prince of Thieves</em> (1991), Colonel Brandon in <em>Sense and Sensibility</em> (1995), and Marvin in <em>The Hitchhiker's Guide to the Galaxy</em> (2005).",
+  "photoCredit": "Jonathan Hordle / REX / Shutterstock",
+  "createdAt": "2026-04-26",
+  "location": {
+    "name": "Wyndham's Theatre, 32-36 Charing Cross Road, London WC2H 0DA, United Kingdom",
+    "lat": 51.511332,
+    "lng": -0.128385,
+    "mapsUrl": "https://www.google.com/maps/search/Wyndham%27s+Theatre+32-36+Charing+Cross+Road+London+WC2H+0DA"
+  },
+  "aspectRatio": "portrait",
+  "focalPoint": {
+    "x": 46,
+    "y": 17
+  }
+}
