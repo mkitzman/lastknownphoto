@@ -44,10 +44,9 @@ const lastAdded = computed(() => {
       </h1>
       <div class="hero-aside">
         <p class="hero-copy">
-          A working archive of the last known photographs of public figures —
-          assembled from public record, private collections, and family estates.
-          Catalogued with the date of record, the interval to death, and the
-          known photographer.
+          A curated collection of the last known photographs of public figures.
+          This working archive draws from a wide range of public records and
+          historical archives to serve as a quiet reminder of life's presence.
         </p>
         <div class="hero-stats">
           <div><span class="stat-label">Records </span><span>{{ totalRecords }}</span></div>
