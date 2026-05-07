@@ -21,8 +21,8 @@
   ],
   "createdAt": "2026-03-22",
   "focalPoint": {
-    "x": 50,
-    "y": 36
+    "x": 46,
+    "y": 19
   },
   "location": {
     "name": "Barnaby's of America, West Chester, PA",
@@ -30,5 +30,5 @@
     "lng": -75.6055,
     "mapsUrl": "https://www.google.com/maps/search/Barnabys+of+America+West+Chester+PA"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "square"
 }
