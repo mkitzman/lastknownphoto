@@ -29,8 +29,8 @@
   "additionalImagesNote": "Plates 01, 02 & 03: Harvard Stadium, August 12, 1970 — Plate 03 is the original contact sheet from the Warrack negatives. Plate 04: Sunset Sound Recorders, Hollywood — final recording session, October 1, 1970.",
   "createdAt": "2026-03-22",
   "focalPoint": {
-    "x": 44,
-    "y": 32
+    "x": 47,
+    "y": 34
   },
   "location": {
     "name": "Harvard Stadium, 79 N Harvard St, Allston, MA 02134",
@@ -38,5 +38,5 @@
     "lng": -71.129501,
     "mapsUrl": "https://www.google.com/maps/place/Harvard+Stadium,+79+N+Harvard+St,+Allston,+MA+02134/@42.36636,-71.129501,17z"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "portrait"
 }
