@@ -15,6 +15,10 @@
   "sourceUrl": null,
   "sourceLabel": null,
   "description": "John Lennon was photographed outside his Manhattan apartment building, The Dakota, on the afternoon of December 8, 1980, signing a copy of his album 'Double Fantasy' for a fan. That fan was Mark David Chapman. Hours later, as Lennon and Yoko Ono returned home from a recording session that evening, Chapman shot Lennon four times in the back. He was 40 years old.",
+  "lyrics": {
+    "text": "Imagine there's no countries\nIt isn't hard to do\nNothing to kill or die for\nAnd no religion too\nImagine all the people\nLiving life in peace\n\nYou may say I'm a dreamer\nBut I'm not the only one\nI hope someday you'll join us\nAnd the world will be as one",
+    "source": "“Imagine” (1971)"
+  },
   "photoCredit": "Paul Goresh",
   "bio": "John Lennon was an English singer, songwriter, and peace activist who co-founded the Beatles. His solo career and activism for peace made him one of the most influential cultural figures of the 20th century.",
   "createdAt": "2026-03-22",
