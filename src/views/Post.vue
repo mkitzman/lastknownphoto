@@ -44,6 +44,10 @@ const recordIndex = computed(() => {
   if (!post.value) return 0
   return posts.findIndex(p => p.slug === post.value!.slug) + 1
 })
+
+const sourceIsWikipedia = computed(() => {
+  return post.value?.sourceUrl?.includes('wikipedia.org') ?? false
+})
 </script>
 
 <template>
@@ -148,6 +152,7 @@ const recordIndex = computed(() => {
             class="record-link"
           >{{ post.sourceLabel || 'Source' }} →</a>
           <a
+            v-if="!sourceIsWikipedia"
             :href="getWikipediaUrl(post)"
             target="_blank"
             rel="noopener noreferrer"
