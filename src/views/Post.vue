@@ -88,6 +88,10 @@ const recordIndex = computed(() => {
           <span v-if="profession">{{ profession }}</span>
         </div>
         <p v-if="post.description || post.title" class="record-note" v-html="post.description || post.title"></p>
+        <blockquote v-if="post.lyrics" class="record-lyrics">
+          <p class="record-lyrics-text">{{ post.lyrics.text }}</p>
+          <cite v-if="post.lyrics.source" class="record-lyrics-source">— {{ post.lyrics.source }}</cite>
+        </blockquote>
         <p class="record-bio" v-if="post.bio" v-html="post.bio"></p>
 
         <dl class="record-meta">
@@ -327,6 +331,35 @@ const recordIndex = computed(() => {
   color: var(--fg);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.record-lyrics {
+  margin: 28px 0 0;
+  padding: 18px 0 18px 22px;
+  border-left: 1px solid var(--hairline-strong);
+  max-width: 520px;
+}
+
+.record-lyrics-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre-line;
+  font-style: italic;
+  font-weight: 300;
+  opacity: 0.85;
+  letter-spacing: -0.05px;
+}
+
+.record-lyrics-source {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-style: normal;
+  color: var(--fg-dim);
 }
 
 .record-meta {

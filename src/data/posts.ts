@@ -11,6 +11,10 @@ export interface Post {
   sourceUrl: string | null
   sourceLabel: string | null
   description: string
+  lyrics?: {
+    text: string
+    source?: string | null
+  } | null
   bio?: string | null
   photoCredit?: string | null
   additionalImages?: string[]
