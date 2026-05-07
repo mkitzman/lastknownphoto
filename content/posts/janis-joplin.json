@@ -22,14 +22,15 @@
   "bio": "Janis Joplin was an American rock and blues singer known for her powerful, raw vocal style. She was one of the most successful and widely known female rock stars of the 1960s counterculture era.",
   "photoCredit": "Peter Warrack / House of Roulx",
   "additionalImages": [
-    "/images/janis-joplin-2.jpg",
-    "/images/janis-joplin-3.jpg"
+    "/images/janis-joplin-4.jpg",
+    "/images/janis-joplin-3.jpg",
+    "/images/janis-joplin-2.jpg"
   ],
-  "additionalImagesNote": "Plate 02: Sunset Sound Recorders, Hollywood — final recording session, October 1, 1970. Plate 03: contact sheet from the Harvard Stadium series.",
+  "additionalImagesNote": "Plates 01, 02 & 03: Harvard Stadium, August 12, 1970 — Plate 03 is the original contact sheet from the Warrack negatives. Plate 04: Sunset Sound Recorders, Hollywood — final recording session, October 1, 1970.",
   "createdAt": "2026-03-22",
   "focalPoint": {
-    "x": 47,
-    "y": 34
+    "x": 44,
+    "y": 32
   },
   "location": {
     "name": "Harvard Stadium, 79 N Harvard St, Allston, MA 02134",
@@ -37,5 +38,5 @@
     "lng": -71.129501,
     "mapsUrl": "https://www.google.com/maps/place/Harvard+Stadium,+79+N+Harvard+St,+Allston,+MA+02134/@42.36636,-71.129501,17z"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "landscape"
 }
