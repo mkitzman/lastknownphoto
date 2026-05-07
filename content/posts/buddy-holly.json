@@ -25,6 +25,7 @@
     "/images/buddy-holly-2.jpg",
     "/images/buddy-holly-3.jpg"
   ],
+  "interval": "2h",
   "createdAt": "2026-03-22",
   "focalPoint": {
     "x": 55,
