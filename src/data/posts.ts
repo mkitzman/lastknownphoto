@@ -16,6 +16,7 @@ export interface Post {
     source?: string | null
   } | null
   bio?: string | null
+  interval?: string | null
   photoCredit?: string | null
   additionalImages?: string[]
   additionalImagesNote?: string | null
@@ -61,6 +62,7 @@ export function getProfession(post: Post): string | null {
 
 /** Interval between photo date and death date, formatted with unit. */
 export function getInterval(post: Post): string | null {
+  if (post.interval) return post.interval
   const photo = Date.parse(post.date.replace(/(\d+)(st|nd|rd|th)/g, '$1'))
   const death = Date.parse(post.deathDate.replace(/(\d+)(st|nd|rd|th)/g, '$1'))
   if (isNaN(photo) || isNaN(death)) return null
