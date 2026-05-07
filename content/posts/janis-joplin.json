@@ -2,9 +2,9 @@
   "id": "151335166358",
   "slug": "janis-joplin",
   "name": "Janis Joplin",
-  "title": "Last known photo of Janis Joplin, taken at her final recording session on October 1, 1970, three days before her death.",
+  "title": "Last known photos of Janis Joplin, taken from the front row by Peter Warrack at her final concert — Harvard Stadium, August 12, 1970, less than two months before her death.",
   "imageUrl": "/images/janis-joplin.jpg",
-  "date": "October 1, 1970",
+  "date": "August 12, 1970",
   "deathDate": "October 4, 1970",
   "age": 27,
   "tags": [
@@ -12,20 +12,30 @@
     "27 club",
     "singer"
   ],
-  "sourceUrl": "https://en.wikipedia.org/wiki/Janis_Joplin",
-  "sourceLabel": "Wikipedia",
-  "description": "Janis Joplin was photographed during her final recording session at Sunset Sound Recorders in Hollywood on October 1, 1970, where she was working on her album \"Pearl\". Three days later, on October 4, she was found dead on the floor of her room at the Landmark Motor Hotel in Hollywood by her road manager John Cooke. The cause of death was a heroin overdose, possibly compounded by alcohol. She was 27 years old. \"Pearl\" was released posthumously in January 1971 and became her most commercially successful album, featuring the hit \"Me and Bobby McGee\".",
+  "sourceUrl": "https://www.rollingstone.com/culture/culture-lists/see-lost-photos-of-janis-joplins-last-show-cher-de-niro-and-more-14406/janis-joplin-7-42678/",
+  "sourceLabel": "Rolling Stone",
+  "description": "The last known photos of Janis Joplin were taken on August 12, 1970, by amateur photographer <a href=\"https://www.houseofroulx.com/collections/peter-warrack\" target=\"_blank\" rel=\"noopener noreferrer\">Peter Warrack</a> from the front row at <a href=\"https://en.wikipedia.org/wiki/Harvard_Stadium\" target=\"_blank\" rel=\"noopener noreferrer\">Harvard Stadium</a> in Allston, Massachusetts — what would prove to be her final concert. Performing with the Full Tilt Boogie Band before a crowd of roughly 40,000, Joplin was visibly intoxicated but, in the words of Warrack's partner Kevin McElroy, &ldquo;even though she was plastered, she nailed it.&rdquo; Warrack's negatives sat unseen for over 40 years until after his 2008 death, when McElroy and <a href=\"https://www.houseofroulx.com/\" target=\"_blank\" rel=\"noopener noreferrer\">House of Roulx</a> made them public. Less than two months after this performance, on October 4, 1970, Joplin was found dead at the Landmark Motor Hotel in Hollywood from a heroin overdose. She was 27 years old. Her album <em>Pearl</em> — which she was still recording at the time of her death — was released posthumously in January 1971 and produced the hit &ldquo;Me and Bobby McGee.&rdquo;",
+  "lyrics": {
+    "text": "Take another little piece of my heart now, baby\nOh, oh, break it\nBreak another little bit of my heart now, darling\nOh, oh, have a\nHave another little piece of my heart now, baby\nWell, you know you got it, if it makes you feel good\nOh, yes indeed",
+    "source": "“Piece of My Heart” (1968)"
+  },
   "bio": "Janis Joplin was an American rock and blues singer known for her powerful, raw vocal style. She was one of the most successful and widely known female rock stars of the 1960s counterculture era.",
+  "photoCredit": "Peter Warrack / House of Roulx",
+  "additionalImages": [
+    "/images/janis-joplin-2.jpg",
+    "/images/janis-joplin-3.jpg"
+  ],
+  "additionalImagesNote": "Plate 02: Sunset Sound Recorders, Hollywood — final recording session, October 1, 1970. Plate 03: contact sheet from the Harvard Stadium series.",
   "createdAt": "2026-03-22",
   "focalPoint": {
-    "x": 55,
-    "y": 18
+    "x": 47,
+    "y": 34
   },
   "location": {
-    "name": "Sunset Sound Recorders, Hollywood, CA",
-    "lat": 34.0981,
-    "lng": -118.3364,
-    "mapsUrl": "https://www.google.com/maps/search/Sunset+Sound+Recorders+6650+Sunset+Blvd+Hollywood+CA"
+    "name": "Harvard Stadium, 79 N Harvard St, Allston, MA 02134",
+    "lat": 42.36636,
+    "lng": -71.129501,
+    "mapsUrl": "https://www.google.com/maps/place/Harvard+Stadium,+79+N+Harvard+St,+Allston,+MA+02134/@42.36636,-71.129501,17z"
   },
   "aspectRatio": "portrait"
 }
