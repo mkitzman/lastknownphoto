@@ -1,0 +1,36 @@
+{
+  "id": "waylon-jennings-01",
+  "slug": "waylon-jennings",
+  "name": "Waylon Jennings",
+  "title": "Last known photo of Waylon Jennings, taken on July 3, 2001 as he arrived at Chet Atkins' funeral at the Ryman Auditorium in Nashville — about seven months before his death.",
+  "imageUrl": "/images/waylon-jennings.jpg",
+  "date": "July 3, 2001",
+  "deathDate": "February 13, 2002",
+  "age": 64,
+  "tags": [
+    "musician",
+    "country",
+    "highwaymen"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Waylon_Jennings",
+  "sourceLabel": "Wikipedia",
+  "description": "The last known photo of Waylon Jennings was taken on July 3, 2001, as he arrived at the funeral of legendary guitarist <a href=\"https://en.wikipedia.org/wiki/Chet_Atkins\" target=\"_blank\" rel=\"noopener noreferrer\">Chet Atkins</a> at the <a href=\"https://en.wikipedia.org/wiki/Ryman_Auditorium\" target=\"_blank\" rel=\"noopener noreferrer\">Ryman Auditorium</a> in Nashville. Already in long decline from complications of diabetes, Jennings was using a wheelchair that day; he would have his left foot amputated five months later, in December 2001. He died on February 13, 2002, at his home in Chandler, Arizona, in his sleep, of complications from the disease. He was 64 years old.",
+  "lyrics": {
+    "text": "I was a dam builder\nAcross a river deep and wide\nWhere steel and water did collide\nA place called Boulder, on the wild Colorado\nI slipped and fell into the wet concrete below\nThey buried me in that gray tomb that knows no sound\nBut I am still around\nI'll always be around\nAnd around, and around, and around\nAnd around, and around, and around…",
+    "source": "“Highwayman” (1985)"
+  },
+  "bio": "Waylon Arnold Jennings was an American singer-songwriter and a pioneer of the <a href=\"https://en.wikipedia.org/wiki/Outlaw_country\" target=\"_blank\" rel=\"noopener noreferrer\">outlaw country</a> movement. He began his career as bassist for <a href=\"https://en.wikipedia.org/wiki/Buddy_Holly\" target=\"_blank\" rel=\"noopener noreferrer\">Buddy Holly</a>, famously giving up his seat on the chartered flight that crashed on February 3, 1959 — &ldquo;The Day the Music Died&rdquo; — killing Holly, Ritchie Valens, and J. P. &ldquo;The Big Bopper&rdquo; Richardson. With Willie Nelson, Johnny Cash, and Kris Kristofferson he later formed the supergroup <a href=\"https://en.wikipedia.org/wiki/The_Highwaymen_(country_supergroup)\" target=\"_blank\" rel=\"noopener noreferrer\">The Highwaymen</a>. He was inducted into the Country Music Hall of Fame in 2001, just months before his death.",
+  "photoCredit": "ZUMA Press",
+  "createdAt": "2026-05-07",
+  "location": {
+    "name": "Ryman Auditorium, 116 Rep. John Lewis Way N, Nashville, TN 37219",
+    "lat": 36.16124,
+    "lng": -86.778488,
+    "mapsUrl": "https://www.google.com/maps/place/Ryman+Auditorium,+116+Rep.+John+Lewis+Way+N,+Nashville,+TN+37219/@36.16124,-86.778488,17z"
+  },
+  "aspectRatio": "portrait",
+  "focalPoint": {
+    "x": 45,
+    "y": 33
+  }
+}
