@@ -1,0 +1,37 @@
+{
+  "id": "kris-kristofferson-01",
+  "slug": "kris-kristofferson",
+  "name": "Kris Kristofferson",
+  "title": "Last known photo of Kris Kristofferson, posted by Tanya Tucker to Instagram on April 11, 2024, from his longtime Maui ranch — about five and a half months before his death.",
+  "imageUrl": "/images/kris-kristofferson.jpg",
+  "date": "April 11, 2024",
+  "deathDate": "September 28, 2024",
+  "age": 88,
+  "tags": [
+    "musician",
+    "singer",
+    "actor",
+    "country"
+  ],
+  "sourceUrl": "https://www.instagram.com/p/C5n4u39ubzX/",
+  "sourceLabel": "Instagram",
+  "description": "The last known photo of Kris Kristofferson was shared by country singer <a href=\"https://www.instagram.com/p/C5n4u39ubzX/\" target=\"_blank\" rel=\"noopener noreferrer\">Tanya Tucker on Instagram</a> on April 11, 2024. It was taken at his longtime Maui ranch in Hawaii — a 25-acre property he had purchased in 1984 for $120,000 and called home for the next four decades. Kristofferson had retired from performing in 2021 and lived quietly on the island, once describing the place as &ldquo;an old samurai poet warrior&rsquo;s house. I&rsquo;m his groundskeeper.&rdquo; He died at that same home on September 28, 2024, of natural causes. He was 88 years old.",
+  "lyrics": {
+    "text": "I was a sailor\nI was born upon the tide\nAnd with the sea I did abide\nI sailed a schooner around the Horn to Mexico\nI went aloft and furled the mainsail in a blow\nAnd when the yards broke off they said that I got killed\nBut I am living still",
+    "source": "“The Highwayman” (1985)"
+  },
+  "bio": "Kris Kristofferson was an American singer-songwriter and actor, and a pioneering figure in <a href=\"https://en.wikipedia.org/wiki/Outlaw_country\" target=\"_blank\" rel=\"noopener noreferrer\">outlaw country</a> music. His songs — including &ldquo;Me and Bobby McGee,&rdquo; &ldquo;Help Me Make It Through the Night,&rdquo; &ldquo;Sunday Mornin&rsquo; Comin&rsquo; Down,&rdquo; and &ldquo;For the Good Times&rdquo; — became standards covered by Janis Joplin, Johnny Cash, Sammi Smith, and many others. With Cash, Willie Nelson, and Waylon Jennings he formed the supergroup <a href=\"https://en.wikipedia.org/wiki/The_Highwaymen_(country_supergroup)\" target=\"_blank\" rel=\"noopener noreferrer\">The Highwaymen</a>. As an actor he co-starred with Barbra Streisand in <em>A Star Is Born</em> (1976), played the title role in Sam Peckinpah&rsquo;s <em>Pat Garrett and Billy the Kid</em> (1973), and appeared as Whistler in the <em>Blade</em> film trilogy.",
+  "photoCredit": "Tanya Tucker (via Instagram)",
+  "createdAt": "2026-05-07",
+  "location": {
+    "name": "5402 Hana Hwy, Haiku, HI 96708",
+    "lat": 20.7418717,
+    "lng": -155.9866546,
+    "mapsUrl": "https://www.google.com/maps/place/5402+Hana+Hwy,+Haiku,+HI+96708/@20.7418717,-155.9866546,17z"
+  },
+  "aspectRatio": "portrait",
+  "focalPoint": {
+    "x": 23,
+    "y": 28
+  }
+}
