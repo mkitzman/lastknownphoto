@@ -27,5 +27,7 @@
     "lng": -96.8083,
     "mapsUrl": "https://www.google.com/maps/search/Dealey+Plaza+Dallas+Texas"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 99,
+  "level": 4
 }

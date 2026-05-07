@@ -26,5 +26,7 @@
     "lng": -93.2913,
     "mapsUrl": "https://www.google.com/maps/search/United+States+Medical+Center+for+Federal+Prisoners+Springfield+Missouri"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 99,
+  "level": 4
 }

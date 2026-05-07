@@ -31,5 +31,7 @@
     "lng": -0.151,
     "mapsUrl": "https://www.google.com/maps/search/London+Hilton+on+Park+Lane+22+Park+Lane+London"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 98,
+  "level": 4
 }

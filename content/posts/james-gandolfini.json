@@ -1,7 +1,7 @@
 {
   "id": "146123622608",
   "slug": "james-gandolfini",
-  "name": "James Gandolfini",
+  "name": "James Gandolfini",
   "title": "Last known photo of James Gandolfini, taken on June 18, 2013, in Rome — he died the following night.",
   "imageUrl": "/images/james-gandolfini.jpg",
   "date": "June 18, 2013",
@@ -27,5 +27,7 @@
     "lng": 12.4695,
     "mapsUrl": "https://www.google.com/maps/search/Sabatini+Restaurant+Piazza+Santa+Maria+Trastevere+Rome"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 98,
+  "level": 4
 }

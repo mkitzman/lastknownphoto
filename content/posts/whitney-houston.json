@@ -35,5 +35,7 @@
     "lng": -118.4157,
     "mapsUrl": "https://www.google.com/maps/search/Beverly+Hilton+Hotel+9876+Wilshire+Blvd+Beverly+Hills+CA"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 97,
+  "level": 4
 }

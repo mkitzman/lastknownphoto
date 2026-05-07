@@ -27,5 +27,7 @@
     "lng": 32.8541,
     "mapsUrl": "https://www.google.com/maps/search/Cagdas+Sanatlar+Merkezi+Ankara+Turkey"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 100,
+  "level": 5
 }

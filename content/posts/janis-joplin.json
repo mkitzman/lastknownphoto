@@ -38,5 +38,7 @@
     "lng": -71.129501,
     "mapsUrl": "https://www.google.com/maps/place/Harvard+Stadium,+79+N+Harvard+St,+Allston,+MA+02134/@42.36636,-71.129501,17z"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 89,
+  "level": 2
 }

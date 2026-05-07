@@ -26,5 +26,7 @@
     "lng": -90.258,
     "mapsUrl": "https://www.google.com/maps/search/Louis+Armstrong+New+Orleans+International+Airport"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 96,
+  "level": 3
 }

@@ -31,5 +31,7 @@
     "lng": 0.0539,
     "mapsUrl": "https://www.google.com/maps/search/Cotchford+Farm+Wych+Cross+Hartfield+East+Sussex+TN7+4EQ"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 90,
+  "level": 2
 }

@@ -31,5 +31,7 @@
     "lng": -117.404,
     "mapsUrl": "https://www.google.com/maps/search/Spokane+Arena+Spokane+Washington"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 80,
+  "level": 1
 }

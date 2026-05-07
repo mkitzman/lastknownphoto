@@ -26,5 +26,7 @@
     "mapsUrl": "https://www.google.com/maps/search/Hotel+Chelsea+222+West+23rd+Street+New+York"
   },
   "photoCredit": "Alan Zindman / The Village Voice",
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 93,
+  "level": 3
 }

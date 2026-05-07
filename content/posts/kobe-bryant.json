@@ -29,5 +29,7 @@
     "lng": -118.2673,
     "mapsUrl": "https://www.google.com/maps/search/Crypto.com+Arena+Los+Angeles+California"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 96,
+  "level": 3
 }

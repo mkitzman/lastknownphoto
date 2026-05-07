@@ -30,5 +30,7 @@
     "lng": -93.2873,
     "mapsUrl": "https://www.google.com/maps/search/Womans+Club+of+Minneapolis+410+Oak+Grove+St+Minneapolis+MN"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 99,
+  "level": 4
 }

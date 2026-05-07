@@ -26,5 +26,7 @@
     "mapsUrl": "https://www.google.com/maps/search/Millennium+Biltmore+Hotel+506+S+Grand+Ave+Los+Angeles"
   },
   "photoCredit": "Unknown",
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 99,
+  "level": 4
 }

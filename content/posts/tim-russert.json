@@ -26,5 +26,7 @@
     "mapsUrl": "https://www.google.com/maps/search/NBC+News+Washington+Bureau+4001+Nebraska+Ave+Washington+DC"
   },
   "photoCredit": "Unknown",
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 98,
+  "level": 4
 }

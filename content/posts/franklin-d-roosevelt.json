@@ -26,5 +26,7 @@
     "lng": -84.693,
     "mapsUrl": "https://www.google.com/maps/search/Little+White+House+401+Little+White+House+Road+Warm+Springs+GA"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 99,
+  "level": 4
 }

@@ -1,3 +1,19 @@
+export type VerificationLevel = 1 | 2 | 3 | 4 | 5
+
+export interface VerificationScaleEntry {
+  displayLevel: string
+  label: string
+  description: string
+}
+
+export interface VerificationScale {
+  level_1: VerificationScaleEntry
+  level_2: VerificationScaleEntry
+  level_3: VerificationScaleEntry
+  level_4: VerificationScaleEntry
+  level_5: VerificationScaleEntry
+}
+
 export interface Post {
   id: string
   slug: string
@@ -30,6 +46,8 @@ export interface Post {
     lng: number
     mapsUrl: string
   } | null
+  level?: VerificationLevel | null
+  raw_score?: number | null
 }
 
 export function getWikipediaUrl(post: Post): string {
@@ -77,6 +95,16 @@ export function getInterval(post: Post): string | null {
 }
 
 const postModules = import.meta.glob<Post>('../../content/posts/*.json', { eager: true, import: 'default' })
+
+import metadataJson from '../../content/metadata.json'
+
+export const verificationScale: VerificationScale = metadataJson.scale as VerificationScale
+
+export function getVerificationEntry(level: VerificationLevel): VerificationScaleEntry {
+  return verificationScale[`level_${level}` as keyof VerificationScale]
+}
+
+export const verificationLevelsDescending: VerificationLevel[] = [5, 4, 3, 2, 1]
 
 function parseDate(d: string): number {
   if (!d) return 0

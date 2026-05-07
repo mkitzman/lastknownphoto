@@ -1,0 +1,29 @@
+{
+  "scale": {
+    "level_5": {
+      "displayLevel": "LVL_05",
+      "label": "Absolute / Terminal",
+      "description": "Captured at the moment of the event or within minutes of death. Historically indisputable."
+    },
+    "level_4": {
+      "displayLevel": "LVL_04",
+      "label": "Definitive / Locked",
+      "description": "Widely accepted as the final public capture. No credible evidence of subsequent photos exists."
+    },
+    "level_3": {
+      "displayLevel": "LVL_03",
+      "label": "High Corroboration",
+      "description": "Multiple independent sources confirm the timeline. Other angles from the same series may exist."
+    },
+    "level_2": {
+      "displayLevel": "LVL_02",
+      "label": "Probable Sequence",
+      "description": "Strongest contender in the known timeline, though the date range allows for potential unrecorded sightings."
+    },
+    "level_1": {
+      "displayLevel": "LVL_01",
+      "label": "Plausible / Contested",
+      "description": "Significant historical debate or multiple 'last' contenders exist without consensus."
+    }
+  }
+}

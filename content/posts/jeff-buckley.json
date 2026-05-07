@@ -31,5 +31,7 @@
     "mapsUrl": "https://www.google.com/maps/search/Wolf+River+Harbor+Memphis+Tennessee"
   },
   "photoCredit": "Gene Bowen",
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 98,
+  "level": 4
 }

@@ -25,5 +25,7 @@
     "lng": -74.6593,
     "mapsUrl": "https://www.google.com/maps/search/112+Mercer+Street+Princeton+NJ"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 88,
+  "level": 2
 }

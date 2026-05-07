@@ -35,5 +35,7 @@
     "lng": -90.1268,
     "mapsUrl": "https://www.google.com/maps/search/Tipitinas+501+Napoleon+Ave+New+Orleans+LA"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 97,
+  "level": 4
 }

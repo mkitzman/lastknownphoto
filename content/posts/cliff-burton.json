@@ -27,5 +27,7 @@
     "lng": 17.9889,
     "mapsUrl": "https://www.google.com/maps/search/Solnahallen+Solna+Sweden"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 92,
+  "level": 2
 }

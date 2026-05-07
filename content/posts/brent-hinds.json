@@ -37,5 +37,7 @@
     "lng": -86.7894,
     "mapsUrl": "https://www.google.com/maps/search/The+Nick+2514+10th+Ave+S+Birmingham+AL+35205"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 95,
+  "level": 3
 }

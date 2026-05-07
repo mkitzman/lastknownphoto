@@ -27,5 +27,7 @@
     "lng": -96.1182,
     "mapsUrl": "https://www.google.com/maps/search/4360+Lone+Wolf+Ranch+Rd+Navasota+TX+77868"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 95,
+  "level": 3
 }

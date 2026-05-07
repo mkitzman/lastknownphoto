@@ -31,5 +31,7 @@
     "lng": -122.1515,
     "mapsUrl": "https://www.google.com/maps/search/2101+Waverley+St+Palo+Alto+CA"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 98,
+  "level": 4
 }

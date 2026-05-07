@@ -33,5 +33,7 @@
     "lng": -0.1538,
     "mapsUrl": "https://www.google.com/maps/search/97+West+Eaton+Place+Belgravia+London"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 90,
+  "level": 2
 }

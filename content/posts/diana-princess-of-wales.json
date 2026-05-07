@@ -26,5 +26,7 @@
     "lng": 2.3292,
     "mapsUrl": "https://www.google.com/maps/search/Ritz+Paris+15+Place+Vendome+Paris"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 100,
+  "level": 5
 }

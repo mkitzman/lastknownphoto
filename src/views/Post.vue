@@ -1,7 +1,18 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
-import { getPostBySlug, getDecade, getYears, getProfession, getInterval, getWikipediaUrl, posts } from '../data/posts'
+import {
+  getPostBySlug,
+  getDecade,
+  getYears,
+  getProfession,
+  getInterval,
+  getWikipediaUrl,
+  posts,
+  getVerificationEntry,
+  verificationLevelsDescending,
+} from '../data/posts'
+import { methodology } from '../data/methodology'
 
 const route = useRoute()
 const router = useRouter()
@@ -48,6 +59,20 @@ const recordIndex = computed(() => {
 const sourceIsWikipedia = computed(() => {
   return post.value?.sourceUrl?.includes('wikipedia.org') ?? false
 })
+
+const showMethodology = ref(false)
+
+const verificationEntry = computed(() => {
+  const lvl = post.value?.level
+  if (!lvl) return null
+  return getVerificationEntry(lvl)
+})
+
+const methodologyPanelId = 'methodology-panel'
+
+function toggleMethodology() {
+  showMethodology.value = !showMethodology.value
+}
 </script>
 
 <template>
@@ -132,7 +157,56 @@ const sourceIsWikipedia = computed(() => {
             <dt>Decade</dt>
             <dd>{{ decade }}</dd>
           </template>
+          <template v-if="post.level && verificationEntry">
+            <dt class="meta-trigger-cell">
+              <button
+                type="button"
+                class="verification-trigger"
+                :aria-expanded="showMethodology"
+                :aria-controls="methodologyPanelId"
+                :aria-label="`Verification level ${post.level} of 5: ${verificationEntry.label}. Open methodology.`"
+                @click="toggleMethodology"
+              >
+                <span>Verification</span>
+                <span class="verification-chevron" aria-hidden="true">{{ showMethodology ? '−' : '+' }}</span>
+              </button>
+            </dt>
+            <dd>
+              <span class="verification-value" aria-hidden="true">[ {{ verificationEntry.displayLevel }} // {{ verificationEntry.label.toUpperCase() }} ]</span>
+            </dd>
+          </template>
         </dl>
+
+        <Transition name="methodology">
+          <section
+            v-if="showMethodology && post.level && verificationEntry"
+            :id="methodologyPanelId"
+            class="methodology-panel"
+            role="region"
+            :aria-label="methodology.title"
+          >
+            <div class="methodology-eyebrow">{{ methodology.title }}</div>
+            <p class="methodology-intro">{{ methodology.intro }}</p>
+            <div v-for="section in methodology.sections" :key="section.heading" class="methodology-section">
+              <div class="methodology-eyebrow methodology-eyebrow--inline">{{ section.heading }}</div>
+              <ul class="methodology-list">
+                <li v-for="(point, i) in section.points" :key="i">{{ point }}</li>
+              </ul>
+            </div>
+            <div class="methodology-section">
+              <div class="methodology-eyebrow methodology-eyebrow--inline">{{ methodology.gradesHeading }}</div>
+              <dl class="methodology-grades">
+                <template v-for="lvl in verificationLevelsDescending" :key="lvl">
+                  <dt :class="{ 'methodology-grade-current': lvl === post.level }">{{ getVerificationEntry(lvl).displayLevel }}</dt>
+                  <dd :class="{ 'methodology-grade-current': lvl === post.level }">
+                    <span class="methodology-grade-label">{{ getVerificationEntry(lvl).label }}</span>
+                    <span class="methodology-grade-desc">{{ getVerificationEntry(lvl).description }}</span>
+                  </dd>
+                </template>
+              </dl>
+            </div>
+          </section>
+        </Transition>
 
         <div class="record-tags" v-if="post.tags.length">
           <RouterLink
@@ -396,6 +470,190 @@ const sourceIsWikipedia = computed(() => {
 
 .location-name {
   margin-bottom: 4px;
+}
+
+.meta-trigger-cell {
+  padding: 0 !important;
+}
+
+.verification-trigger {
+  background: none;
+  border: none;
+  padding: 16px 0;
+  margin: 0;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.verification-trigger:hover,
+.verification-trigger:focus-visible {
+  color: var(--fg);
+  outline: none;
+}
+
+.verification-trigger:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.verification-chevron {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.verification-trigger:hover .verification-chevron,
+.verification-trigger:focus-visible .verification-chevron {
+  opacity: 1;
+}
+
+.verification-value {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  color: var(--fg);
+}
+
+.methodology-panel {
+  margin-top: 24px;
+  padding: 28px 28px 32px;
+  border: 1px solid var(--hairline-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.methodology-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.methodology-eyebrow--inline {
+  margin-bottom: 12px;
+}
+
+.methodology-intro {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 300;
+  color: var(--fg);
+  opacity: 0.85;
+  max-width: 560px;
+  margin: 0;
+}
+
+.methodology-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.methodology-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--fg);
+  opacity: 0.85;
+  max-width: 560px;
+}
+
+.methodology-list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.methodology-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--fg-dim);
+}
+
+.methodology-grades {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 24px;
+  font-size: 13px;
+}
+
+.methodology-grades dt {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  padding: 14px 0;
+  border-top: 1px solid var(--hairline-soft);
+}
+
+.methodology-grades dd {
+  margin: 0;
+  padding: 14px 0;
+  border-top: 1px solid var(--hairline-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--fg);
+  opacity: 0.9;
+}
+
+.methodology-grade-label {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.05px;
+}
+
+.methodology-grade-desc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 300;
+  opacity: 0.75;
+}
+
+.methodology-grades dt.methodology-grade-current,
+.methodology-grades dd.methodology-grade-current {
+  color: var(--fg);
+  opacity: 1;
+}
+
+.methodology-grades dt.methodology-grade-current {
+  color: var(--fg);
+}
+
+.methodology-enter-active,
+.methodology-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.methodology-enter-from,
+.methodology-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
 }
 
 .coords-link {

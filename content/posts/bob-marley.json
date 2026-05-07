@@ -30,5 +30,7 @@
     "lng": 11.7597,
     "mapsUrl": "https://www.google.com/maps/search/Werinherstr+2+Rottach-Egern+Germany"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 95,
+  "level": 3
 }

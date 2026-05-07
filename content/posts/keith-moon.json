@@ -31,5 +31,7 @@
     "lng": -0.149,
     "mapsUrl": "https://www.google.com/maps/search/Curzon+Square+Mayfair+London"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 97,
+  "level": 4
 }

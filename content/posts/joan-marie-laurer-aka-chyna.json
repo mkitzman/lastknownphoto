@@ -30,5 +30,7 @@
     "lng": -118.3932,
     "mapsUrl": "https://www.google.com/maps/search/916+Esplanade+Redondo+Beach+CA"
   },
-  "aspectRatio": "portrait"
+  "aspectRatio": "portrait",
+  "raw_score": 98,
+  "level": 4
 }

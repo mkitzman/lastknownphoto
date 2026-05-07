@@ -33,5 +33,7 @@
     "lng": -115.1657,
     "mapsUrl": "https://www.google.com/maps/search/Flamingo+Rd+and+Koval+Ln+Las+Vegas+NV"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 98,
+  "level": 4
 }

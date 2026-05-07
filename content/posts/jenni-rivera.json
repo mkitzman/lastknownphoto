@@ -30,5 +30,7 @@
     "mapsUrl": "https://www.google.com/maps/search/Arena+Monterrey+Monterrey+Mexico"
   },
   "photoCredit": "Jacob Yebale",
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 99,
+  "level": 4
 }

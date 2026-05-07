@@ -30,5 +30,7 @@
     "lng": -118.4217,
     "mapsUrl": "https://www.google.com/maps/search/9536+Heather+Rd+Beverly+Hills+CA"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 97,
+  "level": 4
 }

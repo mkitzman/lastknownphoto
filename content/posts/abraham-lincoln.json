@@ -27,5 +27,7 @@
     "lng": -77.0253,
     "mapsUrl": "https://www.google.com/maps/search/511+7th+Street+NW+Washington+DC"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 99,
+  "level": 4
 }

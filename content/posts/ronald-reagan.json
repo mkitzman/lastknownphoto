@@ -26,5 +26,7 @@
     "mapsUrl": "https://www.google.com/maps/search/668+St+Cloud+Road+Bel+Air+Los+Angeles"
   },
   "photoCredit": "Unknown",
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 95,
+  "level": 3
 }

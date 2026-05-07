@@ -30,5 +30,7 @@
     "lng": -72.2934,
     "mapsUrl": "https://www.google.com/maps/search/WLNG+1619+Main+St+Sag+Harbor+NY"
   },
-  "aspectRatio": "square"
+  "aspectRatio": "square",
+  "raw_score": 93,
+  "level": 3
 }

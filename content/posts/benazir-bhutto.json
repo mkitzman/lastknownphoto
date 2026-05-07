@@ -26,5 +26,7 @@
     "lng": 73.0479,
     "mapsUrl": "https://www.google.com/maps/search/Liaquat+National+Bagh+Rawalpindi+Pakistan"
   },
-  "aspectRatio": "landscape"
+  "aspectRatio": "landscape",
+  "raw_score": 100,
+  "level": 5
 }
