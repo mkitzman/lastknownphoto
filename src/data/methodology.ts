@@ -19,7 +19,7 @@ export const methodology: Methodology = {
       heading: 'VERIFICATION LOGIC',
       points: [
         'Temporal Precision: The interval between Date of Record and Date of Death. As the interval narrows, the attestation grade increases.',
-        'Series vs. Single Frame: For burst photography or film, "Last Photo" refers to the final frame in a documented sequence unless a specific frame is uniquely verified.',
+        'Series vs. Single Frame: When the last record is a documented series — a roll of film, a burst sequence, or a contact sheet — we attest to the series, not the individual frame. The displayed image is a representative frame; the precise final exposure is rarely identifiable and is not claimed here.',
         'Public vs. Private: This database tracks public records. Private, unreleased estate photos are acknowledged but not counted. "Absolute" status is granted only when the public record is provably terminal.',
       ],
     },
