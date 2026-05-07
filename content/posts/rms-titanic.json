@@ -1,9 +1,9 @@
 {
   "id": "20596603443",
-  "slug": "rms-titantic",
-  "name": "RMS Titantic",
+  "slug": "rms-titanic",
+  "name": "RMS Titanic",
   "title": "Last known photo of the RMS Titanic, taken on April 12, 1912, as the ship departed Queenstown, Ireland on its maiden voyage.",
-  "imageUrl": "/images/rms-titantic.jpg",
+  "imageUrl": "/images/rms-titanic.jpg",
   "date": "April 12, 1912",
   "deathDate": "April 15, 1912",
   "age": null,
