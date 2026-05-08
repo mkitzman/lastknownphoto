@@ -1,0 +1,48 @@
+{
+  "id": "ricky-nelson-01",
+  "slug": "ricky-nelson",
+  "name": "Ricky Nelson",
+  "title": "Last known photo of Ricky Nelson, taken on the tarmac at Guntersville Municipal Airport in Alabama on December 31, 1985 — about two hours before the plane crash that killed him.",
+  "imageUrl": "/images/ricky-nelson.jpg",
+  "date": "December 31, 1985",
+  "deathDate": "December 31, 1985",
+  "age": 45,
+  "tags": [
+    "musician",
+    "singer",
+    "actor"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_Ricky_Nelson",
+  "sourceLabel": "Wikipedia",
+  "description": "Ricky Nelson and his fiancée Helen Blair were photographed together on the tarmac at <a href=\"https://en.wikipedia.org/wiki/Guntersville_Municipal_Airport\" target=\"_blank\" rel=\"noopener noreferrer\">Guntersville Municipal Airport</a> in Alabama on the afternoon of December 31, 1985, roughly two hours before they boarded his vintage <a href=\"https://en.wikipedia.org/wiki/Douglas_DC-3\" target=\"_blank\" rel=\"noopener noreferrer\">Douglas DC-3</a> for the flight to Dallas, Texas. En route, an in-flight fire broke out in the cabin and the aircraft crash-landed in a field near De Kalb, Texas. Nelson, Blair, and five members of his band were killed when smoke and flames overwhelmed the passenger cabin; both pilots survived by escaping through a cockpit window. The NTSB officially attributed the fire to a malfunctioning cabin heater. He was 45 years old.",
+  "lyrics": {
+    "text": "I'm a travelin' man, I've made a lot of stops\nAll over the world\nAnd in every part I own the heart\nOf at least one lovely girl\n\nPretty Polynesian baby over the sea\nI remember the night\nWhen we walked in the sands of the Waikiki\nAnd I held you oh so tight\n\nOh, I'm a travelin' man\nYes, I'm a travelin' man",
+    "source": "“Travelin' Man” (1961)"
+  },
+  "bio": "Eric Hilliard &ldquo;Ricky&rdquo; Nelson was an American rock and roll musician, singer-songwriter, and actor. As a child he starred alongside his family on the long-running television sitcom <em>The Adventures of Ozzie and Harriet</em> (1952–1966); as a teenager he became one of the first true rock and roll idols, placing 19 Top 10 singles on the Billboard charts between 1957 and 1962, including &ldquo;Poor Little Fool,&rdquo; &ldquo;Travelin' Man,&rdquo; and &ldquo;Hello Mary Lou.&rdquo; He was inducted into the Rock and Roll Hall of Fame in 1987.",
+  "photoCredit": "Uncredited",
+  "additionalImages": [
+    "/images/ricky-nelson-2.jpg"
+  ],
+  "additionalImagesNote": "Plate 02: Nelson with a band member at the same airport, also from December 31, 1985.",
+  "interval": "2h",
+  "createdAt": "2026-05-08",
+  "focalPoint": {
+    "x": 39,
+    "y": 28
+  },
+  "cardFocalPoint": {
+    "x": 39,
+    "y": 28,
+    "zoom": 1.4
+  },
+  "location": {
+    "name": "Guntersville Municipal Airport, 405 Buck Island Rd, Guntersville, AL 35976",
+    "lat": 34.39984,
+    "lng": -86.268275,
+    "mapsUrl": "https://www.google.com/maps/place/Guntersville+Municipal+Airport,+405+Buck+Island+Rd,+Guntersville,+AL+35976/@34.39984,-86.268275,17z"
+  },
+  "aspectRatio": "square",
+  "raw_score": 98,
+  "level": 4
+}
