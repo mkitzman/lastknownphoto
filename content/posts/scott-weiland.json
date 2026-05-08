@@ -26,6 +26,11 @@
     "x": 43,
     "y": 39
   },
+  "cardFocalPoint": {
+    "x": 25,
+    "y": 25,
+    "zoom": 1.6
+  },
   "location": {
     "name": "Medina Entertainment Center, Medina, MN",
     "lat": 45.0358,
