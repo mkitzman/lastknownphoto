@@ -1,0 +1,41 @@
+{
+  "id": "lisa-left-eye-lopes-01",
+  "slug": "lisa-left-eye-lopes",
+  "name": "Lisa “Left Eye” Lopes",
+  "title": "Last known image of Lisa “Left Eye” Lopes — a video still captured seconds before the fatal car crash in Honduras on April 25, 2002.",
+  "imageUrl": "/images/lisa-left-eye-lopes.jpg",
+  "date": "April 25, 2002",
+  "deathDate": "April 25, 2002",
+  "age": 30,
+  "tags": [
+    "musician",
+    "singer",
+    "rapper",
+    "hip hop",
+    "tlc"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Lisa_Lopes",
+  "sourceLabel": "Wikipedia",
+  "description": "This is a still from the video being filmed inside the SUV in the moments before Lisa &ldquo;Left Eye&rdquo; Lopes was killed in a single-vehicle crash on a remote stretch of highway in Atlántida, Honduras, on April 25, 2002. She had been driving a rented Mitsubishi Montero with seven other passengers while documenting a spiritual retreat for what would later become the VH1 documentary <a href=\"https://en.wikipedia.org/wiki/The_Last_Days_of_Left_Eye\" target=\"_blank\" rel=\"noopener noreferrer\"><em>The Last Days of Left Eye</em></a>. Lopes swerved to avoid another vehicle, lost control, and the SUV rolled multiple times. She was not wearing a seatbelt and was ejected from the vehicle, suffering fatal head injuries. The other seven passengers survived. <a href=\"https://www.nytimes.com/2002/04/27/us/lisa-lopes-rapper-dies-in-honduras-crash-at-30.html\" target=\"_blank\" rel=\"noopener noreferrer\">She was 30 years old.</a>",
+  "lyrics": {
+    "text": "I seen a rainbow yesterday, but too many storms\nHave come and gone, leaving a trace of not one God-given ray\nIs it because my life is ten shades of gray?\nI pray all ten fade away, seldom praise Him for the sunny days\nAnd like His promise is true, only my faith can undo\nThe many chances I blew to bring my life to anew",
+    "source": "“Waterfalls” (1994)"
+  },
+  "bio": "Lisa Nicole &ldquo;Left Eye&rdquo; Lopes was an American rapper, singer, and dancer, best known as a founding member of the R&amp;B and hip-hop group <a href=\"https://en.wikipedia.org/wiki/TLC_(group)\" target=\"_blank\" rel=\"noopener noreferrer\">TLC</a> alongside Tionne &ldquo;T-Boz&rdquo; Watkins and Rozonda &ldquo;Chilli&rdquo; Thomas. She co-wrote and rapped on TLC hits including &ldquo;Waterfalls,&rdquo; &ldquo;No Scrubs,&rdquo; &ldquo;Creep,&rdquo; and &ldquo;Unpretty.&rdquo; The group sold over 75 million records worldwide and won four Grammy Awards.",
+  "photoCredit": "Bryan Harris / “The Last Days of Left Eye” (2007)",
+  "interval": "1m",
+  "createdAt": "2026-05-08",
+  "focalPoint": {
+    "x": 73,
+    "y": 31
+  },
+  "location": {
+    "name": "Salitran, Atlántida, Honduras",
+    "lat": 15.782861,
+    "lng": -86.579444,
+    "mapsUrl": "https://www.google.com/maps/place/Salitran,+Atlántida,+Honduras/@15.782861,-86.579444,17z"
+  },
+  "aspectRatio": "square",
+  "raw_score": 100,
+  "level": 5
+}
