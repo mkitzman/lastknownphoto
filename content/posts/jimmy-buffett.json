@@ -24,6 +24,11 @@
     "x": 40,
     "y": 47
   },
+  "cardFocalPoint": {
+    "x": 19,
+    "y": 27,
+    "zoom": 1.7
+  },
   "location": {
     "name": "WLNG 92.1 FM, 1619 Main St, Sag Harbor, NY",
     "lat": 40.9998,
