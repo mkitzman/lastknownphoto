@@ -16,13 +16,9 @@ const { filteredPosts } = useFilter({ applySort: false })
 
 const markerIcon = L.divIcon({
   className: 'custom-marker',
-  html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
-    <circle cx="12" cy="12" r="9" />
-    <line x1="12" y1="2" x2="12" y2="6" />
-    <line x1="12" y1="18" x2="12" y2="22" />
-    <line x1="2" y1="12" x2="6" y2="12" />
-    <line x1="18" y1="12" x2="22" y2="12" />
-    <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+  html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+    <circle cx="12" cy="12" r="10" />
+    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
   </svg>`,
   iconSize: [24, 24],
   iconAnchor: [12, 12],
