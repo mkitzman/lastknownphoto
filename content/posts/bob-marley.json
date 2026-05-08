@@ -24,6 +24,11 @@
     "x": 60,
     "y": 32
   },
+  "cardFocalPoint": {
+    "x": 69,
+    "y": 37,
+    "zoom": 1.5
+  },
   "location": {
     "name": "Ringberg-Klinik, Werinherstr. 2, Rottach-Egern, Bavaria, Germany",
     "lat": 47.6881,
