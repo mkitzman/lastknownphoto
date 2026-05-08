@@ -31,6 +31,11 @@
     "x": 47,
     "y": 50
   },
+  "cardFocalPoint": {
+    "x": 25,
+    "y": 47,
+    "zoom": 1.6
+  },
   "location": {
     "name": "The Nick, 2514 10th Ave S, Birmingham, AL 35205",
     "lat": 33.4957,
