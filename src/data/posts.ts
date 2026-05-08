@@ -40,6 +40,7 @@ export interface Post {
   wikipediaUrl?: string | null
   createdAt?: string | null
   focalPoint?: { x: number; y: number } | null
+  cardFocalPoint?: { x: number; y: number; zoom?: number } | null
   location?: {
     name: string
     lat: number

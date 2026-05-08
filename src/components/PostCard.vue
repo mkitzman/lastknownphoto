@@ -9,9 +9,17 @@ const decade = computed(() => getDecade(props.post))
 const years = computed(() => getYears(props.post))
 const profession = computed(() => getProfession(props.post))
 const interval = computed(() => getInterval(props.post))
-const objectPosition = computed(() => {
+const cardImageStyle = computed(() => {
+  const cfp = props.post.cardFocalPoint
   const fp = props.post.focalPoint
-  return fp ? `${fp.x}% ${fp.y}%` : '50% 50%'
+  const x = cfp?.x ?? fp?.x ?? 50
+  const y = cfp?.y ?? fp?.y ?? 50
+  const zoom = cfp?.zoom ?? 1
+  return {
+    objectPosition: `${x}% ${y}%`,
+    transformOrigin: `${x}% ${y}%`,
+    '--card-zoom': zoom,
+  } as Record<string, string | number>
 })
 </script>
 
@@ -27,7 +35,7 @@ const objectPosition = computed(() => {
           :src="post.imageUrl"
           :alt="post.name"
           loading="lazy"
-          :style="{ objectPosition }"
+          :style="cardImageStyle"
         />
         <div class="hairline" aria-hidden="true"></div>
       </div>
@@ -92,13 +100,13 @@ const objectPosition = computed(() => {
   height: 100%;
   object-fit: cover;
   filter: saturate(0.55) contrast(1);
-  transform: scale(1);
+  transform: scale(var(--card-zoom, 1));
   transition: transform 900ms cubic-bezier(0.2, 0.7, 0.3, 1), filter 600ms ease;
 }
 
 .card-link:hover .photo-frame img,
 .card-link:focus-visible .photo-frame img {
-  transform: scale(1.02);
+  transform: scale(calc(var(--card-zoom, 1) * 1.02));
   filter: saturate(0.75) contrast(1);
 }
 
