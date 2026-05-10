@@ -1,0 +1,38 @@
+{
+  "id": "patsy-cline-01",
+  "slug": "patsy-cline",
+  "name": "Patsy Cline",
+  "title": "Last known photo of Patsy Cline, taken by her friend Mildred Keith on March 3, 1963, backstage at Memorial Hall in Kansas City, two days before she died in a plane crash.",
+  "imageUrl": "/images/patsy-cline.jpg",
+  "date": "March 3, 1963",
+  "deathDate": "March 5, 1963",
+  "age": 30,
+  "tags": [
+    "musician",
+    "singer",
+    "country"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Patsy_Cline",
+  "sourceLabel": "Wikipedia",
+  "description": "This is the last known photograph of Patsy Cline, taken backstage at <a href=\"https://en.wikipedia.org/wiki/Memorial_Hall_(Kansas_City,_Kansas)\" target=\"_blank\" rel=\"noopener noreferrer\">Memorial Hall</a> in Kansas City, Kansas, on March 3, 1963, by her friend Mildred Keith. Cline was performing at a benefit concert for the family of disc jockey Cactus Jack Call, who had died in a car accident the previous month. Two days later, on March 5, 1963, the small <a href=\"https://en.wikipedia.org/wiki/1963_Camden_PA-24_crash\" target=\"_blank\" rel=\"noopener noreferrer\">Piper PA-24 Comanche</a> carrying her back to Nashville crashed in a forest near Camden, Tennessee, during a thunderstorm. The pilot, Cline's manager Randy Hughes, lost control while flying through low clouds. All four on board were killed, including country stars Cowboy Copas and Hawkshaw Hawkins. She was 30 years old.",
+  "lyrics": {
+    "text": "You want me to act like we've never kissed\nYou want me to forget (To forget)\nPretend we've never met (Never met)\nAnd I've tried and I've tried, but I haven't yet\nYou walk by and I fall to pieces\n\nI fall to pieces\nEach time someone speaks your name\nI fall to pieces\nTime only adds to the flame",
+    "source": "“I Fall to Pieces” (1961)"
+  },
+  "bio": "Patsy Cline (born Virginia Patterson Hensley) was an American country music singer, widely regarded as one of the most influential vocalists of the 20th century and one of the first country artists to successfully cross over to pop. Hits including &ldquo;Walkin' After Midnight,&rdquo; &ldquo;I Fall to Pieces,&rdquo; &ldquo;Crazy,&rdquo; and &ldquo;She's Got You&rdquo; remain standards. She was inducted into the Country Music Hall of Fame in 1973, the first woman elected as a solo artist.",
+  "photoCredit": "Mildred Keith",
+  "createdAt": "2026-05-09",
+  "focalPoint": {
+    "x": 47,
+    "y": 24
+  },
+  "location": {
+    "name": "Memorial Hall, 600 N 7th St Trfy, Kansas City, KS 66101",
+    "lat": 39.112209,
+    "lng": -94.627518,
+    "mapsUrl": "https://www.google.com/maps/place/Memorial+Hall,+600+N+7th+St+Trfy,+Kansas+City,+KS+66101/@39.112209,-94.627518,17z"
+  },
+  "aspectRatio": "portrait",
+  "raw_score": 98,
+  "level": 4
+}
