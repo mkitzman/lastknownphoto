@@ -1,0 +1,34 @@
+{
+  "id": "richard-simmons-01",
+  "slug": "richard-simmons",
+  "name": "Richard Simmons",
+  "title": "Last known photo of Richard Simmons, a self-portrait he took at home on the night of July 12, 2024, intended for his next morning's social media post.",
+  "imageUrl": "/images/richard-simmons.jpg",
+  "date": "July 12, 2024",
+  "deathDate": "July 13, 2024",
+  "age": 76,
+  "tags": [
+    "fitness",
+    "tv personality"
+  ],
+  "sourceUrl": "https://people.com/richard-simmons-staff-share-a-final-post-and-last-photo-before-death-8681177",
+  "sourceLabel": "People",
+  "description": "This is the last known photograph of Richard Simmons, a self-portrait he took at his home on the night of July 12, 2024, his 76th birthday. He intended to share it the next morning with the caption: &ldquo;Let me fly you to the moon, so we can gaze upon the stars.&rdquo; Simmons was found unresponsive at his home in the Hollywood Hills the following day, July 13, 2024. The Los Angeles County coroner ruled the death accidental, citing complications from a fall combined with heart disease. His staff <a href=\"https://people.com/richard-simmons-staff-share-a-final-post-and-last-photo-before-death-8681177\" target=\"_blank\" rel=\"noopener noreferrer\">later posted the image and his intended caption</a> on his social accounts. Simmons was 76 years old.",
+  "bio": "Richard Simmons was an American fitness instructor, actor, and television personality. He rose to fame in the 1980s with his flamboyant, high-energy <em>Sweatin' to the Oldies</em> workout videos and his frequent appearances on daytime television, becoming one of the most recognizable promoters of weight-loss culture in the United States. He largely retreated from public life in early 2014 and rarely appeared in public during the final decade of his life.",
+  "photoCredit": "Richard Simmons (self)",
+  "interval": "12h",
+  "createdAt": "2026-05-13",
+  "focalPoint": {
+    "x": 54,
+    "y": 33
+  },
+  "location": {
+    "name": "Home of Richard Simmons, 1350 Belfast Dr, Los Angeles, CA 90069",
+    "lat": 34.098863,
+    "lng": -118.384666,
+    "mapsUrl": "https://www.google.com/maps/place/1350+Belfast+Dr,+Los+Angeles,+CA+90069/@34.098863,-118.384666,17z"
+  },
+  "aspectRatio": "square",
+  "raw_score": 98,
+  "level": 4
+}
