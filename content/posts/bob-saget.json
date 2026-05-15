@@ -1,0 +1,40 @@
+{
+  "id": "bob-saget-01",
+  "slug": "bob-saget",
+  "name": "Bob Saget",
+  "title": "Last known photo of Bob Saget, a selfie taken around 2 AM on January 9, 2022, by hotel valet Orlando Nunez at the Ritz-Carlton Orlando, hours before he was found dead in his room.",
+  "imageUrl": "/images/bob-saget.jpg",
+  "date": "January 9, 2022",
+  "deathDate": "January 9, 2022",
+  "age": 65,
+  "tags": [
+    "actor",
+    "comedian",
+    "tv personality"
+  ],
+  "sourceUrl": "https://pagesix.com/2022/03/15/bob-saget-seen-smiling-hours-before-death-in-final-photo/",
+  "sourceLabel": "Page Six",
+  "description": "This selfie of Bob Saget was taken around 2:00 a.m. on January 9, 2022, by hotel valet Orlando Nunez, shortly after Saget returned to the Ritz-Carlton Orlando, Grande Lakes following a stand-up show earlier that night. The two spoke in the hotel valet area for about ten minutes; Nunez later told police that Saget seemed lucid and kind, did not appear injured or distressed, and was not slurring his words. Saget then went up to his room. He was found unresponsive in bed by hotel staff later that afternoon. An autopsy determined the cause of death was blunt head trauma, consistent with an accidental fall, with no evidence of drug or alcohol intoxication. Saget was 65 years old.",
+  "bio": "Robert Lane Saget was an American stand-up comedian, actor, director, and television host. He was best known for playing widowed father Danny Tanner on the ABC sitcom <em>Full House</em> (1987&ndash;1995) and its Netflix sequel <em>Fuller House</em>, and for hosting <em>America's Funniest Home Videos</em> from 1989 to 1997. He also voiced the older Ted Mosby on <em>How I Met Your Mother</em>. Off camera, his stand-up work was famously raucous and crude, the opposite of his wholesome TV persona.",
+  "photoCredit": "Orlando Nunez",
+  "interval": "12h",
+  "createdAt": "2026-05-15",
+  "focalPoint": {
+    "x": 73,
+    "y": 44
+  },
+  "cardFocalPoint": {
+    "x": 73,
+    "y": 44,
+    "zoom": 1.5
+  },
+  "location": {
+    "name": "The Ritz-Carlton Orlando, Grande Lakes, 4012 Central Florida Pkwy, Orlando, FL 32837",
+    "lat": 28.4051596,
+    "lng": -81.4294819,
+    "mapsUrl": "https://maps.app.goo.gl/reVSxjjGdb8aHfLv9"
+  },
+  "aspectRatio": "square",
+  "raw_score": 98,
+  "level": 4
+}
