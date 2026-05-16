@@ -1,0 +1,45 @@
+{
+  "id": "bon-scott-01",
+  "slug": "bon-scott",
+  "name": "Bon Scott",
+  "title": "Last known photo of Bon Scott, taken by Ross Halfin at the Music Machine in London on the night of February 18, 1980, hours before he was found dead in a parked car.",
+  "imageUrl": "/images/bon-scott.jpg",
+  "date": "February 18, 1980",
+  "deathDate": "February 19, 1980",
+  "age": 33,
+  "tags": [
+    "musician",
+    "singer",
+    "rock",
+    "ac/dc"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Bon_Scott",
+  "sourceLabel": "Wikipedia",
+  "description": "The last known photo of AC/DC singer Bon Scott was taken by rock photographer <a href=\"https://en.wikipedia.org/wiki/Ross_Halfin\" target=\"_blank\" rel=\"noopener noreferrer\">Ross Halfin</a> on the night of February 18, 1980, at The Music Machine (later renamed <a href=\"https://en.wikipedia.org/wiki/Koko_(music_club)\" target=\"_blank\" rel=\"noopener noreferrer\">Koko</a>) in Camden, London, where Scott had gone to see the band Lonesome No More. After the show he continued drinking with acquaintance Alistair Kinnear, who later drove him back to East Dulwich. Unable to wake Scott once they arrived, Kinnear left him to sleep it off in the passenger seat of the parked car with a blanket. When Kinnear returned the next morning, February 19, 1980, Scott was unresponsive. The coroner ruled the cause of death as acute alcohol poisoning, listed officially as &ldquo;death by misadventure.&rdquo; Scott was 33 years old.",
+  "lyrics": {
+    "text": "Ridin' down the highway\nGoin' to a show\nStoppin' on the byways\nPlayin' rock 'n' roll\n\nGettin' robbed, gettin' stoned\nGettin' beat up, broken-boned\nGettin' had, gettin' took\nI tell you, folks, it's harder than it looks\n\nIt's a long way to the top if you wanna rock 'n' roll",
+    "source": "“It's a Long Way to the Top (If You Wanna Rock 'n' Roll)” (1975)"
+  },
+  "bio": "Ronald Belford &ldquo;Bon&rdquo; Scott was a Scottish-Australian singer, songwriter, and the lead vocalist and lyricist of the hard rock band AC/DC from 1974 until his death. Born in Forfar, Scotland and raised in Fremantle, Western Australia, his raspy delivery and provocative lyrics helped define the band's sound on albums including <em>Highway to Hell</em> (1979). After his death AC/DC continued with Brian Johnson, releasing <em>Back in Black</em> (1980) as a tribute to him. Scott was inducted into the Rock and Roll Hall of Fame with AC/DC in 2003.",
+  "photoCredit": "Ross Halfin",
+  "interval": "12h",
+  "createdAt": "2026-05-16",
+  "focalPoint": {
+    "x": 56,
+    "y": 25
+  },
+  "cardFocalPoint": {
+    "x": 56,
+    "y": 25,
+    "zoom": 1.6
+  },
+  "location": {
+    "name": "The Music Machine (now Koko), 1A Camden High St, London NW1 7JE, United Kingdom",
+    "lat": 51.534722,
+    "lng": -0.138333,
+    "mapsUrl": "https://maps.app.goo.gl/iPjngytXkH3xbZGt5"
+  },
+  "aspectRatio": "portrait",
+  "raw_score": 98,
+  "level": 4
+}
