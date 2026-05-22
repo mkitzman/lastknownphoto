@@ -48,7 +48,13 @@ function renderMarkers() {
   markerLayer.clearLayers()
   for (const post of filteredPosts.value) {
     if (!post.location || !post.location.lat || !post.location.lng) continue
-    const marker = L.marker([post.location.lat, post.location.lng], { icon: markerIcon })
+    const label = `View record for ${post.name} at ${post.location.name}`
+    const marker = L.marker([post.location.lat, post.location.lng], {
+      icon: markerIcon,
+      alt: label,
+      title: post.name,
+      keyboard: true,
+    })
       .bindPopup(buildPopup(post), {
         maxWidth: 280,
         minWidth: 240,
@@ -64,6 +70,14 @@ function renderMarkers() {
       }
     })
     markerLayer.addLayer(marker)
+    const el = marker.getElement() as HTMLElement | undefined
+    if (el) el.setAttribute('aria-label', label)
+  }
+}
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape' && map) {
+    map.closePopup()
   }
 }
 
@@ -79,6 +93,8 @@ onMounted(() => {
     zoomControl: false,
     attributionControl: false,
   })
+
+  document.addEventListener('keydown', onKeydown)
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 19,
@@ -96,6 +112,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  document.removeEventListener('keydown', onKeydown)
   if (map) {
     map.remove()
     map = null
