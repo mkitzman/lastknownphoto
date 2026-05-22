@@ -84,7 +84,15 @@ function renderMarkers() {
     })
     markerLayer.addLayer(marker)
     const el = marker.getElement() as HTMLElement | undefined
-    if (el) el.setAttribute('aria-label', label)
+    if (el) {
+      el.setAttribute('aria-label', label)
+      el.addEventListener('keydown', (ev) => {
+        if (ev.key === ' ' || ev.key === 'Spacebar') {
+          ev.preventDefault()
+          marker.openPopup()
+        }
+      })
+    }
   }
 }
 
