@@ -11,6 +11,7 @@ const router = useRouter()
 const mapContainer = ref<HTMLElement | null>(null)
 let map: L.Map | null = null
 let markerLayer: L.LayerGroup | null = null
+let popupTriggerEl: HTMLElement | null = null
 
 const { filteredPosts } = useFilter({ applySort: false })
 
@@ -37,7 +38,7 @@ function buildPopup(post: Post): string {
         <h3>${post.name}</h3>
         <p class="map-popup-location">${loc.name}</p>
         <p class="map-popup-desc">${truncDesc}</p>
-        <a href="/post/${post.slug}" class="map-popup-link">Read more &rarr;</a>
+        <a href="/post/${post.slug}" class="map-popup-link">Read more <span class="visually-hidden">about ${post.name}'s last photo</span><span aria-hidden="true"> &rarr;</span></a>
       </div>
     </div>
   `
@@ -60,14 +61,26 @@ function renderMarkers() {
         minWidth: 240,
         className: 'dark-popup',
       })
-    marker.on('popupopen', () => {
-      const link = document.querySelector('.map-popup-link') as HTMLElement
+    marker.on('popupopen', (e) => {
+      popupTriggerEl = marker.getElement() as HTMLElement | null
+      const container = (e.popup as L.Popup).getElement() as HTMLElement | null
+      if (container) {
+        container.setAttribute('role', 'dialog')
+        container.setAttribute('aria-label', `${post.name} location preview`)
+      }
+      const link = container?.querySelector('.map-popup-link') as HTMLAnchorElement | null
       if (link) {
-        link.addEventListener('click', (e) => {
-          e.preventDefault()
+        link.addEventListener('click', (ev) => {
+          ev.preventDefault()
           router.push({ name: 'post', params: { slug: post.slug } })
         })
+        requestAnimationFrame(() => link.focus({ preventScroll: true }))
       }
+    })
+    marker.on('popupclose', () => {
+      const trigger = popupTriggerEl
+      popupTriggerEl = null
+      if (trigger) requestAnimationFrame(() => trigger.focus({ preventScroll: true }))
     })
     markerLayer.addLayer(marker)
     const el = marker.getElement() as HTMLElement | undefined
