@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import {
   getPostBySlug,
@@ -13,11 +13,16 @@ import {
   verificationLevelsDescending,
 } from '../data/posts'
 import { methodology } from '../data/methodology'
+import { setPageMeta } from '../composables/usePageMeta'
 
 const route = useRoute()
 const router = useRouter()
 
 const post = computed(() => getPostBySlug(route.params.slug as string))
+
+watch(post, (p) => {
+  if (p) setPageMeta(p.name)
+}, { immediate: true })
 const activeImage = ref<string | null>(null)
 
 function toDMS(decimal: number, isLat: boolean): string {

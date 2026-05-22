@@ -145,6 +145,7 @@ onUnmounted(() => {
 
 <template>
   <div class="map-page">
+    <h1 class="visually-hidden">Map</h1>
     <FilterBar :show-sort="false" />
     <div ref="mapContainer" class="map-container"></div>
   </div>

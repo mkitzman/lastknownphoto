@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { RouterView, RouterLink, useRoute } from 'vue-router'
+import { pageAnnouncement } from './composables/usePageMeta'
 
 const route = useRoute()
 const isMapPage = computed(() => route.name === 'map')
+
+function focusPageHeading() {
+  const h1 = document.querySelector('main h1') as HTMLElement | null
+  if (!h1) return
+  if (!h1.hasAttribute('tabindex')) h1.setAttribute('tabindex', '-1')
+  h1.focus({ preventScroll: false })
+}
 </script>
 
 <template>
@@ -29,11 +37,12 @@ const isMapPage = computed(() => route.name === 'map')
     </header>
     <main>
       <RouterView v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
+        <transition name="fade" mode="out-in" @after-enter="focusPageHeading">
           <component :is="Component" />
         </transition>
       </RouterView>
     </main>
+    <div class="visually-hidden" aria-live="polite" aria-atomic="true">{{ pageAnnouncement }}</div>
     <footer v-if="!isMapPage" class="site-footer">
       <span>Last Known Photo &copy; {{ new Date().getFullYear() }}</span>
       <span>A non-commercial archive · Corrections welcome</span>
