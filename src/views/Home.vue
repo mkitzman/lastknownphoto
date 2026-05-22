@@ -5,7 +5,25 @@ import { useFilter } from '../composables/useFilter'
 import PostCard from '../components/PostCard.vue'
 import FilterBar from '../components/FilterBar.vue'
 
-const { filteredPosts } = useFilter()
+const { filteredPosts, filterMode, selectedDecade, selectedTag, sortMode } = useFilter()
+
+const liveMessage = computed(() => {
+  const count = filteredPosts.value.length
+  const noun = count === 1 ? 'record' : 'records'
+  let scope: string
+  if (filterMode.value === 'decade' && selectedDecade.value) {
+    scope = `${count} ${noun} from the ${selectedDecade.value}`
+  } else if (filterMode.value === 'tag' && selectedTag.value) {
+    scope = `${count} ${noun} tagged ${selectedTag.value}`
+  } else {
+    scope = `all ${count} ${noun}`
+  }
+  let sortDesc: string
+  if (sortMode.value === 'death-desc') sortDesc = 'sorted by date of death, newest first'
+  else if (sortMode.value === 'death-asc') sortDesc = 'sorted by date of death, oldest first'
+  else sortDesc = 'sorted by most recently added'
+  return `Showing ${scope}, ${sortDesc}.`
+})
 
 const totalRecords = computed(() => posts.length)
 
@@ -57,6 +75,8 @@ const lastAdded = computed(() => {
     </section>
 
     <FilterBar />
+
+    <div class="visually-hidden" aria-live="polite" aria-atomic="true">{{ liveMessage }}</div>
 
     <section class="grid">
       <PostCard v-for="post in filteredPosts" :key="post.id" :post="post" />
