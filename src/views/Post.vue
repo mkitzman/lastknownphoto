@@ -339,7 +339,7 @@ function toggleMethodology() {
   font-size: 10px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  opacity: 0.5;
+  color: var(--fg-muted);
 }
 
 .photo-note {
@@ -348,7 +348,7 @@ function toggleMethodology() {
   font-size: 10px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  opacity: 0.4;
+  color: var(--fg-dim);
 }
 
 .record-info {
@@ -402,14 +402,17 @@ function toggleMethodology() {
 
 .record-note :deep(a) {
   color: #c8a87c;
-  text-decoration: none;
-  transition: text-decoration 0.2s, color 0.2s;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(200, 168, 124, 0.55);
+  transition: color 0.2s, text-decoration-color 0.2s;
 }
 
-.record-note :deep(a:hover) {
+.record-note :deep(a:hover),
+.record-note :deep(a:focus-visible) {
   color: var(--fg);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration-color: var(--fg);
 }
 
 .record-lyrics {
