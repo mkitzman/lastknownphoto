@@ -13,9 +13,9 @@
   /* Semantic */
   --bg: var(--ink-800);
   --fg: var(--bone-100);
-  --fg-muted: rgba(232, 225, 212, 0.65);
-  --fg-dim: rgba(232, 225, 212, 0.45);
-  --fg-faint: rgba(232, 225, 212, 0.3);
+  --fg-muted: rgba(232, 225, 212, 0.78);
+  --fg-dim: rgba(232, 225, 212, 0.62);
+  --fg-faint: rgba(232, 225, 212, 0.5);
   --hairline: rgba(232, 225, 212, 0.1);
   --hairline-strong: rgba(232, 225, 212, 0.15);
   --hairline-soft: rgba(232, 225, 212, 0.08);
