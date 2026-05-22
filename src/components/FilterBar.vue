@@ -104,11 +104,10 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   gap: 8px;
-  opacity: 0.5;
 }
 
 .filter-prefix {
-  color: var(--fg);
+  color: var(--fg-muted);
 }
 
 .filter-select-wrapper {
@@ -121,8 +120,8 @@ onBeforeUnmount(() => {
   appearance: none;
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--fg);
-  color: var(--fg);
+  border-bottom: 1px solid var(--fg-muted);
+  color: var(--fg-muted);
   padding: 2px 18px 2px 0;
   font-family: var(--font-mono);
   font-size: 11px;
@@ -136,7 +135,7 @@ onBeforeUnmount(() => {
   position: absolute;
   right: 2px;
   pointer-events: none;
-  color: var(--fg);
+  color: var(--fg-muted);
 }
 
 .filter-options {
@@ -182,7 +181,6 @@ onBeforeUnmount(() => {
 }
 
 .chip-count {
-  opacity: 0.45;
   margin-left: 2px;
 }
 
