@@ -33,7 +33,7 @@ const cardImageStyle = computed(() => {
       <div class="photo-frame">
         <img
           :src="post.imageUrl"
-          :alt="post.name"
+          alt=""
           loading="lazy"
           :style="cardImageStyle"
         />

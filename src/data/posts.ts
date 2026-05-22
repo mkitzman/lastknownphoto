@@ -34,6 +34,7 @@ export interface Post {
   bio?: string | null
   interval?: string | null
   photoCredit?: string | null
+  imageAlt?: string | null
   additionalImages?: string[]
   additionalImagesNote?: string | null
   aspectRatio?: 'portrait' | 'landscape' | 'square' | null

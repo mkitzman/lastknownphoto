@@ -36,6 +36,11 @@ function coordsDisplay(lat: number, lng: number): string {
 
 const currentImage = computed(() => activeImage.value || post.value?.imageUrl || '')
 
+const mainImageAlt = computed(() => {
+  if (!post.value) return ''
+  return post.value.imageAlt ?? `Photograph of ${post.value.name}`
+})
+
 const allImages = computed(() => {
   if (!post.value) return []
   return [post.value.imageUrl, ...(post.value.additionalImages || [])]
@@ -86,7 +91,7 @@ function toggleMethodology() {
     <section class="record-layout">
       <div class="record-photo">
         <div class="photo-frame">
-          <img :src="currentImage" :alt="post.name" />
+          <img :src="currentImage" :alt="mainImageAlt" />
         </div>
         <div class="photo-thumbs" v-if="allImages.length > 1">
           <button
@@ -98,7 +103,7 @@ function toggleMethodology() {
             :aria-label="'View photo ' + (i + 1)"
             type="button"
           >
-            <img :src="img" :alt="post.name + ' photo ' + (i + 1)" />
+            <img :src="img" alt="" />
           </button>
         </div>
         <div class="photo-caption">
