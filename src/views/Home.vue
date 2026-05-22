@@ -118,7 +118,7 @@ const lastAdded = computed(() => {
 }
 
 .stat-label {
-  opacity: 0.4;
+  color: var(--fg-dim);
 }
 
 .grid {
