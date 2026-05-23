@@ -1,0 +1,46 @@
+{
+  "id": "pete-maravich-01",
+  "slug": "pete-maravich",
+  "name": "Pete Maravich",
+  "title": "Last known images of Pete Maravich, video stills from a pickup basketball game at the First Church of the Nazarene in Pasadena on January 5, 1988. He collapsed and died of a heart attack about 45 minutes into the game.",
+  "imageUrl": "/images/pete-maravich.jpg",
+  "date": "January 5, 1988",
+  "deathDate": "January 5, 1988",
+  "age": 40,
+  "tags": [
+    "athlete",
+    "basketball",
+    "nba"
+  ],
+  "sourceUrl": "https://www.nba.com/news/the-final-day-of-pistol-pete-maravich",
+  "sourceLabel": "NBA.com",
+  "description": "These video stills capture Pete &ldquo;Pistol Pete&rdquo; Maravich during a casual pickup basketball game at the <a href=\"https://www.google.com/maps/place/First+Church+of+the+Nazarene,+3700+E+Sierra+Madre+Blvd,+Pasadena,+CA+91107/@34.160782,-118.07457,17z\" target=\"_blank\" rel=\"noopener noreferrer\">First Church of the Nazarene</a> in Pasadena, California, on the morning of January 5, 1988. Earlier that day Maravich had been a guest on Dr. James Dobson's <em>Focus on the Family</em> radio show. After the taping, Dobson invited him to play in the church gym. About 45 minutes into the game, Maravich stopped, said &ldquo;I feel great,&rdquo; and collapsed. Despite immediate CPR he could not be revived. An autopsy revealed he had been born with a rare congenital heart defect, missing his left coronary artery. Maravich was 40 years old. The pickup game was filmed by fellow player Norm Moline, a CPA who had brought a camcorder to the church that morning hoping to get Maravich to sign some rookie cards. The <a href=\"https://www.youtube.com/watch?v=sgw8v1ENnMU\" target=\"_blank\" rel=\"noopener noreferrer\">surviving footage is on YouTube</a>. <a href=\"https://www.latimes.com/sports/la-xpm-2013-jan-05-la-sp-dwyre-20130105-story.html\" target=\"_blank\" rel=\"noopener noreferrer\">The Los Angeles Times revisited his final day on the 25th anniversary</a>.",
+  "bio": "Peter Press &ldquo;Pistol Pete&rdquo; Maravich was an American professional basketball player, widely considered one of the greatest creators and ball-handlers in the history of the sport. At LSU he set NCAA Division I scoring records that still stand more than half a century later (44.2 points per game, achieved without a three-point line or shot clock). He played ten NBA seasons with the Hawks, Jazz, and Celtics, was a five-time All-Star, and was inducted into the Naismith Memorial Basketball Hall of Fame in 1987, just months before his death.",
+  "photoCredit": "Norm Moline",
+  "additionalImages": [
+    "/images/pete-maravich-2.jpg",
+    "/images/pete-maravich-3.jpg",
+    "/images/pete-maravich-4.jpg"
+  ],
+  "additionalImagesNote": "All four plates are stills extracted from the same pickup-game video on the morning of January 5, 1988. Because the exact final frame in the recording cannot be identified, the displayed images are representative of the series.",
+  "interval": "1h",
+  "createdAt": "2026-05-23",
+  "focalPoint": {
+    "x": 41,
+    "y": 21
+  },
+  "cardFocalPoint": {
+    "x": 41,
+    "y": 21,
+    "zoom": 1.6
+  },
+  "location": {
+    "name": "First Church of the Nazarene, 3700 E Sierra Madre Blvd, Pasadena, CA 91107",
+    "lat": 34.160782,
+    "lng": -118.07457,
+    "mapsUrl": "https://www.google.com/maps/place/First+Church+of+the+Nazarene,+3700+E+Sierra+Madre+Blvd,+Pasadena,+CA+91107/@34.160782,-118.07457,17z"
+  },
+  "aspectRatio": "portrait",
+  "raw_score": 97,
+  "level": 4
+}
