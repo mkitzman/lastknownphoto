@@ -77,6 +77,14 @@ img {
   text-transform: uppercase;
 }
 
+/* Suppress focus ring on programmatically-focused page headings.
+   These get tabindex="-1" via the SPA navigation a11y handler so screen
+   readers re-announce the new page; sighted users should never see it. */
+h1[tabindex="-1"]:focus,
+h1[tabindex="-1"]:focus-visible {
+  outline: none;
+}
+
 /* Visually hidden for screen reader text */
 .visually-hidden {
   position: absolute;
