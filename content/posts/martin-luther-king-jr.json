@@ -1,0 +1,38 @@
+{
+  "id": "martin-luther-king-jr-01",
+  "slug": "martin-luther-king-jr",
+  "name": "Martin Luther King Jr.",
+  "title": "Last known photo of Dr. Martin Luther King Jr., taken with aides on the second-floor balcony of the Lorraine Motel in Memphis on April 3, 1968, the day before he was assassinated in nearly the same spot.",
+  "imageUrl": "/images/martin-luther-king-jr.jpg",
+  "date": "April 3, 1968",
+  "deathDate": "April 4, 1968",
+  "age": 39,
+  "tags": [
+    "civil rights",
+    "assassination"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr.",
+  "sourceLabel": "Wikipedia",
+  "description": "This is the last known photograph of Dr. Martin Luther King Jr., taken on the afternoon of April 3, 1968, on the second-floor balcony of room 306 at the <a href=\"https://en.wikipedia.org/wiki/Lorraine_Motel\" target=\"_blank\" rel=\"noopener noreferrer\">Lorraine Motel</a> in Memphis, Tennessee. From left: Hosea Williams, Jesse Jackson, King, and Ralph Abernathy. King had arrived in Memphis the previous day to support the Memphis sanitation workers' strike and that evening delivered his &ldquo;<a href=\"https://en.wikipedia.org/wiki/I%27ve_Been_to_the_Mountaintop\" target=\"_blank\" rel=\"noopener noreferrer\">I've Been to the Mountaintop</a>&rdquo; address at the Mason Temple Church of God in Christ. About twenty-six hours after this photograph was made, on the evening of April 4, 1968, King was standing in nearly the same spot on the balcony when a single rifle shot fired from a boarding house across the street struck him in the right jaw and severed his spinal cord. He was pronounced dead at St. Joseph's Hospital at 7:05 p.m. King was 39 years old. James Earl Ray, a fugitive from the Missouri State Penitentiary, was arrested in London two months later and pleaded guilty to the killing. The Lorraine Motel today operates as the <a href=\"https://www.civilrightsmuseum.org/\" target=\"_blank\" rel=\"noopener noreferrer\">National Civil Rights Museum</a>; room 306 and the balcony are preserved.",
+  "bio": "Martin Luther King Jr. was an American Baptist minister, civil rights activist, and the most prominent leader of the American civil rights movement from 1955 until his assassination in 1968. He led the Montgomery bus boycott of 1955&ndash;1956, helped found and headed the Southern Christian Leadership Conference, organized nonviolent campaigns against segregation across the American South, and delivered the &ldquo;I Have a Dream&rdquo; speech at the 1963 March on Washington. He was awarded the Nobel Peace Prize in 1964.",
+  "photoCredit": "Charles Kelly / AP",
+  "createdAt": "2026-05-23",
+  "focalPoint": {
+    "x": 62,
+    "y": 29
+  },
+  "cardFocalPoint": {
+    "x": 62,
+    "y": 29,
+    "zoom": 1.5
+  },
+  "location": {
+    "name": "Lorraine Motel (National Civil Rights Museum), 450 Mulberry St, Memphis, TN 38103",
+    "lat": 35.134444,
+    "lng": -90.0575,
+    "mapsUrl": "https://www.google.com/maps/place/National+Civil+Rights+Museum,+450+Mulberry+St,+Memphis,+TN+38103/@35.134444,-90.0575,17z"
+  },
+  "aspectRatio": "landscape",
+  "raw_score": 99,
+  "level": 4
+}
