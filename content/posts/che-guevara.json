@@ -1,0 +1,39 @@
+{
+  "id": "che-guevara-01",
+  "slug": "che-guevara",
+  "name": "Che Guevara",
+  "title": "Last known photo of Che Guevara, taken at the schoolhouse in La Higuera, Bolivia, on the morning of October 9, 1967, hours before his execution by the Bolivian Army.",
+  "imageUrl": "/images/che-guevara.jpg",
+  "date": "October 9, 1967",
+  "deathDate": "October 9, 1967",
+  "age": 39,
+  "tags": [
+    "revolutionary",
+    "communist",
+    "assassination"
+  ],
+  "sourceUrl": "https://en.wikipedia.org/wiki/Che_Guevara",
+  "sourceLabel": "Wikipedia",
+  "description": "This is the last known photograph of Ernesto &ldquo;Che&rdquo; Guevara, taken outside the small adobe schoolhouse in <a href=\"https://en.wikipedia.org/wiki/La_Higuera\" target=\"_blank\" rel=\"noopener noreferrer\">La Higuera</a>, Bolivia, on the morning of October 9, 1967. Captured by Bolivian Army Rangers in the nearby Yuro ravine the previous afternoon, Guevara had been brought to the schoolhouse overnight and held in one of its two classrooms. The man in the cap at left is <a href=\"https://en.wikipedia.org/wiki/F%C3%A9lix_Rodr%C3%ADguez_(soldier)\" target=\"_blank\" rel=\"noopener noreferrer\">Félix Rodríguez</a>, a Cuban-American CIA officer attached to the Bolivian counterinsurgency operation, who later became the subject of allegations (which he denies and has never been charged with) that he participated in the 1985 torture and killing of DEA agent Enrique &ldquo;Kiki&rdquo; Camarena in Guadalajara, Mexico. A few hours after this photograph was made, Bolivian sergeant Mario Terán entered the second classroom and shot Guevara nine times. Guevara was 39 years old. <a href=\"https://www.newyorker.com/news/news-desk/picturing-the-dead\" target=\"_blank\" rel=\"noopener noreferrer\">The New Yorker covered the staged post-mortem photographs that followed</a>.",
+  "bio": "Ernesto &ldquo;Che&rdquo; Guevara was an Argentine Marxist revolutionary, physician, author, and military theorist. A central figure in the Cuban Revolution alongside Fidel and Raúl Castro, he served in the post-revolutionary Cuban government before leaving in 1965 to foment armed insurrections abroad, first in the Congo and then in Bolivia. His face, derived from <a href=\"https://en.wikipedia.org/wiki/Guerrillero_Heroico\" target=\"_blank\" rel=\"noopener noreferrer\">Alberto Korda's 1960 photograph <em>Guerrillero Heroico</em></a>, became one of the most reproduced images of the 20th century and a global symbol of rebellion.",
+  "photoCredit": "Unknown",
+  "additionalImages": [
+    "/images/che-guevara-2.jpg"
+  ],
+  "additionalImagesNote": "Plate 02: Guevara in bound captivity outside the same schoolhouse, also October 9, 1967.",
+  "interval": "2h",
+  "createdAt": "2026-05-23",
+  "focalPoint": {
+    "x": 50,
+    "y": 31
+  },
+  "location": {
+    "name": "Schoolhouse, La Higuera, Vallegrande Province, Bolivia",
+    "lat": -18.794722,
+    "lng": -64.201111,
+    "mapsUrl": "https://www.google.com/maps?ll=-18.794722,-64.201111&q=-18.794722,-64.201111"
+  },
+  "aspectRatio": "landscape",
+  "raw_score": 99,
+  "level": 4
+}
