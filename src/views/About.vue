@@ -42,9 +42,9 @@ function openContact() {
       <section id="i" class="section">
         <div class="section-main">
           <div class="section-marker">I. On the project</div>
-          <p class="lede">A curated archive of the final known photographs of public figures.</p>
-          <p>We live in an era of infinite documentation. For those in the public eye, life is a series of thousands of frames captured by strangers and fans alike. But eventually, the shutter clicks for the last time.</p>
-          <p>These aren't dramatic finales. They are candid moments at a party or a wave outside a hotel. <strong>They represent a Tuesday that looked like every other Tuesday—until it wasn't.</strong> Most people in these images had no idea they were being photographed for the last time.</p>
+          <p class="lede">An archive of the last known photographs of public figures.</p>
+          <p>Public figures are photographed constantly. Paparazzi, fans with phones, security cameras outside hotels, friends at backyard parties. The volume is staggering, and then one day it stops.</p>
+          <p>Most of the photos in this collection are ordinary. A wave outside a restaurant. A drink at a party. A friend's phone catching someone mid-sentence. <strong>None of the people in them knew they were being photographed for the last time.</strong></p>
         </div>
         <aside class="section-margin">
           <figure class="pull-quote">
@@ -61,10 +61,9 @@ function openContact() {
       <section id="ii" class="section">
         <div class="section-main">
           <div class="section-marker">II. On presence</div>
-          <p>These images were once unremarkable. They only became significant in the absence of everything that followed. That is the point.</p>
-          <p>This project is a curated study of those final moments. By focusing on "ordinary" last photos — taken in grocery stores, on sidewalks, or during rehearsals — we strip away the spectacle of "the end" to find the humanity that remains.</p>
-          <p>This isn't an archive of tragedy; it is an archive of presence. These photos serve as a reminder that the "insignificant" moments of our lives are often the most precious.</p>
-          <p>We hope these images encourage you to look at your own "unremarkable" day with a little more attention.</p>
+          <p>These photos were unremarkable at the time. They only became significant because of what came next, or because of what didn't.</p>
+          <p>Most of them aren't dramatic. A grocery store parking lot. A rehearsal break. Dinner with friends. There is nothing in the frame that warns you.</p>
+          <p>This is an archive of the last ordinary minute.</p>
         </div>
         <aside class="section-margin">
           <figure class="pull-quote">
@@ -77,8 +76,8 @@ function openContact() {
       <section id="iii" class="section">
         <div class="section-main">
           <div class="section-marker">III. On image use &amp; attribution</div>
-          <p>This is a non-commercial historical archive created for educational and documentary purposes. All photographs remain the property of their respective copyright holders and are used here under fair use (17 U.S.C. &sect; 107) for purposes of commentary, criticism, and historical documentation. Photographer credits are provided where known.</p>
-          <p>If you are a rights holder and would like an image credited, modified, or removed, please <a href="#" class="contact-link" @click.prevent="openContact">get in touch</a>.</p>
+          <p>This is a non-commercial historical archive made for educational and documentary purposes. Photographs remain the property of their copyright holders and appear here under fair use (17 U.S.C. &sect; 107) for commentary, criticism, and historical documentation. Photographer credits are listed where known.</p>
+          <p>If you hold rights to an image and would like it credited, modified, or removed, please <a href="#" class="contact-link" @click.prevent="openContact">get in touch</a>.</p>
         </div>
       </section>
 
