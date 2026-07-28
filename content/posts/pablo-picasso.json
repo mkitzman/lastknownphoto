@@ -1,0 +1,39 @@
+{
+  "id": "pablo-picasso-01",
+  "slug": "pablo-picasso",
+  "name": "Pablo Picasso",
+  "title": "A photograph said to show Pablo Picasso on April 7, 1973, the day before his death at his home outside Mougins, France.",
+  "imageUrl": "/images/pablo-picasso.jpg",
+  "date": "April 7, 1973",
+  "deathDate": "April 8, 1973",
+  "interval": "About a day",
+  "age": 91,
+  "tags": [
+    "artist",
+    "painter"
+  ],
+  "sourceUrl": "https://content.time.com/time/subscriber/article/0,33009,945265,00.html",
+  "sourceLabel": "TIME",
+  "description": "This black-and-white photograph is said to be one of the last images of Pablo Picasso, reportedly taken on April 7, 1973, the day before he died at Notre-Dame-de-Vie, his hillside home above Mougins on the French Riviera. It shows Picasso at 91, smiling in a cardigan and knotted neckerchief among guests, with a framed portrait of himself on the wall behind. The dating cannot be independently corroborated, so its standing as his final photograph remains contested. The following morning, on April 8, 1973, Picasso died of pulmonary edema and heart failure. His wife Jacqueline Roque was at his side.",
+  "bio": "Pablo Picasso was a Spanish painter, sculptor, and printmaker widely regarded as one of the most influential artists of the twentieth century. Co-founder of Cubism and endlessly inventive across a career that spanned more than seventy years, he created works including <em>Les Demoiselles d'Avignon</em> (1907) and <em>Guernica</em> (1937). More on his life is at <a href=\"https://en.wikipedia.org/wiki/Pablo_Picasso\" target=\"_blank\" rel=\"noopener noreferrer\">Wikipedia</a>.",
+  "photoCredit": "Unknown",
+  "createdAt": "2026-07-28",
+  "focalPoint": {
+    "x": 49,
+    "y": 34
+  },
+  "cardFocalPoint": {
+    "x": 49,
+    "y": 33,
+    "zoom": 1.6
+  },
+  "location": {
+    "name": "Mougins, France",
+    "lat": 43.603479,
+    "lng": 6.991661,
+    "mapsUrl": "https://www.google.com/maps/place/43.603479,6.991661"
+  },
+  "aspectRatio": "landscape",
+  "raw_score": 86,
+  "level": 2
+}
