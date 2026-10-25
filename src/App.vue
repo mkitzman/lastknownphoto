@@ -21,11 +21,11 @@ function focusPageHeading() {
     <header class="site-header">
       <RouterLink to="/" class="site-title-block">
         <span class="title-line">
-          Last Known Photo
-          <svg class="shutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="shutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
             <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
           </svg>
+          Last Known Photo
         </span>
       </RouterLink>
       <nav class="site-nav">
@@ -73,18 +73,21 @@ function focusPageHeading() {
 
 .title-line {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-sans);
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: -0.2px;
+  /* Baseline-align so the header lines the wordmark up with the nav text, not the icon */
+  align-items: baseline;
+  gap: 10px;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1;
   color: var(--fg);
 }
 
 .shutter-icon {
-  width: 16px;
-  height: 16px;
+  align-self: center;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   transform: rotate(0deg);
   transition: transform 1.5s cubic-bezier(0.2, 0, 0.1, 1);
