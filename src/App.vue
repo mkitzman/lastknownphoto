@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import { RouterView, RouterLink, useRoute } from 'vue-router'
 import { pageAnnouncement } from './composables/usePageMeta'
+import { posts } from './data/posts'
+import { lastUpdated } from './data/stats'
 
 const route = useRoute()
 const isMapPage = computed(() => route.name === 'map')
@@ -18,20 +20,18 @@ function focusPageHeading() {
   <div class="app">
     <header class="site-header">
       <RouterLink to="/" class="site-title-block">
-        <span class="eyebrow">LKP — Est. 2024</span>
         <span class="title-line">
           Last Known Photo
           <svg class="shutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
             <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
           </svg>
-          <span class="sep">·</span>
-          <span class="subtitle">an archive</span>
         </span>
       </RouterLink>
       <nav class="site-nav">
         <RouterLink to="/" class="nav-link" :class="{ active: route.name === 'home' }">Archive</RouterLink>
         <RouterLink to="/map" class="nav-link" :class="{ active: route.name === 'map' }">Map</RouterLink>
+        <RouterLink to="/stats" class="nav-link" :class="{ active: route.name === 'stats' }">Stats</RouterLink>
         <RouterLink to="/about" class="nav-link" :class="{ active: route.name === 'about' }">About</RouterLink>
       </nav>
     </header>
@@ -45,7 +45,8 @@ function focusPageHeading() {
     <div class="visually-hidden" aria-live="polite" aria-atomic="true">{{ pageAnnouncement }}</div>
     <footer v-if="!isMapPage" class="site-footer">
       <span>Last Known Photo &copy; {{ new Date().getFullYear() }}</span>
-      <span>A non-commercial archive · Corrections welcome</span>
+      <span v-if="route.name === 'stats'">Figures computed from {{ posts.length }} records · Updated {{ lastUpdated }}</span>
+      <span v-else>A non-commercial archive · Corrections welcome</span>
     </footer>
   </div>
 </template>
@@ -70,14 +71,6 @@ function focusPageHeading() {
   color: var(--fg);
 }
 
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-}
-
 .title-line {
   display: inline-flex;
   align-items: center;
@@ -100,15 +93,6 @@ function focusPageHeading() {
 .site-title-block:hover .shutter-icon {
   transform: rotate(720deg);
   transition: transform 2s cubic-bezier(0.1, 0, 0.3, 1);
-}
-
-.title-line .sep {
-  opacity: 0.4;
-  margin: 0 6px;
-}
-
-.title-line .subtitle {
-  opacity: 0.5;
 }
 
 .site-nav {

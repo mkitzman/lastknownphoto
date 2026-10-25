@@ -8,6 +8,7 @@ const router = createRouter({
     { path: '/', name: 'home', component: Home, meta: { title: 'Archive' } },
     { path: '/post/:slug', name: 'post', component: () => import('../views/Post.vue') },
     { path: '/map', name: 'map', component: () => import('../views/Map.vue'), meta: { title: 'Map' } },
+    { path: '/stats', name: 'stats', component: () => import('../views/Stats.vue'), meta: { title: 'Stats' } },
     { path: '/about', name: 'about', component: () => import('../views/About.vue'), meta: { title: 'About' } },
     { path: '/admin', name: 'admin', component: () => import('../views/Admin.vue'), meta: { title: 'Admin' } },
   ],
