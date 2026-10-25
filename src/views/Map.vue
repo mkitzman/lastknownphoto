@@ -168,6 +168,8 @@ const located = posts.filter(p => p.location).length
 
 .map-container {
   flex: 1;
+  /* Same gap below the filters as the homepage grid */
+  margin-top: 32px;
   background: var(--ink-800);
   width: 100%;
   min-height: 0;

@@ -59,7 +59,8 @@ const sortItems = SORT_ORDER.map(s => ({ value: s, label: SORT_LABELS[s] }))
   display: flex;
   gap: 40px;
   align-items: center;
-  padding: 18px 56px;
+  min-height: 50px;
+  padding: 0 56px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 1.2px;
@@ -73,14 +74,14 @@ const sortItems = SORT_ORDER.map(s => ({ value: s, label: SORT_LABELS[s] }))
 
 @media (max-width: 1100px) {
   .filter-bar {
-    padding: 16px 40px;
+    padding: 0 40px;
     gap: 28px;
   }
 }
 
 @media (max-width: 640px) {
   .filter-bar {
-    padding: 14px 24px;
+    padding: 8px 24px;
     gap: 20px;
     flex-wrap: wrap;
   }

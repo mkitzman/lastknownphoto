@@ -160,7 +160,7 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
 }
 
 .hero {
-  padding: 23px 56px 56px;
+  padding: 45px 56px 56px;
   border-bottom: 1px solid var(--hairline);
 }
 

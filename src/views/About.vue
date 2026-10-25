@@ -100,7 +100,7 @@ function openContact() {
   grid-template-columns: var(--about-cols);
   column-gap: var(--about-gap);
   align-items: start;
-  padding: 24px 56px 112px;
+  padding: 46px 56px 112px;
   color: var(--fg);
 }
 
@@ -318,7 +318,7 @@ function openContact() {
   .about {
     --about-cols: minmax(0, 1fr) 280px;
     --about-gap: 56px;
-    padding: 20px 40px 80px;
+    padding: 42px 40px 80px;
   }
 }
 
@@ -326,7 +326,7 @@ function openContact() {
 @media (max-width: 720px) {
   .about {
     --about-cols: minmax(0, 1fr);
-    padding: 16px 24px 64px;
+    padding: 38px 24px 64px;
   }
   .about {
     row-gap: 40px;
