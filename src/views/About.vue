@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import PageTitle from '../components/PageTitle.vue'
+
 function openContact() {
   const u = 'unrealcityproject'
   const d = 'gmail.com'
@@ -7,55 +9,22 @@ function openContact() {
 </script>
 
 <template>
+  <div class="about-page">
+  <PageTitle eyebrow="Curatorial note">
+    The Last Frame
+    <template #credit>Founded 2024 <span class="dot">·</span> A non-commercial remembrance archive</template>
+  </PageTitle>
+
   <div class="about">
-    <aside class="wall-label">
-      <div class="label-section">
-        <div class="label-eyebrow">Object label</div>
-        <dl class="label-meta">
-          <dt>Est.</dt><dd>2024</dd>
-          <dt>Medium</dt><dd>Digital photographs</dd>
-          <dt>Scope</dt><dd>Public figures</dd>
-          <dt>Status</dt><dd>Non-commercial</dd>
-          <dt>Rights</dt><dd>Fair use · 17 U.S.C. &sect; 107</dd>
-        </dl>
-      </div>
-      <div class="label-section">
-        <div class="label-eyebrow">Contents</div>
-        <ol class="label-toc">
-          <li><a href="#i">I. On the project</a></li>
-          <li><a href="#ii">II. On presence</a></li>
-          <li><a href="#iii">III. On image use</a></li>
-        </ol>
-      </div>
-    </aside>
 
     <article class="prose">
-      <header class="prose-header">
-        <div class="prose-eyebrow">Curatorial note</div>
-        <h1>The Last Frame</h1>
-        <div class="credit-line">
-          Founded 2024 <span class="dot">·</span>
-          A non-commercial remembrance archive
-        </div>
-      </header>
-
-      <section id="i" class="section">
+      <section id="i" class="section section-first">
         <div class="section-main">
           <div class="section-marker">I. On the project</div>
           <p class="lede">An archive of the last known photographs of public figures.</p>
           <p>Public figures are photographed constantly. Paparazzi, fans with phones, security cameras outside hotels, friends at backyard parties. The volume is staggering, and then one day it stops.</p>
           <p>Most of the photos in this collection are ordinary. A wave outside a restaurant. A drink at a party. A friend's phone catching someone mid-sentence. <strong>None of the people in them knew they were being photographed for the last time.</strong></p>
         </div>
-        <aside class="section-margin">
-          <figure class="pull-quote">
-            <blockquote>The future's uncertain and the end is always near.</blockquote>
-            <figcaption>Jim Morrison</figcaption>
-          </figure>
-          <figure class="pull-quote">
-            <blockquote>The trouble is, you think you have time.</blockquote>
-            <figcaption>Buddha</figcaption>
-          </figure>
-        </aside>
       </section>
 
       <section id="ii" class="section">
@@ -65,12 +34,6 @@ function openContact() {
           <p>Most of them aren't dramatic. A grocery store parking lot. A rehearsal break. Dinner with friends. There is nothing in the frame that warns you.</p>
           <p>This is an archive of the last ordinary minute.</p>
         </div>
-        <aside class="section-margin">
-          <figure class="pull-quote">
-            <blockquote>Enjoy every sandwich.</blockquote>
-            <figcaption>Warren Zevon</figcaption>
-          </figure>
-        </aside>
       </section>
 
       <section id="iii" class="section">
@@ -89,25 +52,60 @@ function openContact() {
         </div>
       </footer>
     </article>
+
+    <aside class="about-rail">
+      <div class="wall-label">
+        <div class="label-section">
+          <div class="label-eyebrow">Object label</div>
+          <dl class="label-meta">
+            <dt>Est.</dt><dd>2024</dd>
+            <dt>Medium</dt><dd>Digital photographs</dd>
+            <dt>Scope</dt><dd>Public figures</dd>
+            <dt>Status</dt><dd>Non-commercial</dd>
+            <dt>Rights</dt><dd>Fair use · 17 U.S.C. &sect; 107</dd>
+          </dl>
+        </div>
+        <div class="label-section">
+          <div class="label-eyebrow">Contents</div>
+          <ol class="label-toc">
+            <li><a href="#i">I. On the project</a></li>
+            <li><a href="#ii">II. On presence</a></li>
+            <li><a href="#iii">III. On image use</a></li>
+          </ol>
+        </div>
+      </div>
+      <figure class="pull-quote">
+        <blockquote>The future's uncertain and the end is always near.</blockquote>
+        <figcaption>Jim Morrison</figcaption>
+      </figure>
+      <figure class="pull-quote">
+        <blockquote>The trouble is, you think you have time.</blockquote>
+        <figcaption>Buddha</figcaption>
+      </figure>
+      <figure class="pull-quote">
+        <blockquote>Enjoy every sandwich.</blockquote>
+        <figcaption>Warren Zevon</figcaption>
+      </figure>
+    </aside>
+  </div>
   </div>
 </template>
 
 <style scoped>
 .about {
+  /* Two independent columns: essay left, label and quotes right */
+  --about-cols: minmax(0, 1fr) 440px;
+  --about-gap: 96px;
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  column-gap: 72px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 72px 56px 112px;
+  grid-template-columns: var(--about-cols);
+  column-gap: var(--about-gap);
+  align-items: start;
+  padding: 24px 56px 112px;
   color: var(--fg);
 }
 
-/* Wall label — sticky left rail */
+/* Wall label — top of the right column */
 .wall-label {
-  position: sticky;
-  top: 120px;
-  align-self: start;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -161,11 +159,22 @@ function openContact() {
   display: flex;
   align-items: center;
   min-height: 24px;
-  color: var(--fg-muted);
+  color: var(--link);
 }
 
 .label-toc a:hover {
   color: var(--fg);
+}
+
+/* The label sits inside .prose, so opt out of its underline-at-rest link style */
+.wall-label .label-toc a {
+  text-decoration: none;
+}
+
+.wall-label .label-toc a:hover,
+.wall-label .label-toc a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
 }
 
 /* Prose column */
@@ -173,50 +182,17 @@ function openContact() {
   min-width: 0;
 }
 
-.prose-header {
-  padding-bottom: 48px;
-  border-bottom: 1px solid var(--hairline-strong);
-}
-
-.prose-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-  margin-bottom: 20px;
-}
-
-.prose h1 {
-  font-family: 'Young Serif', Georgia, serif;
-  font-size: 64px;
-  font-weight: 400;
-  letter-spacing: -1px;
-  line-height: 1;
-  margin: 0;
-}
-
-.credit-line {
-  margin-top: 18px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-}
-
-.dot {
-  opacity: 0.5;
-  margin: 0 6px;
-}
-
 /* Sections — subgrid-ish: main reading column + margin rail */
 .section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  column-gap: 48px;
   padding: 48px 0;
-  border-bottom: 1px solid var(--hairline-soft);
+}
+
+.section-first {
+  padding-top: 0;
+}
+
+.wall-label + .pull-quote {
+  margin-top: 16px;
 }
 
 .section:last-of-type {
@@ -262,11 +238,10 @@ function openContact() {
   opacity: 1;
 }
 
-.section-margin {
+.about-rail {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-top: 44px;
 }
 
 .pull-quote {
@@ -297,14 +272,18 @@ function openContact() {
 
 .contact-link,
 .prose a {
-  color: var(--fg);
-  border-bottom: 1px solid var(--hairline-strong);
-  transition: border-color 0.2s;
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--link-underline);
+  transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 .prose a:hover,
 .contact-link:hover {
-  border-bottom-color: var(--fg);
+  color: var(--fg);
+  text-decoration-color: var(--fg);
 }
 
 .prose-footer {
@@ -321,58 +300,47 @@ function openContact() {
   color: var(--fg-dim);
 }
 
+.colophon .dot {
+  opacity: 0.5;
+  margin: 0 6px;
+}
+
 .colophon a {
-  color: var(--fg-dim);
-  border-bottom: 1px solid var(--hairline-strong);
+  color: var(--link);
 }
 
 .colophon a:hover {
   color: var(--fg);
-  border-bottom-color: var(--fg);
 }
 
 /* Tablet: hide sidebar, keep margin quotes */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .about {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    padding: 48px 40px 80px;
-  }
-  .wall-label {
-    position: static;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid var(--hairline-strong);
+    --about-cols: minmax(0, 1fr) 280px;
+    --about-gap: 56px;
+    padding: 20px 40px 80px;
   }
 }
 
 /* Mobile: single column, quotes inline below body */
 @media (max-width: 720px) {
   .about {
-    padding: 32px 24px 64px;
+    --about-cols: minmax(0, 1fr);
+    padding: 16px 24px 64px;
+  }
+  .about {
+    row-gap: 40px;
   }
   .wall-label {
-    grid-template-columns: 1fr;
     gap: 24px;
   }
-  .prose h1 {
-    font-size: 44px;
-    letter-spacing: -0.6px;
-  }
   .section {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: 28px;
     padding: 36px 0;
   }
   .section-main {
     max-width: none;
   }
-  .section-margin {
-    padding-top: 0;
+  .about-rail {
     gap: 20px;
   }
   .pull-quote {

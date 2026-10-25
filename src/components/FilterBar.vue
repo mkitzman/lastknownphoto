@@ -60,7 +60,6 @@ const sortItems = SORT_ORDER.map(s => ({ value: s, label: SORT_LABELS[s] }))
   gap: 40px;
   align-items: center;
   padding: 18px 56px;
-  border-bottom: 1px solid var(--hairline-soft);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 1.2px;

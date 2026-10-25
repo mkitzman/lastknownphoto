@@ -5,6 +5,7 @@ import { useFilter, SORT_LABELS } from '../composables/useFilter'
 import PostCard from '../components/PostCard.vue'
 import FilterBar from '../components/FilterBar.vue'
 import DecadeHistogram from '../components/DecadeHistogram.vue'
+import { numberWord } from '../data/stats'
 
 const { filteredPosts, selectedDecade, selectedTag, sortMode } = useFilter()
 
@@ -52,10 +53,14 @@ const lastAdded = computed(() => {
       <div class="hero-text">
         <h1 class="hero-title">Famous faces.<br />Final frames.</h1>
         <p class="hero-copy">
-          The last known photographs of public figures, collected from news
-          archives, private collections and family estates. Each entry notes
-          when the picture was taken, where, by whom, and how long before death.
+          {{ numberWord(totalRecords, true) }} people, photographed for the last time.
+          An archive of the last known photographs of public figures, taken
+          before anyone knew they were the last.
         </p>
+        <div class="hero-links">
+          <RouterLink to="/stats" class="hero-link">Explore the numbers</RouterLink>
+          <RouterLink to="/map" class="hero-link">See them on a map</RouterLink>
+        </div>
         <div class="hero-stats">
           <div><span class="stat-label">Records </span>{{ totalRecords }}</div>
           <div><span class="stat-label">Years </span>{{ yearRange }}</div>
@@ -86,7 +91,7 @@ const lastAdded = computed(() => {
   grid-template-columns: 1fr 440px;
   gap: 96px;
   align-items: stretch;
-  padding: 48px 56px 52px;
+  padding: 48px 56px 23px;
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -106,6 +111,28 @@ const lastAdded = computed(() => {
   max-width: 480px;
   margin: 26px 0 0;
   font-weight: 400;
+}
+
+.hero-links {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: var(--link);
+}
+
+.hero-link:hover {
+  color: var(--fg);
 }
 
 .hero-stats {
@@ -137,7 +164,7 @@ const lastAdded = computed(() => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 56px 48px;
-  padding: 56px 56px 72px;
+  padding: 28px 56px 72px;
 }
 
 .empty {
@@ -152,14 +179,14 @@ const lastAdded = computed(() => {
 
 @media (max-width: 1100px) {
   .hero {
-    padding: 40px 40px 44px;
+    padding: 40px 40px 21px;
     grid-template-columns: 1fr 340px;
     gap: 56px;
   }
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 44px 32px;
-    padding: 40px 40px 56px;
+    padding: 24px 40px 56px;
   }
 }
 
@@ -176,7 +203,7 @@ const lastAdded = computed(() => {
 
 @media (max-width: 640px) {
   .hero {
-    padding: 28px 24px 36px;
+    padding: 28px 24px 19px;
   }
   .hero-title {
     font-size: 46px;
@@ -188,7 +215,7 @@ const lastAdded = computed(() => {
   .grid {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 32px 24px 48px;
+    padding: 20px 24px 48px;
   }
 }
 </style>

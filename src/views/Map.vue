@@ -3,7 +3,10 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import type { Post } from '../data/posts'
 import { useFilter } from '../composables/useFilter'
+import { posts } from '../data/posts'
+import { countryTotal } from '../data/stats'
 import FilterBar from '../components/FilterBar.vue'
+import PageTitle from '../components/PageTitle.vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
@@ -107,7 +110,7 @@ onMounted(() => {
   if (!mapContainer.value) return
 
   map = L.map(mapContainer.value, {
-    center: [20, 0],
+    center: [38, -25],
     zoom: 3,
     minZoom: 3,
     maxBoundsViscosity: 1.0,
@@ -141,11 +144,16 @@ onUnmounted(() => {
     markerLayer = null
   }
 })
+
+const located = posts.filter(p => p.location).length
 </script>
 
 <template>
   <div class="map-page">
-    <h1 class="visually-hidden">Map</h1>
+    <PageTitle eyebrow="Location register">
+      Where they were last seen.
+      <template #credit>{{ located }} locations <span class="dot">·</span> {{ countryTotal }} countries</template>
+    </PageTitle>
     <FilterBar :show-sort="false" />
     <div ref="mapContainer" class="map-container"></div>
   </div>
@@ -155,11 +163,12 @@ onUnmounted(() => {
 .map-page {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 76px);
 }
 
 .map-container {
   flex: 1;
+  background: var(--ink-800);
   width: 100%;
   min-height: 0;
 }
@@ -259,15 +268,12 @@ onUnmounted(() => {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #e8e1d4;
-  text-decoration: none;
+  color: var(--link);
   cursor: pointer;
-  border-bottom: 1px solid rgba(232, 225, 212, 0.25);
-  padding-bottom: 2px;
 }
 
 .map-popup-link:hover {
-  border-bottom-color: #e8e1d4;
+  color: var(--fg);
 }
 
 /* Leaflet overrides for register theme */
@@ -291,6 +297,6 @@ onUnmounted(() => {
 }
 
 .leaflet-control-attribution a {
-  color: rgba(232, 225, 212, 0.6) !important;
+  color: var(--link) !important;
 }
 </style>

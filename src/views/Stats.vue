@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import PageTitle from '../components/PageTitle.vue'
 import IntervalStrip from '../components/stats/IntervalStrip.vue'
 import StatBars from '../components/stats/StatBars.vue'
 import StatHBars from '../components/stats/StatHBars.vue'
@@ -26,9 +27,13 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
 </script>
 
 <template>
+  <div class="stats-page">
+  <PageTitle eyebrow="Statistical abstract">
+    {{ word(s.total, true) }} records,<br />in numbers.
+    <template #credit>Computed from {{ s.total }} records <span class="dot">·</span> Updated {{ s.lastUpdated }}</template>
+  </PageTitle>
   <div class="stats">
     <section class="hero">
-      <h1 class="display">{{ word(s.total, true) }} records,<br />in numbers.</h1>
       <div class="figures">
         <div class="big"><div class="n">{{ s.total }}</div><div class="label">Records</div></div>
         <div class="big"><div class="n">{{ s.yearSpan.from }}–{{ s.yearSpan.to }}</div><div class="label">Years covered · {{ decadeCount }} decades</div></div>
@@ -146,27 +151,23 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
       </div>
     </section>
   </div>
+  </div>
 </template>
 
 <style scoped>
 .stats {
   color: var(--fg);
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .hero {
-  padding: 48px 56px 56px;
+  padding: 23px 56px 56px;
   border-bottom: 1px solid var(--hairline);
 }
 
-.display {
-  font-family: 'Young Serif', Georgia, serif;
-  font-size: 72px;
-  line-height: 1;
-  letter-spacing: -1px;
-  font-weight: 400;
-  margin: 0;
+.hero .figures {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .figures {
@@ -256,9 +257,17 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
 }
 
 .inline-link {
-  color: var(--fg);
+  color: var(--link);
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  text-decoration-color: var(--link-underline);
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.inline-link:hover {
+  color: var(--fg);
+  text-decoration-color: var(--fg);
 }
 
 .chart-gap {
@@ -319,9 +328,6 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
 }
 
 @media (max-width: 900px) {
-  .display {
-    font-size: 48px;
-  }
   .intro,
   .split-row,
   .split-row.even {

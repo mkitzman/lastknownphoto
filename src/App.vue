@@ -109,7 +109,7 @@ function focusPageHeading() {
   font-weight: 400;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  color: var(--fg-dim);
+  color: var(--link);
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
   transition: color 0.2s, border-color 0.2s;

@@ -249,7 +249,7 @@ const caption = computed(() => {
 
 .list summary {
   cursor: pointer;
-  color: var(--fg-label);
+  color: var(--link);
   width: fit-content;
   padding: 6px 0;
 }
@@ -276,12 +276,11 @@ const caption = computed(() => {
 }
 
 .list a {
-  color: var(--fg);
+  color: var(--link);
 }
 
 .list a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: var(--fg);
 }
 
 .list-when {

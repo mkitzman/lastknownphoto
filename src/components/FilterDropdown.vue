@@ -72,8 +72,9 @@ const currentLabel = () => props.options.find(o => o.value === props.value)?.lab
   background: transparent;
   border: none;
   padding: 6px 0;
-  color: var(--fg);
+  color: var(--link);
   cursor: pointer;
+  transition: color 200ms;
   font-family: inherit;
   font-size: inherit;
   letter-spacing: inherit;
@@ -83,13 +84,24 @@ const currentLabel = () => props.options.find(o => o.value === props.value)?.lab
   align-items: center;
 }
 
+.trigger:hover,
+.trigger[aria-expanded='true'] {
+  color: var(--fg);
+}
+
+.trigger:hover .trigger-value,
+.trigger[aria-expanded='true'] .trigger-value {
+  border-bottom-color: var(--fg);
+}
+
 .trigger-label {
   color: var(--fg-label);
 }
 
 .trigger-value {
-  border-bottom: 1px solid rgba(232, 225, 212, 0.35);
+  border-bottom: 1px solid var(--link-underline);
   padding-bottom: 2px;
+  transition: border-color 200ms;
   white-space: nowrap;
 }
 

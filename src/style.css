@@ -18,6 +18,9 @@
   --fg-faint: rgba(232, 225, 212, 0.5);
   /* Lowest ink that passes WCAG AA (4.5:1) for small text on --bg */
   --fg-label: rgba(232, 225, 212, 0.55);
+  /* Link accent: brass, with a softer underline for links inside paragraphs */
+  --link: #c8a87c;
+  --link-underline: rgba(200, 168, 124, 0.55);
   --hairline: rgba(232, 225, 212, 0.1);
   --hairline-strong: rgba(232, 225, 212, 0.15);
   --hairline-soft: rgba(232, 225, 212, 0.08);
@@ -61,9 +64,40 @@ body {
 }
 
 a {
-  color: var(--fg);
+  color: var(--link);
   text-decoration: none;
   transition: color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+/* Page title furniture: mono eyebrow above the headline, credit line below */
+.page-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-bottom: 20px;
+}
+
+.page-credit {
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.page-credit .dot {
+  opacity: 0.5;
+  margin: 0 6px;
+}
+
+/* Underline on hover; skip links that carry their own underline or wrap whole cards */
+a:where(:hover, :focus-visible):not(.nav-link, .site-title-block, .card-link, .tag) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 img {

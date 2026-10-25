@@ -272,7 +272,7 @@ function toggleMethodology() {
 .topbar-link {
   background: none;
   border: none;
-  color: inherit;
+  color: var(--link);
   font: inherit;
   letter-spacing: inherit;
   text-transform: inherit;
@@ -411,17 +411,20 @@ function toggleMethodology() {
   font-weight: 400;
 }
 
-.record-note :deep(a) {
-  color: #c8a87c;
+.record-note :deep(a),
+.record-bio :deep(a) {
+  color: var(--link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(200, 168, 124, 0.55);
+  text-decoration-color: var(--link-underline);
   transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 .record-note :deep(a:hover),
-.record-note :deep(a:focus-visible) {
+.record-note :deep(a:focus-visible),
+.record-bio :deep(a:hover),
+.record-bio :deep(a:focus-visible) {
   color: var(--fg);
   text-decoration-color: var(--fg);
 }
@@ -504,7 +507,7 @@ function toggleMethodology() {
   font-size: 10px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--fg-dim);
+  color: var(--link);
   cursor: pointer;
   transition: color 0.2s;
 }
@@ -674,7 +677,7 @@ function toggleMethodology() {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.4px;
-  color: var(--fg-muted);
+  color: var(--link);
 }
 
 .coords-link:hover {
@@ -695,7 +698,7 @@ function toggleMethodology() {
   text-transform: uppercase;
   padding: 5px 10px;
   border: 1px solid var(--hairline-strong);
-  color: var(--fg-muted);
+  color: var(--link);
 }
 
 .tag:hover {
@@ -715,13 +718,11 @@ function toggleMethodology() {
   font-size: 11px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--fg);
-  border-bottom: 1px solid var(--hairline-strong);
-  padding-bottom: 4px;
+  color: var(--link);
 }
 
 .record-link:hover {
-  border-bottom-color: var(--fg);
+  color: var(--fg);
 }
 
 .not-found {
