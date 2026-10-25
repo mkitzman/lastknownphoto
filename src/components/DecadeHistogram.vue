@@ -6,12 +6,20 @@ const { selectedDecade, selectDecade } = useFilter()
 
 const hovered = ref<{ decade: string; count: number } | null>(null)
 const max = Math.max(1, ...decadeCounts.map(d => d.count))
-const first = decadeCounts[0]?.decade ?? ''
-const middle = decadeCounts[Math.floor(decadeCounts.length / 2)]?.decade ?? ''
-const last = decadeCounts[decadeCounts.length - 1]?.decade ?? ''
+// Axis shows the decade's first year ("1860"); uppercase styling would turn "1860s" into "1860S"
+const year = (decade: string) => decade.replace(/s$/, '')
+const first = year(decadeCounts[0]?.decade ?? '')
+const middle = year(decadeCounts[Math.floor(decadeCounts.length / 2)]?.decade ?? '')
+const last = year(decadeCounts[decadeCounts.length - 1]?.decade ?? '')
+
+// On hover, show the span ("1990–99") so a bare year isn't mistaken for a single year
+const span = (decade: string) => {
+  const y = parseInt(decade)
+  return `${y}–${String((y + 9) % 100).padStart(2, '0')}`
+}
 
 const middleLabel = computed(() =>
-  hovered.value ? `${hovered.value.decade} · ${hovered.value.count} records` : middle
+  hovered.value ? `${span(hovered.value.decade)} · ${hovered.value.count} records` : middle
 )
 
 function toggle(decade: string) {
