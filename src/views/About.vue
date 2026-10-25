@@ -185,10 +185,10 @@ function openContact() {
 }
 
 .prose h1 {
-  font-family: var(--font-sans);
+  font-family: 'Young Serif', Georgia, serif;
   font-size: 64px;
-  font-weight: 300;
-  letter-spacing: -1.8px;
+  font-weight: 400;
+  letter-spacing: -1px;
   line-height: 1;
   margin: 0;
 }
@@ -357,7 +357,7 @@ function openContact() {
   }
   .prose h1 {
     font-size: 44px;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.6px;
   }
   .section {
     grid-template-columns: 1fr;
