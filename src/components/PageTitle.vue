@@ -24,6 +24,8 @@ defineProps<{ eyebrow: string }>()
   letter-spacing: -1px;
   font-weight: 400;
   margin: 0;
+  /* If a title has to wrap, split it into even lines */
+  text-wrap: balance;
 }
 
 @media (max-width: 1100px) {

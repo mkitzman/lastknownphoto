@@ -5,6 +5,7 @@ import { useFilter, SORT_LABELS } from '../composables/useFilter'
 import PostCard from '../components/PostCard.vue'
 import FilterBar from '../components/FilterBar.vue'
 import DecadeHistogram from '../components/DecadeHistogram.vue'
+import PageTitle from '../components/PageTitle.vue'
 import { numberWord } from '../data/stats'
 
 const { filteredPosts, selectedDecade, selectedTag, sortMode } = useFilter()
@@ -49,9 +50,16 @@ const lastAdded = computed(() => {
 
 <template>
   <div class="register">
+    <PageTitle eyebrow="Permanent collection">
+      Famous faces. Final frames.
+      <template #credit>
+        {{ totalRecords }} records <span class="dot">·</span> {{ yearRange }}
+        <template v-if="lastAdded"><span class="dot">·</span> Last added {{ lastAdded }}</template>
+      </template>
+    </PageTitle>
+
     <section class="hero">
       <div class="hero-text">
-        <h1 class="hero-title">Famous faces.<br />Final frames.</h1>
         <p class="hero-copy">
           {{ numberWord(totalRecords, true) }} people, photographed for the last time.
           An archive of the last known photographs of public figures, taken
@@ -60,11 +68,6 @@ const lastAdded = computed(() => {
         <div class="hero-links">
           <RouterLink to="/stats" class="hero-link">Explore the numbers</RouterLink>
           <RouterLink to="/map" class="hero-link">See them on a map</RouterLink>
-        </div>
-        <div class="hero-stats">
-          <div><span class="stat-label">Records </span>{{ totalRecords }}</div>
-          <div><span class="stat-label">Years </span>{{ yearRange }}</div>
-          <div v-if="lastAdded"><span class="stat-label">Last added </span>{{ lastAdded }}</div>
         </div>
       </div>
       <DecadeHistogram />
@@ -91,30 +94,21 @@ const lastAdded = computed(() => {
   grid-template-columns: 1fr 440px;
   gap: 96px;
   align-items: stretch;
-  padding: 48px 56px 23px;
+  padding: 44px 56px 40px;
   border-bottom: 1px solid var(--hairline);
 }
 
-.hero-title {
-  font-family: 'Young Serif', Georgia, serif;
-  font-size: 72px;
-  line-height: 1;
-  letter-spacing: -1px;
-  font-weight: 400;
-  margin: 0;
-}
-
 .hero-copy {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6;
   color: rgba(232, 225, 212, 0.65);
-  max-width: 480px;
-  margin: 26px 0 0;
+  max-width: 540px;
+  margin: 0;
   font-weight: 400;
 }
 
 .hero-links {
-  margin-top: 22px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 32px;
@@ -135,29 +129,9 @@ const lastAdded = computed(() => {
   color: var(--fg);
 }
 
-.hero-stats {
-  margin-top: 26px;
-  line-height: 14px;
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.hero-stats > div {
-  white-space: nowrap;
-}
-
-.stat-label {
-  color: var(--fg-label);
-}
-
-/* Drop the tallest bar to the x-height of the headline's first line */
+/* Trim the chart to the text block's glyph height so both columns read as one band */
 .hero :deep(.histogram) {
-  padding-top: 24px;
+  padding: 5px 0;
 }
 
 .grid {
@@ -179,7 +153,7 @@ const lastAdded = computed(() => {
 
 @media (max-width: 1100px) {
   .hero {
-    padding: 40px 40px 21px;
+    padding: 40px 40px 36px;
     grid-template-columns: 1fr 340px;
     gap: 56px;
   }
@@ -197,20 +171,12 @@ const lastAdded = computed(() => {
   }
   .hero :deep(.histogram) {
     height: 160px;
-    padding-top: 0;
   }
 }
 
 @media (max-width: 640px) {
   .hero {
-    padding: 28px 24px 19px;
-  }
-  .hero-title {
-    font-size: 46px;
-    letter-spacing: -0.6px;
-  }
-  .hero-stats {
-    gap: 10px 20px;
+    padding: 36px 24px 32px;
   }
   .grid {
     grid-template-columns: 1fr;

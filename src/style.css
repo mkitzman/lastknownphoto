@@ -69,6 +69,11 @@ a {
   transition: color 0.2s, border-color 0.2s, opacity 0.2s;
 }
 
+/* Keep a phrase together; titles use it to choose where a line may break */
+.nowrap {
+  white-space: nowrap;
+}
+
 /* Page title furniture: mono eyebrow above the headline, credit line below */
 .page-eyebrow {
   font-family: var(--font-mono);

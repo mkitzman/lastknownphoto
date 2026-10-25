@@ -29,7 +29,7 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
 <template>
   <div class="stats-page">
   <PageTitle eyebrow="Statistical abstract">
-    {{ word(s.total, true) }} records,<br />in numbers.
+    <span class="nowrap">{{ word(s.total, true) }} records,</span> <span class="nowrap">in numbers.</span>
     <template #credit>Computed from {{ s.total }} records <span class="dot">·</span> Updated {{ s.lastUpdated }}</template>
   </PageTitle>
   <div class="stats">
