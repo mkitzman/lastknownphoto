@@ -1,28 +1,21 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { posts } from '../data/posts'
-import { useFilter } from '../composables/useFilter'
+import { useFilter, SORT_LABELS } from '../composables/useFilter'
 import PostCard from '../components/PostCard.vue'
 import FilterBar from '../components/FilterBar.vue'
+import DecadeHistogram from '../components/DecadeHistogram.vue'
 
-const { filteredPosts, filterMode, selectedDecade, selectedTag, sortMode } = useFilter()
+const { filteredPosts, selectedDecade, selectedTag, sortMode } = useFilter()
 
 const liveMessage = computed(() => {
   const count = filteredPosts.value.length
   const noun = count === 1 ? 'record' : 'records'
-  let scope: string
-  if (filterMode.value === 'decade' && selectedDecade.value) {
-    scope = `${count} ${noun} from the ${selectedDecade.value}`
-  } else if (filterMode.value === 'tag' && selectedTag.value) {
-    scope = `${count} ${noun} tagged ${selectedTag.value}`
-  } else {
-    scope = `all ${count} ${noun}`
-  }
-  let sortDesc: string
-  if (sortMode.value === 'death-desc') sortDesc = 'sorted by date of death, newest first'
-  else if (sortMode.value === 'death-asc') sortDesc = 'sorted by date of death, oldest first'
-  else sortDesc = 'sorted by most recently added'
-  return `Showing ${scope}, ${sortDesc}.`
+  let scope = `${count} ${noun}`
+  if (selectedDecade.value) scope += ` from the ${selectedDecade.value}`
+  if (selectedTag.value) scope += ` tagged ${selectedTag.value}`
+  if (!selectedDecade.value && !selectedTag.value) scope = `all ${scope}`
+  return `Showing ${scope}, sorted by ${SORT_LABELS[sortMode.value].toLowerCase()}.`
 })
 
 const totalRecords = computed(() => posts.length)
@@ -56,22 +49,20 @@ const lastAdded = computed(() => {
 <template>
   <div class="register">
     <section class="hero">
-      <h1 class="hero-title">
-        The last frame,<br />
-        <em>held still.</em>
-      </h1>
-      <div class="hero-aside">
+      <div class="hero-text">
+        <h1 class="hero-title">Famous faces.<br />Final frames.</h1>
         <p class="hero-copy">
-          A curated collection of the last known photographs of public figures.
-          This working archive draws from a wide range of public records and
-          historical archives to serve as a quiet reminder of life's presence.
+          The last known photographs of public figures, collected from news
+          archives, private collections and family estates. Each entry notes
+          when the picture was taken, where, by whom, and how long before death.
         </p>
         <div class="hero-stats">
-          <div><span class="stat-label">Records </span><span>{{ totalRecords }}</span></div>
-          <div><span class="stat-label">Years </span><span>{{ yearRange }}</span></div>
-          <div v-if="lastAdded"><span class="stat-label">Last Added </span><span>{{ lastAdded }}</span></div>
+          <div><span class="stat-label">Records </span>{{ totalRecords }}</div>
+          <div><span class="stat-label">Years </span>{{ yearRange }}</div>
+          <div v-if="lastAdded"><span class="stat-label">Last added </span>{{ lastAdded }}</div>
         </div>
       </div>
+      <DecadeHistogram />
     </section>
 
     <FilterBar />
@@ -92,53 +83,54 @@ const lastAdded = computed(() => {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
-  align-items: end;
-  padding: 40px 56px 72px;
+  grid-template-columns: 1fr 440px;
+  gap: 96px;
+  align-items: stretch;
+  padding: 48px 56px 52px;
   border-bottom: 1px solid var(--hairline);
 }
 
 .hero-title {
-  font-size: 88px;
-  line-height: 0.95;
-  letter-spacing: -2.4px;
-  font-weight: 300;
+  font-family: 'Young Serif', Georgia, serif;
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 400;
   margin: 0;
-  text-wrap: pretty;
-}
-
-.hero-title em {
-  font-style: italic;
-  opacity: 0.7;
-}
-
-.hero-aside {
-  padding-bottom: 10px;
 }
 
 .hero-copy {
   font-size: 15px;
   line-height: 1.6;
-  opacity: 0.65;
-  max-width: 380px;
-  margin: 0;
+  color: rgba(232, 225, 212, 0.65);
+  max-width: 480px;
+  margin: 26px 0 0;
   font-weight: 400;
 }
 
 .hero-stats {
-  margin-top: 28px;
+  margin-top: 26px;
+  line-height: 14px;
   display: flex;
-  gap: 24px;
+  gap: 28px;
   flex-wrap: wrap;
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
+.hero-stats > div {
+  white-space: nowrap;
+}
+
 .stat-label {
-  color: var(--fg-dim);
+  opacity: 0.45;
+}
+
+/* Drop the tallest bar to the x-height of the headline's first line */
+.hero :deep(.histogram) {
+  padding-top: 24px;
 }
 
 .grid {
@@ -160,13 +152,9 @@ const lastAdded = computed(() => {
 
 @media (max-width: 1100px) {
   .hero {
-    padding: 32px 40px 56px;
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .hero-title {
-    font-size: 64px;
-    letter-spacing: -1.6px;
+    padding: 40px 40px 44px;
+    grid-template-columns: 1fr 340px;
+    gap: 56px;
   }
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -175,13 +163,27 @@ const lastAdded = computed(() => {
   }
 }
 
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  .hero :deep(.histogram) {
+    height: 160px;
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
-    padding: 24px 24px 40px;
+    padding: 28px 24px 36px;
   }
   .hero-title {
-    font-size: 44px;
-    letter-spacing: -1px;
+    font-size: 46px;
+    letter-spacing: -0.6px;
+  }
+  .hero-stats {
+    gap: 10px 20px;
   }
   .grid {
     grid-template-columns: 1fr;

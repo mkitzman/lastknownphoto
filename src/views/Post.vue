@@ -222,7 +222,7 @@ function toggleMethodology() {
           <RouterLink
             v-for="tag in post.tags"
             :key="tag"
-            :to="{ name: 'home', query: { mode: 'tag', tag } }"
+            :to="{ name: 'home', query: { tag } }"
             class="tag"
           >{{ tag }}</RouterLink>
         </div>

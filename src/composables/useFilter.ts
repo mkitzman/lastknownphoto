@@ -2,19 +2,16 @@ import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { posts, getDecade, type Post } from '../data/posts'
 
-export type FilterMode = 'decade' | 'tag'
-export type SortMode = 'added' | 'death-desc' | 'death-asc'
+export type SortMode = 'recent' | 'oldest' | 'newest' | 'shortest' | 'longest' | 'az'
 
-export const SORT_ORDER: SortMode[] = ['added', 'death-desc', 'death-asc']
+export const SORT_ORDER: SortMode[] = ['recent', 'oldest', 'newest', 'shortest', 'longest', 'az']
 export const SORT_LABELS: Record<SortMode, string> = {
-  'added': 'Recently added',
-  'death-desc': 'Chronologically',
-  'death-asc': 'Chronologically',
-}
-export const SORT_ARROWS: Record<SortMode, string> = {
-  'added': '↓',
-  'death-desc': '↓',
-  'death-asc': '↑',
+  'recent': 'Recently added',
+  'oldest': 'Oldest photo',
+  'newest': 'Newest photo',
+  'shortest': 'Shortest interval',
+  'longest': 'Longest interval',
+  'az': 'A – Z',
 }
 
 function parseDate(d: string | undefined | null): number {
@@ -23,24 +20,54 @@ function parseDate(d: string | undefined | null): number {
   return isNaN(t) ? 0 : t
 }
 
+/** Milliseconds between photo and death, or null when either date is too vague to parse. */
+function intervalMs(p: Post): number | null {
+  const photo = parseDate(p.date)
+  const death = parseDate(p.deathDate)
+  if (!photo || !death) return null
+  return Math.max(0, death - photo)
+}
+
+/** Sort ascending by key; posts without a key go last. */
+function byKey(list: Post[], key: (p: Post) => number | null, dir: 1 | -1): Post[] {
+  return [...list].sort((a, b) => {
+    const ka = key(a)
+    const kb = key(b)
+    if (ka == null) return kb == null ? 0 : 1
+    if (kb == null) return -1
+    return (ka - kb) * dir
+  })
+}
+
+/** Every decade from the earliest to the latest in the archive, including empty ones. */
+export const decadeCounts = (() => {
+  const counts = new Map<number, number>()
+  for (const p of posts) {
+    const d = getDecade(p)
+    if (d) counts.set(parseInt(d), (counts.get(parseInt(d)) || 0) + 1)
+  }
+  if (!counts.size) return []
+  const start = Math.min(...counts.keys())
+  const end = Math.max(...counts.keys())
+  const out: { decade: string; count: number }[] = []
+  for (let y = start; y <= end; y += 10) out.push({ decade: `${y}s`, count: counts.get(y) || 0 })
+  return out
+})()
+
 export function useFilter(options: { applySort?: boolean } = {}) {
   const route = useRoute()
   const router = useRouter()
   const applySort = options.applySort !== false
 
-  const filterMode = computed<FilterMode>(() =>
-    (route.query.mode as FilterMode) === 'tag' ? 'tag' : 'decade'
-  )
   const selectedDecade = computed(() => (route.query.decade as string) || null)
   const selectedTag = computed(() => (route.query.tag as string) || null)
   const sortMode = computed<SortMode>(() => {
-    const q = route.query.sort
-    return q === 'death-desc' || q === 'death-asc' ? q : 'added'
+    const q = route.query.sort as SortMode
+    return SORT_ORDER.includes(q) ? q : 'recent'
   })
 
-  function syncQuery(patch: Partial<{ mode: FilterMode; decade: string | null; tag: string | null; sort: SortMode }>) {
+  function syncQuery(patch: Partial<{ decade: string | null; tag: string | null; sort: SortMode }>) {
     const next = { ...route.query } as Record<string, string | undefined>
-    const mode = patch.mode ?? filterMode.value
     const decade = 'decade' in patch ? patch.decade : selectedDecade.value
     const tag = 'tag' in patch ? patch.tag : selectedTag.value
     const sort = patch.sort ?? sortMode.value
@@ -50,41 +77,24 @@ export function useFilter(options: { applySort?: boolean } = {}) {
     delete next.tag
     delete next.sort
 
-    if (mode === 'tag') next.mode = 'tag'
-    if (mode === 'decade' && decade) next.decade = decade
-    if (mode === 'tag' && tag) next.tag = tag
-    if (sort !== 'added') next.sort = sort
+    if (decade) next.decade = decade
+    if (tag) next.tag = tag
+    if (sort !== 'recent') next.sort = sort
 
     router.replace({ query: next as Record<string, string> })
   }
 
-  function setMode(mode: FilterMode) {
-    syncQuery({ mode, decade: null, tag: null })
-  }
   function selectDecade(decade: string | null) {
     syncQuery({ decade })
   }
   function selectTag(tag: string | null) {
     syncQuery({ tag })
   }
-  function cycleSort() {
-    const i = SORT_ORDER.indexOf(sortMode.value)
-    syncQuery({ sort: SORT_ORDER[(i + 1) % SORT_ORDER.length] })
+  function selectSort(sort: SortMode) {
+    syncQuery({ sort })
   }
 
-  const postsWithDecade = computed(() =>
-    posts.map(p => ({ post: p, decade: getDecade(p) }))
-  )
-
-  const decadeOptions = computed(() => {
-    const counts = new Map<string, number>()
-    for (const { decade } of postsWithDecade.value) {
-      if (decade) counts.set(decade, (counts.get(decade) || 0) + 1)
-    }
-    return Array.from(counts.entries())
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([decade, count]) => ({ decade, count }))
-  })
+  const decadeOptions = computed(() => decadeCounts.filter(d => d.count > 0))
 
   const tagOptions = computed(() => {
     const counts = new Map<string, number>()
@@ -99,34 +109,26 @@ export function useFilter(options: { applySort?: boolean } = {}) {
 
   const filteredPosts = computed<Post[]>(() => {
     let list: Post[] = posts
-    if (filterMode.value === 'decade' && selectedDecade.value) {
-      list = postsWithDecade.value
-        .filter(x => x.decade === selectedDecade.value)
-        .map(x => x.post)
-    } else if (filterMode.value === 'tag' && selectedTag.value) {
-      list = posts.filter(p => p.tags.includes(selectedTag.value!))
-    }
+    if (selectedDecade.value) list = list.filter(p => getDecade(p) === selectedDecade.value)
+    if (selectedTag.value) list = list.filter(p => p.tags.includes(selectedTag.value!))
     if (!applySort) return list
-    const sorted = [...list]
-    if (sortMode.value === 'death-desc') {
-      sorted.sort((a, b) => parseDate(b.deathDate) - parseDate(a.deathDate))
-    } else if (sortMode.value === 'death-asc') {
-      sorted.sort((a, b) => parseDate(a.deathDate) - parseDate(b.deathDate))
-    } else {
-      sorted.sort((a, b) => parseDate(b.createdAt) - parseDate(a.createdAt))
+    switch (sortMode.value) {
+      case 'oldest': return byKey(list, p => parseDate(p.date) || null, 1)
+      case 'newest': return byKey(list, p => parseDate(p.date) || null, -1)
+      case 'shortest': return byKey(list, intervalMs, 1)
+      case 'longest': return byKey(list, intervalMs, -1)
+      case 'az': return [...list].sort((a, b) => a.name.localeCompare(b.name))
+      default: return byKey(list, p => parseDate(p.createdAt), -1)
     }
-    return sorted
   })
 
   return {
-    filterMode,
     selectedDecade,
     selectedTag,
     sortMode,
-    setMode,
     selectDecade,
     selectTag,
-    cycleSort,
+    selectSort,
     decadeOptions,
     tagOptions,
     filteredPosts,
