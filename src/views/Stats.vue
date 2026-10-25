@@ -206,7 +206,7 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(232, 225, 212, 0.45);
+  color: var(--fg-label);
 }
 
 .label {

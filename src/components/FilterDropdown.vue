@@ -84,7 +84,7 @@ const currentLabel = () => props.options.find(o => o.value === props.value)?.lab
 }
 
 .trigger-label {
-  opacity: 0.45;
+  color: var(--fg-label);
 }
 
 .trigger-value {
@@ -131,7 +131,7 @@ const currentLabel = () => props.options.find(o => o.value === props.value)?.lab
   border: none;
   padding: 8px 16px;
   cursor: pointer;
-  color: rgba(232, 225, 212, 0.55);
+  color: var(--fg-label);
   font-family: inherit;
   font-size: inherit;
   letter-spacing: inherit;

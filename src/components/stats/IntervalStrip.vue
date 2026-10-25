@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { useReveal } from '../../composables/useReveal'
 import { intervals, shortest, formatHours } from '../../data/stats'
 
@@ -35,31 +36,75 @@ const ticks = computed<[number, string][]>(() =>
     : [[1, '1 hour'], [24, '1 day'], [168, '1 week'], [720, '1 month'], [8760, '1 year']]
 )
 
-const hov = ref<(typeof dots)[number] | null>(null)
+type Dot = (typeof dots)[number]
+const hov = ref<Dot | null>(null)
+const plot = ref<HTMLDivElement | null>(null)
+const router = useRouter()
+
+// Dots are too dense to be separate tap targets, so the plot is one target that picks the nearest dot
+const PICK_RADIUS = 28
+function nearest(e: MouseEvent): Dot | null {
+  const box = plot.value?.getBoundingClientRect()
+  if (!box) return null
+  const px = e.clientX - box.left
+  const py = e.clientY - box.top
+  let best: Dot | null = null
+  let bestDist = PICK_RADIUS
+  for (const d of dots) {
+    const dist = Math.hypot((x(d.plotHours) / 100) * box.width - px, d.y - py)
+    if (dist < bestDist) {
+      best = d
+      bestDist = dist
+    }
+  }
+  return best
+}
+
+function onMove(e: MouseEvent) {
+  hov.value = nearest(e)
+}
+
+function onClick(e: MouseEvent) {
+  const d = nearest(e)
+  if (!d) return
+  // On touch, the first tap reads the dot and a second tap on it opens the record
+  if ((e as PointerEvent).pointerType === 'touch' && hov.value !== d) {
+    hov.value = d
+    return
+  }
+  router.push(`/post/${d.post.slug}`)
+}
+
+const describe = (d: Dot) => (d.timeUnknown ? 'Same day, hour unknown' : `${formatHours(d.hours)} before death`)
+const listed = [...dots].sort((a, b) => a.plotHours - b.plotHours)
 
 const caption = computed(() => {
   const h = hov.value
   if (!h) return 'Hover over a dot to see who it is'
-  const when = h.timeUnknown ? 'Same day, hour unknown' : `${formatHours(h.hours)} before death`
-  return `${h.post.name} · ${when}`
+  return `${h.post.name} · ${describe(h)}`
 })
 </script>
 
 <template>
   <div ref="el" class="strip" :class="{ shown, hovering: hov }">
-    <div class="plot" @mouseleave="hov = null">
+    <div
+      ref="plot"
+      class="plot"
+      :class="{ pointing: hov }"
+      role="img"
+      :aria-label="`Dot chart of the time between photo and death for ${dots.length} records, on a log scale from under an hour to several years. The full list follows the chart.`"
+      @mousemove="onMove"
+      @mouseleave="hov = null"
+      @click="onClick"
+    >
       <div v-for="[h] in ticks" :key="h" class="guide" :style="{ left: `${x(h)}%` }" />
-      <RouterLink
+      <span
         v-for="(d, i) in dots"
         :key="d.post.id"
-        :to="`/post/${d.post.slug}`"
         class="hit"
         :class="{ on: hov === d, named: d.named }"
         :style="{ left: `${x(d.plotHours)}%`, top: `${d.y}px`, zIndex: hov === d ? 3 : 1 }"
-        :aria-label="`${d.post.name}, ${d.timeUnknown ? 'same day' : formatHours(d.hours) + ' before death'}`"
-        @mouseenter="hov = d"
-        @focus="hov = d"
-        @blur="hov = null"
+        aria-hidden="true"
       >
         <span class="dot" :style="{ transitionDelay: `${i * 12}ms, ${i * 12}ms, 0ms` }" />
         <span
@@ -67,12 +112,21 @@ const caption = computed(() => {
           class="name"
           :class="{ above: d.y > 80, right: d.plotHours > 2000 }"
         >{{ d.post.name }}</span>
-      </RouterLink>
+      </span>
     </div>
     <div class="axis">
       <span v-for="[h, l] in ticks" :key="h" class="tick" :style="{ left: `${x(h)}%` }">{{ l }}</span>
     </div>
-    <div class="caption" :class="{ on: hov }" aria-live="polite">{{ caption }}</div>
+    <div class="caption" :class="{ on: hov }" aria-hidden="true">{{ caption }}</div>
+    <details class="list">
+      <summary>Show all {{ dots.length }} as a list</summary>
+      <ol>
+        <li v-for="d in listed" :key="d.post.id">
+          <RouterLink :to="`/post/${d.post.slug}`">{{ d.post.name }}</RouterLink>
+          <span class="list-when">{{ describe(d) }}</span>
+        </li>
+      </ol>
+    </details>
   </div>
 </template>
 
@@ -80,6 +134,10 @@ const caption = computed(() => {
 .plot {
   position: relative;
   height: 120px;
+}
+
+.plot.pointing {
+  cursor: pointer;
 }
 
 .guide {
@@ -91,6 +149,7 @@ const caption = computed(() => {
 
 .hit {
   position: absolute;
+  pointer-events: none;
   width: 14px;
   height: 14px;
   margin: -7px 0 0 -7px;
@@ -163,7 +222,7 @@ const caption = computed(() => {
   font-size: 10px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(232, 225, 212, 0.45);
+  color: var(--fg-label);
 }
 
 .caption {
@@ -173,11 +232,61 @@ const caption = computed(() => {
   font-size: 11px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: rgba(232, 225, 212, 0.45);
+  color: var(--fg-label);
 }
 
 .caption.on {
   color: var(--fg);
+}
+
+.list {
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.list summary {
+  cursor: pointer;
+  color: var(--fg-label);
+  width: fit-content;
+  padding: 6px 0;
+}
+
+.list summary:hover,
+.list[open] summary {
+  color: var(--fg);
+}
+
+.list ol {
+  list-style: none;
+  margin-top: 16px;
+  columns: 3 260px;
+  column-gap: 40px;
+}
+
+.list li {
+  break-inside: avoid;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--hairline-soft);
+}
+
+.list a {
+  color: var(--fg);
+}
+
+.list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.list-when {
+  color: var(--fg-label);
+  white-space: nowrap;
 }
 
 @media (prefers-reduced-motion: reduce) {

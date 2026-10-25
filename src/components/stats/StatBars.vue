@@ -82,7 +82,7 @@ const middle = computed(() => props.data[Math.floor(props.data.length / 2)]?.[0]
   font-size: 10px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(232, 225, 212, 0.45);
+  color: var(--fg-label);
 }
 
 .tick {

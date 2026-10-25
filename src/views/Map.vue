@@ -196,7 +196,7 @@ onUnmounted(() => {
 }
 
 .dark-popup .leaflet-popup-close-button {
-  color: rgba(232, 225, 212, 0.5);
+  color: var(--fg-label);
   font-size: 18px;
   padding: 6px 8px 0 0;
 }
@@ -242,7 +242,7 @@ onUnmounted(() => {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: rgba(232, 225, 212, 0.5);
+  color: var(--fg-label);
   margin: 0 0 10px;
 }
 
@@ -273,7 +273,7 @@ onUnmounted(() => {
 /* Leaflet overrides for register theme */
 .leaflet-control-zoom a {
   background: #1a1612 !important;
-  color: rgba(232, 225, 212, 0.5) !important;
+  color: var(--fg-label) !important;
   border-color: rgba(232, 225, 212, 0.15) !important;
   border-radius: 0 !important;
 }
@@ -284,7 +284,7 @@ onUnmounted(() => {
 
 .leaflet-control-attribution {
   background: rgba(15, 13, 11, 0.7) !important;
-  color: rgba(232, 225, 212, 0.4) !important;
+  color: var(--fg-label) !important;
   font-family: 'JetBrains Mono', ui-monospace, monospace !important;
   font-size: 9px !important;
   letter-spacing: 0.5px !important;

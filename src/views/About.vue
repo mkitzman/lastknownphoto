@@ -150,14 +150,17 @@ function openContact() {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
+/* 24px rows keep each link a comfortable tap target */
 .label-toc a {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
   color: var(--fg-muted);
 }
 

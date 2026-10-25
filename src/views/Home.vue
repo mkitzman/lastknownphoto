@@ -125,7 +125,7 @@ const lastAdded = computed(() => {
 }
 
 .stat-label {
-  opacity: 0.45;
+  color: var(--fg-label);
 }
 
 /* Drop the tallest bar to the x-height of the headline's first line */

@@ -90,7 +90,7 @@ function toggle(decade: string) {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.45;
+  color: var(--fg-label);
   white-space: nowrap;
 }
 </style>

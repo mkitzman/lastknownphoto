@@ -296,6 +296,7 @@ function toggleMethodology() {
   aspect-ratio: 4 / 5;
   background: var(--ink-750);
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .photo-frame img {

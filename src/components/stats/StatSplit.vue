@@ -61,7 +61,7 @@ const visible = computed(() => props.parts.filter(p => p[1] > 0))
   font-size: 10px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(232, 225, 212, 0.5);
+  color: var(--fg-label);
   white-space: nowrap;
   overflow: hidden;
 }

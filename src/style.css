@@ -16,6 +16,8 @@
   --fg-muted: rgba(232, 225, 212, 0.78);
   --fg-dim: rgba(232, 225, 212, 0.62);
   --fg-faint: rgba(232, 225, 212, 0.5);
+  /* Lowest ink that passes WCAG AA (4.5:1) for small text on --bg */
+  --fg-label: rgba(232, 225, 212, 0.55);
   --hairline: rgba(232, 225, 212, 0.1);
   --hairline-strong: rgba(232, 225, 212, 0.15);
   --hairline-soft: rgba(232, 225, 212, 0.08);

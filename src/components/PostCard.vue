@@ -92,6 +92,7 @@ const cardImageStyle = computed(() => {
   position: relative;
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  border-radius: 4px;
   background: var(--ink-750);
 }
 
@@ -186,6 +187,6 @@ const cardImageStyle = computed(() => {
 }
 
 .interval-caption {
-  opacity: 0.5;
+  color: var(--fg-label);
 }
 </style>

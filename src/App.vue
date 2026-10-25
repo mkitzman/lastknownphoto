@@ -29,7 +29,7 @@ function focusPageHeading() {
         </span>
       </RouterLink>
       <nav class="site-nav">
-        <RouterLink to="/" class="nav-link" :class="{ active: route.name === 'home' }">Home</RouterLink>
+        <RouterLink to="/" class="nav-link" :class="{ active: route.name === 'home' }">Archive</RouterLink>
         <RouterLink to="/map" class="nav-link" :class="{ active: route.name === 'map' }">Map</RouterLink>
         <RouterLink to="/stats" class="nav-link" :class="{ active: route.name === 'stats' }">Stats</RouterLink>
         <RouterLink to="/about" class="nav-link" :class="{ active: route.name === 'about' }">About</RouterLink>

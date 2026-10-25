@@ -52,7 +52,7 @@ const max = computed(() => Math.max(1, ...props.data.map(d => d[1])))
 }
 
 .hovering .label:not(.on) {
-  color: rgba(232, 225, 212, 0.3);
+  color: var(--fg-label);
 }
 
 .track {
@@ -77,7 +77,7 @@ const max = computed(() => Math.max(1, ...props.data.map(d => d[1])))
 }
 
 .count {
-  color: rgba(232, 225, 212, 0.5);
+  color: var(--fg-label);
   text-align: right;
 }
 
