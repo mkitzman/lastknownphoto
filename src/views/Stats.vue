@@ -44,9 +44,9 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
     </section>
 
     <section class="section">
-      <div class="eyebrow"><span>Time between photo and death</span><span>01 · The archive's own measure</span></div>
+      <div class="eyebrow"><span>Time between photo and death</span><span>01</span></div>
       <div class="intro">
-        <h2 class="title">Most of these photographs were taken in the last week of a life.</h2>
+        <h2 class="title">Most of these photographs were taken in the last week before death.</h2>
         <p class="note">
           {{ word(s.withinWeek, true) }} of the {{ word(counted) }} were made within seven days of death;
           {{ word(s.sameDay) }} on the day itself.
@@ -91,7 +91,7 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
         <p class="note">
           {{ listJoin(s.dayExtremes.most) }} {{ s.dayExtremes.most.length === 1 ? 'accounts' : 'each account' }} for {{ word(s.dayExtremes.mostCount) }} records,
           {{ listJoin(s.dayExtremes.fewest) }} for {{ word(s.dayExtremes.fewestCount) }}.
-          By decade the archive leans toward the {{ listJoin(s.topDecades) }}, which says as much about surviving photographs as about death.
+          The {{ listJoin(s.topDecades) }} have the most records of any decade.
         </p>
       </div>
       <div class="chart-gap">
@@ -129,8 +129,8 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onMq))
       <div class="intro">
         <h2 class="title">{{ sharePhrase(s.photographerCredited, s.total, 'in') }} carry a photographer's name.</h2>
         <p class="note">
-          Each record is graded for how firmly it can be established as the last known photograph.
-          Level 5 is a dated, attributed image with corroborating testimony; Level 1 is a plausible but unconfirmed candidate.
+          Each record is graded on how sure we can be that it's the last photograph.
+          Level 5 was taken at the moment of death or minutes before. Level 1 is still disputed, with more than one photo claimed as the last.
         </p>
       </div>
       <div class="split-row even">

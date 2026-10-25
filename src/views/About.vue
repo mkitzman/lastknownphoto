@@ -30,8 +30,8 @@ function openContact() {
       <section id="ii" class="section">
         <div class="section-main">
           <div class="section-marker">II. On presence</div>
-          <p>These photos were unremarkable at the time. They only became significant because of what came next, or because of what didn't.</p>
-          <p>Most of them aren't dramatic. A grocery store parking lot. A rehearsal break. Dinner with friends. There is nothing in the frame that warns you.</p>
+          <p>These photos were unremarkable at the time. They only matter because of what came next.</p>
+          <p>Plenty were taken in a grocery store parking lot, on a rehearsal break or at dinner with friends. There is nothing in the frame that warns you.</p>
           <p>This is an archive of the last ordinary minute.</p>
         </div>
       </section>
