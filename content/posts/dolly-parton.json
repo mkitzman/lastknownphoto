@@ -1,0 +1,49 @@
+{
+  "id": "dolly-parton-01",
+  "slug": "dolly-parton",
+  "name": "Dolly Parton",
+  "title": "Dolly Parton speaking to the crowd at the grand opening of Dolly's Tennessean Travel Stop in Cornersville, Tennessee, on June 24, 2026, her last public appearance.",
+  "imageUrl": "/images/dolly-parton.jpg",
+  "date": "June 24, 2026",
+  "deathDate": "August 25, 2026",
+  "interval": "About two months",
+  "age": 80,
+  "tags": [
+    "singer",
+    "songwriter"
+  ],
+  "sourceUrl": "https://www.usatoday.com/picture-gallery/entertainment/music/2026/08/25/dolly-parton-last-public-appearance-photos/91462919007/",
+  "sourceLabel": "USA Today",
+  "description": "This photograph comes from a series taken on June 24, 2026, at the grand opening of <a href=\"http://dollystravelstops.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Dolly's Tennessean Travel Stop</a>, her own truck stop off Interstate 65 in Cornersville, Tennessee. It shows Parton at the microphone, addressing the crowd. The last frame of the series is likely Plate 02, taken as she was escorted out after her remarks, her back to the camera as confetti fell. The event turned out to be <a href=\"https://www.rollingstone.com/music/music-country/dolly-parton-final-public-appearance-truck-stop-1235614902/\" target=\"_blank\" rel=\"noopener noreferrer\">her final public appearance</a>. In May she had said she was responding well to treatment for health problems, and in an interview with People in August she spoke of having \"hard times\" with her health. On August 21, 2026, she was admitted to the Vanderbilt-Ingram Cancer Center in Nashville. She died there four days later, on August 25, after a brief battle with cancer. Her nephew Bryan Seaver, her head of security for more than two decades, announced her death the same day. She was 80 years old.",
+  "lyrics": {
+    "text": "Your beauty is beyond compare\nWith flaming locks of auburn hair\nWith ivory skin and eyes of emerald green\nYour smile is like a breath of spring\nYour voice is soft like summer rain\nAnd I cannot compete with you, Jolene",
+    "source": "“Jolene” (1973)"
+  },
+  "bio": "Dolly Parton was an American singer, songwriter, and actress known as the \"Queen of Country\", one of the most successful performers in the history of country music. Raised in the Smoky Mountains of East Tennessee, she released her debut album <em>Hello, I'm Dolly</em> in 1967 and went on to write more than 3,000 songs, including \"Jolene\", \"Coat of Many Colors\", \"I Will Always Love You\", and \"9 to 5\". She sold more than a hundred million records, won eleven Grammy Awards, and was inducted into the Country Music Hall of Fame in 1999. More on her life is at <a href=\"https://en.wikipedia.org/wiki/Dolly_Parton\" target=\"_blank\" rel=\"noopener noreferrer\">Wikipedia</a>.",
+  "photoCredit": "Nicole Hester / The Tennessean",
+  "additionalImages": [
+    "/images/dolly-parton-2.jpg",
+    "/images/dolly-parton-3.jpg",
+    "/images/dolly-parton-4.jpg"
+  ],
+  "additionalImagesNote": "Plate 02: Parton is escorted out after addressing the crowd, likely the last photograph of her in public. Plate 03: Parton cutting the ribbon with a jeweled pair of scissors. Plate 04: Parton addressing the crowd at the grand opening.",
+  "createdAt": "2026-10-25",
+  "focalPoint": {
+    "x": 57,
+    "y": 33
+  },
+  "cardFocalPoint": {
+    "x": 57,
+    "y": 32,
+    "zoom": 1.4
+  },
+  "location": {
+    "name": "Dolly's Tennessean Travel Stop, 3686 Pulaski Hwy, Cornersville, TN 37047",
+    "lat": 35.348374,
+    "lng": -86.846756,
+    "mapsUrl": "https://www.google.com/maps/place/35.348374,-86.846756"
+  },
+  "aspectRatio": "portrait",
+  "raw_score": 95,
+  "level": 3
+}
