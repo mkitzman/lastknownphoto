@@ -2,9 +2,9 @@
   "id": "phil-hartman-01",
   "slug": "phil-hartman",
   "name": "Phil Hartman",
-  "title": "Last known photo of Phil Hartman with his wife Brynn, taken on May 8, 1998, at a private dinner party at Chasen's Restaurant in Beverly Hills, California, just 20 days before his death.",
+  "title": "Last known photo of Phil Hartman, taken with Marc Graue at Graue's studio in Burbank, California, on May 25, 1998, three days before his death.",
   "imageUrl": "/images/phil-hartman.jpg",
-  "date": "May 8, 1998",
+  "date": "May 25, 1998",
   "deathDate": "May 28, 1998",
   "age": 49,
   "tags": [
@@ -13,22 +13,27 @@
     "snl",
     "newsradio"
   ],
-  "sourceUrl": "https://en.wikipedia.org/wiki/Phil_Hartman",
-  "sourceLabel": "Wikipedia",
-  "description": "Phil Hartman and his wife Brynn Omdahl were photographed on May 8, 1998, attending a private dinner party at Chasen's Restaurant in Beverly Hills, California. The photo was taken near the end of the fourth season of NewsRadio, in which Hartman starred. Days earlier, on May 4, Hartman had made a public appearance at Planet Hollywood in Las Vegas. At the time, the couple's marriage was under severe strain due to Brynn's struggles with substance abuse; reports indicate she had recently relapsed after a period of sobriety. In the early morning hours of May 28, 1998, Brynn Hartman shot and killed Phil as he slept in their Encino, California home, then died by suicide hours later. He was 49 years old.",
+  "sourceUrl": "https://www.instagram.com/p/B_0LHpPHTjp/",
+  "sourceLabel": "Instagram",
+  "description": "This photograph shows Phil Hartman (left) with Marc Graue at Graue's studio in Burbank, California, on May 25, 1998. Hartman had spent the day there. In 2020, Graue shared the photo on Instagram, writing that he \"was lucky enough to spend the day with the amazing Phil Hartman\" three days before he was killed, and remembered him as \"funny, down to earth and a genuinely nice guy.\" At the time, Hartman's marriage to Brynn Omdahl was under severe strain because of her struggles with substance abuse, and reports indicate she had recently relapsed. In the early morning hours of May 28, 1998, Brynn shot and killed Phil as he slept in their Encino home, then died by suicide hours later. He was 49 years old.",
   "bio": "Phil Hartman was an American comedian, actor, screenwriter, and graphic designer. Best known for his eight seasons on Saturday Night Live, his starring role as Bill McNeal on NewsRadio, and voice work on The Simpsons as Troy McClure and Lionel Hutz.",
-  "photoCredit": "Jeff Kravitz / Associated Press",
+  "photoCredit": "Marc Graue",
   "createdAt": "2026-04-17",
   "location": {
-    "name": "Chasen's Restaurant, 246 N Canon Dr, Beverly Hills, CA 90210",
-    "lat": 34.0687,
-    "lng": -118.4014,
-    "mapsUrl": "https://www.google.com/maps/search/246+N+Canon+Dr+Beverly+Hills+CA+90210"
+    "name": "Marc Graue's studio, 3421 W Burbank Blvd, Burbank, CA 91505",
+    "lat": 34.175679,
+    "lng": -118.347446,
+    "mapsUrl": "https://www.google.com/maps/place/34.175679,-118.347446"
   },
-  "aspectRatio": "portrait",
+  "aspectRatio": "square",
   "focalPoint": {
-    "x": 28,
-    "y": 20
+    "x": 37,
+    "y": 27
+  },
+  "cardFocalPoint": {
+    "x": 37,
+    "y": 30,
+    "zoom": 1.3
   },
   "raw_score": 98,
   "level": 4
