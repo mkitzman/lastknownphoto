@@ -69,6 +69,12 @@ export function getDecade(post: Post): string | null {
   return `${Math.floor(y / 10) * 10}s`
 }
 
+/** Year the photo was taken, read from the photo date ("May 25, 1998" -> "1998"). */
+export function getPhotoYear(post: Post): string | null {
+  const years = post.date.match(/\b\d{4}\b/g)
+  return years ? years[years.length - 1] : null
+}
+
 export function getYears(post: Post): string | null {
   const death = deathYear(post)
   if (!death) return null

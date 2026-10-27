@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import { type Post, getDecade, getYears, getProfession, getInterval } from '../data/posts'
+import { type Post, getPhotoYear, getYears, getProfession, getInterval } from '../data/posts'
 
 const props = defineProps<{ post: Post }>()
 
-const decade = computed(() => getDecade(props.post))
+const photoYear = computed(() => getPhotoYear(props.post))
 const years = computed(() => getYears(props.post))
 const profession = computed(() => getProfession(props.post))
 const interval = computed(() => getInterval(props.post))
@@ -28,7 +28,7 @@ const cardImageStyle = computed(() => {
     <RouterLink :to="{ name: 'post', params: { slug: post.slug } }" class="card-link" :aria-label="`View record for ${post.name}`">
       <div class="eyebrow-row">
         <span>{{ post.slug.replace(/-/g, ' ') }}</span>
-        <span v-if="decade">{{ decade }}</span>
+        <span v-if="photoYear">{{ photoYear }}</span>
       </div>
       <div class="photo-frame">
         <img
